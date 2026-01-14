@@ -2,11 +2,15 @@
 .pixi/*
 !.pixi/config.toml
 .pytest_cache/*
-data/*
-dump/*
 
 # Python cache files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Folders with some testing and also big files
+data/*
+dump/*
+benchmarks/*
+src/testing_parsing/*
