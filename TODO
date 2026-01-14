@@ -1,0 +1,6 @@
+1. Make sure that generated instances does not contain escape characters.
+2. Follow-up to 1. Use GUID for a property of instances.
+3. Check if current IfcOpenShell contains stream2. If so, ditch anaconda install.
+4. Clean up the repo.
+5. Adjust stream writer.
+6. Push it.

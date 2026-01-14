@@ -24,12 +24,13 @@ python = ">=3.11,<3.14"
 
 [tool.pixi.feature.stable-conda.dependencies]
 python = "*"
-ifcopenshell = ">=0.8.3.post1,<0.9"
+ifcopenshell = ">=0.8.4.post1,<0.9"
 lark = ">=1.3.0,<2"
 
 [tool.pixi.feature.experimental-conda.dependencies]
 python = "*"
-ifcopenshell = { version = ">=0.8.4alpha251015,<0.9", channel = "ifcopenshell" }
+ifcopenshell = { version = ">=0.8.5alpha260112,<0.9", channel = "ifcopenshell" }
+pyoxigraph = ">=0.5.3.post1,<0.6"
 lark = ">=1.3.0,<2"
 
 [tool.pixi.feature.test.dependencies]
@@ -46,6 +47,9 @@ experimental-conda = { features = ["experimental-conda"], no-default-feature = t
 test = ["test"]
 perf-test = ["test", "performance-test"]
 
+[tool.pixi.dependencies]
+pyoxigraph = ">=0.5.3.post1,<0.6"
+
 [tool.pixi.feature.stable-conda.tasks]
 attr = "python src/lbd/attribute_name.py"
 cli = "python src/main.py"
@@ -53,8 +57,19 @@ test = "python src/main.py -i data/input/Duplex.ifc -o data/output/Duplex-spf.tt
 rail_test = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail.ttl --verbose"
 
 [tool.pixi.feature.experimental-conda.tasks]
+simple_test = "python src/testing_parsing/simple_test.py"
+stream_generic_test = "python src/testing_parsing/stream2_test.py"
 stream_test = "python src/lbd/TTL_writer_strings_stream.py"
-stream = "python src/main.py -i data/input/Viadotto.ifc -o data/output/Viadotto-stream.ttl --stream --verbose"
+stream = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream.ttl --converter mini_ifcowl --stream --verbose"
+stream_1pass = "python src/main.py -i data/input/Girder.ifc -o data/output/Girder-stream-1pass.ttl --converter mini_ifcowl_optimized --stream --verbose --single-pass"
+stream_1pass_profiling = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream-1pass-profiling.ttl --converter mini_ifcowl_optimized --stream --verbose --single-pass --profile"
+stream_raw_dict = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-raw-dict.ttl --converter simple_triples --stream --verbose"
+stream_raw_dict_profiling = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-raw-dict-profiling.ttl --converter simple_triples --stream --verbose --profile"
+stream_raw_dict_benchmark = "python src/main.py -i data/input/Girder.ifc -o data/output/Girder-raw-dict.ttl --converter simple_triples --stream --verbose --benchmark"
+stream_profiling = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream.ttl --stream --verbose --profile"
+stream_profiling_optimized = "python src/main.py -i data/input/Girder.ifc -o data/output/Girder-stream-optimized.ttl --converter mini_ifcowl_optimized --stream --verbose --profile"
+stream_profiling_optimized_1pass = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream-optimized-1pass.ttl --converter mini_ifcowl_optimized --stream --verbose --profile --single-pass"
+benchmark = "python benchmarks/benchmark_collection.py"
 
 [dependency-groups]
-stable-pypi = ["ifcopenshell>=0.8.3.post2,<0.9"]
+stable-pypi = ["ifcopenshell>=0.8.4.post1,<0.9"]
