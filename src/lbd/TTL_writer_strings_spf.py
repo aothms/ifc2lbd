@@ -66,13 +66,9 @@ def string_writer_mini_ifcOWL(model, output_path: str, namespaces: Dict[str, str
             #print(instance_schema)
             # Subject IRI
             subj = f"inst:{inst.is_a()}_{inst.id()}"
-            pred_obj = defaultdict(list)                    
+            pred_obj = defaultdict(list)
 
-            for attr_idx in range(len(inst)):
-                try:
-                    value = inst[attr_idx]
-                except:
-                    continue
+            for attr_idx, value in enumerate(inst):
                 if value is None:
                     continue
                 # Predicate

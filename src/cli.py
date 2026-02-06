@@ -130,7 +130,7 @@ def main():
     all_metrics = []
     
     for idx, (input_file, output_file) in enumerate(zip(args.inputs, args.outputs), 1):
-        # try:
+        try:
             log(f"[{idx}/{len(args.inputs)}] Converting '{input_file}' -> '{output_file}'", args.verbose)
             
             if is_multiple:
@@ -146,11 +146,11 @@ def main():
             log(f"[{idx}/{len(args.inputs)}] Completed successfully", args.verbose)
             success_count += 1
             
-        ## except Exception as e:
-        ##     print(f"Error converting '{input_file}': {e}", file=sys.stderr)
-        ##     if args.verbose:
-        ##         import traceback
-        ##         traceback.print_exc()
+        except Exception as e:
+            print(f"Error converting '{input_file}': {e}", file=sys.stderr)
+            if args.verbose:
+                import traceback
+                traceback.print_exc()
     
     # Print benchmark results if requested
     if args.benchmark and all_metrics:
