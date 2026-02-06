@@ -62,10 +62,22 @@ def main():
     )
     
     parser.add_argument(
+        "--benchmark", "-b",
+        action="store_true",
+        help="Enable benchmark mode - returns detailed metrics for performance analysis"
+    )
+    
+    parser.add_argument(
         "--converter", "-c",
-        choices=["mini_ifcowl", "ifcowl", "ifcowl_express"],
-        default="mini_ifcowl",
-        help="Choose conversion method: 'mini_ifcowl' (default, simplified), 'ifcowl' (with declared types), 'ifcowl_express' (full ifcOWL+EXPRESS with typed nodes)"
+        choices=["mini_ifcowl", "mini_ifcowl_complete", "mini_ifcowl_complete2"], 
+        default="mini_ifcowl_complete",
+        help="Choose conversion method: 'mini_ifcowl' (default, simplified), 'ifcowl' (with declared types), 'mini_ifcowl_optimized' (optimized streaming(read about it in docs))"
+    )
+    
+    parser.add_argument(
+        "--single-pass",
+        action="store_true",
+        help="Use single-pass mode (skip entity type mapping). Mind, only works with mini_ifcowl_optimized converter for now. References will be inst:Entity_ID instead of inst:IfcType_ID"
     )
     
     args = parser.parse_args()
@@ -80,6 +92,14 @@ def main():
     log(f"Processing {len(args.inputs)} file(s)", args.verbose)
     log(f"Mode: {'Streaming' if args.stream else 'Load to memory'}", args.verbose)
     log(f"Converter: {args.converter}", args.verbose)
+    
+    # Validate single-pass flag
+    if args.single_pass and args.converter != "mini_ifcowl_optimized":
+        print("Error: --single-pass only works with --converter mini_ifcowl_optimized", file=sys.stderr)
+        sys.exit(1)
+    
+    if args.single_pass:
+        log("Single-pass mode: enabled (generic entity references)", args.verbose)
     
     # Validate all input files exist
     for input_file in args.inputs:
@@ -105,16 +125,22 @@ def main():
     
     # Perform conversions
     success_count = 0
+    # Collect metrics if benchmark mode enabled
+    all_metrics = []
+    
     for idx, (input_file, output_file) in enumerate(zip(args.inputs, args.outputs), 1):
         try:
             log(f"[{idx}/{len(args.inputs)}] Converting '{input_file}' -> '{output_file}'", args.verbose)
             
             if is_multiple:
                 # Use TRIG format for multiple files
-                ifc_to_lbd_trig(input_file, output_file, stream=args.stream, verbose=args.verbose, profile=args.profile, converter=args.converter)
+                metrics = ifc_to_lbd_trig(input_file, output_file, stream=args.stream, verbose=args.verbose, profile=args.profile, converter=args.converter, return_metrics=args.benchmark)
             else:
                 # Use TTL format for single file
-                ifc_to_lbd_ttl(input_file, output_file, stream=args.stream, verbose=args.verbose, profile=args.profile, converter=args.converter)
+                metrics = ifc_to_lbd_ttl(input_file, output_file, stream=args.stream, verbose=args.verbose, profile=args.profile, converter=args.converter, return_metrics=args.benchmark, single_pass=args.single_pass)
+            
+            if args.benchmark and metrics:
+                all_metrics.append(metrics)
             
             log(f"[{idx}/{len(args.inputs)}] Completed successfully", args.verbose)
             success_count += 1
@@ -124,6 +150,23 @@ def main():
             if args.verbose:
                 import traceback
                 traceback.print_exc()
+    
+    # Print benchmark results if requested
+    if args.benchmark and all_metrics:
+        print("\n" + "=" * 80)
+        print("BENCHMARK RESULTS")
+        print("=" * 80)
+        for metrics in all_metrics:
+            print(f"\nFile: {metrics.get('input_file')}")
+            print(f"  Entities processed: {metrics.get('entities_processed', 'N/A')}")
+            print(f"  Triples written: {metrics.get('triples_written', 'N/A')}")
+            print(f"  Load time: {metrics.get('load_time', 0):.3f}s")
+            print(f"  Write time: {metrics.get('write_time', 0):.3f}s")
+            print(f"  Total time: {metrics.get('total_time', 0):.3f}s")
+            if metrics.get('triples_written') and metrics.get('total_time'):
+                throughput = metrics['triples_written'] / metrics['total_time']
+                print(f"  Throughput: {throughput:.0f} triples/second")
+        print("=" * 80)
     
     # Summary
     log("=" * 50, args.verbose)
