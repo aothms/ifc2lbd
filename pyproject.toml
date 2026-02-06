@@ -76,5 +76,11 @@ refactored = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/In
 
 functional = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-functional-by-co.ttl --converter co_functional --stream --verbose --benchmark"
 
+
+#### PLEASE use these tasks for testing.
+refactored_test = "python src/main.py -i test_files/InfraBridge.ifc -o test_files/InfraBridge-refactored-test.ttl --converter co_refactored --stream --verbose"
+
+functional_test = "python src/main.py -i test_files/InfraBridge.ifc -o test_files/InfraBridge-functional-test.ttl --converter co_functional --stream --verbose"
+
 [dependency-groups]
 stable-pypi = ["ifcopenshell>=0.8.4.post1,<0.9"]
