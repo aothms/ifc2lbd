@@ -7,6 +7,8 @@ from pathlib import Path
 import ifcopenshell
 import ifcopenshell.ifcopenshell_wrapper as wrapper
 
+from ifc2lbd.geometry import geometry_processor
+
 def format_turtle_value(val, p, o):
     """
     Format value for Turtle syntax.
@@ -26,7 +28,7 @@ def format_turtle_value(val, p, o):
     else:
         return f'"{str(val)}"'
 
-def string_writer_mini_ifcOWL(model, output_path: str, namespaces: Dict[str, str]):
+def string_writer_mini_ifcOWL(model, output_path: str, namespaces: Dict[str, str], geometry: Optional[geometry_processor] = None):
     """
     Write IFC model to Turtle TTL format.
     
@@ -82,7 +84,16 @@ def string_writer_mini_ifcOWL(model, output_path: str, namespaces: Dict[str, str
                 else:
                     obj = format_turtle_value(value, INST, XSD)
                     pred_obj[pred].append(obj)
-        
+
+            if geometry:
+                for s, p, o in geometry.lookup(inst, subj):
+                    if s == subj:
+                        pred_obj[p].append(o)
+                    else:
+                        # @todo should be further optimized, prefixes and all...
+                        f.write(f"inst:{s.rsplit('/',1)[1]} {p} {o} .\n\n")
+                        triple_count += 1
+
             f.write(f"{subj} a ifc:{inst.is_a()}")
             triple_count += 1
 
@@ -107,7 +118,7 @@ def string_writer_mini_ifcOWL(model, output_path: str, namespaces: Dict[str, str
 
 # This one is still not functioning.
 
-def string_writer_ifcOWL(model, output_path: str, namespaces: Dict[str, str]):
+def string_writer_ifcOWL(model, output_path: str, namespaces: Dict[str, str], geometry: Optional[geometry_processor]= None):
     """
     Write IFC model to Turtle TTL format following full ifcOWL.
     
