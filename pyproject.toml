@@ -21,6 +21,8 @@ convert = "python src/main.py"
 
 [tool.pixi.feature.stable-pypi.dependencies]
 python = ">=3.11,<3.14"
+requests = "*"
+beautifulsoup4 = "*"
 
 [tool.pixi.feature.stable-conda.dependencies]
 python = "*"
@@ -57,19 +59,22 @@ test = "python src/main.py -i data/input/Duplex.ifc -o data/output/Duplex-spf.tt
 rail_test = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail.ttl --verbose"
 
 [tool.pixi.feature.experimental-conda.tasks]
-simple_test = "python src/testing_parsing/simple_test.py"
-stream_generic_test = "python src/testing_parsing/stream2_test.py"
-stream_test = "python src/lbd/TTL_writer_strings_stream.py"
-stream = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream.ttl --converter mini_ifcowl --stream --verbose"
-stream_1pass = "python src/main.py -i data/input/Girder.ifc -o data/output/Girder-stream-1pass.ttl --converter mini_ifcowl_optimized --stream --verbose --single-pass"
-stream_1pass_profiling = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream-1pass-profiling.ttl --converter mini_ifcowl_optimized --stream --verbose --single-pass --profile"
-stream_raw_dict = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-raw-dict.ttl --converter simple_triples --stream --verbose"
-stream_raw_dict_profiling = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-raw-dict-profiling.ttl --converter simple_triples --stream --verbose --profile"
-stream_raw_dict_benchmark = "python src/main.py -i data/input/Girder.ifc -o data/output/Girder-raw-dict.ttl --converter simple_triples --stream --verbose --benchmark"
-stream_profiling = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream.ttl --stream --verbose --profile"
-stream_profiling_optimized = "python src/main.py -i data/input/Girder.ifc -o data/output/Girder-stream-optimized.ttl --converter mini_ifcowl_optimized --stream --verbose --profile"
-stream_profiling_optimized_1pass = "python src/main.py -i data/input/Rail.ifc -o data/output/Rail-stream-optimized-1pass.ttl --converter mini_ifcowl_optimized --stream --verbose --profile --single-pass"
-benchmark = "python benchmarks/benchmark_collection.py"
+# Stream with 1 pass and optimized converter
+stream_1pass = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-stream-1pass.ttl --converter mini_ifcowl --stream --verbose --single-pass"
+# Stream with 1 pass, optimized converter and profiling
+stream_1pass_profiling = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-stream-1pass-profiling.ttl --converter mini_ifcowl --stream --verbose --single-pass --profile"
+# Stream with 1 pass, optimized converter and benchmarking
+stream_1pass_benchmark = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-stream-1pass-benchmark.ttl --converter mini_ifcowl --stream --verbose --single-pass --benchmark"
+
+[tool.pixi.feature.stable-pypi.tasks]
+
+stream = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-mini_ifcowl.ttl --converter mini_ifcowl --stream --verbose"
+
+stream_ifcowl = "python src/main.py -i data/input/Viadotto.ifc -o data/output/Viadotto-ifcowl.ttl --converter ifcowl --stream --verbose"
+
+refactored = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-refactored-by-co.ttl --converter co_refactored --stream --verbose --benchmark"
+
+functional = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-functional-by-co.ttl --converter co_functional --stream --verbose --benchmark"
 
 [dependency-groups]
 stable-pypi = ["ifcopenshell>=0.8.4.post1,<0.9"]
