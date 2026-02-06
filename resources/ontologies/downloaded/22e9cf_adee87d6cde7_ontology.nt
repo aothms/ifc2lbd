@@ -1,0 +1,1003 @@
+<http://w3id.org/dstv#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/dstv#> <http://purl.org/dc/terms/creator> "Victoria Jung, Lukas Kirner, Jyrki Oraskari, Timur Kuzu, Individualized Production RWTH Aachen" .
+<http://w3id.org/dstv#> <http://purl.org/dc/terms/description> "dstv"@en .
+<http://w3id.org/dstv#> <http://purl.org/dc/terms/issued> "2025-08-04"@en .
+<http://w3id.org/dstv#> <http://purl.org/dc/terms/title> "DSTV:Steel Construction Ontology"@en .
+<http://w3id.org/dstv#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dstv" .
+<http://w3id.org/dstv#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/dstv#" .
+<http://w3id.org/dstv#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/dstv#hasAdjustedProperty
+<http://w3id.org/dstv#hasAdjustedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasAdjustedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#MeasurableProperties> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasAdjustedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#PropertyState> .
+<http://w3id.org/dstv#hasAdjustedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a property that has been modified or recalculated based on measurements or processing results." .
+<http://w3id.org/dstv#hasAdjustedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has adjusted property" .
+# 
+# http://w3id.org/dstv#hasComment
+<http://w3id.org/dstv#hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasComment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasComment> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Comment> .
+<http://w3id.org/dstv#hasComment> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a feature or process to a descriptive comment or annotation." .
+<http://w3id.org/dstv#hasComment> <http://www.w3.org/2000/01/rdf-schema#label> "has comment" .
+# 
+# http://w3id.org/dstv#hasCreator
+<http://w3id.org/dstv#hasCreator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasCreator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasCreator> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Creator> .
+<http://w3id.org/dstv#hasCreator> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the entity (person or organization) responsible for creating the workpiece." .
+<http://w3id.org/dstv#hasCreator> <http://www.w3.org/2000/01/rdf-schema#label> "has creator" .
+# 
+# http://w3id.org/dstv#hasDefinedToleranceProperty
+<http://w3id.org/dstv#hasDefinedToleranceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasDefinedToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#MeasurableProperties> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasDefinedToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#hasDefinedToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a feature or process to a defined tolerance specification from a standard or design requirement." .
+<http://w3id.org/dstv#hasDefinedToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has defined tolerance property" .
+# 
+# http://w3id.org/dstv#hasDiameter
+<http://w3id.org/dstv#hasDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Diameter> .
+<http://w3id.org/dstv#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the diameter of a circular feature, such as a hole" .
+<http://w3id.org/dstv#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has diameter" .
+# 
+# http://w3id.org/dstv#hasHeight
+<http://w3id.org/dstv#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasHeight> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#ProfileDef> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Height> .
+<http://w3id.org/dstv#hasHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the height of a feature or a profile." .
+<http://w3id.org/dstv#hasHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has height" .
+# 
+# http://w3id.org/dstv#hasInformaiton
+<http://w3id.org/dstv#hasInformaiton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasInformaiton> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasInformaiton> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Information> .
+<http://w3id.org/dstv#hasInformaiton> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a workpiece to supplementary information." .
+<http://w3id.org/dstv#hasInformaiton> <http://www.w3.org/2000/01/rdf-schema#label> "has information" .
+# 
+# http://w3id.org/dstv#hasLowerToleranceLimit
+<http://w3id.org/dstv#hasLowerToleranceLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasLowerToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceLimit> .
+<http://w3id.org/dstv#hasLowerToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#PropertyState> .
+<http://w3id.org/dstv#hasLowerToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the lower boundary of an acceptable dimensional range." .
+<http://w3id.org/dstv#hasLowerToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#label> "has lower tolerance limit" .
+# 
+# http://w3id.org/dstv#hasMaterial
+<http://w3id.org/dstv#hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Material> .
+<http://w3id.org/dstv#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the material from which the workpiece is made." .
+<http://w3id.org/dstv#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has material" .
+# 
+# http://w3id.org/dstv#hasMaterialInventory
+<http://w3id.org/dstv#hasMaterialInventory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasMaterialInventory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Material> .
+<http://w3id.org/dstv#hasMaterialInventory> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#MaterialInventory> .
+<http://w3id.org/dstv#hasMaterialInventory> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a material to its inventory or stock information." .
+<http://w3id.org/dstv#hasMaterialInventory> <http://www.w3.org/2000/01/rdf-schema#label> "has material inventory" .
+# 
+# http://w3id.org/dstv#hasMeasuredProperty
+<http://w3id.org/dstv#hasMeasuredProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasMeasuredProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#MeasurableProperties> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasMeasuredProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#PropertyState> .
+<http://w3id.org/dstv#hasMeasuredProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a measurable property that was recorded during or after production." .
+<http://w3id.org/dstv#hasMeasuredProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has measured property" .
+# 
+# http://w3id.org/dstv#hasNominalsize
+<http://w3id.org/dstv#hasNominalsize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasNominalsize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceLimit> .
+<http://w3id.org/dstv#hasNominalsize> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#NominalSize> .
+<http://w3id.org/dstv#hasNominalsize> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the target or nominal size from which tolerances are derived." .
+<http://w3id.org/dstv#hasNominalsize> <http://www.w3.org/2000/01/rdf-schema#label> "has nominalsize" .
+# 
+# http://w3id.org/dstv#hasNormReference
+<http://w3id.org/dstv#hasNormReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasNormReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#hasNormReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#NormReference> .
+<http://w3id.org/dstv#hasNormReference> <http://www.w3.org/2000/01/rdf-schema#comment> "References a normative document or standard that defines the tolerance." .
+<http://w3id.org/dstv#hasNormReference> <http://www.w3.org/2000/01/rdf-schema#label> "has norm reference" .
+# 
+# http://w3id.org/dstv#hasPlannedProperty
+<http://w3id.org/dstv#hasPlannedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasPlannedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#MeasurableProperties> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasPlannedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#PropertyState> .
+<http://w3id.org/dstv#hasPlannedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a property value that is planned during the design or production phase." .
+<http://w3id.org/dstv#hasPlannedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has planned property" .
+# 
+# http://w3id.org/dstv#hasPosition
+<http://w3id.org/dstv#hasPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasPosition> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasPosition> <http://www.w3.org/2000/01/rdf-schema#range> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#VertexX> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#VertexY> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the position of a feature or process within the coordinate system of the workpiece." .
+<http://w3id.org/dstv#hasPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has position" .
+# 
+# http://w3id.org/dstv#hasProfileDef
+<http://w3id.org/dstv#hasProfileDef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasProfileDef> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasProfileDef> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#ProfileDef> .
+<http://w3id.org/dstv#hasProfileDef> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a workpiece or structural part to its profile definition, such as an I-beam or U-profile." .
+<http://w3id.org/dstv#hasProfileDef> <http://www.w3.org/2000/01/rdf-schema#label> "has profile def" .
+# 
+# http://w3id.org/dstv#hasProject
+<http://w3id.org/dstv#hasProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasProject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasProject> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Project> .
+<http://w3id.org/dstv#hasProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates the workpiece with a specific construction or production project." .
+<http://w3id.org/dstv#hasProject> <http://www.w3.org/2000/01/rdf-schema#label> "has project" .
+# 
+# http://w3id.org/dstv#hasProperties
+<http://w3id.org/dstv#hasProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasProperties> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#ProfileDef> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasProperties> <http://www.w3.org/2000/01/rdf-schema#range> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#ProcessProperties> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an object to a set of technical or geometric properties relevant for manufacturing or analysis." .
+<http://w3id.org/dstv#hasProperties> <http://www.w3.org/2000/01/rdf-schema#label> "has properties" .
+# 
+# http://w3id.org/dstv#hasReference
+<http://w3id.org/dstv#hasReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#hasReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#DimensionalReference> .
+<http://w3id.org/dstv#hasReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a reference that a feature is based on." .
+<http://w3id.org/dstv#hasReference> <http://www.w3.org/2000/01/rdf-schema#label> "has dimensional reference" .
+# 
+# http://w3id.org/dstv#hasToleranceLimit
+<http://w3id.org/dstv#hasToleranceLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#hasToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#ToleranceLimit> .
+<http://w3id.org/dstv#hasToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tolerance specification to its actual dimensional limit values." .
+<http://w3id.org/dstv#hasToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#label> "has tolerance limit" .
+# 
+# http://w3id.org/dstv#hasUpperToleranceLimit
+<http://w3id.org/dstv#hasUpperToleranceLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasUpperToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceLimit> .
+<http://w3id.org/dstv#hasUpperToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#PropertyState> .
+<http://w3id.org/dstv#hasUpperToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the upper boundary of an acceptable dimensional range." .
+<http://w3id.org/dstv#hasUpperToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#label> "has upper tolerance limit" .
+# 
+# http://w3id.org/dstv#hasView
+<http://w3id.org/dstv#hasView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasView> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/2002/07/owl#unionOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Feature> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#Process> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/dstv#hasView> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Reference> .
+<http://w3id.org/dstv#hasView> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the view of the profile where the process and feature is planned on." .
+<http://w3id.org/dstv#hasView> <http://www.w3.org/2000/01/rdf-schema#label> "has reference view" .
+# 
+# http://w3id.org/dstv#hasWidth
+<http://w3id.org/dstv#hasWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#hasWidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Width> .
+<http://w3id.org/dstv#hasWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the width of a feature or a profile." .
+<http://w3id.org/dstv#hasWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has width" .
+# 
+# http://w3id.org/dstv#hasfeature
+<http://w3id.org/dstv#hasfeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasfeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasfeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#hasfeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a workpiece with its geometric or functional features." .
+<http://w3id.org/dstv#hasfeature> <http://www.w3.org/2000/01/rdf-schema#label> "has feature" .
+# 
+# http://w3id.org/dstv#hasfeaturevalues
+<http://w3id.org/dstv#hasfeaturevalues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasfeaturevalues> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#hasfeaturevalues> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#hasfeaturevalues> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to concrete values that describe the feature, such as dimensions or angles." .
+<http://w3id.org/dstv#hasfeaturevalues> <http://www.w3.org/2000/01/rdf-schema#label> "has feature values" .
+# 
+# http://w3id.org/dstv#hasgeneralinformation
+<http://w3id.org/dstv#hasgeneralinformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#hasgeneralinformation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#hasgeneralinformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#GeneralInformation> .
+<http://w3id.org/dstv#hasgeneralinformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a workpiece to general metadata such as date, client, or job description." .
+<http://w3id.org/dstv#hasgeneralinformation> <http://www.w3.org/2000/01/rdf-schema#label> "has general information" .
+# 
+# http://w3id.org/dstv#preDefinedType
+<http://w3id.org/dstv#preDefinedType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/dstv#preDefinedType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceLimit> .
+<http://w3id.org/dstv#preDefinedType> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#ToleranceClasses> .
+<http://w3id.org/dstv#preDefinedType> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a predefined tolerance class." .
+<http://w3id.org/dstv#preDefinedType> <http://www.w3.org/2000/01/rdf-schema#label> "pre defined type" .
+# 
+# http://w3id.org/ioc#hasInputElement
+<http://w3id.org/ioc#hasInputElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/ioc#hasInputElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Process> .
+<http://w3id.org/ioc#hasInputElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/ioc#hasInputElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the input workpiece to a process step." .
+<http://w3id.org/ioc#hasInputElement> <http://www.w3.org/2000/01/rdf-schema#label> "has input element" .
+# 
+# http://w3id.org/ioc#hasOutputElement
+<http://w3id.org/ioc#hasOutputElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/ioc#hasOutputElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Process> .
+<http://w3id.org/ioc#hasOutputElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/ioc#hasOutputElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the result or product of a process, typically a new or modified feature." .
+<http://w3id.org/ioc#hasOutputElement> <http://www.w3.org/2000/01/rdf-schema#label> "has output element" .
+# 
+# https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identification
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Workpiece> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identification> <http://www.w3.org/2000/01/rdf-schema#range> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identification> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides a unique identifier for the workpiece in compliance with IFC standards." .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identification> <http://www.w3.org/2000/01/rdf-schema#label> "identification" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org#Value
+<http://schema.org#Value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org#Value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#PropertyState> .
+<http://schema.org#Value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://schema.org#Value> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the actual value of a planned, measured, calculated or defined tolerance property." .
+<http://schema.org#Value> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
+# 
+# http://w3id.org/dstv#AdditionalTolerance1
+<http://w3id.org/dstv#AdditionalTolerance1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#AdditionalTolerance1> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceClasses> .
+<http://w3id.org/dstv#AdditionalTolerance1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#AdditionalTolerance1> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the first additional tolerance value applied to the basic tolerance." .
+<http://w3id.org/dstv#AdditionalTolerance1> <http://www.w3.org/2000/01/rdf-schema#label> "additional tolerance 1" .
+# 
+# http://w3id.org/dstv#AdditionalTolerance2
+<http://w3id.org/dstv#AdditionalTolerance2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#AdditionalTolerance2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceClasses> .
+<http://w3id.org/dstv#AdditionalTolerance2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#AdditionalTolerance2> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the second additional tolerance value applied to the basic tolerance." .
+<http://w3id.org/dstv#AdditionalTolerance2> <http://www.w3.org/2000/01/rdf-schema#label> "additional tolerance 2" .
+# 
+# http://w3id.org/dstv#BasicTolerance
+<http://w3id.org/dstv#BasicTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#BasicTolerance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#ToleranceClasses> .
+<http://w3id.org/dstv#BasicTolerance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#BasicTolerance> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the base tolerance value for a particular tolerance class." .
+<http://w3id.org/dstv#BasicTolerance> <http://www.w3.org/2000/01/rdf-schema#label> "basic tolerance" .
+# 
+# http://w3id.org/dstv#Company
+<http://w3id.org/dstv#Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#Company> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Creator> .
+<http://w3id.org/dstv#Company> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#Company> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the company or organization that created the element." .
+<http://w3id.org/dstv#Company> <http://www.w3.org/2000/01/rdf-schema#label> "company" .
+# 
+# http://w3id.org/dstv#DrawingNumber
+<http://w3id.org/dstv#DrawingNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#DrawingNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Information> .
+<http://w3id.org/dstv#DrawingNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#DrawingNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the engineering or technical drawing number related to the workpiece." .
+<http://w3id.org/dstv#DrawingNumber> <http://www.w3.org/2000/01/rdf-schema#label> "drawing number" .
+# 
+# http://w3id.org/dstv#MaterialDelivery
+<http://w3id.org/dstv#MaterialDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#MaterialDelivery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#MaterialInventory> .
+<http://w3id.org/dstv#MaterialDelivery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#MaterialDelivery> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the delivery status or date of the material." .
+<http://w3id.org/dstv#MaterialDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "material delivery" .
+# 
+# http://w3id.org/dstv#MaterialGrade
+<http://w3id.org/dstv#MaterialGrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#MaterialGrade> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Material> .
+<http://w3id.org/dstv#MaterialGrade> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#MaterialGrade> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the classification or quality grade of the material." .
+<http://w3id.org/dstv#MaterialGrade> <http://www.w3.org/2000/01/rdf-schema#label> "material grade" .
+# 
+# http://w3id.org/dstv#MaterialID
+<http://w3id.org/dstv#MaterialID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#MaterialID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Material> .
+<http://w3id.org/dstv#MaterialID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#MaterialID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier for the material used in the workpiece." .
+<http://w3id.org/dstv#MaterialID> <http://www.w3.org/2000/01/rdf-schema#label> "material i d" .
+# 
+# http://w3id.org/dstv#MaterialQuality
+<http://w3id.org/dstv#MaterialQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#MaterialQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Material> .
+<http://w3id.org/dstv#MaterialQuality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#MaterialQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the quality condition or specification of the material." .
+<http://w3id.org/dstv#MaterialQuality> <http://www.w3.org/2000/01/rdf-schema#label> "material quality" .
+# 
+# http://w3id.org/dstv#MaterialStock
+<http://w3id.org/dstv#MaterialStock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#MaterialStock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#MaterialInventory> .
+<http://w3id.org/dstv#MaterialStock> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#MaterialStock> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of material currently in inventory or stock." .
+<http://w3id.org/dstv#MaterialStock> <http://www.w3.org/2000/01/rdf-schema#label> "material stock" .
+# 
+# http://w3id.org/dstv#MaterialSupplier
+<http://w3id.org/dstv#MaterialSupplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#MaterialSupplier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#MaterialInventory> .
+<http://w3id.org/dstv#MaterialSupplier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#MaterialSupplier> <http://www.w3.org/2000/01/rdf-schema#comment> "Name or identifier of the supplier providing the material." .
+<http://w3id.org/dstv#MaterialSupplier> <http://www.w3.org/2000/01/rdf-schema#label> "material supplier" .
+# 
+# http://w3id.org/dstv#Object
+<http://w3id.org/dstv#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#Object> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Project> .
+<http://w3id.org/dstv#Object> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the construction or production object name related to the project." .
+<http://w3id.org/dstv#Object> <http://www.w3.org/2000/01/rdf-schema#label> "object" .
+# 
+# http://w3id.org/dstv#Order
+<http://w3id.org/dstv#Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#Order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Project> .
+<http://w3id.org/dstv#Order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#Order> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the production or project order identifier." .
+<http://w3id.org/dstv#Order> <http://www.w3.org/2000/01/rdf-schema#label> "order" .
+# 
+# http://w3id.org/dstv#OrderNumber
+<http://w3id.org/dstv#OrderNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#OrderNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Information> .
+<http://w3id.org/dstv#OrderNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#OrderNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique number used to track or identify the order associated with the component." .
+<http://w3id.org/dstv#OrderNumber> <http://www.w3.org/2000/01/rdf-schema#label> "order number" .
+# 
+# http://w3id.org/dstv#Orderer
+<http://w3id.org/dstv#Orderer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#Orderer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Project> .
+<http://w3id.org/dstv#Orderer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#Orderer> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity (person or organization) who placed the order for the project." .
+<http://w3id.org/dstv#Orderer> <http://www.w3.org/2000/01/rdf-schema#label> "orderer" .
+# 
+# http://w3id.org/dstv#PartNumber
+<http://w3id.org/dstv#PartNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#PartNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Information> .
+<http://w3id.org/dstv#PartNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#PartNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique part number assigned to the workpiece or component." .
+<http://w3id.org/dstv#PartNumber> <http://www.w3.org/2000/01/rdf-schema#label> "part number" .
+# 
+# http://w3id.org/dstv#PositionNumber
+<http://w3id.org/dstv#PositionNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#PositionNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Information> .
+<http://w3id.org/dstv#PositionNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#PositionNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the position number of the component within the assembly or drawing. Here, the part can be identified as either a main part or a sub-part." .
+<http://w3id.org/dstv#PositionNumber> <http://www.w3.org/2000/01/rdf-schema#label> "position number" .
+# 
+# http://w3id.org/dstv#Release
+<http://w3id.org/dstv#Release> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#Release> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Creator> .
+<http://w3id.org/dstv#Release> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://w3id.org/dstv#Release> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the date and time when the detailing of the steel element was officially released." .
+<http://w3id.org/dstv#Release> <http://www.w3.org/2000/01/rdf-schema#label> "release" .
+# 
+# http://w3id.org/dstv#SupplyCondition
+<http://w3id.org/dstv#SupplyCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#SupplyCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Material> .
+<http://w3id.org/dstv#SupplyCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#SupplyCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the delivery or supply condition of the raw material." .
+<http://w3id.org/dstv#SupplyCondition> <http://www.w3.org/2000/01/rdf-schema#label> "supply condition" .
+# 
+# http://w3id.org/dstv#System
+<http://w3id.org/dstv#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#System> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Creator> .
+<http://w3id.org/dstv#System> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#System> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the system or application used during creation of the component or model." .
+<http://w3id.org/dstv#System> <http://www.w3.org/2000/01/rdf-schema#label> "system" .
+# 
+# http://w3id.org/dstv#User
+<http://w3id.org/dstv#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#User> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Creator> .
+<http://w3id.org/dstv#User> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#User> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the user who created or edited the element." .
+<http://w3id.org/dstv#User> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
+# 
+# http://w3id.org/dstv#Weightpm
+<http://w3id.org/dstv#Weightpm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/dstv#Weightpm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#Information> .
+<http://w3id.org/dstv#Weightpm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/dstv#Weightpm> <http://www.w3.org/2000/01/rdf-schema#comment> "Weight per meter of the component or profile." .
+<http://w3id.org/dstv#Weightpm> <http://www.w3.org/2000/01/rdf-schema#label> "weightpm" .
+# 
+# http://www.w3.org/ns/prov#GeneratedAtTime
+<http://www.w3.org/ns/prov#GeneratedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#GeneratedAtTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/dstv#PropertyState> .
+<http://www.w3.org/ns/prov#GeneratedAtTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.w3.org/ns/prov#GeneratedAtTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp when the property state or measurement was generated." .
+<http://www.w3.org/ns/prov#GeneratedAtTime> <http://www.w3.org/2000/01/rdf-schema#label> "generated at time" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/dstv#AdjustmentProcess
+<http://w3id.org/dstv#AdjustmentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#AdjustmentProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Process> .
+<http://w3id.org/dstv#AdjustmentProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A process in which existing properties are corrected or adjusted, e.g. alignment or re-measurement after initial fabrication." .
+<http://w3id.org/dstv#AdjustmentProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Adjustment Process" .
+# 
+# http://w3id.org/dstv#Assembly
+<http://w3id.org/dstv#Assembly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Assembly> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Assembly> <http://www.w3.org/2000/01/rdf-schema#comment> "A production process where multiple components are joined or assembled into a final workpiece." .
+<http://w3id.org/dstv#Assembly> <http://www.w3.org/2000/01/rdf-schema#label> "Assembly" .
+# 
+# http://w3id.org/dstv#Beam
+<http://w3id.org/dstv#Beam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Beam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Profile> .
+<http://w3id.org/dstv#Beam> <http://www.w3.org/2000/01/rdf-schema#comment> "A Beam is usually a horizontal or almost horizontal component that can be loaded primarily by bending. For steel construction fabrication, the Beam must have a parametric profile and the volume geometry must consist of an extrusion. The extrusion direction must correspond to the x-direction of the local coordinate system." .
+<http://w3id.org/dstv#Beam> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBeam> .
+<http://w3id.org/dstv#Beam> <http://www.w3.org/2000/01/rdf-schema#label> "Beam" .
+# 
+# http://w3id.org/dstv#Bending
+<http://w3id.org/dstv#Bending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Bending> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Bending> <http://www.w3.org/2000/01/rdf-schema#comment> "A process where material is plastically deformed into a curved shape." .
+<http://w3id.org/dstv#Bending> <http://www.w3.org/2000/01/rdf-schema#label> "Bending" .
+# 
+# http://w3id.org/dstv#BlindHoleDrill
+<http://w3id.org/dstv#BlindHoleDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#BlindHoleDrill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Drill> .
+<http://w3id.org/dstv#BlindHoleDrill> <http://www.w3.org/2000/01/rdf-schema#comment> "A drilling process that creates a hole which does not pass completely through the material." .
+<http://w3id.org/dstv#BlindHoleDrill> <http://www.w3.org/2000/01/rdf-schema#label> "Blind Hole Drill" .
+# 
+# http://w3id.org/dstv#Bolting
+<http://w3id.org/dstv#Bolting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Bolting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Assembly> .
+<http://w3id.org/dstv#Bolting> <http://www.w3.org/2000/01/rdf-schema#comment> "An assembly process using bolts to join components." .
+<http://w3id.org/dstv#Bolting> <http://www.w3.org/2000/01/rdf-schema#label> "Bolting" .
+# 
+# http://w3id.org/dstv#BottomReference
+<http://w3id.org/dstv#BottomReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#BottomReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DimensionalReference> .
+<http://w3id.org/dstv#BottomReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference datum positioned at the bottom edge or surface of a component." .
+<http://w3id.org/dstv#BottomReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/dstv#> .
+<http://w3id.org/dstv#BottomReference> <http://www.w3.org/2000/01/rdf-schema#label> "Bottom Reference" .
+# 
+# http://w3id.org/dstv#BottomView
+<http://w3id.org/dstv#BottomView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#BottomView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Reference> .
+<http://w3id.org/dstv#BottomView> <http://www.w3.org/2000/01/rdf-schema#comment> "A view representing the bottom side of a workpiece." .
+<http://w3id.org/dstv#BottomView> <http://www.w3.org/2000/01/rdf-schema#label> "Bottom View" .
+# 
+# http://w3id.org/dstv#Column
+<http://w3id.org/dstv#Column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Column> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Profile> .
+<http://w3id.org/dstv#Column> <http://www.w3.org/2000/01/rdf-schema#comment> "A Column is a vertical structural member which often is aligned with a structural grid intersection. For steel construction fabrication, the Column must have a parametric profile and the volume geometry must consist of an extrusion. The extrusion direction must correspond to the x-direction of the local coordinate system." .
+<http://w3id.org/dstv#Column> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcColumn> .
+<http://w3id.org/dstv#Column> <http://www.w3.org/2000/01/rdf-schema#label> "Column" .
+# 
+# http://w3id.org/dstv#Comment
+<http://w3id.org/dstv#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<http://w3id.org/dstv#Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation or remark associated with a feature, process, or workpiece. Specifications between two entities can be exchanged here" .
+<http://w3id.org/dstv#Comment> <http://www.w3.org/2000/01/rdf-schema#label> "Comment" .
+# 
+# http://w3id.org/dstv#CountersinkHoleDrill
+<http://w3id.org/dstv#CountersinkHoleDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#CountersinkHoleDrill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Drill> .
+<http://w3id.org/dstv#CountersinkHoleDrill> <http://www.w3.org/2000/01/rdf-schema#comment> "A drilling process that creates a countersunk hole, typically for flush bolt heads." .
+<http://w3id.org/dstv#CountersinkHoleDrill> <http://www.w3.org/2000/01/rdf-schema#label> "Countersink Hole Drill" .
+# 
+# http://w3id.org/dstv#Creator
+<http://w3id.org/dstv#Creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Creator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<http://w3id.org/dstv#Creator> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the person or organization that produced the workpiece." .
+<http://w3id.org/dstv#Creator> <http://www.w3.org/2000/01/rdf-schema#label> "Creator" .
+# 
+# http://w3id.org/dstv#Cutting
+<http://w3id.org/dstv#Cutting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Cutting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Cutting> <http://www.w3.org/2000/01/rdf-schema#comment> "A production process where material is removed or separated by cutting." .
+<http://w3id.org/dstv#Cutting> <http://www.w3.org/2000/01/rdf-schema#label> "Cutting" .
+# 
+# http://w3id.org/dstv#DefinedTolerance
+<http://w3id.org/dstv#DefinedTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#DefinedTolerance> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification of allowable deviation from nominal dimensions." .
+<http://w3id.org/dstv#DefinedTolerance> <http://www.w3.org/2000/01/rdf-schema#label> "Defined Tolerance" .
+# 
+# http://w3id.org/dstv#Depth
+<http://w3id.org/dstv#Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Depth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#Depth> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimensional value representing how deep a feature extends into the material." .
+<http://w3id.org/dstv#Depth> <http://www.w3.org/2000/01/rdf-schema#label> "Depth" .
+# 
+# http://w3id.org/dstv#Diameter
+<http://w3id.org/dstv#Diameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Diameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#Diameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimensional value describing the width across a circular feature." .
+<http://w3id.org/dstv#Diameter> <http://www.w3.org/2000/01/rdf-schema#label> "Diameter" .
+# 
+# http://w3id.org/dstv#DimensionalReference
+<http://w3id.org/dstv#DimensionalReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#DimensionalReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference geometry or datum used to define dimensions relative to features." .
+<http://w3id.org/dstv#DimensionalReference> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensional Reference" .
+# 
+# http://w3id.org/dstv#Drill
+<http://w3id.org/dstv#Drill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Drill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Drill> <http://www.w3.org/2000/01/rdf-schema#comment> "A fabrication process to produce holes using a drill tool." .
+<http://w3id.org/dstv#Drill> <http://www.w3.org/2000/01/rdf-schema#label> "Drill" .
+# 
+# http://w3id.org/dstv#Feature
+<http://w3id.org/dstv#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "A geometric or functional element of a workpiece which represents a steel fabrication output element of a specific process" .
+<http://w3id.org/dstv#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# http://w3id.org/dstv#FeatureValues
+<http://w3id.org/dstv#FeatureValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#FeatureValues> <http://www.w3.org/2000/01/rdf-schema#comment> "A container class for planned, actual measured or nominal geometric dimensions of a feature." .
+<http://w3id.org/dstv#FeatureValues> <http://www.w3.org/2000/01/rdf-schema#label> "Feature Values" .
+# 
+# http://w3id.org/dstv#FrontView
+<http://w3id.org/dstv#FrontView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#FrontView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Reference> .
+<http://w3id.org/dstv#FrontView> <http://www.w3.org/2000/01/rdf-schema#comment> "A view representing the front side of a workpiece." .
+<http://w3id.org/dstv#FrontView> <http://www.w3.org/2000/01/rdf-schema#label> "Front View" .
+# 
+# http://w3id.org/dstv#GeneralInformation
+<http://w3id.org/dstv#GeneralInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#GeneralInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "A superclass for metadata or descriptive information about entities." .
+<http://w3id.org/dstv#GeneralInformation> <http://www.w3.org/2000/01/rdf-schema#label> "General Information" .
+# 
+# http://w3id.org/dstv#Height
+<http://w3id.org/dstv#Height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Height> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#Height> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimensional value measuring vertical extent of a feature or profile" .
+<http://w3id.org/dstv#Height> <http://www.w3.org/2000/01/rdf-schema#label> "Height" .
+# 
+# http://w3id.org/dstv#Information
+<http://w3id.org/dstv#Information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<http://w3id.org/dstv#Information> <http://www.w3.org/2000/01/rdf-schema#comment> "General metadata describing aspects of a workpiece." .
+<http://w3id.org/dstv#Information> <http://www.w3.org/2000/01/rdf-schema#label> "Information" .
+# 
+# http://w3id.org/dstv#InternalContouring
+<http://w3id.org/dstv#InternalContouring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#InternalContouring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Cutting> .
+<http://w3id.org/dstv#InternalContouring> <http://www.w3.org/2000/01/rdf-schema#comment> "A cutting process to produce internal shapes or voids within a workpiece." .
+<http://w3id.org/dstv#InternalContouring> <http://www.w3.org/2000/01/rdf-schema#label> "Internal Contouring" .
+# 
+# http://w3id.org/dstv#InternalCountour
+<http://w3id.org/dstv#InternalCountour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#InternalCountour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#VoidingFeature> .
+<http://w3id.org/dstv#InternalCountour> <http://www.w3.org/2000/01/rdf-schema#comment> "An internal cutout (creating an opening) or external cutout (creating a recess) of arbitrary shape. The edges between cutting planes may be overcut or undercut, i.e. rounded." .
+<http://w3id.org/dstv#InternalCountour> <http://www.w3.org/2000/01/rdf-schema#label> "Internal Countour" .
+# 
+# http://w3id.org/dstv#Material
+<http://w3id.org/dstv#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Material> .
+<http://w3id.org/dstv#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A class representing physical material of a workpiece." .
+<http://w3id.org/dstv#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+# 
+# http://w3id.org/dstv#MaterialInventory
+<http://w3id.org/dstv#MaterialInventory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#MaterialInventory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<http://w3id.org/dstv#MaterialInventory> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata about material stock, delivery, and supplier." .
+<http://w3id.org/dstv#MaterialInventory> <http://www.w3.org/2000/01/rdf-schema#label> "Material Inventory" .
+# 
+# http://w3id.org/dstv#MeasurableProcessProperties
+<http://w3id.org/dstv#MeasurableProcessProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#MeasurableProcessProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#MeasurableProperties> .
+<http://w3id.org/dstv#MeasurableProcessProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifiable attributes of a process, such as feed rate or speed." .
+<http://w3id.org/dstv#MeasurableProcessProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Measurable Process Properties" .
+# 
+# http://w3id.org/dstv#MeasurableProfileProperties
+<http://w3id.org/dstv#MeasurableProfileProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#MeasurableProfileProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#MeasurableProperties> .
+<http://w3id.org/dstv#MeasurableProfileProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifiable properties of a profile or a feature" .
+<http://w3id.org/dstv#MeasurableProfileProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Measurable Profile Properties" .
+# 
+# http://w3id.org/dstv#MeasurableProperties
+<http://w3id.org/dstv#MeasurableProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#MeasurableProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Superclass grouping measurable features or properties." .
+<http://w3id.org/dstv#MeasurableProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Measurable Properties" .
+# 
+# http://w3id.org/dstv#Milling
+<http://w3id.org/dstv#Milling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Milling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Milling> <http://www.w3.org/2000/01/rdf-schema#comment> "A machining process using rotary cutting tools to remove material." .
+<http://w3id.org/dstv#Milling> <http://www.w3.org/2000/01/rdf-schema#label> "Milling" .
+# 
+# http://w3id.org/dstv#Mitre
+<http://w3id.org/dstv#Mitre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Mitre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Mitre> <http://www.w3.org/2000/01/rdf-schema#comment> "A process producing angled cuts (miter joints) between components." .
+<http://w3id.org/dstv#Mitre> <http://www.w3.org/2000/01/rdf-schema#label> "Mitre" .
+# 
+# http://w3id.org/dstv#NominalSize
+<http://w3id.org/dstv#NominalSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#NominalSize> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#NominalSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The target dimension from which tolerances are defined." .
+<http://w3id.org/dstv#NominalSize> <http://www.w3.org/2000/01/rdf-schema#label> "Nominal Size" .
+# 
+# http://w3id.org/dstv#NormReference
+<http://w3id.org/dstv#NormReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#NormReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#NormReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to a normative standard defining tolerance classes." .
+<http://w3id.org/dstv#NormReference> <http://www.w3.org/2000/01/rdf-schema#label> "Norm Reference" .
+# 
+# http://w3id.org/dstv#Plate
+<http://w3id.org/dstv#Plate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Plate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#Plate> <http://www.w3.org/2000/01/rdf-schema#comment> "An Plate is a planar and often flat part with constant thickness. A plate may carry loads between or beyond points of support, or provide stiffening. The location of the plate (being horizontal, vertical or sloped) is not relevant to its definition. For steel construction fabrication, the Plate must have a  profile and the volume geometry must consist of an extrusion." .
+<http://w3id.org/dstv#Plate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcPlate> .
+<http://w3id.org/dstv#Plate> <http://www.w3.org/2000/01/rdf-schema#label> "Plate" .
+# 
+# http://w3id.org/dstv#Process
+<http://w3id.org/dstv#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "The generic class process serves as the central element of the construction process ontology. It can represent a classical process or a subfield common in some definitions such as an activity or a task. Here it is used to describe processes in steel fabrication." .
+<http://w3id.org/dstv#Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/ioc#Process> .
+<http://w3id.org/dstv#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process" .
+# 
+# http://w3id.org/dstv#ProcessProperties
+<http://w3id.org/dstv#ProcessProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ProcessProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#MeasurableProcessProperties> .
+<http://w3id.org/dstv#ProcessProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific measurable parameters of a process step." .
+<http://w3id.org/dstv#ProcessProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Process Properties" .
+# 
+# http://w3id.org/dstv#ProductionProcess
+<http://w3id.org/dstv#ProductionProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ProductionProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Process> .
+<http://w3id.org/dstv#ProductionProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A process directly involved in fabrication or modification of the workpiece." .
+<http://w3id.org/dstv#ProductionProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Production Process" .
+# 
+# http://w3id.org/dstv#Profile
+<http://w3id.org/dstv#Profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Workpiece> .
+<http://w3id.org/dstv#Profile> <http://www.w3.org/2000/01/rdf-schema#comment> "A linear structural member with a standardized cross-section." .
+<http://w3id.org/dstv#Profile> <http://www.w3.org/2000/01/rdf-schema#label> "Profile" .
+# 
+# http://w3id.org/dstv#ProfileDef
+<http://w3id.org/dstv#ProfileDef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ProfileDef> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition of a profile shape according to IFC standard." .
+<http://w3id.org/dstv#ProfileDef> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcProfileDef" .
+<http://w3id.org/dstv#ProfileDef> <http://www.w3.org/2000/01/rdf-schema#label> "Profile Def" .
+# 
+# http://w3id.org/dstv#Project
+<http://w3id.org/dstv#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<http://w3id.org/dstv#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata about the production or construction project." .
+<http://w3id.org/dstv#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+# 
+# http://w3id.org/dstv#PropertyState
+<http://w3id.org/dstv#PropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#PropertyState> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an instance of a measurable property at a given time or condition." .
+<http://w3id.org/dstv#PropertyState> <http://www.w3.org/2000/01/rdf-schema#label> "Property State" .
+# 
+# http://w3id.org/dstv#Punching
+<http://w3id.org/dstv#Punching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Punching> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Punching> <http://www.w3.org/2000/01/rdf-schema#comment> "A process removing material using a punch press to create holes or shapes." .
+<http://w3id.org/dstv#Punching> <http://www.w3.org/2000/01/rdf-schema#label> "Punching" .
+# 
+# http://w3id.org/dstv#QualityCheck
+<http://w3id.org/dstv#QualityCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#QualityCheck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Process> .
+<http://w3id.org/dstv#QualityCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "A process step intended to assess or validate conformity of features." .
+<http://w3id.org/dstv#QualityCheck> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Check" .
+# 
+# http://w3id.org/dstv#RearView
+<http://w3id.org/dstv#RearView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#RearView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Reference> .
+<http://w3id.org/dstv#RearView> <http://www.w3.org/2000/01/rdf-schema#comment> "A view representing the rear side of a workpiece." .
+<http://w3id.org/dstv#RearView> <http://www.w3.org/2000/01/rdf-schema#label> "Rear View" .
+# 
+# http://w3id.org/dstv#Reference
+<http://w3id.org/dstv#Reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Reference> <http://www.w3.org/2000/01/rdf-schema#comment> "A general viewpoint or reference projection used for feature specification." .
+<http://w3id.org/dstv#Reference> <http://www.w3.org/2000/01/rdf-schema#label> "Reference View" .
+# 
+# http://w3id.org/dstv#Sawing
+<http://w3id.org/dstv#Sawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Sawing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Sawing> <http://www.w3.org/2000/01/rdf-schema#comment> "A cutting process using a saw to separate material." .
+<http://w3id.org/dstv#Sawing> <http://www.w3.org/2000/01/rdf-schema#label> "Sawing" .
+# 
+# http://w3id.org/dstv#Scanning
+<http://w3id.org/dstv#Scanning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Scanning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#QualityCheck> .
+<http://w3id.org/dstv#Scanning> <http://www.w3.org/2000/01/rdf-schema#comment> "A process where measurement equipment captures feature dimensions or geometry." .
+<http://w3id.org/dstv#Scanning> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement Process" .
+# 
+# http://w3id.org/dstv#Signing
+<http://w3id.org/dstv#Signing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Signing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#Signing> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of marking or labeling components, e.g. engraving or stamping identification." .
+<http://w3id.org/dstv#Signing> <http://www.w3.org/2000/01/rdf-schema#label> "Signing" .
+# 
+# http://w3id.org/dstv#SurfaceFeature
+<http://w3id.org/dstv#SurfaceFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#SurfaceFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#SurfaceFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A surface feature is a modification at (onto, or into) of the surface of an element. Parts of the surface of the entire surface may be affected. The volume and mass of the element may be increased, remain unchanged, or be decreased by the surface feature, depending on manufacturing technology. However, any increase or decrease of volume is small compared to the total volume of the element. In steel fabrication each surface feature is representing a fabrication process step which manipulates the surface of the workpiece e.g. blasting, painting, marking." .
+<http://w3id.org/dstv#SurfaceFeature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcSurfaceFeature> .
+<http://w3id.org/dstv#SurfaceFeature> <http://www.w3.org/2000/01/rdf-schema#label> "Surface Feature" .
+# 
+# http://w3id.org/dstv#SurfaceTreatment
+<http://w3id.org/dstv#SurfaceTreatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#SurfaceTreatment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#ProductionProcess> .
+<http://w3id.org/dstv#SurfaceTreatment> <http://www.w3.org/2000/01/rdf-schema#comment> "Processes such as painting, galvanizing, or coating applied to the surface." .
+<http://w3id.org/dstv#SurfaceTreatment> <http://www.w3.org/2000/01/rdf-schema#label> "Surface Treatment" .
+# 
+# http://w3id.org/dstv#SymmetricalReference
+<http://w3id.org/dstv#SymmetricalReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#SymmetricalReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DimensionalReference> .
+<http://w3id.org/dstv#SymmetricalReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference datum centered or mirrored along a symmetry plane." .
+<http://w3id.org/dstv#SymmetricalReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/dstv#> .
+<http://w3id.org/dstv#SymmetricalReference> <http://www.w3.org/2000/01/rdf-schema#label> "Symmetrical Reference" .
+# 
+# http://w3id.org/dstv#ThreadedHoleDrill
+<http://w3id.org/dstv#ThreadedHoleDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ThreadedHoleDrill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Drill> .
+<http://w3id.org/dstv#ThreadedHoleDrill> <http://www.w3.org/2000/01/rdf-schema#comment> "A drilling process that creates a threaded hole with internal screw threads." .
+<http://w3id.org/dstv#ThreadedHoleDrill> <http://www.w3.org/2000/01/rdf-schema#label> "Threaded Hole Drill" .
+# 
+# http://w3id.org/dstv#ThroughHole
+<http://w3id.org/dstv#ThroughHole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ThroughHole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#VoidingFeature> .
+<http://w3id.org/dstv#ThroughHole> <http://www.w3.org/2000/01/rdf-schema#comment> "A circular or slotted or threaded hole, typically but not necessarily of smaller dimension than what would be considered a cutout." .
+<http://w3id.org/dstv#ThroughHole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#HOLE" .
+<http://w3id.org/dstv#ThroughHole> <http://www.w3.org/2000/01/rdf-schema#label> "Through Hole" .
+# 
+# http://w3id.org/dstv#ThroughHoleDrill
+<http://w3id.org/dstv#ThroughHoleDrill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ThroughHoleDrill> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Drill> .
+<http://w3id.org/dstv#ThroughHoleDrill> <http://www.w3.org/2000/01/rdf-schema#comment> "A drilling process that produces a hole through the entire workpiece." .
+<http://w3id.org/dstv#ThroughHoleDrill> <http://www.w3.org/2000/01/rdf-schema#label> "Through Hole Drill" .
+# 
+# http://w3id.org/dstv#ToleranceClasses
+<http://w3id.org/dstv#ToleranceClasses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ToleranceClasses> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#ToleranceClasses> <http://www.w3.org/2000/01/rdf-schema#comment> "Classes categorizing tolerance ranges" .
+<http://w3id.org/dstv#ToleranceClasses> <http://www.w3.org/2000/01/rdf-schema#label> "Tolerance Classes" .
+# 
+# http://w3id.org/dstv#ToleranceLimit
+<http://w3id.org/dstv#ToleranceLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DefinedTolerance> .
+<http://w3id.org/dstv#ToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific upper or lower bound defined for a tolerance class." .
+<http://w3id.org/dstv#ToleranceLimit> <http://www.w3.org/2000/01/rdf-schema#label> "Tolerance Limit" .
+# 
+# http://w3id.org/dstv#TopReference
+<http://w3id.org/dstv#TopReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#TopReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#DimensionalReference> .
+<http://w3id.org/dstv#TopReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference datum at the top edge or surface of a component." .
+<http://w3id.org/dstv#TopReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/dstv#> .
+<http://w3id.org/dstv#TopReference> <http://www.w3.org/2000/01/rdf-schema#label> "Top Reference" .
+# 
+# http://w3id.org/dstv#TopView
+<http://w3id.org/dstv#TopView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#TopView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Reference> .
+<http://w3id.org/dstv#TopView> <http://www.w3.org/2000/01/rdf-schema#comment> "A view representing the top side of a workpiece." .
+<http://w3id.org/dstv#TopView> <http://www.w3.org/2000/01/rdf-schema#label> "Top View" .
+# 
+# http://w3id.org/dstv#ValidationProcess
+<http://w3id.org/dstv#ValidationProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#ValidationProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#QualityCheck> .
+<http://w3id.org/dstv#ValidationProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific quality check process verifying compliance to specifications." .
+<http://w3id.org/dstv#ValidationProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Validation Process" .
+# 
+# http://w3id.org/dstv#VertexX
+<http://w3id.org/dstv#VertexX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#VertexX> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#VertexX> <http://www.w3.org/2000/01/rdf-schema#comment> "The X‑coordinate value of a vertex point defining a feature location." .
+<http://w3id.org/dstv#VertexX> <http://www.w3.org/2000/01/rdf-schema#label> "Vertex X" .
+# 
+# http://w3id.org/dstv#VertexY
+<http://w3id.org/dstv#VertexY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#VertexY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#VertexY> <http://www.w3.org/2000/01/rdf-schema#comment> "The Y‑coordinate value of a vertex point defining a feature location." .
+<http://w3id.org/dstv#VertexY> <http://www.w3.org/2000/01/rdf-schema#label> "Vertex Y" .
+# 
+# http://w3id.org/dstv#VoidingFeature
+<http://w3id.org/dstv#VoidingFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#VoidingFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Feature> .
+<http://w3id.org/dstv#VoidingFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A voiding feature is a modification of an element which reduces its volume. Such a feature may be manufactured in different ways, for example by cutting, drilling, or milling of members made of various materials, or by inlays into the formwork of cast members made of materials such as concrete. In steel fabrication each voiding element representation a fabrication process step, which significantly reduces the volume e.g. drilling, milling, sawing." .
+<http://w3id.org/dstv#VoidingFeature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcVoidingFeature> .
+<http://w3id.org/dstv#VoidingFeature> <http://www.w3.org/2000/01/rdf-schema#label> "Voiding Feature" .
+# 
+# http://w3id.org/dstv#Welding
+<http://w3id.org/dstv#Welding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Welding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#Assembly> .
+<http://w3id.org/dstv#Welding> <http://www.w3.org/2000/01/rdf-schema#comment> "An assembly process using fusion to join metal components." .
+<http://w3id.org/dstv#Welding> <http://www.w3.org/2000/01/rdf-schema#label> "Welding" .
+# 
+# http://w3id.org/dstv#Width
+<http://w3id.org/dstv#Width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Width> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#FeatureValues> .
+<http://w3id.org/dstv#Width> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimensional value representing how wide a feature or profile is." .
+<http://w3id.org/dstv#Width> <http://www.w3.org/2000/01/rdf-schema#label> "Width" .
+# 
+# http://w3id.org/dstv#Workpiece
+<http://w3id.org/dstv#Workpiece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/dstv#Workpiece> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical element or component to be manufactured within a structural project." .
+<http://w3id.org/dstv#Workpiece> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuildingElement> .
+<http://w3id.org/dstv#Workpiece> <http://www.w3.org/2000/01/rdf-schema#label> "Workpiece" .
+# 
+# https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier is an alphanumeric string which allows an individual thing to be identified. It may not provide natural-language meaning." .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcIdentifier> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier" .
+# 
+# https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Material
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#GeneralInformation> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Material is a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). Material is the basic entity for material designation and definition; this includes identification by name and classification (via reference to an external classification). Material must have a name (=material grade e.g. S355JR) and a category (=material e.g. Steel, Aluminium etc.). Material defines the planned/proposed material. The finally used material is stored in the property set." .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+# 
+# https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/dstv#MeasurableProfileProperties> .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "IFC-defined measurable properties associated with profile elements." .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcProfileProperties" .
+<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#ProfileProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Profile Properties" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid39 <http://www.w3.org/2002/07/owl#members> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#BottomView> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#FrontView> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#RearView> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/dstv#TopView> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1341 @@
+@prefix fisa: <https://purl.org/fisa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://purl.org/fisa> a owl:Ontology .
+
+fisa:AboveGroundStorey a owl:Class ;
+    rdfs:label "AboveGroundStorey" .
+
+fisa:AccessibilityOfFireFighters a owl:Class ;
+    rdfs:label "AccessibilityOfFireFighters" .
+
+fisa:Accommodation a owl:Class ;
+    rdfs:label "Accommodation" .
+
+fisa:AccommodationFacility a owl:Class ;
+    rdfs:label "AccommodationFacility" .
+
+fisa:Administrative a owl:Class ;
+    rdfs:label "Administrative" .
+
+fisa:Agriculture a owl:Class ;
+    rdfs:label "Agriculture" .
+
+fisa:AmusementPark a owl:Class ;
+    rdfs:label "AmusementPark" .
+
+fisa:AnimalHusbandry a owl:Class ;
+    rdfs:label "AnimalHusbandry" .
+
+fisa:Anteroom a owl:Class ;
+    rdfs:label "Anteroom" .
+
+fisa:Apron a owl:Class ;
+    rdfs:label "Apron" .
+
+fisa:ArcadeSpace a owl:Class ;
+    rdfs:label "ArcadeSpace" .
+
+fisa:AreaForFireFighters a owl:Class ;
+    rdfs:label "AreaForFireFighters" .
+
+fisa:AssemblyBuilding a owl:Class ;
+    rdfs:label "AssemblyBuilding" .
+
+fisa:AssemblyProduct a owl:Class ;
+    rdfs:label "AssemblyProduct" .
+
+fisa:AssessmentBasis a owl:Class ;
+    rdfs:label "AssessmentBasis" .
+
+fisa:AtticSpace a owl:Class ;
+    rdfs:label "AtticSpace" .
+
+fisa:Basement a owl:Class ;
+    rdfs:label "Basement" .
+
+fisa:Bathroom a owl:Class ;
+    rdfs:label "Bathroom" .
+
+fisa:https://w3id.org/bot#Building a owl:Class ;
+    rdfs:label "Building" .
+
+fisa:BuildingClass a owl:Class ;
+    rdfs:label "BuildingClass" .
+
+fisa:BuildingClass1 a owl:Class ;
+    rdfs:label "BuildingClass1" .
+
+fisa:BuildingClass1a a owl:Class ;
+    rdfs:label "BuildingClass1a" .
+
+fisa:BuildingClass1b a owl:Class ;
+    rdfs:label "BuildingClass1b" .
+
+fisa:BuildingClass2 a owl:Class ;
+    rdfs:label "BuildingClass2" .
+
+fisa:BuildingClass3 a owl:Class ;
+    rdfs:label "BuildingClass3" .
+
+fisa:BuildingClass4 a owl:Class ;
+    rdfs:label "BuildingClass4" .
+
+fisa:BuildingClass5 a owl:Class ;
+    rdfs:label "BuildingClass5" .
+
+fisa:https://w3id.org/bot#Element a owl:Class ;
+    rdfs:label "BuildingElement" .
+
+fisa:BuildingMaterialClass a owl:Class ;
+    rdfs:label "BuildingMaterialClass" .
+
+fisa:Campsite a owl:Class ;
+    rdfs:label "Campsite" .
+
+fisa:Canteen a owl:Class ;
+    rdfs:label "Canteen" .
+
+fisa:Care a owl:Class ;
+    rdfs:label "Care" .
+
+fisa:CareForPeople a owl:Class ;
+    rdfs:label "CareForPeople" .
+
+fisa:CavitySpace a owl:Class ;
+    rdfs:label "CavitySpace" .
+
+fisa:ChildCare a owl:Class ;
+    rdfs:label "ChildCare" .
+
+fisa:Cladding a owl:Class ;
+    rdfs:label "Cladding" .
+
+fisa:Classification a owl:Class ;
+    rdfs:label "Classification" .
+
+fisa:ClientSpecification a owl:Class ;
+    rdfs:label "ClientSpecification" .
+
+fisa:ClosedProfile a owl:Class ;
+    rdfs:label "ClosedProfile" .
+
+fisa:Closing a owl:Class ;
+    rdfs:label "Closing" .
+
+fisa:CombustionAppliance a owl:Class ;
+    rdfs:label "Combustion appliances are fixed installations or equipment used in or on buildings and intended to generate heat by combustion." .
+
+fisa:CompartmentWall a owl:Class ;
+    rdfs:label "CompartmentWall" .
+
+fisa:Component a owl:Class ;
+    rdfs:label "Component" .
+
+fisa:ComponentType a owl:Class ;
+    rdfs:label "ComponentType" .
+
+fisa:ConstructionalMovingArea a owl:Class ;
+    rdfs:label "ConstructionalMovingArea" .
+
+fisa:Corridor a owl:Class ;
+    rdfs:label "Corridor" .
+
+fisa:DayCareCenter a owl:Class ;
+    rdfs:label "DayCareCenter" .
+
+fisa:DefensiveFireSafety a owl:Class ;
+    rdfs:label "DefensiveFireSafety" .
+
+fisa:DIN4102 a owl:Class ;
+    rdfs:label "DIN4102" .
+
+fisa:DIN4102-12:1998-11 a owl:Class ;
+    rdfs:label "DIN4102-12:1998-11" .
+
+fisa:DIN4102-15:1990-05 a owl:Class ;
+    rdfs:label "DIN4102-15:1990-05" .
+
+fisa:DIN4102-17:2017-12 a owl:Class ;
+    rdfs:label "DIN4102-17:2017-12" .
+
+fisa:DIN4102-1:1998-05 a owl:Class ;
+    rdfs:label "DIN4102-1:1998-05" .
+
+fisa:DIN_EN13501 a owl:Class ;
+    rdfs:label "DIN_EN_13501" .
+
+fisa:Door a owl:Class ;
+    rdfs:label "Door" .
+
+fisa:Dormitory a owl:Class ;
+    rdfs:label "Dormitory" .
+
+fisa:DriveShaftWall a owl:Class ;
+    rdfs:label "DriveShaftWall" .
+
+fisa:Education a owl:Class ;
+    rdfs:label "Education" .
+
+fisa:EducationalInstitution a owl:Class ;
+    rdfs:label "EducationalInstitution" .
+
+fisa:Elevator a owl:Class ;
+    rdfs:label "Elevator" .
+
+fisa:EmergencyMedicalService a owl:Class ;
+    rdfs:label "EmergencyMedicalService" .
+
+fisa:EscapeRoute a owl:Class ;
+    rdfs:label "EscapeRoute" .
+
+fisa:Eurocode a owl:Class ;
+    rdfs:label "Eurocode" .
+
+fisa:ExternalDevelopment a owl:Class ;
+    rdfs:label "ExternalDevelopment" .
+
+fisa:ExternalWall a owl:Class ;
+    rdfs:label "ExternalWall" .
+
+fisa:ExtinguishingWaterAccess a owl:Class ;
+    rdfs:label "ExtinguishingWaterAccess" .
+
+fisa:ExtinguishingWaterRetention a owl:Class ;
+    rdfs:label "ExtinguishingWaterRetention" .
+
+fisa:ExtinguishingWaterSupply a owl:Class ;
+    rdfs:label "ExtinguishingWaterSupply" .
+
+fisa:Fastening a owl:Class ;
+    rdfs:label "Fastening" .
+
+fisa:FireBehaviour a owl:Class ;
+    rdfs:label "FireBehaviour" .
+
+fisa:FireBrigadeLifts a owl:Class ;
+    rdfs:label "FireBrigadeLifts" .
+
+fisa:FireCompartment a owl:Class ;
+    rdfs:label "FireCompartment" .
+
+fisa:FireControlOfLifts a owl:Class ;
+    rdfs:label "FireControl_of_Lifts" .
+
+fisa:FireDamper a owl:Class ;
+    rdfs:label "FireDamper" .
+
+fisa:FireFighterAccessEntrance a owl:Class ;
+    rdfs:label "FireFighterAccess_Entrance" .
+
+fisa:FireFighterAccessPoint a owl:Class ;
+    rdfs:label "FireFighterAccessPoint" .
+
+fisa:FireFighterLift a owl:Class ;
+    rdfs:label "FireFighterLift" .
+
+fisa:FireResistance a owl:Class ;
+    rdfs:label "FireResistance" .
+
+fisa:FireResistantEnclosure a owl:Class ;
+    rdfs:label "FireResistantEnclosure" .
+
+fisa:FireSafety a owl:Class ;
+    rdfs:label "FireSafety" .
+
+fisa:FireSafetyCertificate a owl:Class ;
+    rdfs:label "FireSafetyCertificate" .
+
+fisa:FireWall a owl:Class ;
+    rdfs:label "FireWall" .
+
+fisa:FireWallAsExternalWall a owl:Class ;
+    rdfs:label "FireWallAsExternalWall" .
+
+fisa:FirstEscapeRoute a owl:Class ;
+    rdfs:label "FirstEscapeRoute" .
+
+fisa:Foyer a owl:Class ;
+    rdfs:label "Foyer" .
+
+fisa:Garage a owl:Class ;
+    rdfs:label "Garage" .
+
+fisa:Gate a owl:Class ;
+    rdfs:label "Gate" .
+
+fisa:MusterVerwaltungsvorschrift a owl:Class ;
+    rdfs:label "GeneralAdministrativeRegulation" .
+
+fisa:Musterrichtlinie a owl:Class ;
+    rdfs:label "GeneralGuideline" .
+
+fisa:GeneralInformation a owl:Class ;
+    rdfs:label "GeneralInformation" .
+
+fisa:Mustervorschrift a owl:Class ;
+    rdfs:label "GeneralPrescription" .
+
+fisa:GeneralSlab a owl:Class ;
+    rdfs:label "GeneralSlab" .
+
+fisa:Glazing a owl:Class ;
+    rdfs:label "Glazing" .
+
+fisa:GroundStorey a owl:Class ;
+    rdfs:label "GroundStorey" .
+
+fisa:Gym a owl:Class ;
+    rdfs:label "Gym" .
+
+fisa:HazardousEnvironment a owl:Class ;
+    rdfs:label "HazardousEnvironment" .
+
+fisa:HeatExtractionDevice a owl:Class ;
+    rdfs:label "HeatExtractionDevice" .
+
+fisa:HighRiseBuilding a owl:Class ;
+    rdfs:label "HighRiseBuilding" .
+
+fisa:Hospital a owl:Class ;
+    rdfs:label "Hospital" .
+
+fisa:Hospitality a owl:Class ;
+    rdfs:label "Hospitality" .
+
+fisa:Installation a owl:Class ;
+    rdfs:label "Installation" .
+
+fisa:InstallationArea a owl:Class ;
+    rdfs:label "InstallationArea" .
+
+fisa:InstallationDuct a owl:Class ;
+    rdfs:label "InstallationDuct" .
+
+fisa:InstallationShaft a owl:Class ;
+    rdfs:label "InstallationShaft" .
+
+fisa:Institution a owl:Class ;
+    rdfs:label "Institution" .
+
+fisa:Insulation a owl:Class ;
+    rdfs:label "Insulation" .
+
+fisa:https://w3id.org/bot#Interface a owl:Class ;
+    rdfs:label "Interface" .
+
+fisa:InternalFireWall a owl:Class ;
+    rdfs:label "InternalFireWall" .
+
+fisa:JointSealing a owl:Class ;
+    rdfs:label "JointSealing" .
+
+fisa:Kindergarden a owl:Class ;
+    rdfs:label "Kindergarden" .
+
+fisa:Kitchen a owl:Class ;
+    rdfs:label "Kitchen" .
+
+fisa:Lab a owl:Class ;
+    rdfs:label "Lab" .
+
+fisa:LawEnforcement a owl:Class ;
+    rdfs:label "LawEnforcement" .
+
+fisa:Leisure a owl:Class ;
+    rdfs:label "Leisure" .
+
+fisa:LightningSafetySystem a owl:Class ;
+    rdfs:label "LightningSafetySystem" .
+
+fisa:LivingRoom a owl:Class ;
+    rdfs:label "LivingRoom" .
+
+fisa:LoadbearingEnclosingComponent a owl:Class ;
+    rdfs:label "LoadbearingEnclosingComponent" .
+
+fisa:LoadbearingNonEnclosingComponent a owl:Class ;
+    rdfs:label "LoadbearingNonEnclosingComponent" .
+
+fisa:M_FIBauR a owl:Class ;
+    rdfs:label "M_FIBauR" .
+
+fisa:M_FIBauVwV a owl:Class ;
+    rdfs:label "M_FIBauVwV" .
+
+fisa:MBeVO a owl:Class ;
+    rdfs:label "MBeVO" .
+
+fisa:MBO a owl:Class ;
+    rdfs:label "MBO" .
+
+fisa:MeetingRoom a owl:Class ;
+    rdfs:label "MeetingRoom" .
+
+fisa:MEltBauVO a owl:Class ;
+    rdfs:label "MEltBauVO" .
+
+fisa:MHHR a owl:Class ;
+    rdfs:label "MHHR" .
+
+fisa:MSchulbauR a owl:Class ;
+    rdfs:label "MSchulbauR" .
+
+fisa:MVKVO a owl:Class ;
+    rdfs:label "MVKVO" .
+
+fisa:MVStättVO a owl:Class ;
+    rdfs:label "MVStättVO" .
+
+fisa:MVV_TB a owl:Class ;
+    rdfs:label "MVV_TB" .
+
+fisa:MWR a owl:Class ;
+    rdfs:label "MWR" .
+
+fisa:NecessaryCorridor a owl:Class ;
+    rdfs:label "NecessaryCorridor" .
+
+fisa:NecessaryStairSpace a owl:Class ;
+    rdfs:label "NecessaryStairSpace" .
+
+fisa:NonLoadbearingEnclosingComponent a owl:Class ;
+    rdfs:label "NonLoadbearingEnclosingComponent" .
+
+fisa:NonLoadbearingNonEnclosingComponent a owl:Class ;
+    rdfs:label "NonLoadbearingNonEnclosingComponent" .
+
+fisa:Norm a owl:Class ;
+    rdfs:label "Norm" .
+
+fisa:NursingHome a owl:Class ;
+    rdfs:label "NursingHome" .
+
+fisa:ObjectRadioSystemForFireBrigade a owl:Class ;
+    rdfs:label "ObjectRadioSystem_for_FireBrigade" .
+
+fisa:OfficeRoom a owl:Class ;
+    rdfs:label "OfficeRoom" .
+
+fisa:Opening a owl:Class ;
+    rdfs:label "Opening" .
+
+fisa:OpenProfile a owl:Class ;
+    rdfs:label "OpenProfile" .
+
+fisa:OrganizationalFireSafety a owl:Class ;
+    rdfs:label "OrganizationalFireSafety" .
+
+fisa:OtherCertificate a owl:Class ;
+    rdfs:label "OtherCertificate" .
+
+fisa:OtherRoomUsage a owl:Class ;
+    rdfs:label "OtherRoomUsage" .
+
+fisa:OvernightAccommodation a owl:Class ;
+    rdfs:label "OvernightAccommodation" .
+
+fisa:PanelInstitutionForLegalExecutiveRegulations a owl:Class ;
+    rdfs:label "PanelInstitutionForLegalExecutiveRegulations" .
+
+fisa:Parapet a owl:Class ;
+    rdfs:label "Parapet" .
+
+fisa:Parking a owl:Class ;
+    rdfs:label "Parking" .
+
+fisa:ParkingSpace a owl:Class ;
+    rdfs:label "ParkingSpace" .
+
+fisa:PenalInstitution a owl:Class ;
+    rdfs:label "PenalInstitution" .
+
+fisa:PlanningDocument a owl:Class ;
+    rdfs:label "PlanningDocument" .
+
+fisa:PortableConstruction a owl:Class ;
+    rdfs:label "PortableConstruction" .
+
+fisa:PositionAccessibleForFireService a owl:Class ;
+    rdfs:label "PositionAccessibleForFireService" .
+
+fisa:Posts a owl:Class ;
+    rdfs:label "Posts" .
+
+fisa:PrescriptiveCertificate a owl:Class ;
+    rdfs:label "PrescriptiveCertificate" .
+
+fisa:Profile a owl:Class ;
+    rdfs:label "Profile" .
+
+fisa:ProtectiveGoal a owl:Class ;
+    rdfs:label "ProtectiveGoal" .
+
+fisa:ProtectiveGoalOrientedCertificate a owl:Class ;
+    rdfs:label "ProtectiveGoalOrientedCertificate" .
+
+fisa:RegulatedSpecialPurposeConstruction a owl:Class ;
+    rdfs:label "RegulatedSpecialPurposeConstruction" .
+
+fisa:RescueConcept a owl:Class ;
+    rdfs:label "RescueConcept" .
+
+fisa:ResidenceSpace a owl:Class ;
+    rdfs:label "ResidenceSpace" .
+
+fisa:Residential a owl:Class ;
+    rdfs:label "Residential" .
+
+fisa:Roof a owl:Class ;
+    rdfs:label "Roof" .
+
+fisa:Roofing a owl:Class ;
+    rdfs:label "Roofing" .
+
+fisa:RoofStructure a owl:Class ;
+    rdfs:label "RoofStructure" .
+
+fisa:RuleOfApplication a owl:Class ;
+    rdfs:label "RuleOfApplication" .
+
+fisa:SafetyStairSpace a owl:Class ;
+    rdfs:label "SafetyStairSpace" .
+
+fisa:Sales a owl:Class ;
+    rdfs:label "Sales" .
+
+fisa:SalesPremises a owl:Class ;
+    rdfs:label "SalesPremises" .
+
+fisa:SalesRoom a owl:Class ;
+    rdfs:label "SalesRoom" .
+
+fisa:SceneArea a owl:Class ;
+    rdfs:label "SceneArea" .
+
+fisa:School a owl:Class ;
+    rdfs:label "School" .
+
+fisa:SecondEscapeRoute a owl:Class ;
+    rdfs:label "SecondEscapeRoute" .
+
+fisa:SecurityGate a owl:Class ;
+    rdfs:label "SecurityGate" .
+
+fisa:ShelfWarehouse a owl:Class ;
+    rdfs:label "ShelfWarehouse" .
+
+fisa:https://w3id.org/bot#Site a owl:Class ;
+    rdfs:label "Site" .
+
+fisa:SiteDevelopmentMeasure a owl:Class ;
+    rdfs:label "SiteDevelopmentMeasure" .
+
+fisa:Slab a owl:Class ;
+    rdfs:label "Slab" .
+
+fisa:SmokeCompartment a owl:Class ;
+    rdfs:label "SmokeCompartment" .
+
+fisa:https://w3id.org/bot#Space a owl:Class ;
+    rdfs:label "Space" .
+
+fisa:SpaceClosure a owl:Class ;
+    rdfs:label "SpaceClosure" .
+
+fisa:SpaceOfIncreasedFireRisk a owl:Class ;
+    rdfs:label "SpaceOfIncreasedFireRisk" .
+
+fisa:SpaceUsage a owl:Class ;
+    rdfs:label "SpaceUsage" .
+
+fisa:SpecialPurposeCondition a owl:Class ;
+    rdfs:label "SpecialPurposeCondition" .
+
+fisa:SpecialPurposeConditionAcc§2_S4_P19 a owl:Class ;
+    rdfs:label "SpecialPurposeConditionAcc§2_S4_P19" .
+
+fisa:SpecialPurposeConditionAcc§2_S4_P2 a owl:Class ;
+    rdfs:label "SpecialPurposeConditionAcc§2_S4_P2" .
+
+fisa:SpecialPurposeConditionAcc§2_S4_P20 a owl:Class ;
+    rdfs:label "SpecialPurposeConditionAcc§2_S4_P20" .
+
+fisa:SpecialPurposeConditionAcc§2_S4_P3 a owl:Class ;
+    rdfs:label "SpecialPurposeConditionAcc§2_S4_P3" .
+
+fisa:SpecialPurposeConditionAcc§2_S4_P5 a owl:Class ;
+    rdfs:label "SpecialPurposeConditionAcc§2_S4_P5" .
+
+fisa:SpecialPurposeConditionAcc§2_S4_P6 a owl:Class ;
+    rdfs:label "SpecialPurposeConditionAcc§2_S4_P6" .
+
+fisa:SpecialPurposeConstruction a owl:Class ;
+    rdfs:label "SpecialPurposeConstruction" .
+
+fisa:Sonderbaurichtlinie a owl:Class ;
+    rdfs:label "SpecialPurposeGuideline" .
+
+fisa:Sonderbauvorschrift a owl:Class ;
+    rdfs:label "SpecialPurposePrescription" .
+
+fisa:Sonderbauverordnung a owl:Class ;
+    rdfs:label "SpecialPurposeRegulation" .
+
+fisa:SpectatorFacility a owl:Class ;
+    rdfs:label "SpectatorFacility" .
+
+fisa:Sport a owl:Class ;
+    rdfs:label "Sport" .
+
+fisa:Stairs a owl:Class ;
+    rdfs:label "Stairs" .
+
+fisa:StairSpace a owl:Class ;
+    rdfs:label "StairSpace" .
+
+fisa:StairSpaceExtension a owl:Class ;
+    rdfs:label "StairSpaceExtension" .
+
+fisa:StairsParts a owl:Class ;
+    rdfs:label "StairsParts" .
+
+fisa:StairsSupportingStructure a owl:Class ;
+    rdfs:label "StairsSupportingStructure" .
+
+fisa:StandardConstruction a owl:Class ;
+    rdfs:label "StandardConstruction" .
+
+fisa:StandardConstructionType a owl:Class ;
+    rdfs:label "StandardConstructionType" .
+
+fisa:Storage a owl:Class ;
+    rdfs:label "Storage" .
+
+fisa:StoreStreet a owl:Class ;
+    rdfs:label "StoreStreet" .
+
+fisa:https://w3id.org/bot#Storey a owl:Class ;
+    rdfs:label "Storey" .
+
+fisa:StoreySlab a owl:Class ;
+    rdfs:label "StoreySlab" .
+
+fisa:StructuralFacility a owl:Class ;
+    rdfs:label "StructuralFacility" .
+
+fisa:StructuralFireSafety a owl:Class ;
+    rdfs:label "StructuralFireSafety" .
+
+fisa:StructuralFireSafetyMeasures a owl:Class ;
+    rdfs:label "StructuralFireSafetyMeasures" .
+
+fisa:Structure a owl:Class ;
+    rdfs:label "Structure" .
+
+fisa:SurfaceType a owl:Class ;
+    rdfs:label "SurfaceType" .
+
+fisa:Surrounding a owl:Class ;
+    rdfs:label "Surrounding" .
+
+fisa:SystemFlooring a owl:Class ;
+    rdfs:label "SystemFlooring" .
+
+fisa:TavernAndRestaurant a owl:Class ;
+    rdfs:label "TavernAndRestaurant" .
+
+fisa:TechnicalComponent a owl:Class ;
+    rdfs:label "TechnicalComponent" .
+
+fisa:TechnicalFireSafety a owl:Class ;
+    rdfs:label "TechnicalFireSafety" .
+
+fisa:TechnicalStructuralCertificate a owl:Class ;
+    rdfs:label "TechnicalStructuralCertificate" .
+
+fisa:Technology a owl:Class ;
+    rdfs:label "Technology" .
+
+fisa:ThemePark a owl:Class ;
+    rdfs:label "ThemePark" .
+
+fisa:Transom a owl:Class ;
+    rdfs:label "Transom" .
+
+fisa:University a owl:Class ;
+    rdfs:label "University" .
+
+fisa:UnregulatedSpecialPurposeConstruction a owl:Class ;
+    rdfs:label "UnregulatedSpecialPurposeConstruction" .
+
+fisa:UpperStorey a owl:Class ;
+    rdfs:label "UpperStorey" .
+
+fisa:Usage a owl:Class ;
+    rdfs:label "Usage" .
+
+fisa:UtilizationPurpose a owl:Class ;
+    rdfs:label "UtilizationPurpose" .
+
+fisa:UtilizationUnit a owl:Class ;
+    rdfs:label "UtilizationUnit" .
+
+fisa:Wall a owl:Class ;
+    rdfs:label "Wall" .
+
+fisa:WallinsteadOfFireWall a owl:Class ;
+    rdfs:label "WallinsteadOfFireWall" .
+
+fisa:WallOfANecessaryCorridor a owl:Class ;
+    rdfs:label "WallOfANecessaryCorridor" .
+
+fisa:WallOfANecessaryStaircase a owl:Class ;
+    rdfs:label "WallOfANecessaryStaircase" .
+
+fisa:WallParts a owl:Class ;
+    rdfs:label "WallParts" .
+
+fisa:WallStructure a owl:Class ;
+    rdfs:label "WallStructure" .
+
+fisa:WeekendPlace a owl:Class ;
+    rdfs:label "WeekendPlace" .
+
+fisa:Window a owl:Class ;
+    rdfs:label "Window" .
+
+fisa:Work a owl:Class ;
+    rdfs:label "Work" .
+
+fisa:https://w3id.org/bot#Zone a owl:Class ;
+    rdfs:label "Zone" .
+
+fisa:https://w3id.org/bot#adjacentElement a owl:ObjectProperty ;
+    rdfs:label "adjacentElement" .
+
+fisa:https://w3id.org/bot#adjacentZone a owl:ObjectProperty ;
+    rdfs:label "adjacentZone" .
+
+fisa:asARuleOfApplicationFollowedBy a owl:ObjectProperty ;
+    rdfs:label "asARuleOfApplicationFollowedBy" .
+
+fisa:https://w3id.org/bot#containsElement a owl:ObjectProperty ;
+    rdfs:label "containsElement" .
+
+fisa:https://w3id.org/bot#containsZone a owl:ObjectProperty ;
+    rdfs:label "containsZone" .
+
+fisa:followsRulesOfApplication a owl:ObjectProperty ;
+    rdfs:label "followsRulesOfApplication" .
+
+fisa:hasAccessiblePositionForFireServices a owl:ObjectProperty ;
+    rdfs:label "hasAccessiblePositionForFireServices" .
+
+fisa:hasAssessmentBasis a owl:ObjectProperty ;
+    rdfs:label "hasAssessmentBasis" .
+
+fisa:hasAtticSpace a owl:ObjectProperty ;
+    rdfs:label "hasAtticSpace" .
+
+fisa:https://w3id.org/bot#hasBuilding a owl:ObjectProperty ;
+    rdfs:label "hasBuilding" .
+
+fisa:hasBuildingClass a owl:ObjectProperty ;
+    rdfs:label "hasBuildingClass" .
+
+fisa:hasBuildingFacility a owl:ObjectProperty ;
+    rdfs:label "hasBuildingFacility" .
+
+fisa:hasBuildingMaterialClass a owl:ObjectProperty ;
+    rdfs:label "hasBuildingMaterialClass" .
+
+fisa:hasCavity a owl:ObjectProperty ;
+    rdfs:label "hasCavity" .
+
+fisa:hasClassification a owl:ObjectProperty ;
+    rdfs:label "hasClassification" .
+
+fisa:hasClientSpecification a owl:ObjectProperty ;
+    rdfs:label "hasClientSpecification" .
+
+fisa:hasComponentType a owl:ObjectProperty ;
+    rdfs:label "hasComponentType" .
+
+fisa:https://w3id.org/bot#hasElement a owl:ObjectProperty ;
+    rdfs:label "hasElement" .
+
+fisa:hasEscapeRoute a owl:ObjectProperty ;
+    rdfs:label "hasEscapeRoute" .
+
+fisa:hasFireBehaviour a owl:ObjectProperty ;
+    rdfs:label "hasFireBehaviour" .
+
+fisa:hasFireCompartment a owl:ObjectProperty ;
+    rdfs:label "hasFireCompartment" .
+
+fisa:hasFireResistance a owl:ObjectProperty ;
+    rdfs:label "hasFireResistance" .
+
+fisa:hasGarage a owl:ObjectProperty ;
+    rdfs:label "hasGarage" .
+
+fisa:hasGeneralInformation a owl:ObjectProperty ;
+    rdfs:label "hasGeneralInformation" .
+
+fisa:hasPart a owl:ObjectProperty ;
+    rdfs:label "hasPart" .
+
+fisa:hasPlanningDocument a owl:ObjectProperty ;
+    rdfs:label "hasPlanningDocument" .
+
+fisa:hasProtectiveGoal a owl:ObjectProperty ;
+    rdfs:label "hasProtectiveGoal" .
+
+fisa:hasRequirement a owl:ObjectProperty ;
+    rdfs:label "hasRequirement" .
+
+fisa:hasRequirementOfFireBehaviour a owl:ObjectProperty ;
+    rdfs:label "hasRequirementOfFireBehaviour" .
+
+fisa:hasRequirementOfFireResistance a owl:ObjectProperty ;
+    rdfs:label "hasRequirementOfFireResistance" .
+
+fisa:hasRequirementOfSpaceClosure a owl:ObjectProperty ;
+    rdfs:label "hasRequirementOfSpaceClosure" .
+
+fisa:hasRescueConcept a owl:ObjectProperty ;
+    rdfs:label "hasRescueConcept" .
+
+fisa:hasSmokeCompartment a owl:ObjectProperty ;
+    rdfs:label "hasSmokeCompartment" .
+
+fisa:https://w3id.org/bot#hasSpace a owl:ObjectProperty ;
+    rdfs:label "hasSpace" .
+
+fisa:hasSpaceClosure a owl:ObjectProperty ;
+    rdfs:label "hasSpaceClosure" .
+
+fisa:hasSpaceUsage a owl:ObjectProperty ;
+    rdfs:label "hasSpaceUsage" .
+
+fisa:hasSpecialPurposeCondition a owl:ObjectProperty ;
+    rdfs:label "hasSpecialPurposeCondition" .
+
+fisa:hasStairSpaceExit a owl:ObjectProperty ;
+    rdfs:label "hasStairSpaceExit" .
+
+fisa:hasStandardConstructionType a owl:ObjectProperty ;
+    rdfs:label "hasStandardConstructionType" .
+
+fisa:https://w3id.org/bot#hasStorey a owl:ObjectProperty ;
+    rdfs:label "hasStorey" .
+
+fisa:hasStructuralFireSafetyMeasure a owl:ObjectProperty ;
+    rdfs:label "hasStructuralFireSafetyMeasure" .
+
+fisa:https://w3id.org/bot#hasSubElement a owl:ObjectProperty ;
+    rdfs:label "hasSub-Element" .
+
+fisa:hasUsage a owl:ObjectProperty ;
+    rdfs:label "hasUsage" .
+
+fisa:hasUtilizationPurpose a owl:ObjectProperty ;
+    rdfs:label "hasUtilizationPurpose" .
+
+fisa:hasUtilizationSpace a owl:ObjectProperty ;
+    rdfs:label "hasUtilizationSpace" .
+
+fisa:https://w3id.org/bot#interfaceOf a owl:ObjectProperty ;
+    rdfs:label "interfaceOf" .
+
+fisa:https://w3id.org/bot#intersectingElement a owl:ObjectProperty ;
+    rdfs:label "intersectingElement" .
+
+fisa:https://w3id.org/bot#intersectsZone a owl:ObjectProperty ;
+    rdfs:label "intersectsZone" .
+
+fisa:isAnAccessiblePositionForFireServicesOf a owl:ObjectProperty ;
+    rdfs:label "isAnAccessiblePositionForFireServicesOf" .
+
+fisa:isAssessmentBasisOf a owl:ObjectProperty ;
+    rdfs:label "isAssessmentBasisOf" .
+
+fisa:isBasedOn a owl:ObjectProperty ;
+    rdfs:label "isBasedOn" .
+
+fisa:isBasisOf a owl:ObjectProperty ;
+    rdfs:label "isBasisOf" .
+
+fisa:isBuildingClassOf a owl:ObjectProperty ;
+    rdfs:label "isBuildingClassOf" .
+
+fisa:isBuildingMaterialClassOf a owl:ObjectProperty ;
+    rdfs:label "isBuildingMaterialClassOf" .
+
+fisa:isClassificationOf a owl:ObjectProperty ;
+    rdfs:label "isClassificationOf" .
+
+fisa:isClientSpecificationOf a owl:ObjectProperty ;
+    rdfs:label "isClientSpecificationOf" .
+
+fisa:isComponentTypeOf a owl:ObjectProperty ;
+    rdfs:label "isComponentTypeOf" .
+
+fisa:isEscapeRouteOf a owl:ObjectProperty ;
+    rdfs:label "isEscapeRouteOf" .
+
+fisa:isGeneralInformationOf a owl:ObjectProperty ;
+    rdfs:label "isGeneralInformationOf" .
+
+fisa:isLessFireResistantThan a owl:ObjectProperty ;
+    rdfs:label "isLessFireResistantThan" .
+
+fisa:isLessFlammableThan a owl:ObjectProperty ;
+    rdfs:label "isLessFlammableThan" .
+
+fisa:isMoreFireResistantThan a owl:ObjectProperty ;
+    rdfs:label "isMoreFireResistantThan" .
+
+fisa:isMoreFlammableThan a owl:ObjectProperty ;
+    rdfs:label "isMoreFlammableThan" .
+
+fisa:isNeededBy a owl:ObjectProperty ;
+    rdfs:label "isNeededBy" .
+
+fisa:isPartOf a owl:ObjectProperty ;
+    rdfs:label "isPartOf" .
+
+fisa:isPermittedWith a owl:ObjectProperty ;
+    rdfs:label "isPermittedWith" .
+
+fisa:isPermittedWithFireBehaviour a owl:ObjectProperty ;
+    rdfs:label "isPermittedWithFireBehaviour" .
+
+fisa:isPermittedWithFireResistance a owl:ObjectProperty ;
+    rdfs:label "isPermittedWithFireResistance" .
+
+fisa:isPermittedWithSpaceClosure a owl:ObjectProperty ;
+    rdfs:label "isPermittedWithSpaceClosure" .
+
+fisa:isPlanningDocumentOf a owl:ObjectProperty ;
+    rdfs:label "isPlanningDocumentOf" .
+
+fisa:isRescueConceptOf a owl:ObjectProperty ;
+    rdfs:label "isRescueConceptOf" .
+
+fisa:isSpaceUsageOf a owl:ObjectProperty ;
+    rdfs:label "isSpaceUsageOf" .
+
+fisa:isSpecialPurposeConditionOf a owl:ObjectProperty ;
+    rdfs:label "isSpecialPurposeConditionOf" .
+
+fisa:isStandardConstructionTypeOf a owl:ObjectProperty ;
+    rdfs:label "isStandardConstructionTypeOf" .
+
+fisa:isSubElementOf a owl:ObjectProperty ;
+    rdfs:label "isSub-ElementOf" .
+
+fisa:isUsageOf a owl:ObjectProperty ;
+    rdfs:label "isUsageOf" .
+
+fisa:isUtilizationPurposeOf a owl:ObjectProperty ;
+    rdfs:label "isUtilizationPurposeOf" .
+
+fisa:isUtilizationSpaceOf a owl:ObjectProperty ;
+    rdfs:label "isUtilizationSpaceOf" .
+
+fisa:needs a owl:ObjectProperty ;
+    rdfs:label "needs" .
+
+fisa:remoteZone a owl:ObjectProperty ;
+    rdfs:label "remoteZone" .
+
+fisa:accessibleForFireServices a owl:DatatypeProperty ;
+    rdfs:label "accessibleForFireServices" .
+
+fisa:hasAge a owl:DatatypeProperty ;
+    rdfs:label "hasAge" .
+
+fisa:hasAverageHeight a owl:DatatypeProperty ;
+    rdfs:label "hasAverageHeight" .
+
+fisa:hasCombinedGrossFloorArea a owl:DatatypeProperty ;
+    rdfs:label "hasCombinedGrossFloorArea" .
+
+fisa:hasDescription a owl:DatatypeProperty ;
+    rdfs:label "hasDescription" .
+
+fisa:hasDisability a owl:DatatypeProperty ;
+    rdfs:label "hasDisability" .
+
+fisa:hasEscapeRouteWidth a owl:DatatypeProperty ;
+    rdfs:label "hasEscapeRouteWidth" .
+
+fisa:hasGFASalesSpaces a owl:DatatypeProperty ;
+    rdfs:label "hasGFASalesSpaces" .
+
+fisa:hasHeight a owl:DatatypeProperty ;
+    rdfs:label "hasHeight" .
+
+fisa:hasIntensiveCareNeed a owl:DatatypeProperty ;
+    rdfs:label "hasIntensiveCareNeed" .
+
+fisa:hasNeedForCare a owl:DatatypeProperty ;
+    rdfs:label "hasNeedForCare" .
+
+fisa:hasNumberOfBeds a owl:DatatypeProperty ;
+    rdfs:label "hasNumberOfBeds" .
+
+fisa:hasNumberOfHostPlaces a owl:DatatypeProperty ;
+    rdfs:label "hasNumberOfHostPlaces" .
+
+fisa:hasNumberOfPeople a owl:DatatypeProperty ;
+    rdfs:label "hasNumberOfPeople" .
+
+fisa:hasNumberOfVisitors a owl:DatatypeProperty ;
+    rdfs:label "hasNumberOfVisitors" .
+
+fisa:hasOutdoorHostPlaces a owl:DatatypeProperty ;
+    rdfs:label "hasOutdoorHostPlaces" .
+
+fisa:hasSharedEscapeRoute a owl:DatatypeProperty ;
+    rdfs:label "hasSharedEscapeRoute" .
+
+fisa:hasStairSpaceLocation a owl:DatatypeProperty ;
+    rdfs:label "hasStairSpaceLocation" .
+
+fisa:hasStiffening a owl:DatatypeProperty ;
+    rdfs:label "hasStiffening" .
+
+fisa:hasStorageItemHeight a owl:DatatypeProperty ;
+    rdfs:label "hasStorageItemHeight" .
+
+fisa:hasTotalAmountOfUtilizationUnits a owl:DatatypeProperty ;
+    rdfs:label "hasTotalAmountOfUtilizationUnits" .
+
+fisa:hasTotalNumberOfStoreys a owl:DatatypeProperty ;
+    rdfs:label "hasTotalNumberOfStoreys" .
+
+fisa:hasUnit a owl:DatatypeProperty ;
+    rdfs:label "hasUnit" .
+
+fisa:hasUpperEndingAt a owl:DatatypeProperty ;
+    rdfs:label "hasUpperEndingAt" .
+
+fisa:hasUsefulWidth a owl:DatatypeProperty ;
+    rdfs:label "hasUsefulWidth" .
+
+fisa:hasUser a owl:DatatypeProperty ;
+    rdfs:label "hasUser" .
+
+fisa:isBarrierFree a owl:DatatypeProperty ;
+    rdfs:label "isBarrierFree" .
+
+fisa:isClosedProfile a owl:DatatypeProperty ;
+    rdfs:label "isClosedProfile" .
+
+fisa:isExternal a owl:DatatypeProperty ;
+    rdfs:label "isExternal" .
+
+fisa:isFreestanding a owl:DatatypeProperty ;
+    rdfs:label "isFreestanding" .
+
+fisa:isFullStorey a owl:DatatypeProperty ;
+    rdfs:label "isFullStorey" .
+
+fisa:isHighestStoreyWithPossibleResidenceSpace a owl:DatatypeProperty ;
+    rdfs:label "isHighestStoreyWithPossibleResidenceSpace" .
+
+fisa:isLoadBearing a owl:DatatypeProperty ;
+    rdfs:label "isLoadBearing" .
+
+fisa:isNecessary a owl:DatatypeProperty ;
+    rdfs:label "isNecessary" .
+
+fisa:isOpenedProfile a owl:DatatypeProperty ;
+    rdfs:label "isOpenedProfile" .
+
+fisa:isPossibleForResidence a owl:DatatypeProperty ;
+    rdfs:label "isPossibleForResidence" .
+
+fisa:isProfile a owl:DatatypeProperty ;
+    rdfs:label "isProfile" .
+
+fisa:isSelfClosing a owl:DatatypeProperty ;
+    rdfs:label "isSelfClosing" .
+
+fisa:isSmokeResistant a owl:DatatypeProperty ;
+    rdfs:label "isSmokeResistant" .
+
+fisa:isSpaceEnclosing a owl:DatatypeProperty ;
+    rdfs:label "isSpaceEnclosing" .
+
+fisa:isStoreySlab a owl:DatatypeProperty ;
+    rdfs:label "isStoreySlab" .
+
+fisa:isTightClosing a owl:DatatypeProperty ;
+    rdfs:label "isTightClosing" .
+
+fisa:isType a owl:DatatypeProperty ;
+    rdfs:label "isType" .
+
+fisa:isUndergroundBuilding a owl:DatatypeProperty ;
+    rdfs:label "isUndergroundBuilding" .
+
+fisa:isUsable a owl:DatatypeProperty ;
+    rdfs:label "isUsable" .
+
+fisa:largestUtilizationSpace a owl:DatatypeProperty ;
+    rdfs:label "largestUtilizationSpace" .
+
+fisa:outdoors a owl:DatatypeProperty ;
+    rdfs:label "outdoors" .
+
+fisa:under400_meta a owl:DatatypeProperty ;
+    rdfs:label "under400_meta" .
+
+fisa:usesGrossFloorArea a owl:DatatypeProperty ;
+    rdfs:label "usesGrossFloorArea" .
+
+fisa:https://w3id.org/bot#adjacentElement a rdf:Property ;
+    rdfs:label "adjacentElement" .
+
+fisa:https://w3id.org/bot#adjacentZone a rdf:Property ;
+    rdfs:label "adjacentZone" .
+
+fisa:asARuleOfApplicationFollowedBy a rdf:Property ;
+    rdfs:label "asARuleOfApplicationFollowedBy" .
+
+fisa:https://w3id.org/bot#containsElement a rdf:Property ;
+    rdfs:label "containsElement" .
+
+fisa:https://w3id.org/bot#containsZone a rdf:Property ;
+    rdfs:label "containsZone" .
+
+fisa:followsRulesOfApplication a rdf:Property ;
+    rdfs:label "followsRulesOfApplication" .
+
+fisa:hasAccessiblePositionForFireServices a rdf:Property ;
+    rdfs:label "hasAccessiblePositionForFireServices" .
+
+fisa:hasAssessmentBasis a rdf:Property ;
+    rdfs:label "hasAssessmentBasis" .
+
+fisa:hasAtticSpace a rdf:Property ;
+    rdfs:label "hasAtticSpace" .
+
+fisa:https://w3id.org/bot#hasBuilding a rdf:Property ;
+    rdfs:label "hasBuilding" .
+
+fisa:hasBuildingClass a rdf:Property ;
+    rdfs:label "hasBuildingClass" .
+
+fisa:hasBuildingFacility a rdf:Property ;
+    rdfs:label "hasBuildingFacility" .
+
+fisa:hasBuildingMaterialClass a rdf:Property ;
+    rdfs:label "hasBuildingMaterialClass" .
+
+fisa:hasCavity a rdf:Property ;
+    rdfs:label "hasCavity" .
+
+fisa:hasClassification a rdf:Property ;
+    rdfs:label "hasClassification" .
+
+fisa:hasClientSpecification a rdf:Property ;
+    rdfs:label "hasClientSpecification" .
+
+fisa:hasComponentType a rdf:Property ;
+    rdfs:label "hasComponentType" .
+
+fisa:https://w3id.org/bot#hasElement a rdf:Property ;
+    rdfs:label "hasElement" .
+
+fisa:hasEscapeRoute a rdf:Property ;
+    rdfs:label "hasEscapeRoute" .
+
+fisa:hasFireBehaviour a rdf:Property ;
+    rdfs:label "hasFireBehaviour" .
+
+fisa:hasFireCompartment a rdf:Property ;
+    rdfs:label "hasFireCompartment" .
+
+fisa:hasFireResistance a rdf:Property ;
+    rdfs:label "hasFireResistance" .
+
+fisa:hasGarage a rdf:Property ;
+    rdfs:label "hasGarage" .
+
+fisa:hasGeneralInformation a rdf:Property ;
+    rdfs:label "hasGeneralInformation" .
+
+fisa:hasPart a rdf:Property ;
+    rdfs:label "hasPart" .
+
+fisa:hasPlanningDocument a rdf:Property ;
+    rdfs:label "hasPlanningDocument" .
+
+fisa:hasProtectiveGoal a rdf:Property ;
+    rdfs:label "hasProtectiveGoal" .
+
+fisa:hasRequirement a rdf:Property ;
+    rdfs:label "hasRequirement" .
+
+fisa:hasRequirementOfFireBehaviour a rdf:Property ;
+    rdfs:label "hasRequirementOfFireBehaviour" .
+
+fisa:hasRequirementOfFireResistance a rdf:Property ;
+    rdfs:label "hasRequirementOfFireResistance" .
+
+fisa:hasRequirementOfSpaceClosure a rdf:Property ;
+    rdfs:label "hasRequirementOfSpaceClosure" .
+
+fisa:hasRescueConcept a rdf:Property ;
+    rdfs:label "hasRescueConcept" .
+
+fisa:hasSmokeCompartment a rdf:Property ;
+    rdfs:label "hasSmokeCompartment" .
+
+fisa:https://w3id.org/bot#hasSpace a rdf:Property ;
+    rdfs:label "hasSpace" .
+
+fisa:hasSpaceClosure a rdf:Property ;
+    rdfs:label "hasSpaceClosure" .
+
+fisa:hasSpaceUsage a rdf:Property ;
+    rdfs:label "hasSpaceUsage" .
+
+fisa:hasSpecialPurposeCondition a rdf:Property ;
+    rdfs:label "hasSpecialPurposeCondition" .
+
+fisa:hasStairSpaceExit a rdf:Property ;
+    rdfs:label "hasStairSpaceExit" .
+
+fisa:hasStandardConstructionType a rdf:Property ;
+    rdfs:label "hasStandardConstructionType" .
+
+fisa:https://w3id.org/bot#hasStorey a rdf:Property ;
+    rdfs:label "hasStorey" .
+
+fisa:hasStructuralFireSafetyMeasure a rdf:Property ;
+    rdfs:label "hasStructuralFireSafetyMeasure" .
+
+fisa:https://w3id.org/bot#hasSubElement a rdf:Property ;
+    rdfs:label "hasSub-Element" .
+
+fisa:hasUsage a rdf:Property ;
+    rdfs:label "hasUsage" .
+
+fisa:hasUtilizationPurpose a rdf:Property ;
+    rdfs:label "hasUtilizationPurpose" .
+
+fisa:hasUtilizationSpace a rdf:Property ;
+    rdfs:label "hasUtilizationSpace" .
+
+fisa:https://w3id.org/bot#interfaceOf a rdf:Property ;
+    rdfs:label "interfaceOf" .
+
+fisa:https://w3id.org/bot#intersectingElement a rdf:Property ;
+    rdfs:label "intersectingElement" .
+
+fisa:https://w3id.org/bot#intersectsZone a rdf:Property ;
+    rdfs:label "intersectsZone" .
+
+fisa:isAnAccessiblePositionForFireServicesOf a rdf:Property ;
+    rdfs:label "isAnAccessiblePositionForFireServicesOf" .
+
+fisa:isAssessmentBasisOf a rdf:Property ;
+    rdfs:label "isAssessmentBasisOf" .
+
+fisa:isBasedOn a rdf:Property ;
+    rdfs:label "isBasedOn" .
+
+fisa:isBasisOf a rdf:Property ;
+    rdfs:label "isBasisOf" .
+
+fisa:isBuildingClassOf a rdf:Property ;
+    rdfs:label "isBuildingClassOf" .
+
+fisa:isBuildingMaterialClassOf a rdf:Property ;
+    rdfs:label "isBuildingMaterialClassOf" .
+
+fisa:isClassificationOf a rdf:Property ;
+    rdfs:label "isClassificationOf" .
+
+fisa:isClientSpecificationOf a rdf:Property ;
+    rdfs:label "isClientSpecificationOf" .
+
+fisa:isComponentTypeOf a rdf:Property ;
+    rdfs:label "isComponentTypeOf" .
+
+fisa:isEscapeRouteOf a rdf:Property ;
+    rdfs:label "isEscapeRouteOf" .
+
+fisa:isGeneralInformationOf a rdf:Property ;
+    rdfs:label "isGeneralInformationOf" .
+
+fisa:isLessFireResistantThan a rdf:Property ;
+    rdfs:label "isLessFireResistantThan" .
+
+fisa:isLessFlammableThan a rdf:Property ;
+    rdfs:label "isLessFlammableThan" .
+
+fisa:isMoreFireResistantThan a rdf:Property ;
+    rdfs:label "isMoreFireResistantThan" .
+
+fisa:isMoreFlammableThan a rdf:Property ;
+    rdfs:label "isMoreFlammableThan" .
+
+fisa:isNeededBy a rdf:Property ;
+    rdfs:label "isNeededBy" .
+
+fisa:isPartOf a rdf:Property ;
+    rdfs:label "isPartOf" .
+
+fisa:isPermittedWith a rdf:Property ;
+    rdfs:label "isPermittedWith" .
+
+fisa:isPermittedWithFireBehaviour a rdf:Property ;
+    rdfs:label "isPermittedWithFireBehaviour" .
+
+fisa:isPermittedWithFireResistance a rdf:Property ;
+    rdfs:label "isPermittedWithFireResistance" .
+
+fisa:isPermittedWithSpaceClosure a rdf:Property ;
+    rdfs:label "isPermittedWithSpaceClosure" .
+
+fisa:isPlanningDocumentOf a rdf:Property ;
+    rdfs:label "isPlanningDocumentOf" .
+
+fisa:isRescueConceptOf a rdf:Property ;
+    rdfs:label "isRescueConceptOf" .
+
+fisa:isSpaceUsageOf a rdf:Property ;
+    rdfs:label "isSpaceUsageOf" .
+
+fisa:isSpecialPurposeConditionOf a rdf:Property ;
+    rdfs:label "isSpecialPurposeConditionOf" .
+
+fisa:isStandardConstructionTypeOf a rdf:Property ;
+    rdfs:label "isStandardConstructionTypeOf" .
+
+fisa:isSubElementOf a rdf:Property ;
+    rdfs:label "isSub-ElementOf" .
+
+fisa:isUsageOf a rdf:Property ;
+    rdfs:label "isUsageOf" .
+
+fisa:isUtilizationPurposeOf a rdf:Property ;
+    rdfs:label "isUtilizationPurposeOf" .
+
+fisa:isUtilizationSpaceOf a rdf:Property ;
+    rdfs:label "isUtilizationSpaceOf" .
+
+fisa:needs a rdf:Property ;
+    rdfs:label "needs" .
+
+fisa:remoteZone a rdf:Property ;
+    rdfs:label "remoteZone" .

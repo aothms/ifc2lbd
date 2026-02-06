@@ -1,0 +1,842 @@
+{
+  "select_type_definitions": {
+    "IfcActorSelect": [
+      "IfcOrganization",
+      "IfcPerson",
+      "IfcPersonAndOrganization"
+    ],
+    "IfcAppliedValueSelect": [
+      "IfcRatioMeasure",
+      "IfcMeasureWithUnit",
+      "IfcMonetaryMeasure"
+    ],
+    "IfcAxis2Placement": [
+      "IfcAxis2Placement2D",
+      "IfcAxis2Placement3D"
+    ],
+    "IfcBooleanOperand": [
+      "IfcSolidModel",
+      "IfcHalfSpaceSolid",
+      "IfcBooleanResult",
+      "IfcCsgPrimitive3D"
+    ],
+    "IfcCharacterStyleSelect": [
+      "IfcTextStyleForDefinedFont"
+    ],
+    "IfcClassificationNotationSelect": [
+      "IfcClassificationNotation",
+      "IfcClassificationReference"
+    ],
+    "IfcColour": [
+      "IfcColourSpecification",
+      "IfcPreDefinedColour"
+    ],
+    "IfcColourOrFactor": [
+      "IfcColourRgb",
+      "IfcNormalisedRatioMeasure"
+    ],
+    "IfcConditionCriterionSelect": [
+      "IfcLabel",
+      "IfcMeasureWithUnit"
+    ],
+    "IfcCsgSelect": [
+      "IfcBooleanResult",
+      "IfcCsgPrimitive3D"
+    ],
+    "IfcCurveFontOrScaledCurveFontSelect": [
+      "IfcCurveStyleFontSelect",
+      "IfcCurveStyleFontAndScaling"
+    ],
+    "IfcCurveOrEdgeCurve": [
+      "IfcBoundedCurve",
+      "IfcEdgeCurve"
+    ],
+    "IfcCurveStyleFontSelect": [
+      "IfcPreDefinedCurveFont",
+      "IfcCurveStyleFont"
+    ],
+    "IfcDateTimeSelect": [
+      "IfcCalendarDate",
+      "IfcLocalTime",
+      "IfcDateAndTime"
+    ],
+    "IfcDefinedSymbolSelect": [
+      "IfcPreDefinedSymbol",
+      "IfcExternallyDefinedSymbol"
+    ],
+    "IfcDerivedMeasureValue": [
+      "IfcVolumetricFlowRateMeasure",
+      "IfcTimeStamp",
+      "IfcThermalTransmittanceMeasure",
+      "IfcThermalResistanceMeasure",
+      "IfcThermalAdmittanceMeasure",
+      "IfcPressureMeasure",
+      "IfcPowerMeasure",
+      "IfcMassFlowRateMeasure",
+      "IfcMassDensityMeasure",
+      "IfcLinearVelocityMeasure",
+      "IfcKinematicViscosityMeasure",
+      "IfcIntegerCountRateMeasure",
+      "IfcHeatFluxDensityMeasure",
+      "IfcFrequencyMeasure",
+      "IfcEnergyMeasure",
+      "IfcElectricVoltageMeasure",
+      "IfcDynamicViscosityMeasure",
+      "IfcCompoundPlaneAngleMeasure",
+      "IfcAngularVelocityMeasure",
+      "IfcThermalConductivityMeasure",
+      "IfcMolecularWeightMeasure",
+      "IfcVaporPermeabilityMeasure",
+      "IfcMoistureDiffusivityMeasure",
+      "IfcIsothermalMoistureCapacityMeasure",
+      "IfcSpecificHeatCapacityMeasure",
+      "IfcMonetaryMeasure",
+      "IfcMagneticFluxDensityMeasure",
+      "IfcMagneticFluxMeasure",
+      "IfcLuminousFluxMeasure",
+      "IfcForceMeasure",
+      "IfcInductanceMeasure",
+      "IfcIlluminanceMeasure",
+      "IfcElectricResistanceMeasure",
+      "IfcElectricConductanceMeasure",
+      "IfcElectricChargeMeasure",
+      "IfcDoseEquivalentMeasure",
+      "IfcElectricCapacitanceMeasure",
+      "IfcAbsorbedDoseMeasure",
+      "IfcRadioActivityMeasure",
+      "IfcRotationalFrequencyMeasure",
+      "IfcTorqueMeasure",
+      "IfcAccelerationMeasure",
+      "IfcLinearForceMeasure",
+      "IfcLinearStiffnessMeasure",
+      "IfcModulusOfSubgradeReactionMeasure",
+      "IfcModulusOfElasticityMeasure",
+      "IfcMomentOfInertiaMeasure",
+      "IfcPlanarForceMeasure",
+      "IfcRotationalStiffnessMeasure",
+      "IfcShearModulusMeasure",
+      "IfcLinearMomentMeasure",
+      "IfcLuminousIntensityDistributionMeasure",
+      "IfcCurvatureMeasure",
+      "IfcMassPerLengthMeasure",
+      "IfcModulusOfLinearSubgradeReactionMeasure",
+      "IfcModulusOfRotationalSubgradeReactionMeasure",
+      "IfcRotationalMassMeasure",
+      "IfcSectionalAreaIntegralMeasure",
+      "IfcSectionModulusMeasure",
+      "IfcTemperatureGradientMeasure",
+      "IfcThermalExpansionCoefficientMeasure",
+      "IfcWarpingConstantMeasure",
+      "IfcWarpingMomentMeasure",
+      "IfcSoundPowerMeasure",
+      "IfcSoundPressureMeasure",
+      "IfcHeatingValueMeasure",
+      "IfcPHMeasure",
+      "IfcIonConcentrationMeasure"
+    ],
+    "IfcDocumentSelect": [
+      "IfcDocumentReference",
+      "IfcDocumentInformation"
+    ],
+    "IfcDraughtingCalloutElement": [
+      "IfcAnnotationCurveOccurrence",
+      "IfcAnnotationTextOccurrence",
+      "IfcAnnotationSymbolOccurrence"
+    ],
+    "IfcFillAreaStyleTileShapeSelect": [
+      "IfcFillAreaStyleTileSymbolWithStyle"
+    ],
+    "IfcFillStyleSelect": [
+      "IfcFillAreaStyleHatching",
+      "IfcFillAreaStyleTiles",
+      "IfcColour",
+      "IfcExternallyDefinedHatchStyle"
+    ],
+    "IfcGeometricSetSelect": [
+      "IfcPoint",
+      "IfcCurve",
+      "IfcSurface"
+    ],
+    "IfcHatchLineDistanceSelect": [
+      "IfcOneDirectionRepeatFactor",
+      "IfcPositiveLengthMeasure"
+    ],
+    "IfcLayeredItem": [
+      "IfcRepresentationItem",
+      "IfcRepresentation"
+    ],
+    "IfcLibrarySelect": [
+      "IfcLibraryReference",
+      "IfcLibraryInformation"
+    ],
+    "IfcLightDistributionDataSourceSelect": [
+      "IfcExternalReference",
+      "IfcLightIntensityDistribution"
+    ],
+    "IfcMaterialSelect": [
+      "IfcMaterial",
+      "IfcMaterialList",
+      "IfcMaterialLayerSetUsage",
+      "IfcMaterialLayerSet",
+      "IfcMaterialLayer"
+    ],
+    "IfcMeasureValue": [
+      "IfcVolumeMeasure",
+      "IfcTimeMeasure",
+      "IfcThermodynamicTemperatureMeasure",
+      "IfcSolidAngleMeasure",
+      "IfcPositiveRatioMeasure",
+      "IfcRatioMeasure",
+      "IfcPositivePlaneAngleMeasure",
+      "IfcPlaneAngleMeasure",
+      "IfcParameterValue",
+      "IfcNumericMeasure",
+      "IfcMassMeasure",
+      "IfcPositiveLengthMeasure",
+      "IfcLengthMeasure",
+      "IfcElectricCurrentMeasure",
+      "IfcDescriptiveMeasure",
+      "IfcCountMeasure",
+      "IfcContextDependentMeasure",
+      "IfcAreaMeasure",
+      "IfcAmountOfSubstanceMeasure",
+      "IfcLuminousIntensityMeasure",
+      "IfcNormalisedRatioMeasure",
+      "IfcComplexNumber"
+    ],
+    "IfcMetricValueSelect": [
+      "IfcDateTimeSelect",
+      "IfcMeasureWithUnit",
+      "IfcTable",
+      "IfcText",
+      "IfcTimeSeries",
+      "IfcCostValue"
+    ],
+    "IfcObjectReferenceSelect": [
+      "IfcMaterial",
+      "IfcPerson",
+      "IfcDateAndTime",
+      "IfcMaterialList",
+      "IfcOrganization",
+      "IfcCalendarDate",
+      "IfcLocalTime",
+      "IfcPersonAndOrganization",
+      "IfcMaterialLayer",
+      "IfcExternalReference",
+      "IfcTimeSeries",
+      "IfcAddress",
+      "IfcAppliedValue"
+    ],
+    "IfcOrientationSelect": [
+      "IfcPlaneAngleMeasure",
+      "IfcDirection"
+    ],
+    "IfcPointOrVertexPoint": [
+      "IfcPoint",
+      "IfcVertexPoint"
+    ],
+    "IfcPresentationStyleSelect": [
+      "IfcNullStyle",
+      "IfcCurveStyle",
+      "IfcSymbolStyle",
+      "IfcFillAreaStyle",
+      "IfcTextStyle",
+      "IfcSurfaceStyle"
+    ],
+    "IfcShell": [
+      "IfcClosedShell",
+      "IfcOpenShell"
+    ],
+    "IfcSimpleValue": [
+      "IfcInteger",
+      "IfcReal",
+      "IfcBoolean",
+      "IfcIdentifier",
+      "IfcText",
+      "IfcLabel",
+      "IfcLogical"
+    ],
+    "IfcSizeSelect": [
+      "IfcRatioMeasure",
+      "IfcLengthMeasure",
+      "IfcDescriptiveMeasure",
+      "IfcPositiveLengthMeasure",
+      "IfcNormalisedRatioMeasure",
+      "IfcPositiveRatioMeasure"
+    ],
+    "IfcSpecularHighlightSelect": [
+      "IfcSpecularExponent",
+      "IfcSpecularRoughness"
+    ],
+    "IfcStructuralActivityAssignmentSelect": [
+      "IfcStructuralItem",
+      "IfcElement"
+    ],
+    "IfcSurfaceOrFaceSurface": [
+      "IfcSurface",
+      "IfcFaceSurface",
+      "IfcFaceBasedSurfaceModel"
+    ],
+    "IfcSurfaceStyleElementSelect": [
+      "IfcSurfaceStyleShading",
+      "IfcSurfaceStyleLighting",
+      "IfcSurfaceStyleWithTextures",
+      "IfcExternallyDefinedSurfaceStyle",
+      "IfcSurfaceStyleRefraction"
+    ],
+    "IfcSymbolStyleSelect": [
+      "IfcColour"
+    ],
+    "IfcTextFontSelect": [
+      "IfcPreDefinedTextFont",
+      "IfcExternallyDefinedTextFont"
+    ],
+    "IfcTextStyleSelect": [
+      "IfcTextStyleWithBoxCharacteristics",
+      "IfcTextStyleTextModel"
+    ],
+    "IfcTrimmingSelect": [
+      "IfcCartesianPoint",
+      "IfcParameterValue"
+    ],
+    "IfcUnit": [
+      "IfcDerivedUnit",
+      "IfcNamedUnit",
+      "IfcMonetaryUnit"
+    ],
+    "IfcValue": [
+      "IfcMeasureValue",
+      "IfcSimpleValue",
+      "IfcDerivedMeasureValue"
+    ],
+    "IfcVectorOrDirection": [
+      "IfcDirection",
+      "IfcVector"
+    ]
+  },
+  "select_attribute_map": {
+    "IfcActor": {
+      "TheActor": "IfcActorSelect"
+    },
+    "IfcAngularDimension": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcAppliedValue": {
+      "AppliedValue": "IfcAppliedValueSelect",
+      "ApplicableDate": "IfcDateTimeSelect",
+      "FixedUntilDate": "IfcDateTimeSelect"
+    },
+    "IfcApproval": {
+      "ApprovalDateTime": "IfcDateTimeSelect"
+    },
+    "IfcApprovalActorRelationship": {
+      "Actor": "IfcActorSelect"
+    },
+    "IfcAsset": {
+      "Owner": "IfcActorSelect",
+      "User": "IfcActorSelect"
+    },
+    "IfcAsymmetricIShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcBlock": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcBooleanClippingResult": {
+      "FirstOperand": "IfcBooleanOperand",
+      "SecondOperand": "IfcBooleanOperand"
+    },
+    "IfcBooleanResult": {
+      "FirstOperand": "IfcBooleanOperand",
+      "SecondOperand": "IfcBooleanOperand"
+    },
+    "IfcCShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcCircle": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcCircleHollowProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcCircleProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcConditionCriterion": {
+      "Criterion": "IfcConditionCriterionSelect",
+      "CriterionDateTime": "IfcDateTimeSelect"
+    },
+    "IfcConic": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcConnectionCurveGeometry": {
+      "CurveOnRelatingElement": "IfcCurveOrEdgeCurve",
+      "CurveOnRelatedElement": "IfcCurveOrEdgeCurve"
+    },
+    "IfcConnectionPointEccentricity": {
+      "PointOnRelatingElement": "IfcPointOrVertexPoint",
+      "PointOnRelatedElement": "IfcPointOrVertexPoint"
+    },
+    "IfcConnectionPointGeometry": {
+      "PointOnRelatingElement": "IfcPointOrVertexPoint",
+      "PointOnRelatedElement": "IfcPointOrVertexPoint"
+    },
+    "IfcConnectionPortGeometry": {
+      "LocationAtRelatingElement": "IfcAxis2Placement",
+      "LocationAtRelatedElement": "IfcAxis2Placement"
+    },
+    "IfcConnectionSurfaceGeometry": {
+      "SurfaceOnRelatingElement": "IfcSurfaceOrFaceSurface",
+      "SurfaceOnRelatedElement": "IfcSurfaceOrFaceSurface"
+    },
+    "IfcConstraint": {
+      "CreatingActor": "IfcActorSelect",
+      "CreationTime": "IfcDateTimeSelect"
+    },
+    "IfcConstraintClassificationRelationship": {
+      "RelatedClassifications": "IfcClassificationNotationSelect"
+    },
+    "IfcConstructionMaterialResource": {
+      "Suppliers": "IfcActorSelect"
+    },
+    "IfcContextDependentUnit": {
+      "UnitType": "IfcUnit"
+    },
+    "IfcConversionBasedUnit": {
+      "UnitType": "IfcUnit"
+    },
+    "IfcCostSchedule": {
+      "SubmittedBy": "IfcActorSelect",
+      "PreparedBy": "IfcActorSelect",
+      "SubmittedOn": "IfcDateTimeSelect",
+      "TargetUsers": "IfcActorSelect",
+      "UpdateDate": "IfcDateTimeSelect"
+    },
+    "IfcCostValue": {
+      "AppliedValue": "IfcAppliedValueSelect",
+      "ApplicableDate": "IfcDateTimeSelect",
+      "FixedUntilDate": "IfcDateTimeSelect"
+    },
+    "IfcCraneRailAShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcCraneRailFShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcCsgPrimitive3D": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcCsgSolid": {
+      "TreeRootExpression": "IfcCsgSelect"
+    },
+    "IfcCurveStyle": {
+      "CurveFont": "IfcCurveFontOrScaledCurveFontSelect",
+      "CurveWidth": "IfcSizeSelect",
+      "CurveColour": "IfcColour"
+    },
+    "IfcCurveStyleFontAndScaling": {
+      "CurveFont": "IfcCurveStyleFontSelect"
+    },
+    "IfcDefinedSymbol": {
+      "Definition": "IfcDefinedSymbolSelect"
+    },
+    "IfcDiameterDimension": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcDimensionCurveDirectedCallout": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcDocumentInformation": {
+      "DocumentOwner": "IfcActorSelect",
+      "Editors": "IfcActorSelect"
+    },
+    "IfcDraughtingCallout": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcElementarySurface": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcEllipse": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcEllipseProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcEnvironmentalImpactValue": {
+      "AppliedValue": "IfcAppliedValueSelect",
+      "ApplicableDate": "IfcDateTimeSelect",
+      "FixedUntilDate": "IfcDateTimeSelect"
+    },
+    "IfcExtrudedAreaSolid": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcFillAreaStyle": {
+      "FillStyles": "IfcFillStyleSelect"
+    },
+    "IfcFillAreaStyleHatching": {
+      "StartOfNextHatchLine": "IfcHatchLineDistanceSelect"
+    },
+    "IfcFillAreaStyleTiles": {
+      "Tiles": "IfcFillAreaStyleTileShapeSelect"
+    },
+    "IfcFluidFlowProperties": {
+      "FlowrateSingleValue": "IfcDerivedMeasureValue"
+    },
+    "IfcGeometricCurveSet": {
+      "Elements": "IfcGeometricSetSelect"
+    },
+    "IfcGeometricRepresentationContext": {
+      "WorldCoordinateSystem": "IfcAxis2Placement"
+    },
+    "IfcGeometricRepresentationSubContext": {
+      "WorldCoordinateSystem": "IfcAxis2Placement"
+    },
+    "IfcGeometricSet": {
+      "Elements": "IfcGeometricSetSelect"
+    },
+    "IfcIShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcInventory": {
+      "Jurisdiction": "IfcActorSelect"
+    },
+    "IfcIrregularTimeSeries": {
+      "StartTime": "IfcDateTimeSelect",
+      "EndTime": "IfcDateTimeSelect",
+      "Unit": "IfcUnit"
+    },
+    "IfcIrregularTimeSeriesValue": {
+      "TimeStamp": "IfcDateTimeSelect",
+      "ListValues": "IfcValue"
+    },
+    "IfcLShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcLightSource": {
+      "LightColour": "IfcColour"
+    },
+    "IfcLightSourceAmbient": {
+      "LightColour": "IfcColour"
+    },
+    "IfcLightSourceDirectional": {
+      "LightColour": "IfcColour"
+    },
+    "IfcLightSourceGoniometric": {
+      "Position": "IfcAxis2Placement",
+      "ColourAppearance": "IfcColour",
+      "LightDistributionDataSource": "IfcLightDistributionDataSourceSelect",
+      "LightColour": "IfcColour"
+    },
+    "IfcLightSourcePositional": {
+      "LightColour": "IfcColour"
+    },
+    "IfcLightSourceSpot": {
+      "LightColour": "IfcColour"
+    },
+    "IfcLinearDimension": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcLocalPlacement": {
+      "RelativePlacement": "IfcAxis2Placement"
+    },
+    "IfcMaterialClassificationRelationship": {
+      "MaterialClassifications": "IfcClassificationNotationSelect"
+    },
+    "IfcMeasureWithUnit": {
+      "ValueComponent": "IfcValue",
+      "UnitComponent": "IfcUnit"
+    },
+    "IfcMetric": {
+      "DataValue": "IfcMetricValueSelect",
+      "CreatingActor": "IfcActorSelect",
+      "CreationTime": "IfcDateTimeSelect"
+    },
+    "IfcNamedUnit": {
+      "UnitType": "IfcUnit"
+    },
+    "IfcObjective": {
+      "CreatingActor": "IfcActorSelect",
+      "CreationTime": "IfcDateTimeSelect"
+    },
+    "IfcOccupant": {
+      "TheActor": "IfcActorSelect"
+    },
+    "IfcParameterizedProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcPlanarBox": {
+      "Placement": "IfcAxis2Placement"
+    },
+    "IfcPlane": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcPolygonalBoundedHalfSpace": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcPresentationLayerAssignment": {
+      "AssignedItems": "IfcLayeredItem"
+    },
+    "IfcPresentationLayerWithStyle": {
+      "LayerStyles": "IfcPresentationStyleSelect",
+      "AssignedItems": "IfcLayeredItem"
+    },
+    "IfcPresentationStyleAssignment": {
+      "Styles": "IfcPresentationStyleSelect"
+    },
+    "IfcProject": {
+      "UnitsInContext": "IfcUnit"
+    },
+    "IfcPropertyBoundedValue": {
+      "UpperBoundValue": "IfcValue",
+      "LowerBoundValue": "IfcValue",
+      "Unit": "IfcUnit"
+    },
+    "IfcPropertyEnumeratedValue": {
+      "EnumerationValues": "IfcValue"
+    },
+    "IfcPropertyEnumeration": {
+      "EnumerationValues": "IfcValue",
+      "Unit": "IfcUnit"
+    },
+    "IfcPropertyListValue": {
+      "ListValues": "IfcValue",
+      "Unit": "IfcUnit"
+    },
+    "IfcPropertyReferenceValue": {
+      "PropertyReference": "IfcObjectReferenceSelect"
+    },
+    "IfcPropertySingleValue": {
+      "NominalValue": "IfcValue",
+      "Unit": "IfcUnit"
+    },
+    "IfcPropertyTableValue": {
+      "DefiningValues": "IfcValue",
+      "DefinedValues": "IfcValue",
+      "DefiningUnit": "IfcUnit",
+      "DefinedUnit": "IfcUnit"
+    },
+    "IfcRadiusDimension": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcRectangleHollowProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcRectangleProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcRectangularPyramid": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcReferencesValueDocument": {
+      "ReferencedDocument": "IfcDocumentSelect"
+    },
+    "IfcRegularTimeSeries": {
+      "StartTime": "IfcDateTimeSelect",
+      "EndTime": "IfcDateTimeSelect",
+      "Unit": "IfcUnit"
+    },
+    "IfcRelAssociatesClassification": {
+      "RelatingClassification": "IfcClassificationNotationSelect"
+    },
+    "IfcRelAssociatesDocument": {
+      "RelatingDocument": "IfcDocumentSelect"
+    },
+    "IfcRelAssociatesLibrary": {
+      "RelatingLibrary": "IfcLibrarySelect"
+    },
+    "IfcRelAssociatesMaterial": {
+      "RelatingMaterial": "IfcMaterialSelect"
+    },
+    "IfcRelAssociatesProfileProperties": {
+      "ProfileOrientation": "IfcOrientationSelect"
+    },
+    "IfcRelConnectsStructuralActivity": {
+      "RelatingElement": "IfcStructuralActivityAssignmentSelect"
+    },
+    "IfcRelConnectsStructuralMember": {
+      "ConditionCoordinateSystem": "IfcAxis2Placement"
+    },
+    "IfcRelConnectsWithEccentricity": {
+      "ConditionCoordinateSystem": "IfcAxis2Placement"
+    },
+    "IfcRepresentationMap": {
+      "MappingOrigin": "IfcAxis2Placement"
+    },
+    "IfcRevolvedAreaSolid": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcRightCircularCone": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcRightCircularCylinder": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcRoundedRectangleProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcSIUnit": {
+      "UnitType": "IfcUnit"
+    },
+    "IfcScheduleTimeControl": {
+      "ActualStart": "IfcDateTimeSelect",
+      "EarlyStart": "IfcDateTimeSelect",
+      "LateStart": "IfcDateTimeSelect",
+      "ScheduleStart": "IfcDateTimeSelect",
+      "ActualFinish": "IfcDateTimeSelect",
+      "EarlyFinish": "IfcDateTimeSelect",
+      "LateFinish": "IfcDateTimeSelect",
+      "ScheduleFinish": "IfcDateTimeSelect",
+      "StatusTime": "IfcDateTimeSelect"
+    },
+    "IfcSectionedSpine": {
+      "CrossSectionPositions": "IfcAxis2Placement"
+    },
+    "IfcServiceLifeFactor": {
+      "UpperValue": "IfcMeasureValue",
+      "MostUsedValue": "IfcMeasureValue",
+      "LowerValue": "IfcMeasureValue"
+    },
+    "IfcShellBasedSurfaceModel": {
+      "SbsmBoundary": "IfcShell"
+    },
+    "IfcSoundValue": {
+      "SoundLevelSingleValue": "IfcDerivedMeasureValue"
+    },
+    "IfcSphere": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcStructuralAnalysisModel": {
+      "OrientationOf2DPlane": "IfcAxis2Placement"
+    },
+    "IfcStructuredDimensionCallout": {
+      "Contents": "IfcDraughtingCalloutElement"
+    },
+    "IfcSubContractResource": {
+      "SubContractor": "IfcActorSelect"
+    },
+    "IfcSurfaceCurveSweptAreaSolid": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcSurfaceOfLinearExtrusion": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcSurfaceOfRevolution": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcSurfaceStyle": {
+      "Styles": "IfcSurfaceStyleElementSelect"
+    },
+    "IfcSurfaceStyleLighting": {
+      "DiffuseTransmissionColour": "IfcColour",
+      "DiffuseReflectionColour": "IfcColour",
+      "TransmissionColour": "IfcColour",
+      "ReflectanceColour": "IfcColour"
+    },
+    "IfcSurfaceStyleRendering": {
+      "DiffuseColour": "IfcColour",
+      "TransmissionColour": "IfcColour",
+      "DiffuseTransmissionColour": "IfcColour",
+      "ReflectionColour": "IfcColour",
+      "SpecularColour": "IfcColour",
+      "SpecularHighlight": "IfcSpecularHighlightSelect",
+      "SurfaceColour": "IfcColour"
+    },
+    "IfcSurfaceStyleShading": {
+      "SurfaceColour": "IfcColour"
+    },
+    "IfcSweptAreaSolid": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcSweptSurface": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcSymbolStyle": {
+      "StyleOfSymbol": "IfcSymbolStyleSelect"
+    },
+    "IfcTShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcTableRow": {
+      "RowCells": "IfcValue"
+    },
+    "IfcTextLiteral": {
+      "Placement": "IfcAxis2Placement"
+    },
+    "IfcTextLiteralWithExtent": {
+      "Placement": "IfcAxis2Placement"
+    },
+    "IfcTextStyle": {
+      "TextCharacterAppearance": "IfcCharacterStyleSelect",
+      "TextStyle": "IfcTextStyleSelect",
+      "TextFontStyle": "IfcTextFontSelect"
+    },
+    "IfcTextStyleFontModel": {
+      "FontSize": "IfcSizeSelect"
+    },
+    "IfcTextStyleForDefinedFont": {
+      "Colour": "IfcColour",
+      "BackgroundColour": "IfcColour"
+    },
+    "IfcTextStyleTextModel": {
+      "TextIndent": "IfcSizeSelect",
+      "LetterSpacing": "IfcSizeSelect",
+      "WordSpacing": "IfcSizeSelect",
+      "LineHeight": "IfcSizeSelect"
+    },
+    "IfcTextStyleWithBoxCharacteristics": {
+      "CharacterSpacing": "IfcSizeSelect"
+    },
+    "IfcTextureCoordinateGenerator": {
+      "Parameter": "IfcSimpleValue"
+    },
+    "IfcTimeSeries": {
+      "StartTime": "IfcDateTimeSelect",
+      "EndTime": "IfcDateTimeSelect",
+      "Unit": "IfcUnit"
+    },
+    "IfcTimeSeriesReferenceRelationship": {
+      "TimeSeriesReferences": "IfcDocumentSelect"
+    },
+    "IfcTimeSeriesSchedule": {
+      "ApplicableDates": "IfcDateTimeSelect"
+    },
+    "IfcTimeSeriesValue": {
+      "ListValues": "IfcValue"
+    },
+    "IfcTrapeziumProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcTrimmedCurve": {
+      "Trim1": "IfcTrimmingSelect",
+      "Trim2": "IfcTrimmingSelect"
+    },
+    "IfcUShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    },
+    "IfcUnitAssignment": {
+      "Units": "IfcUnit"
+    },
+    "IfcUnitaryEquipmentType": {
+      "PredefinedType": "IfcUnit",
+      "WR1": "IfcUnit"
+    },
+    "IfcWorkControl": {
+      "CreationDate": "IfcDateTimeSelect",
+      "StartTime": "IfcDateTimeSelect",
+      "FinishTime": "IfcDateTimeSelect"
+    },
+    "IfcWorkPlan": {
+      "CreationDate": "IfcDateTimeSelect",
+      "StartTime": "IfcDateTimeSelect",
+      "FinishTime": "IfcDateTimeSelect"
+    },
+    "IfcWorkSchedule": {
+      "CreationDate": "IfcDateTimeSelect",
+      "StartTime": "IfcDateTimeSelect",
+      "FinishTime": "IfcDateTimeSelect"
+    },
+    "IfcZShapeProfileDef": {
+      "Position": "IfcAxis2Placement"
+    }
+  }
+}

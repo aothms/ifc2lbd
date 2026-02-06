@@ -1,0 +1,1559 @@
+{
+  "IfcActionRequest": {},
+  "IfcActor": {
+    "IsActingUpon": "SET"
+  },
+  "IfcActorRole": {
+    "HasExternalReference": "SET"
+  },
+  "IfcActuator": {},
+  "IfcActuatorType": {},
+  "IfcAddress": {
+    "OfPerson": "SET",
+    "OfOrganization": "SET"
+  },
+  "IfcAdvancedBrep": {},
+  "IfcAdvancedBrepWithVoids": {
+    "Voids": "SET"
+  },
+  "IfcAdvancedFace": {},
+  "IfcAirTerminal": {},
+  "IfcAirTerminalBox": {},
+  "IfcAirTerminalBoxType": {},
+  "IfcAirTerminalType": {},
+  "IfcAirToAirHeatRecovery": {},
+  "IfcAirToAirHeatRecoveryType": {},
+  "IfcAlarm": {},
+  "IfcAlarmType": {},
+  "IfcAlignment": {},
+  "IfcAlignmentCant": {},
+  "IfcAlignmentCantSegment": {},
+  "IfcAlignmentHorizontal": {},
+  "IfcAlignmentHorizontalSegment": {},
+  "IfcAlignmentParameterSegment": {},
+  "IfcAlignmentSegment": {},
+  "IfcAlignmentVertical": {},
+  "IfcAlignmentVerticalSegment": {},
+  "IfcAnnotation": {
+    "ContainedInStructure": "SET"
+  },
+  "IfcAnnotationFillArea": {
+    "InnerBoundaries": "SET"
+  },
+  "IfcApplication": {},
+  "IfcAppliedValue": {
+    "Components": "LIST",
+    "HasExternalReference": "SET"
+  },
+  "IfcApproval": {
+    "HasExternalReferences": "SET",
+    "ApprovedObjects": "SET",
+    "ApprovedResources": "SET",
+    "IsRelatedWith": "SET",
+    "Relates": "SET"
+  },
+  "IfcApprovalRelationship": {
+    "RelatedApprovals": "SET"
+  },
+  "IfcArbitraryClosedProfileDef": {
+    "WR3": "SET"
+  },
+  "IfcArbitraryOpenProfileDef": {},
+  "IfcArbitraryProfileDefWithVoids": {
+    "InnerCurves": "SET"
+  },
+  "IfcAsset": {},
+  "IfcAsymmetricIShapeProfileDef": {},
+  "IfcAudioVisualAppliance": {},
+  "IfcAudioVisualApplianceType": {},
+  "IfcAxis1Placement": {},
+  "IfcAxis2Placement2D": {
+    "P": "LIST"
+  },
+  "IfcAxis2Placement3D": {
+    "P": "LIST"
+  },
+  "IfcAxis2PlacementLinear": {},
+  "IfcBSplineCurve": {
+    "ControlPointsList": "LIST",
+    "UpperIndexOnControlPoints": "LIST",
+    "ControlPoints": "ARRAY",
+    "SameDim": "LIST"
+  },
+  "IfcBSplineCurveWithKnots": {
+    "KnotMultiplicities": "LIST",
+    "Knots": "LIST",
+    "CorrespondingKnotLists": "LIST"
+  },
+  "IfcBSplineSurface": {
+    "ControlPointsList": "LIST",
+    "UUpper": "LIST",
+    "VUpper": "LIST",
+    "ControlPoints": "ARRAY"
+  },
+  "IfcBSplineSurfaceWithKnots": {
+    "UMultiplicities": "LIST",
+    "VMultiplicities": "LIST",
+    "UKnots": "LIST",
+    "VKnots": "LIST",
+    "CorrespondingULists": "LIST",
+    "CorrespondingVLists": "LIST"
+  },
+  "IfcBeam": {},
+  "IfcBeamType": {},
+  "IfcBearing": {},
+  "IfcBearingType": {},
+  "IfcBlobTexture": {},
+  "IfcBlock": {},
+  "IfcBoiler": {},
+  "IfcBoilerType": {},
+  "IfcBooleanClippingResult": {},
+  "IfcBooleanResult": {
+    "FirstOperandClosed": "SET",
+    "SecondOperandClosed": "SET"
+  },
+  "IfcBorehole": {},
+  "IfcBoundaryCondition": {},
+  "IfcBoundaryCurve": {},
+  "IfcBoundaryEdgeCondition": {},
+  "IfcBoundaryFaceCondition": {},
+  "IfcBoundaryNodeCondition": {},
+  "IfcBoundaryNodeConditionWarping": {},
+  "IfcBoundedCurve": {},
+  "IfcBoundedSurface": {},
+  "IfcBoundingBox": {},
+  "IfcBoxedHalfSpace": {},
+  "IfcBridge": {},
+  "IfcBridgePart": {},
+  "IfcBuilding": {},
+  "IfcBuildingElementPart": {},
+  "IfcBuildingElementPartType": {},
+  "IfcBuildingElementProxy": {},
+  "IfcBuildingElementProxyType": {},
+  "IfcBuildingStorey": {},
+  "IfcBuildingSystem": {},
+  "IfcBuiltElement": {},
+  "IfcBuiltElementType": {},
+  "IfcBuiltSystem": {},
+  "IfcBurner": {},
+  "IfcBurnerType": {},
+  "IfcCShapeProfileDef": {},
+  "IfcCableCarrierFitting": {},
+  "IfcCableCarrierFittingType": {},
+  "IfcCableCarrierSegment": {},
+  "IfcCableCarrierSegmentType": {},
+  "IfcCableFitting": {},
+  "IfcCableFittingType": {},
+  "IfcCableSegment": {},
+  "IfcCableSegmentType": {},
+  "IfcCaissonFoundation": {},
+  "IfcCaissonFoundationType": {},
+  "IfcCartesianPoint": {
+    "Coordinates": "LIST"
+  },
+  "IfcCartesianPointList": {
+    "Dim": "LIST"
+  },
+  "IfcCartesianPointList2D": {
+    "CoordList": "LIST",
+    "TagList": "LIST"
+  },
+  "IfcCartesianPointList3D": {
+    "CoordList": "LIST",
+    "TagList": "LIST"
+  },
+  "IfcCartesianTransformationOperator": {},
+  "IfcCartesianTransformationOperator2D": {
+    "U": "LIST"
+  },
+  "IfcCartesianTransformationOperator2DnonUniform": {},
+  "IfcCartesianTransformationOperator3D": {
+    "U": "LIST"
+  },
+  "IfcCartesianTransformationOperator3DnonUniform": {},
+  "IfcCenterLineProfileDef": {},
+  "IfcChiller": {},
+  "IfcChillerType": {},
+  "IfcChimney": {},
+  "IfcChimneyType": {},
+  "IfcCircle": {},
+  "IfcCircleHollowProfileDef": {},
+  "IfcCircleProfileDef": {},
+  "IfcCivilElement": {},
+  "IfcCivilElementType": {},
+  "IfcClassification": {
+    "ReferenceTokens": "LIST",
+    "ClassificationForObjects": "SET",
+    "HasReferences": "SET"
+  },
+  "IfcClassificationReference": {
+    "ClassificationRefForObjects": "SET",
+    "HasReferences": "SET"
+  },
+  "IfcClosedShell": {},
+  "IfcClothoid": {},
+  "IfcCoil": {},
+  "IfcCoilType": {},
+  "IfcColourRgb": {},
+  "IfcColourRgbList": {
+    "ColourList": "LIST"
+  },
+  "IfcColourSpecification": {},
+  "IfcColumn": {},
+  "IfcColumnType": {},
+  "IfcCommunicationsAppliance": {},
+  "IfcCommunicationsApplianceType": {},
+  "IfcComplexProperty": {
+    "HasProperties": "SET"
+  },
+  "IfcComplexPropertyTemplate": {
+    "HasPropertyTemplates": "SET"
+  },
+  "IfcCompositeCurve": {
+    "Segments": "LIST"
+  },
+  "IfcCompositeCurveOnSurface": {
+    "BasisSurface": "SET"
+  },
+  "IfcCompositeCurveSegment": {},
+  "IfcCompositeProfileDef": {
+    "Profiles": "SET"
+  },
+  "IfcCompressor": {},
+  "IfcCompressorType": {},
+  "IfcCondenser": {},
+  "IfcCondenserType": {},
+  "IfcConic": {},
+  "IfcConnectedFaceSet": {
+    "CfsFaces": "SET"
+  },
+  "IfcConnectionCurveGeometry": {},
+  "IfcConnectionGeometry": {},
+  "IfcConnectionPointEccentricity": {},
+  "IfcConnectionPointGeometry": {},
+  "IfcConnectionSurfaceGeometry": {},
+  "IfcConnectionVolumeGeometry": {},
+  "IfcConstraint": {
+    "HasExternalReferences": "SET",
+    "PropertiesForConstraint": "SET"
+  },
+  "IfcConstructionEquipmentResource": {},
+  "IfcConstructionEquipmentResourceType": {},
+  "IfcConstructionMaterialResource": {},
+  "IfcConstructionMaterialResourceType": {},
+  "IfcConstructionProductResource": {},
+  "IfcConstructionProductResourceType": {},
+  "IfcConstructionResource": {
+    "BaseCosts": "LIST"
+  },
+  "IfcConstructionResourceType": {
+    "BaseCosts": "LIST"
+  },
+  "IfcContext": {
+    "RepresentationContexts": "SET",
+    "IsDefinedBy": "SET",
+    "Declares": "SET"
+  },
+  "IfcContextDependentUnit": {
+    "HasExternalReference": "SET"
+  },
+  "IfcControl": {
+    "Controls": "SET"
+  },
+  "IfcController": {},
+  "IfcControllerType": {},
+  "IfcConversionBasedUnit": {
+    "HasExternalReference": "SET"
+  },
+  "IfcConversionBasedUnitWithOffset": {
+    "ConversionOffset": "SET"
+  },
+  "IfcConveyorSegment": {},
+  "IfcConveyorSegmentType": {},
+  "IfcCooledBeam": {},
+  "IfcCooledBeamType": {},
+  "IfcCoolingTower": {},
+  "IfcCoolingTowerType": {},
+  "IfcCoordinateOperation": {},
+  "IfcCoordinateReferenceSystem": {
+    "HasCoordinateOperation": "SET",
+    "WellKnownText": "SET"
+  },
+  "IfcCosineSpiral": {},
+  "IfcCostItem": {
+    "CostValues": "LIST",
+    "CostQuantities": "LIST"
+  },
+  "IfcCostSchedule": {},
+  "IfcCostValue": {},
+  "IfcCourse": {
+    "PredefinedType": "SET"
+  },
+  "IfcCourseType": {
+    "PredefinedType": "SET",
+    "CorrectPredefinedType": "SET"
+  },
+  "IfcCovering": {
+    "CoversSpaces": "SET",
+    "CoversElements": "SET"
+  },
+  "IfcCoveringType": {},
+  "IfcCrewResource": {},
+  "IfcCrewResourceType": {},
+  "IfcCsgPrimitive3D": {},
+  "IfcCsgSolid": {},
+  "IfcCurrencyRelationship": {},
+  "IfcCurtainWall": {},
+  "IfcCurtainWallType": {},
+  "IfcCurve": {},
+  "IfcCurveBoundedPlane": {
+    "InnerBoundaries": "SET"
+  },
+  "IfcCurveBoundedSurface": {
+    "Boundaries": "SET"
+  },
+  "IfcCurveSegment": {},
+  "IfcCurveStyle": {},
+  "IfcCurveStyleFont": {
+    "PatternList": "LIST"
+  },
+  "IfcCurveStyleFontAndScaling": {},
+  "IfcCurveStyleFontPattern": {},
+  "IfcCylindricalSurface": {},
+  "IfcDamper": {},
+  "IfcDamperType": {},
+  "IfcDeepFoundation": {},
+  "IfcDeepFoundationType": {},
+  "IfcDerivedProfileDef": {},
+  "IfcDerivedUnit": {
+    "Elements": "SET"
+  },
+  "IfcDerivedUnitElement": {},
+  "IfcDimensionalExponents": {},
+  "IfcDirection": {
+    "DirectionRatios": "LIST"
+  },
+  "IfcDirectrixCurveSweptAreaSolid": {},
+  "IfcDirectrixDerivedReferenceSweptAreaSolid": {},
+  "IfcDiscreteAccessory": {},
+  "IfcDiscreteAccessoryType": {},
+  "IfcDistributionBoard": {},
+  "IfcDistributionBoardType": {},
+  "IfcDistributionChamberElement": {},
+  "IfcDistributionChamberElementType": {},
+  "IfcDistributionCircuit": {},
+  "IfcDistributionControlElement": {
+    "AssignedToFlowElement": "SET"
+  },
+  "IfcDistributionControlElementType": {},
+  "IfcDistributionElement": {
+    "HasPorts": "SET"
+  },
+  "IfcDistributionElementType": {},
+  "IfcDistributionFlowElement": {
+    "HasControlElements": "SET"
+  },
+  "IfcDistributionFlowElementType": {},
+  "IfcDistributionPort": {},
+  "IfcDistributionSystem": {},
+  "IfcDocumentInformation": {
+    "Editors": "SET",
+    "DocumentInfoForObjects": "SET",
+    "HasDocumentReferences": "SET",
+    "IsPointedTo": "SET",
+    "IsPointer": "SET"
+  },
+  "IfcDocumentInformationRelationship": {
+    "RelatedDocuments": "SET"
+  },
+  "IfcDocumentReference": {
+    "DocumentRefForObjects": "SET"
+  },
+  "IfcDoor": {},
+  "IfcDoorLiningProperties": {
+    "TransomOffset": "SET",
+    "LiningOffset": "SET",
+    "ThresholdOffset": "SET",
+    "LiningToPanelOffsetX": "SET",
+    "LiningToPanelOffsetY": "SET",
+    "WR33": "SET",
+    "WR35": "SET"
+  },
+  "IfcDoorPanelProperties": {
+    "ApplicableToType": "SET"
+  },
+  "IfcDoorType": {},
+  "IfcDraughtingPreDefinedColour": {},
+  "IfcDraughtingPreDefinedCurveFont": {},
+  "IfcDuctFitting": {},
+  "IfcDuctFittingType": {},
+  "IfcDuctSegment": {},
+  "IfcDuctSegmentType": {},
+  "IfcDuctSilencer": {},
+  "IfcDuctSilencerType": {},
+  "IfcEarthworksCut": {},
+  "IfcEarthworksElement": {},
+  "IfcEarthworksFill": {},
+  "IfcEdge": {},
+  "IfcEdgeCurve": {},
+  "IfcEdgeLoop": {
+    "EdgeList": "LIST",
+    "Ne": "LIST",
+    "IsClosed": "LIST"
+  },
+  "IfcElectricAppliance": {},
+  "IfcElectricApplianceType": {},
+  "IfcElectricDistributionBoard": {},
+  "IfcElectricDistributionBoardType": {},
+  "IfcElectricFlowStorageDevice": {},
+  "IfcElectricFlowStorageDeviceType": {},
+  "IfcElectricFlowTreatmentDevice": {},
+  "IfcElectricFlowTreatmentDeviceType": {},
+  "IfcElectricGenerator": {},
+  "IfcElectricGeneratorType": {},
+  "IfcElectricMotor": {},
+  "IfcElectricMotorType": {},
+  "IfcElectricTimeControl": {},
+  "IfcElectricTimeControlType": {},
+  "IfcElement": {
+    "FillsVoids": "SET",
+    "ConnectedTo": "SET",
+    "IsInterferedByElements": "SET",
+    "InterferesElements": "SET",
+    "HasProjections": "SET",
+    "HasOpenings": "SET",
+    "IsConnectionRealization": "SET",
+    "ProvidesBoundaries": "SET",
+    "ConnectedFrom": "SET",
+    "ContainedInStructure": "SET",
+    "HasCoverings": "SET",
+    "HasSurfaceFeatures": "SET"
+  },
+  "IfcElementAssembly": {},
+  "IfcElementAssemblyType": {},
+  "IfcElementComponent": {},
+  "IfcElementComponentType": {},
+  "IfcElementQuantity": {
+    "Quantities": "SET"
+  },
+  "IfcElementType": {},
+  "IfcElementarySurface": {},
+  "IfcEllipse": {},
+  "IfcEllipseProfileDef": {},
+  "IfcEnergyConversionDevice": {},
+  "IfcEnergyConversionDeviceType": {},
+  "IfcEngine": {},
+  "IfcEngineType": {},
+  "IfcEvaporativeCooler": {},
+  "IfcEvaporativeCoolerType": {},
+  "IfcEvaporator": {},
+  "IfcEvaporatorType": {},
+  "IfcEvent": {},
+  "IfcEventTime": {},
+  "IfcEventType": {},
+  "IfcExtendedProperties": {
+    "Properties": "SET"
+  },
+  "IfcExternalInformation": {},
+  "IfcExternalReference": {
+    "ExternalReferenceForResources": "SET"
+  },
+  "IfcExternalReferenceRelationship": {
+    "RelatedResourceObjects": "SET"
+  },
+  "IfcExternalSpatialElement": {
+    "BoundedBy": "SET"
+  },
+  "IfcExternalSpatialStructureElement": {},
+  "IfcExternallyDefinedHatchStyle": {},
+  "IfcExternallyDefinedSurfaceStyle": {},
+  "IfcExternallyDefinedTextFont": {},
+  "IfcExtrudedAreaSolid": {},
+  "IfcExtrudedAreaSolidTapered": {},
+  "IfcFace": {
+    "Bounds": "SET",
+    "HasTextureMaps": "SET"
+  },
+  "IfcFaceBasedSurfaceModel": {
+    "FbsmFaces": "SET"
+  },
+  "IfcFaceBound": {},
+  "IfcFaceOuterBound": {},
+  "IfcFaceSurface": {},
+  "IfcFacetedBrep": {},
+  "IfcFacetedBrepWithVoids": {
+    "Voids": "SET"
+  },
+  "IfcFacility": {},
+  "IfcFacilityPart": {},
+  "IfcFacilityPartCommon": {},
+  "IfcFailureConnectionCondition": {},
+  "IfcFan": {},
+  "IfcFanType": {},
+  "IfcFastener": {},
+  "IfcFastenerType": {},
+  "IfcFeatureElement": {},
+  "IfcFeatureElementAddition": {},
+  "IfcFeatureElementSubtraction": {},
+  "IfcFillAreaStyle": {
+    "FillStyles": "SET"
+  },
+  "IfcFillAreaStyleHatching": {},
+  "IfcFillAreaStyleTiles": {
+    "TilingPattern": "LIST",
+    "Tiles": "SET"
+  },
+  "IfcFilter": {},
+  "IfcFilterType": {},
+  "IfcFireSuppressionTerminal": {},
+  "IfcFireSuppressionTerminalType": {},
+  "IfcFixedReferenceSweptAreaSolid": {},
+  "IfcFlowController": {},
+  "IfcFlowControllerType": {},
+  "IfcFlowFitting": {},
+  "IfcFlowFittingType": {},
+  "IfcFlowInstrument": {},
+  "IfcFlowInstrumentType": {},
+  "IfcFlowMeter": {},
+  "IfcFlowMeterType": {},
+  "IfcFlowMovingDevice": {},
+  "IfcFlowMovingDeviceType": {},
+  "IfcFlowSegment": {},
+  "IfcFlowSegmentType": {},
+  "IfcFlowStorageDevice": {},
+  "IfcFlowStorageDeviceType": {},
+  "IfcFlowTerminal": {},
+  "IfcFlowTerminalType": {},
+  "IfcFlowTreatmentDevice": {},
+  "IfcFlowTreatmentDeviceType": {},
+  "IfcFooting": {},
+  "IfcFootingType": {},
+  "IfcFurnishingElement": {},
+  "IfcFurnishingElementType": {},
+  "IfcFurniture": {},
+  "IfcFurnitureType": {},
+  "IfcGeographicCRS": {},
+  "IfcGeographicElement": {},
+  "IfcGeographicElementType": {},
+  "IfcGeometricCurveSet": {
+    "NoSurfaces": "SET"
+  },
+  "IfcGeometricRepresentationContext": {
+    "HasSubContexts": "SET",
+    "HasCoordinateOperation": "SET"
+  },
+  "IfcGeometricRepresentationItem": {},
+  "IfcGeometricRepresentationSubContext": {},
+  "IfcGeometricSet": {
+    "Elements": "SET"
+  },
+  "IfcGeomodel": {},
+  "IfcGeoslice": {},
+  "IfcGeotechnicalAssembly": {},
+  "IfcGeotechnicalElement": {},
+  "IfcGeotechnicalStratum": {},
+  "IfcGradientCurve": {},
+  "IfcGrid": {
+    "UAxes": "LIST",
+    "VAxes": "LIST",
+    "WAxes": "LIST"
+  },
+  "IfcGridAxis": {
+    "PartOfW": "SET",
+    "PartOfV": "SET",
+    "PartOfU": "SET",
+    "HasIntersections": "SET"
+  },
+  "IfcGridPlacement": {},
+  "IfcGroup": {
+    "IsGroupedBy": "SET",
+    "ReferencedInStructures": "SET"
+  },
+  "IfcHalfSpaceSolid": {},
+  "IfcHeatExchanger": {},
+  "IfcHeatExchangerType": {},
+  "IfcHumidifier": {},
+  "IfcHumidifierType": {},
+  "IfcIShapeProfileDef": {},
+  "IfcImageTexture": {},
+  "IfcImpactProtectionDevice": {},
+  "IfcImpactProtectionDeviceType": {},
+  "IfcIndexedColourMap": {
+    "MappedTo": "SET",
+    "Colours": "LIST",
+    "ColourIndex": "LIST"
+  },
+  "IfcIndexedPolyCurve": {
+    "Points": "LIST",
+    "Segments": "LIST"
+  },
+  "IfcIndexedPolygonalFace": {
+    "CoordIndex": "LIST",
+    "ToFaceSet": "SET",
+    "HasTexCoords": "SET"
+  },
+  "IfcIndexedPolygonalFaceWithVoids": {
+    "InnerCoordIndices": "LIST"
+  },
+  "IfcIndexedPolygonalTextureMap": {
+    "TexCoordIndices": "SET"
+  },
+  "IfcIndexedTextureMap": {
+    "MappedTo": "SET",
+    "TexCoords": "LIST"
+  },
+  "IfcIndexedTriangleTextureMap": {
+    "TexCoordIndex": "LIST"
+  },
+  "IfcInterceptor": {},
+  "IfcInterceptorType": {},
+  "IfcIntersectionCurve": {},
+  "IfcInventory": {
+    "ResponsiblePersons": "SET"
+  },
+  "IfcIrregularTimeSeries": {
+    "Values": "LIST"
+  },
+  "IfcIrregularTimeSeriesValue": {
+    "ListValues": "LIST"
+  },
+  "IfcJunctionBox": {},
+  "IfcJunctionBoxType": {},
+  "IfcKerb": {},
+  "IfcKerbType": {},
+  "IfcLShapeProfileDef": {},
+  "IfcLaborResource": {},
+  "IfcLaborResourceType": {},
+  "IfcLagTime": {},
+  "IfcLamp": {},
+  "IfcLampType": {},
+  "IfcLibraryInformation": {
+    "LibraryInfoForObjects": "SET",
+    "HasLibraryReferences": "SET"
+  },
+  "IfcLibraryReference": {
+    "LibraryRefForObjects": "SET"
+  },
+  "IfcLightDistributionData": {
+    "SecondaryPlaneAngle": "LIST",
+    "LuminousIntensity": "LIST"
+  },
+  "IfcLightFixture": {},
+  "IfcLightFixtureType": {},
+  "IfcLightIntensityDistribution": {
+    "DistributionData": "LIST"
+  },
+  "IfcLightSource": {},
+  "IfcLightSourceAmbient": {},
+  "IfcLightSourceDirectional": {},
+  "IfcLightSourceGoniometric": {},
+  "IfcLightSourcePositional": {},
+  "IfcLightSourceSpot": {},
+  "IfcLine": {},
+  "IfcLinearElement": {},
+  "IfcLinearPlacement": {},
+  "IfcLinearPositioningElement": {},
+  "IfcLiquidTerminal": {},
+  "IfcLiquidTerminalType": {},
+  "IfcLocalPlacement": {},
+  "IfcLoop": {},
+  "IfcManifoldSolidBrep": {},
+  "IfcMapConversion": {},
+  "IfcMapConversionScaled": {},
+  "IfcMappedItem": {},
+  "IfcMarineFacility": {},
+  "IfcMarinePart": {},
+  "IfcMaterial": {
+    "HasRepresentation": "SET",
+    "IsRelatedWith": "SET",
+    "RelatesTo": "SET"
+  },
+  "IfcMaterialClassificationRelationship": {
+    "MaterialClassifications": "SET"
+  },
+  "IfcMaterialConstituent": {
+    "ToMaterialConstituentSet": "SET"
+  },
+  "IfcMaterialConstituentSet": {
+    "MaterialConstituents": "SET"
+  },
+  "IfcMaterialDefinition": {
+    "AssociatedTo": "SET",
+    "HasExternalReferences": "SET",
+    "HasProperties": "SET"
+  },
+  "IfcMaterialDefinitionRepresentation": {},
+  "IfcMaterialLayer": {
+    "ToMaterialLayerSet": "SET"
+  },
+  "IfcMaterialLayerSet": {
+    "MaterialLayers": "LIST",
+    "LayerSetName": "SET"
+  },
+  "IfcMaterialLayerSetUsage": {
+    "ForLayerSet": "SET",
+    "LayerSetDirection": "SET",
+    "OffsetFromReferenceLine": "SET"
+  },
+  "IfcMaterialLayerWithOffsets": {
+    "OffsetDirection": "SET",
+    "OffsetValues": "SET"
+  },
+  "IfcMaterialList": {
+    "Materials": "LIST"
+  },
+  "IfcMaterialProfile": {
+    "ToMaterialProfileSet": "SET"
+  },
+  "IfcMaterialProfileSet": {
+    "MaterialProfiles": "LIST"
+  },
+  "IfcMaterialProfileSetUsage": {
+    "ForProfileSet": "SET"
+  },
+  "IfcMaterialProfileSetUsageTapering": {
+    "ForProfileEndSet": "SET"
+  },
+  "IfcMaterialProfileWithOffsets": {
+    "OffsetValues": "SET"
+  },
+  "IfcMaterialProperties": {},
+  "IfcMaterialRelationship": {
+    "RelatedMaterials": "SET"
+  },
+  "IfcMaterialUsageDefinition": {
+    "AssociatedTo": "SET"
+  },
+  "IfcMeasureWithUnit": {},
+  "IfcMechanicalFastener": {},
+  "IfcMechanicalFastenerType": {},
+  "IfcMedicalDevice": {},
+  "IfcMedicalDeviceType": {},
+  "IfcMember": {},
+  "IfcMemberType": {},
+  "IfcMetric": {},
+  "IfcMirroredProfileDef": {},
+  "IfcMobileTelecommunicationsAppliance": {},
+  "IfcMobileTelecommunicationsApplianceType": {},
+  "IfcMonetaryUnit": {},
+  "IfcMooringDevice": {},
+  "IfcMooringDeviceType": {},
+  "IfcMotorConnection": {},
+  "IfcMotorConnectionType": {},
+  "IfcNamedUnit": {},
+  "IfcNavigationElement": {},
+  "IfcNavigationElementType": {},
+  "IfcObject": {
+    "IsDeclaredBy": "SET",
+    "Declares": "SET",
+    "IsTypedBy": "SET",
+    "IsDefinedBy": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcObjectDefinition": {
+    "HasAssignments": "SET",
+    "Nests": "SET",
+    "IsNestedBy": "SET",
+    "HasContext": "SET",
+    "IsDecomposedBy": "SET",
+    "Decomposes": "SET",
+    "HasAssociations": "SET"
+  },
+  "IfcObjectPlacement": {
+    "PlacesObject": "SET",
+    "ReferencedByPlacements": "SET"
+  },
+  "IfcObjective": {
+    "BenchmarkValues": "LIST"
+  },
+  "IfcOccupant": {},
+  "IfcOffsetCurve": {},
+  "IfcOffsetCurve2D": {},
+  "IfcOffsetCurve3D": {},
+  "IfcOffsetCurveByDistances": {
+    "OffsetValues": "SET"
+  },
+  "IfcOpenCrossProfileDef": {
+    "Widths": "LIST",
+    "Slopes": "LIST",
+    "Tags": "LIST",
+    "OffsetPoint": "SET"
+  },
+  "IfcOpenShell": {},
+  "IfcOpeningElement": {
+    "HasFillings": "SET"
+  },
+  "IfcOrganization": {
+    "Roles": "LIST",
+    "Addresses": "LIST",
+    "IsRelatedBy": "SET",
+    "Relates": "SET",
+    "Engages": "SET"
+  },
+  "IfcOrganizationRelationship": {
+    "RelatedOrganizations": "SET"
+  },
+  "IfcOrientedEdge": {},
+  "IfcOuterBoundaryCurve": {},
+  "IfcOutlet": {},
+  "IfcOutletType": {},
+  "IfcOwnerHistory": {},
+  "IfcParameterizedProfileDef": {},
+  "IfcPath": {
+    "EdgeList": "LIST"
+  },
+  "IfcPavement": {},
+  "IfcPavementType": {},
+  "IfcPcurve": {},
+  "IfcPerformanceHistory": {},
+  "IfcPermeableCoveringProperties": {},
+  "IfcPermit": {},
+  "IfcPerson": {
+    "MiddleNames": "LIST",
+    "PrefixTitles": "LIST",
+    "SuffixTitles": "LIST",
+    "Roles": "LIST",
+    "Addresses": "LIST",
+    "EngagedIn": "SET",
+    "ValidSetOfNames": "SET"
+  },
+  "IfcPersonAndOrganization": {
+    "Roles": "LIST"
+  },
+  "IfcPhysicalComplexQuantity": {
+    "HasQuantities": "SET"
+  },
+  "IfcPhysicalQuantity": {
+    "HasExternalReferences": "SET",
+    "PartOfComplex": "SET"
+  },
+  "IfcPhysicalSimpleQuantity": {},
+  "IfcPile": {},
+  "IfcPileType": {},
+  "IfcPipeFitting": {},
+  "IfcPipeFittingType": {},
+  "IfcPipeSegment": {},
+  "IfcPipeSegmentType": {},
+  "IfcPixelTexture": {
+    "Pixel": "LIST",
+    "SizeOfPixelList": "LIST"
+  },
+  "IfcPlacement": {},
+  "IfcPlanarBox": {},
+  "IfcPlanarExtent": {},
+  "IfcPlane": {},
+  "IfcPlate": {},
+  "IfcPlateType": {},
+  "IfcPoint": {},
+  "IfcPointByDistanceExpression": {
+    "OffsetLateral": "SET",
+    "OffsetVertical": "SET",
+    "OffsetLongitudinal": "SET"
+  },
+  "IfcPointOnCurve": {},
+  "IfcPointOnSurface": {},
+  "IfcPolyLoop": {
+    "Polygon": "LIST"
+  },
+  "IfcPolygonalBoundedHalfSpace": {},
+  "IfcPolygonalFaceSet": {
+    "Faces": "LIST",
+    "PnIndex": "LIST"
+  },
+  "IfcPolyline": {
+    "Points": "LIST"
+  },
+  "IfcPolynomialCurve": {
+    "CoefficientsX": "LIST",
+    "CoefficientsY": "LIST",
+    "CoefficientsZ": "LIST"
+  },
+  "IfcPort": {
+    "ContainedIn": "SET",
+    "ConnectedFrom": "SET",
+    "ConnectedTo": "SET"
+  },
+  "IfcPositioningElement": {
+    "ContainedInStructure": "SET",
+    "Positions": "SET"
+  },
+  "IfcPostalAddress": {
+    "AddressLines": "LIST"
+  },
+  "IfcPreDefinedColour": {},
+  "IfcPreDefinedCurveFont": {},
+  "IfcPreDefinedItem": {},
+  "IfcPreDefinedProperties": {},
+  "IfcPreDefinedPropertySet": {},
+  "IfcPreDefinedTextFont": {},
+  "IfcPresentationItem": {},
+  "IfcPresentationLayerAssignment": {
+    "AssignedItems": "SET"
+  },
+  "IfcPresentationLayerWithStyle": {
+    "LayerStyles": "SET"
+  },
+  "IfcPresentationStyle": {},
+  "IfcProcedure": {},
+  "IfcProcedureType": {},
+  "IfcProcess": {
+    "IsPredecessorTo": "SET",
+    "IsSuccessorFrom": "SET",
+    "OperatesOn": "SET"
+  },
+  "IfcProduct": {
+    "ReferencedBy": "SET",
+    "PositionedRelativeTo": "SET",
+    "ReferencedInStructures": "SET"
+  },
+  "IfcProductDefinitionShape": {
+    "ShapeOfProduct": "SET",
+    "HasShapeAspects": "SET"
+  },
+  "IfcProductRepresentation": {
+    "Representations": "LIST"
+  },
+  "IfcProfileDef": {
+    "HasExternalReference": "SET",
+    "HasProperties": "SET"
+  },
+  "IfcProfileProperties": {},
+  "IfcProject": {},
+  "IfcProjectLibrary": {},
+  "IfcProjectOrder": {},
+  "IfcProjectedCRS": {},
+  "IfcProjectionElement": {},
+  "IfcProperty": {
+    "PartOfPset": "SET",
+    "PropertyForDependance": "SET",
+    "PropertyDependsOn": "SET",
+    "PartOfComplex": "SET",
+    "HasConstraints": "SET",
+    "HasApprovals": "SET"
+  },
+  "IfcPropertyAbstraction": {
+    "HasExternalReferences": "SET"
+  },
+  "IfcPropertyBoundedValue": {
+    "SetPointValue": "SET",
+    "SameUnitLowerSet": "SET",
+    "SameUnitUpperSet": "SET"
+  },
+  "IfcPropertyDefinition": {
+    "HasContext": "SET",
+    "HasAssociations": "SET"
+  },
+  "IfcPropertyDependencyRelationship": {},
+  "IfcPropertyEnumeratedValue": {
+    "EnumerationValues": "LIST"
+  },
+  "IfcPropertyEnumeration": {
+    "EnumerationValues": "LIST"
+  },
+  "IfcPropertyListValue": {
+    "ListValues": "LIST",
+    "WR31": "LIST"
+  },
+  "IfcPropertyReferenceValue": {},
+  "IfcPropertySet": {
+    "HasProperties": "SET"
+  },
+  "IfcPropertySetDefinition": {
+    "DefinesType": "SET",
+    "IsDefinedBy": "SET",
+    "DefinesOccurrence": "SET"
+  },
+  "IfcPropertySetTemplate": {
+    "TemplateType": "SET",
+    "HasPropertyTemplates": "SET",
+    "Defines": "SET"
+  },
+  "IfcPropertySingleValue": {},
+  "IfcPropertyTableValue": {
+    "DefiningValues": "LIST",
+    "DefinedValues": "LIST"
+  },
+  "IfcPropertyTemplate": {
+    "PartOfComplexTemplate": "SET",
+    "PartOfPsetTemplate": "SET"
+  },
+  "IfcPropertyTemplateDefinition": {},
+  "IfcProtectiveDevice": {},
+  "IfcProtectiveDeviceTrippingUnit": {},
+  "IfcProtectiveDeviceTrippingUnitType": {},
+  "IfcProtectiveDeviceType": {},
+  "IfcPump": {},
+  "IfcPumpType": {},
+  "IfcQuantityArea": {},
+  "IfcQuantityCount": {},
+  "IfcQuantityLength": {},
+  "IfcQuantityNumber": {},
+  "IfcQuantitySet": {},
+  "IfcQuantityTime": {},
+  "IfcQuantityVolume": {},
+  "IfcQuantityWeight": {},
+  "IfcRail": {},
+  "IfcRailType": {},
+  "IfcRailing": {},
+  "IfcRailingType": {},
+  "IfcRailway": {},
+  "IfcRailwayPart": {},
+  "IfcRamp": {},
+  "IfcRampFlight": {},
+  "IfcRampFlightType": {},
+  "IfcRampType": {},
+  "IfcRationalBSplineCurveWithKnots": {
+    "WeightsData": "LIST",
+    "Weights": "ARRAY",
+    "SameNumOfWeightsAndPoints": "LIST"
+  },
+  "IfcRationalBSplineSurfaceWithKnots": {
+    "WeightsData": "LIST",
+    "Weights": "ARRAY",
+    "CorrespondingWeightsDataLists": "LIST"
+  },
+  "IfcRectangleHollowProfileDef": {},
+  "IfcRectangleProfileDef": {},
+  "IfcRectangularPyramid": {},
+  "IfcRectangularTrimmedSurface": {},
+  "IfcRecurrencePattern": {
+    "DayComponent": "SET",
+    "WeekdayComponent": "SET",
+    "MonthComponent": "SET",
+    "TimePeriods": "LIST"
+  },
+  "IfcReference": {
+    "ListPositions": "LIST"
+  },
+  "IfcReferent": {},
+  "IfcRegularTimeSeries": {
+    "Values": "LIST"
+  },
+  "IfcReinforcedSoil": {},
+  "IfcReinforcementBarProperties": {},
+  "IfcReinforcementDefinitionProperties": {
+    "ReinforcementSectionDefinitions": "LIST"
+  },
+  "IfcReinforcingBar": {},
+  "IfcReinforcingBarType": {
+    "BendingParameters": "LIST"
+  },
+  "IfcReinforcingElement": {},
+  "IfcReinforcingElementType": {},
+  "IfcReinforcingMesh": {},
+  "IfcReinforcingMeshType": {
+    "BendingParameters": "LIST"
+  },
+  "IfcRelAdheresToElement": {
+    "RelatedSurfaceFeatures": "SET"
+  },
+  "IfcRelAggregates": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssigns": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToActor": {},
+  "IfcRelAssignsToControl": {},
+  "IfcRelAssignsToGroup": {},
+  "IfcRelAssignsToGroupByFactor": {},
+  "IfcRelAssignsToProcess": {},
+  "IfcRelAssignsToProduct": {},
+  "IfcRelAssignsToResource": {},
+  "IfcRelAssociates": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesApproval": {},
+  "IfcRelAssociatesClassification": {},
+  "IfcRelAssociatesConstraint": {},
+  "IfcRelAssociatesDocument": {},
+  "IfcRelAssociatesLibrary": {},
+  "IfcRelAssociatesMaterial": {},
+  "IfcRelAssociatesProfileDef": {},
+  "IfcRelConnects": {},
+  "IfcRelConnectsElements": {},
+  "IfcRelConnectsPathElements": {
+    "RelatingPriorities": "LIST",
+    "RelatedPriorities": "LIST"
+  },
+  "IfcRelConnectsPortToElement": {},
+  "IfcRelConnectsPorts": {},
+  "IfcRelConnectsStructuralActivity": {},
+  "IfcRelConnectsStructuralMember": {},
+  "IfcRelConnectsWithEccentricity": {},
+  "IfcRelConnectsWithRealizingElements": {
+    "RealizingElements": "SET"
+  },
+  "IfcRelContainedInSpatialStructure": {
+    "RelatedElements": "SET"
+  },
+  "IfcRelCoversBldgElements": {
+    "RelatedCoverings": "SET"
+  },
+  "IfcRelCoversSpaces": {
+    "RelatedCoverings": "SET"
+  },
+  "IfcRelDeclares": {
+    "RelatedDefinitions": "SET"
+  },
+  "IfcRelDecomposes": {},
+  "IfcRelDefines": {},
+  "IfcRelDefinesByObject": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelDefinesByProperties": {
+    "RelatedObjects": "SET",
+    "RelatingPropertyDefinition": "SET"
+  },
+  "IfcRelDefinesByTemplate": {
+    "RelatedPropertySets": "SET",
+    "RelatingTemplate": "SET"
+  },
+  "IfcRelDefinesByType": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelFillsElement": {},
+  "IfcRelFlowControlElements": {
+    "RelatedControlElements": "SET"
+  },
+  "IfcRelInterferesElements": {},
+  "IfcRelNests": {
+    "RelatedObjects": "LIST"
+  },
+  "IfcRelPositions": {
+    "RelatedProducts": "SET"
+  },
+  "IfcRelProjectsElement": {},
+  "IfcRelReferencedInSpatialStructure": {
+    "RelatedElements": "SET"
+  },
+  "IfcRelSequence": {},
+  "IfcRelServicesBuildings": {
+    "RelatedBuildings": "SET"
+  },
+  "IfcRelSpaceBoundary": {},
+  "IfcRelSpaceBoundary1stLevel": {
+    "InnerBoundaries": "SET"
+  },
+  "IfcRelSpaceBoundary2ndLevel": {
+    "Corresponds": "SET"
+  },
+  "IfcRelVoidsElement": {},
+  "IfcRelationship": {},
+  "IfcReparametrisedCompositeCurveSegment": {},
+  "IfcRepresentation": {
+    "Items": "SET",
+    "RepresentationMap": "SET",
+    "LayerAssignments": "SET",
+    "OfProductRepresentation": "SET"
+  },
+  "IfcRepresentationContext": {
+    "RepresentationsInContext": "SET"
+  },
+  "IfcRepresentationItem": {
+    "LayerAssignment": "SET",
+    "StyledByItem": "SET"
+  },
+  "IfcRepresentationMap": {
+    "HasShapeAspects": "SET",
+    "MapUsage": "SET"
+  },
+  "IfcResource": {
+    "ResourceOf": "SET"
+  },
+  "IfcResourceApprovalRelationship": {
+    "RelatedResourceObjects": "SET"
+  },
+  "IfcResourceConstraintRelationship": {
+    "RelatedResourceObjects": "SET"
+  },
+  "IfcResourceLevelRelationship": {},
+  "IfcResourceTime": {},
+  "IfcRevolvedAreaSolid": {},
+  "IfcRevolvedAreaSolidTapered": {},
+  "IfcRightCircularCone": {},
+  "IfcRightCircularCylinder": {},
+  "IfcRigidOperation": {},
+  "IfcRoad": {},
+  "IfcRoadPart": {},
+  "IfcRoof": {},
+  "IfcRoofType": {},
+  "IfcRoot": {},
+  "IfcRoundedRectangleProfileDef": {},
+  "IfcSIUnit": {},
+  "IfcSanitaryTerminal": {},
+  "IfcSanitaryTerminalType": {},
+  "IfcSchedulingTime": {},
+  "IfcSeamCurve": {},
+  "IfcSecondOrderPolynomialSpiral": {},
+  "IfcSectionProperties": {},
+  "IfcSectionReinforcementProperties": {
+    "CrossSectionReinforcementDefinitions": "SET"
+  },
+  "IfcSectionedSolid": {
+    "CrossSections": "LIST"
+  },
+  "IfcSectionedSolidHorizontal": {
+    "CrossSectionPositions": "LIST",
+    "NoLongitudinalOffsets": "SET"
+  },
+  "IfcSectionedSpine": {
+    "CrossSections": "LIST",
+    "CrossSectionPositions": "LIST"
+  },
+  "IfcSectionedSurface": {
+    "CrossSectionPositions": "LIST",
+    "CrossSections": "LIST",
+    "NoOffsets": "SET"
+  },
+  "IfcSegment": {
+    "UsingCurves": "SET"
+  },
+  "IfcSegmentedReferenceCurve": {},
+  "IfcSensor": {},
+  "IfcSensorType": {},
+  "IfcSeventhOrderPolynomialSpiral": {},
+  "IfcShadingDevice": {},
+  "IfcShadingDeviceType": {},
+  "IfcShapeAspect": {
+    "ShapeRepresentations": "LIST",
+    "HasExternalReferences": "SET"
+  },
+  "IfcShapeModel": {
+    "OfShapeAspect": "SET"
+  },
+  "IfcShapeRepresentation": {},
+  "IfcShellBasedSurfaceModel": {
+    "SbsmBoundary": "SET"
+  },
+  "IfcSign": {},
+  "IfcSignType": {},
+  "IfcSignal": {},
+  "IfcSignalType": {},
+  "IfcSimpleProperty": {},
+  "IfcSimplePropertyTemplate": {},
+  "IfcSineSpiral": {},
+  "IfcSite": {},
+  "IfcSlab": {},
+  "IfcSlabType": {},
+  "IfcSlippageConnectionCondition": {},
+  "IfcSolarDevice": {},
+  "IfcSolarDeviceType": {},
+  "IfcSolidModel": {},
+  "IfcSpace": {
+    "HasCoverings": "SET",
+    "BoundedBy": "SET"
+  },
+  "IfcSpaceHeater": {},
+  "IfcSpaceHeaterType": {},
+  "IfcSpaceType": {},
+  "IfcSpatialElement": {
+    "ContainsElements": "SET",
+    "ServicedBySystems": "SET",
+    "ReferencesElements": "SET",
+    "IsInterferedByElements": "SET",
+    "InterferesElements": "SET"
+  },
+  "IfcSpatialElementType": {},
+  "IfcSpatialStructureElement": {},
+  "IfcSpatialStructureElementType": {},
+  "IfcSpatialZone": {},
+  "IfcSpatialZoneType": {},
+  "IfcSphere": {},
+  "IfcSphericalSurface": {},
+  "IfcSpiral": {},
+  "IfcStackTerminal": {},
+  "IfcStackTerminalType": {},
+  "IfcStair": {},
+  "IfcStairFlight": {},
+  "IfcStairFlightType": {},
+  "IfcStairType": {},
+  "IfcStructuralAction": {},
+  "IfcStructuralActivity": {
+    "AssignedToStructuralItem": "SET"
+  },
+  "IfcStructuralAnalysisModel": {
+    "LoadedBy": "SET",
+    "HasResults": "SET"
+  },
+  "IfcStructuralConnection": {
+    "ConnectsStructuralMembers": "SET"
+  },
+  "IfcStructuralConnectionCondition": {},
+  "IfcStructuralCurveAction": {},
+  "IfcStructuralCurveConnection": {},
+  "IfcStructuralCurveMember": {},
+  "IfcStructuralCurveMemberVarying": {},
+  "IfcStructuralCurveReaction": {},
+  "IfcStructuralItem": {
+    "AssignedStructuralActivity": "SET"
+  },
+  "IfcStructuralLinearAction": {},
+  "IfcStructuralLoad": {},
+  "IfcStructuralLoadCase": {
+    "SelfWeightCoefficients": "LIST"
+  },
+  "IfcStructuralLoadConfiguration": {
+    "Values": "LIST",
+    "Locations": "LIST",
+    "ValidListSize": "LIST"
+  },
+  "IfcStructuralLoadGroup": {
+    "SourceOfResultGroup": "SET",
+    "LoadGroupFor": "SET"
+  },
+  "IfcStructuralLoadLinearForce": {},
+  "IfcStructuralLoadOrResult": {},
+  "IfcStructuralLoadPlanarForce": {},
+  "IfcStructuralLoadSingleDisplacement": {},
+  "IfcStructuralLoadSingleDisplacementDistortion": {},
+  "IfcStructuralLoadSingleForce": {},
+  "IfcStructuralLoadSingleForceWarping": {},
+  "IfcStructuralLoadStatic": {},
+  "IfcStructuralLoadTemperature": {},
+  "IfcStructuralMember": {
+    "ConnectedBy": "SET"
+  },
+  "IfcStructuralPlanarAction": {},
+  "IfcStructuralPointAction": {},
+  "IfcStructuralPointConnection": {},
+  "IfcStructuralPointReaction": {},
+  "IfcStructuralReaction": {},
+  "IfcStructuralResultGroup": {
+    "ResultGroupFor": "SET"
+  },
+  "IfcStructuralSurfaceAction": {},
+  "IfcStructuralSurfaceConnection": {},
+  "IfcStructuralSurfaceMember": {},
+  "IfcStructuralSurfaceMemberVarying": {},
+  "IfcStructuralSurfaceReaction": {},
+  "IfcStyleModel": {},
+  "IfcStyledItem": {
+    "Styles": "SET"
+  },
+  "IfcStyledRepresentation": {},
+  "IfcSubContractResource": {},
+  "IfcSubContractResourceType": {},
+  "IfcSubedge": {},
+  "IfcSurface": {},
+  "IfcSurfaceCurve": {
+    "AssociatedGeometry": "LIST",
+    "BasisSurface": "SET"
+  },
+  "IfcSurfaceCurveSweptAreaSolid": {},
+  "IfcSurfaceFeature": {},
+  "IfcSurfaceOfLinearExtrusion": {},
+  "IfcSurfaceOfRevolution": {},
+  "IfcSurfaceReinforcementArea": {
+    "SurfaceReinforcement1": "LIST",
+    "SurfaceReinforcement2": "LIST"
+  },
+  "IfcSurfaceStyle": {
+    "Styles": "SET"
+  },
+  "IfcSurfaceStyleLighting": {
+    "DiffuseTransmissionColour": "SET"
+  },
+  "IfcSurfaceStyleRefraction": {},
+  "IfcSurfaceStyleRendering": {
+    "DiffuseTransmissionColour": "SET"
+  },
+  "IfcSurfaceStyleShading": {},
+  "IfcSurfaceStyleWithTextures": {
+    "Textures": "LIST"
+  },
+  "IfcSurfaceTexture": {
+    "Parameter": "LIST",
+    "IsMappedBy": "SET",
+    "UsedInStyles": "SET"
+  },
+  "IfcSweptAreaSolid": {},
+  "IfcSweptDiskSolid": {},
+  "IfcSweptDiskSolidPolygonal": {},
+  "IfcSweptSurface": {},
+  "IfcSwitchingDevice": {},
+  "IfcSwitchingDeviceType": {},
+  "IfcSystem": {
+    "ServicesBuildings": "SET",
+    "ServicesFacilities": "SET"
+  },
+  "IfcSystemFurnitureElement": {},
+  "IfcSystemFurnitureElementType": {},
+  "IfcTShapeProfileDef": {},
+  "IfcTable": {
+    "Rows": "LIST",
+    "Columns": "LIST"
+  },
+  "IfcTableColumn": {},
+  "IfcTableRow": {
+    "RowCells": "LIST"
+  },
+  "IfcTank": {},
+  "IfcTankType": {},
+  "IfcTask": {},
+  "IfcTaskTime": {},
+  "IfcTaskTimeRecurring": {},
+  "IfcTaskType": {},
+  "IfcTelecomAddress": {
+    "TelephoneNumbers": "LIST",
+    "FacsimileNumbers": "LIST",
+    "ElectronicMailAddresses": "LIST",
+    "MessagingIDs": "LIST"
+  },
+  "IfcTendon": {},
+  "IfcTendonAnchor": {},
+  "IfcTendonAnchorType": {},
+  "IfcTendonConduit": {},
+  "IfcTendonConduitType": {},
+  "IfcTendonType": {},
+  "IfcTessellatedFaceSet": {
+    "Coordinates": "LIST",
+    "HasColours": "SET",
+    "HasTextures": "SET"
+  },
+  "IfcTessellatedItem": {},
+  "IfcTextLiteral": {},
+  "IfcTextLiteralWithExtent": {},
+  "IfcTextStyle": {},
+  "IfcTextStyleFontModel": {
+    "FontFamily": "LIST"
+  },
+  "IfcTextStyleForDefinedFont": {},
+  "IfcTextStyleTextModel": {},
+  "IfcTextureCoordinate": {
+    "Maps": "LIST"
+  },
+  "IfcTextureCoordinateGenerator": {
+    "Parameter": "LIST"
+  },
+  "IfcTextureCoordinateIndices": {
+    "TexCoordIndex": "LIST"
+  },
+  "IfcTextureCoordinateIndicesWithVoids": {
+    "InnerTexCoordIndices": "LIST"
+  },
+  "IfcTextureMap": {
+    "Vertices": "LIST"
+  },
+  "IfcTextureVertex": {
+    "Coordinates": "LIST"
+  },
+  "IfcTextureVertexList": {
+    "TexCoordsList": "LIST"
+  },
+  "IfcThirdOrderPolynomialSpiral": {},
+  "IfcTimePeriod": {},
+  "IfcTimeSeries": {
+    "HasExternalReference": "SET"
+  },
+  "IfcTimeSeriesValue": {
+    "ListValues": "LIST"
+  },
+  "IfcTopologicalRepresentationItem": {},
+  "IfcTopologyRepresentation": {},
+  "IfcToroidalSurface": {},
+  "IfcTrackElement": {},
+  "IfcTrackElementType": {},
+  "IfcTransformer": {},
+  "IfcTransformerType": {},
+  "IfcTransportElement": {},
+  "IfcTransportElementType": {},
+  "IfcTransportationDevice": {},
+  "IfcTransportationDeviceType": {},
+  "IfcTrapeziumProfileDef": {
+    "TopXOffset": "SET"
+  },
+  "IfcTriangulatedFaceSet": {
+    "Normals": "LIST",
+    "CoordIndex": "LIST",
+    "PnIndex": "LIST"
+  },
+  "IfcTriangulatedIrregularNetwork": {
+    "Flags": "LIST",
+    "NotClosed": "SET"
+  },
+  "IfcTrimmedCurve": {
+    "Trim1": "SET",
+    "Trim2": "SET"
+  },
+  "IfcTubeBundle": {},
+  "IfcTubeBundleType": {},
+  "IfcTypeObject": {
+    "HasPropertySets": "SET",
+    "Types": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTypeProcess": {
+    "OperatesOn": "SET"
+  },
+  "IfcTypeProduct": {
+    "RepresentationMaps": "LIST",
+    "ReferencedBy": "SET"
+  },
+  "IfcTypeResource": {
+    "ResourceOf": "SET"
+  },
+  "IfcUShapeProfileDef": {},
+  "IfcUnitAssignment": {
+    "Units": "SET"
+  },
+  "IfcUnitaryControlElement": {},
+  "IfcUnitaryControlElementType": {},
+  "IfcUnitaryEquipment": {},
+  "IfcUnitaryEquipmentType": {},
+  "IfcValve": {},
+  "IfcValveType": {},
+  "IfcVector": {},
+  "IfcVehicle": {},
+  "IfcVehicleType": {},
+  "IfcVertex": {},
+  "IfcVertexLoop": {},
+  "IfcVertexPoint": {},
+  "IfcVibrationDamper": {},
+  "IfcVibrationDamperType": {},
+  "IfcVibrationIsolator": {},
+  "IfcVibrationIsolatorType": {},
+  "IfcVirtualElement": {},
+  "IfcVirtualGridIntersection": {
+    "IntersectingAxes": "LIST",
+    "OffsetDistances": "SET"
+  },
+  "IfcVoidingFeature": {},
+  "IfcWall": {},
+  "IfcWallStandardCase": {
+    "HasMaterialLayerSetUsage": "SET"
+  },
+  "IfcWallType": {},
+  "IfcWasteTerminal": {},
+  "IfcWasteTerminalType": {},
+  "IfcWellKnownText": {},
+  "IfcWindow": {},
+  "IfcWindowLiningProperties": {
+    "FirstTransomOffset": "SET",
+    "SecondTransomOffset": "SET",
+    "FirstMullionOffset": "SET",
+    "SecondMullionOffset": "SET",
+    "LiningOffset": "SET",
+    "LiningToPanelOffsetX": "SET",
+    "LiningToPanelOffsetY": "SET",
+    "WR32": "SET",
+    "WR33": "SET",
+    "WR34": "SET"
+  },
+  "IfcWindowPanelProperties": {
+    "ApplicableToType": "SET"
+  },
+  "IfcWindowType": {},
+  "IfcWorkCalendar": {
+    "WorkingTimes": "SET",
+    "ExceptionTimes": "SET"
+  },
+  "IfcWorkControl": {
+    "Creators": "SET"
+  },
+  "IfcWorkPlan": {},
+  "IfcWorkSchedule": {},
+  "IfcWorkTime": {},
+  "IfcZShapeProfileDef": {},
+  "IfcZone": {}
+}

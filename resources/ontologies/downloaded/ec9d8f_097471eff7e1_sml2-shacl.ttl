@@ -1,0 +1,214 @@
+# baseURI: https://w3id.org/sml/2/shacl/def
+# imports: https://w3id.org/sml/shacl/def
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# imports: https://w3id.org/sml/2/rdfs/def
+# imports: http://www.w3.org/ns/sosa/
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# prefix: sml
+
+@prefix sml: <https://w3id.org/sml/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<https://w3id.org/sml/2/shacl/def>
+  a owl:Ontology ;
+  owl:imports <https://w3id.org/sml/shacl/def> ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <https://w3id.org/sml/2/rdfs/def> ;
+  owl:imports <http://www.w3.org/ns/sosa/> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+.
+
+sml:AggregationStateType
+  a sh:NodeShape ;
+  sh:in (
+      sml:Solid
+      sml:Liquid
+      sml:Gas
+      sml:Plasma
+    ) ;
+.
+sml:ConcreteConcept
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasPartsGroup ;
+      sh:class rdfs:Container ;
+    ] ;
+.
+sml:Connection
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:connectsObject ;
+      sh:class sml:PhysicalObject ;
+    ] ;
+  sh:property [
+      sh:path sml:connectsPort ;
+      sh:class sml:Port ;
+    ] ;
+.
+sml:Interaction
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:overConnection ;
+      sh:class sml:Connection ;
+    ] ;
+  sh:property [
+      sh:path sml:overInterface ;
+      sh:class sml:Interface ;
+    ] ;
+  sh:property [
+      sh:path sml:transferType ;
+      sh:class sml:TransferType ;
+    ] ;
+.
+sml:Interface
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:connectsObject ;
+      sh:class sml:PhysicalObject ;
+    ] ;
+  sh:property [
+      sh:path sml:connectsPort ;
+      sh:class sml:Port ;
+    ] ;
+.
+sml:Matter
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:aggregationStateType ;
+      sh:class sml:AggregationStateType ;
+    ] ;
+  sh:property [
+      sh:path sml:chemicalFormula ;
+      sh:datatype xsd:string ;
+    ] ;
+.
+sml:MatterPortion
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:portion ;
+      sh:class sml:QuantityValue ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+.
+sml:Mixture
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:consistsOf ;
+      sh:or ( [ sh:class sml:Matter] [sh:class sml:MatterPortion ] ) ;
+    ] ;
+.
+sml:PhysicalObject
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:isConnectedTo ;
+      sh:class sml:PhysicalObject ;
+    ] ;
+  sh:property [
+      sh:path sml:participatesIn ;
+      sh:class sml:Interaction ;
+    ] ;
+.
+sml:RealObject
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:consistsOf ;
+      sh:or ( [ sh:class sml:Matter] [sh:class sml:MatterPortion ] ) ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:or ( [ sh:class sml:RealObject] [sh:class sml:Port ] ) ;
+    ] ;
+.
+sml:Requirement
+  a sh:NodeShape ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      sh:path sml:requirementSeverityType ;
+      sh:class sml:RequirementSeverityType ;
+    ] ;
+  sh:property [
+      sh:path sml:requirementSourceType ;
+      sh:class sml:RequirementSourceType ;
+    ] ;
+  sh:property [
+      sh:path sml:requirementTopicType ;
+      sh:class sml:RequirementTopicType ;
+    ] ;
+.
+sml:SpatialRegion
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:contains ;
+      sh:class sml:RealObject ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:or ( [ sh:class sml:SpatialRegion] [sh:class sml:Port ] ) ;
+    ] ;
+  sh:property [
+      sh:path sml:isBoundBy ;
+      sh:class sml:PhysicalObject ;
+    ] ;
+.
+sml:TopConcept
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasRequirement ;
+      sh:class sml:Requirement ;
+    ] ;
+.
+sml:TransferType
+  a sh:NodeShape ;
+  sh:in (
+      sml:MaterialFlow
+      sml:EnergyFlow
+      sml:InformationFlow
+      sml:Force
+    ) ;
+.
+
+sml:AllDisjointClassesShape2
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdf:type ;
+  sh:property [
+    sh:path (rdf:type [sh:zeroOrMorePath rdfs:subClassOf]) ;      
+    sh:qualifiedValueShape [
+      sh:in (
+        sml:RealObject
+        sml:SpatialRegion
+      ) ;
+    ] ;
+    sh:qualifiedMaxCount 1 ;
+  ] ;
+.
+

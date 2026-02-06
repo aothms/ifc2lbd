@@ -1,0 +1,376 @@
+# baseURI: https://w3id.org/sml/rdfs/def
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# import:  https://w3id.org/sml/skos/term
+# prefix: sml
+
+@prefix sml: <https://w3id.org/sml/def#> .
+@prefix sml-term: <https://w3id.org/sml/term#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+qudt:QuantityKind
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:QuantityKind ;
+  skos:definition "Any observable property that can be measured and quantified numerically"@en ;
+  skos:prefLabel "Quantity kind"@en ;
+.
+qudt:Unit
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:Unit ;
+  skos:definition "A particular quantity value that has been chosen as a scale for measuring other quantities the same kind"@en ;
+  skos:prefLabel "Unit"@en ;
+.
+time:TemporalEntity
+  rdfs:seeAlso sml-term:TemporalEntity ;
+  rdfs:subClassOf sml:Representation ;
+  skos:definition "A temporal interval or instant"@en ;
+  skos:prefLabel "Temporal entity"@en ;
+.
+<https://w3id.org/sml/rdfs/def>
+  a owl:Ontology ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <https://w3id.org/sml/skos/term> ;
+.
+sml:AbstractConcept
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:AbstractConcept ;
+  rdfs:subClassOf sml:TopConcept ;
+  skos:definition "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en ;
+  skos:prefLabel "Abstract concept"@en ;
+.
+sml:Activity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Activity ;
+  rdfs:subClassOf sml:Entity ;
+  skos:definition "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en ;
+  skos:prefLabel "Activity"@en ;
+.
+sml:ConceptType
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:ConceptType ;
+  rdfs:subClassOf sml:Type ;
+  skos:definition "A meta-concept having concepts as instances that can have attributes or relations"@en ;
+  skos:prefLabel "Concept type"@en ;
+.
+sml:ConcreteConcept
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:ConcreteConcept ;
+  rdfs:subClassOf sml:TopConcept ;
+  skos:definition "Concept that forms a manifestation and a demarcation in a concrete space-time. A concrete concept has a life cycle"@en ;
+  skos:prefLabel "Concrete concept"@en ;
+.
+sml:Entity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Entity ;
+  rdfs:subClassOf sml:ConcreteConcept ;
+  skos:definition "Concept that forms a manifestation and a demarcation in a concrete space-time, and which has a certain state at any moment in time. An entity has a unique identity that remains constant throughout its life cycle. The life cycle of an entity is made up of the sequence of states of that entity, which follow each other in time. An entity is an object or an activity. An object exists, an activity takes place"@en ;
+  skos:prefLabel "Entity"@en ;
+.
+sml:EnumerationType
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:EnumerationType ;
+  rdfs:subClassOf rdfs:Container ;
+  rdfs:subClassOf sml:Type ;
+  skos:definition "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en ;
+  skos:prefLabel "Enumeration type"@en ;
+.
+sml:Event
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Event ;
+  rdfs:subClassOf sml:ConcreteConcept ;
+  skos:definition "Transition between two successive states of an entity (object or activity). An event is triggered in a state"@en ;
+  skos:prefLabel "Event"@en ;
+  skos:prefLabel "Event"@en ;
+.
+sml:FunctionalEntity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:FunctionalEntity ;
+  rdfs:subClassOf sml:Entity ;
+  skos:definition "An entity involving the external behavior where the output contributes to stakeholder objectives implemented/played by one or more technical entities"@en ;
+  skos:prefLabel "Functional entity"@en ;
+.
+sml:GeometricEntity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:GeometricEntity ;
+  rdfs:subClassOf sml:Representation ;
+  skos:definition "Named concept, which forms an actual or virtual demarcation in a concrete (physical, three-dimensional) space, which we experience in reality"@en ;
+  skos:prefLabel "Geometric entity"@en ;
+.
+sml:InformationObject
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:InformationObject ;
+  rdfs:subClassOf sml:Object ;
+skos:definition "Object which describes a thing in reality"@en ;
+  skos:prefLabel "Information object"@en ;
+.
+sml:Object
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Object ;
+  rdfs:subClassOf sml:Entity ;
+  skos:definition "Entity that exists or can exist within a concrete space-time. An object executes an activity, and is transformed by an activity"@en ;
+  skos:prefLabel "Object"@en ;
+.
+sml:Objectification
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Objectification ;
+  rdfs:subClassOf sml:AbstractConcept ;
+  skos:definition "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en ;
+  skos:prefLabel "Objectification"@en ;
+.
+sml:PhysicalObject
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:PhysicalObject ;
+  rdfs:subClassOf sml:Object ;
+  skos:definition "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en ;
+  skos:prefLabel "Physical object"@en ;
+.
+sml:PlannedEntity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:PlannedEntity ;
+  rdfs:subClassOf sml:Entity ;
+  skos:definition "An entity that does not yet exist in physical reality, but which exists in mental or conceptual reality"@en ;
+  skos:prefLabel "Planned entity"@en ;
+.
+sml:QualityValue
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:QualityValue ;
+  rdfs:subClassOf sml:Objectification ;
+  skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+  skos:prefLabel "Quality value"@en ;
+.
+sml:QuantityValue
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:QuantityValue ;
+  rdfs:subClassOf sml:Objectification ;
+  skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+  skos:prefLabel "Quantity value"@en ;
+.
+sml:RealizedEntity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:RealizedEntity ;
+  rdfs:subClassOf sml:Entity ;
+  skos:definition "An entity that exists or has existed in the physical reality"@en ;
+  skos:prefLabel "Realized entity"@en ;
+.
+sml:RelationReference
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:RelationReference ;
+  rdfs:subClassOf sml:Objectification ;
+  skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relation)"@en ;
+  skos:prefLabel "Relation reference"@en ;
+.
+sml:Representation
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Representation ;
+  rdfs:subClassOf sml:InformationObject ;
+  skos:definition "That which represents something else"@en ;
+  skos:prefLabel "Representation"@en ;
+.
+sml:State
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:State ;
+  rdfs:subClassOf sml:ConcreteConcept ;
+  skos:definition "Temporal part of an entity during a period between two events. A state is characterized by the properties and relations of the entity"@en ;
+  skos:prefLabel "State"@en ;
+.
+sml:TechnicalEntity
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:TechnicalEntity ;
+  rdfs:subClassOf sml:Entity ;
+  skos:definition "An entity concerned with technical properties and relations that implements or plays functional entities"@en ;
+  skos:prefLabel "Technical entity"@en ;
+.
+sml:TopConcept
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:TopConcept ;
+  skos:definition "The most generic concept"@en ;
+  skos:prefLabel "Top concept"@en ;
+.
+sml:Type
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Type ;
+  rdfs:subClassOf sml:AbstractConcept ;
+  skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
+  skos:prefLabel "Type"@en ;
+.
+sml:abbreviation
+  a rdf:Property ;
+  rdfs:domain sml:TopConcept ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso sml-term:abbreviation ;
+  rdfs:subPropertyOf skos:altLabel ;
+  skos:definition "Acronym or initial word as special case of an external name"@en ;
+  skos:prefLabel "abbreviation"@en ;
+.
+sml:begins
+  a rdf:Property ;
+  rdfs:domain sml:Event ;
+  rdfs:range sml:State ;
+  rdfs:seeAlso sml-term:begins ;
+  skos:definition "The state that is started by an event"@en ;
+  skos:prefLabel "begins"@en ;
+.
+sml:ends
+  a rdf:Property ;
+  rdfs:domain sml:Event ;
+  rdfs:range sml:State ;
+  rdfs:seeAlso sml-term:ends ;
+  skos:definition "The state that is ended by an event"@en ;
+  skos:prefLabel "ends"@en ;
+.
+sml:executes
+  a rdf:Property ;
+  rdfs:domain sml:PhysicalObject ;
+  rdfs:range sml:Activity ;
+  rdfs:seeAlso sml-term:executes ;
+  skos:definition "The activity executed by a physical object"@en ;
+  skos:prefLabel "executes"@en ;
+.
+sml:hasBoundary
+  a rdf:Property ;
+  rdfs:domain sml:ConcreteConcept ;
+  rdfs:range sml:GeometricEntity ;
+  rdfs:seeAlso sml-term:hasBoundary ;
+  skos:definition "The geometric entity representing the boundary of a concrete concept"@en ;
+  skos:prefLabel "has boundary"@en ;
+.
+sml:hasFunctionalPart
+  a rdf:Property ;
+  rdfs:domain sml:FunctionalEntity ;
+  rdfs:range sml:FunctionalEntity ;
+  rdfs:seeAlso sml-term:hasFunctionalPart ;
+  rdfs:subPropertyOf sml:hasPart ;
+  skos:definition "The hasPart relation of a functional nature"@en ;
+  skos:prefLabel "has functional part"@en ;
+.
+sml:hasInterior
+  a rdf:Property ;
+  rdfs:domain sml:ConcreteConcept ;
+  rdfs:range sml:GeometricEntity ;
+  rdfs:seeAlso sml-term:hasInterior ;
+  skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
+  skos:prefLabel "has interior"@en ;
+.
+sml:hasPart
+  a rdf:Property ;
+  rdfs:domain sml:ConcreteConcept ;
+  rdfs:range sml:ConcreteConcept ;
+  rdfs:seeAlso sml-term:hasPart ;
+  skos:definition "A decomposition (hasPart) relation between concrete concepts"@en ;
+  skos:prefLabel "has part"@en ;
+.
+sml:hasQuantityKind
+  a rdf:Property ;
+  rdfs:range qudt:QuantityKind ;
+  rdfs:seeAlso sml-term:hasQuantityKind ;
+  skos:definition "The possession of a quantity kind"@en ;
+  skos:prefLabel "has quantity kind"@en ;
+.
+sml:hasSolution
+  a rdf:Property ;
+  rdfs:domain sml:FunctionalEntity ;
+  rdfs:range sml:TechnicalEntity ;
+  rdfs:seeAlso sml-term:hasSolution ;
+  skos:definition "A technical entity that is a potential solution for a functional entity"@en ;
+  skos:prefLabel "has solution"@en ;
+.
+sml:hasState
+  a rdf:Property ;
+  rdfs:domain sml:Entity ;
+  rdfs:range sml:State ;
+  rdfs:seeAlso sml-term:hasState ;
+  skos:definition "The state of an entity in a certain point or period of time"@en ;
+  skos:prefLabel "has state"@en ;
+.
+sml:hasTechnicalPart
+  a rdf:Property ;
+  rdfs:domain sml:TechnicalEntity ;
+  rdfs:range sml:TechnicalEntity ;
+  rdfs:seeAlso sml-term:hasTechnicalPart ;
+  rdfs:subPropertyOf sml:hasPart ;
+  skos:definition "A hasPart relation of a technical nature"@en ;
+  skos:prefLabel "has technical part"@en ;
+.
+sml:hasTemporalEntity
+  a rdf:Property ;
+  rdfs:domain sml:ConcreteConcept ;
+  rdfs:range time:TemporalEntity ;
+  rdfs:seeAlso sml-term:hasTemporalEntity ;
+  skos:definition "The abstract temporal entity representing a concrete concept in time"@en ;
+  skos:prefLabel "has temporal entity"@en ;
+.
+sml:hasUnit
+  a rdf:Property ;
+  rdfs:range qudt:Unit ;
+  rdfs:seeAlso sml-term:hasUnit ;
+  skos:definition "The possession of a unit"@en ;
+  skos:prefLabel "has unit"@en ;
+.
+sml:isDescribedBy
+  a rdf:Property ;
+  rdfs:domain sml:TopConcept ;
+  rdfs:range sml:InformationObject ;
+  rdfs:seeAlso sml-term:isDescribedBy ;
+  skos:definition "The information object that describes something"@en ;
+  skos:prefLabel "is described by"@en ;
+.
+sml:isImplementedBy
+  a rdf:Property ;
+  rdfs:domain sml:FunctionalEntity ;
+  rdfs:range sml:TechnicalEntity ;
+  rdfs:seeAlso sml-term:isImplementedBy ;
+  rdfs:subPropertyOf sml:hasSolution ;
+  skos:definition "The technical entity that implements a functional entity"@en ;
+  skos:prefLabel "is implemented by"@en ;
+.
+sml:isPlanFor
+  a rdf:Property ;
+  rdfs:domain sml:PlannedEntity ;
+  rdfs:range sml:RealizedEntity ;
+  rdfs:seeAlso sml-term:isPlanFor ;
+  skos:definition "A potentially realized entity according to this planned entity"@en ;
+  skos:prefLabel "is plan for"@en ;
+.
+sml:isRealizedBy
+  a rdf:Property ;
+  rdfs:domain sml:PlannedEntity ;
+  rdfs:range sml:RealizedEntity ;
+  rdfs:seeAlso sml-term:isRealizedBy ;
+  skos:definition "The realized entity that realizes a planned entity"@en ;
+  rdfs:subPropertyOf sml:isPlanFor ;
+  skos:prefLabel "is realized by"@en ;
+.
+sml:transforms
+  a rdf:Property ;
+  rdfs:domain sml:Activity ;
+  rdfs:range sml:Object ;
+  rdfs:seeAlso sml-term:transforms ;
+  skos:definition "The object transformed by an activity"@en ;
+  skos:prefLabel "transforms"@en ;
+.
+sml:triggers
+  a rdf:Property ;
+  rdfs:domain sml:Entity ;
+  rdfs:range sml:Event ;
+  rdfs:seeAlso sml-term:triggers ;
+  skos:definition "The event triggert by an entity"@en ;
+  skos:prefLabel "triggers"@en ;
+.

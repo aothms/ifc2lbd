@@ -1,0 +1,37 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dice: <https://w3id.org/digitalconstruction/0.5/Entities#> .
+@prefix dicp: <https://w3id.org/digitalconstruction/0.5/Processes#> .
+@prefix dicv: <https://w3id.org/digitalconstruction/0.5/Variables#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+
+<https://w3id.org/digitalconstruction/0.5/Alignment/SSN/ssn.ttl>
+  rdf:type owl:Ontology ;
+  dcterms:created "2021-04-18"^^xsd:date ;
+  dcterms:creator "Seppo Törmä" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "Alignment of the Digital Construction Processes ontology with SSN and SOSA ontologies" ;
+  rdfs:label "Alignment of DICP and SSN"@en ;
+  owl:imports <https://w3id.org/digitalconstruction/0.5/Processes/processes.ttl> ;
+  owl:imports <http://www.w3.org/ns/ssn/> .
+
+dicv:Subject owl:equivalentClass sosa:FeatureOfInterest .
+dicv:Property owl:equivalentClass ssn:Property .
+sosa:ObservableProperty rdfs:subClassOf dicv:Property .
+dicv:QuantitativeState owl:equivalentClass sosa:Result .
+
+dice:Sensor owl:equivalentClass sosa:Sensor .
+ssn:Platform rdfs:subClassOf dice:MaterialEntity .
+
+dicp:Observation owl:equivalentClass sosa:Observation .
+dicp:Actuation owl:equivalentClass sosa:Actuation .
+
+sosa:observedProperty rdfs:subPropertyOf dicp:hasObservedProperty .
+sosa:actsOnProperty rdfs:subPropertyOf dicp:actsOnProperty .
+sosa:hasResult owl:equivalentProperty dicp:hasObservedResult . 
+
+

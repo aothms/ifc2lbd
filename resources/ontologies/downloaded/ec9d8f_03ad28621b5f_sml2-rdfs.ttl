@@ -1,0 +1,393 @@
+# baseURI: https://w3id.org/sml/2/rdfs/def
+# imports: https://w3id.org/sml/2/skos/term
+# imports: https://w3id.org/sml/rdfs/def
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# imports: http://www.w3.org/ns/sosa/
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# prefix: sml
+
+@prefix sml: <https://w3id.org/sml/def#> .
+@prefix sml-term: <https://w3id.org/sml/term#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<https://w3id.org/sml/2/rdfs/def>
+  a owl:Ontology ;
+  owl:imports <https://w3id.org/sml/rdfs/def> ;
+  owl:imports <https://w3id.org/sml/2/skos/term> ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <http://www.w3.org/ns/sosa/> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+.
+sml:AggregationStateType
+  a rdfs:Class ;
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:AggregationStateType ;
+  skos:definition "One of the four fundamental states of matter being a solid, liquid, gas or plasma"@en ;
+  skos:prefLabel "Aggregation state type"@en ;
+.
+sml:AmountOfBulkMatter
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:AmountOfBulkMatter ;
+  rdfs:subClassOf sml:RealObject ;
+  skos:definition "A real object that consists of a continuous amount of non-rigid matter, held together primarily by external forces (gravity or confinement)"@en ;
+  skos:prefLabel "Amount of bulk matter"@en ;
+.
+sml:ChemicalCompound
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:ChemicalBonding ;
+  rdfs:subClassOf sml:PureSubstance ;
+  skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical compound, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
+  skos:prefLabel "Chemical compound"@en ;
+.
+sml:ChemicalElement
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:ChemicalElement ;
+  rdfs:subClassOf sml:PureSubstance ;
+  skos:definition "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en ;
+  skos:prefLabel "Chemical element"@en ;
+.
+sml:Connection
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Connection ;
+  rdfs:subClassOf sml:PhysicalObject ;
+  skos:definition "A physical object (real object or spatial area) that connects two other physical objects and over which interaction takes place, namely the transfer of matter, energy, information or forces"@en ;
+  skos:prefLabel "Connection"@en ;
+.
+sml:DiscreteObject
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:DiscreteObject ;
+  rdfs:subClassOf sml:RealObject ;
+  skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en ;
+  skos:prefLabel "Discrete object"@en ;
+.
+sml:EnergyFlow
+  a sml:TransferType ;
+  rdfs:seeAlso sml-term:EnergyFlow ;
+  skos:definition "The movement of an amount of energy (as capacity to do work)"@en ;
+  skos:prefLabel "Energy flow"@en ;
+.
+sml:Force
+  a sml:TransferType ;
+  rdfs:seeAlso sml-term:Force ;
+  skos:definition "Physical quantity which, when exerted on a body, causes tension or pressure to arise therein, or which causes the body to change motion, accelerate"@en ;
+  skos:prefLabel "Force"@en ;
+.
+sml:Function
+  a rdfs:Class ;
+  rdfs:subClassOf sml:Activity ;
+  rdfs:subClassOf sml:FunctionalActivity ;
+  skos:definition "An activity performed by an object whose external behavior contributes to goals set by one or more technical entities"@en ;
+  skos:prefLabel "Function"@en ;
+.
+sml:Gas
+  a sml:AggregationStateType ;
+  rdfs:seeAlso sml-term:Gas ;
+  skos:definition "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en ;
+  skos:prefLabel "Gas"@en ;
+.
+sml:HeterogeneousMixture
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:HeterogeneousMixture ;
+  rdfs:subClassOf sml:Mixture ;
+  skos:definition "A mixture that is separated into different regions or phases that have different compositions or properties"@en ;
+  skos:prefLabel "Heterogeneous mixture"@en ;
+.
+sml:HomogeneousMixture
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:HomogeneousMixture ;
+  rdfs:subClassOf sml:Mixture ;
+  skos:definition "A mixture that is uniform throughout, and has only one phase"@en ;
+  skos:prefLabel "Homogeneous mixture"@en ;
+.
+sml:InformationFlow
+  a sml:TransferType ;
+  rdfs:seeAlso sml-term:InformationFlow ;
+  skos:definition "The movement of information represented in some medium"@en ;
+  skos:prefLabel "Information flow"@en ;
+.
+sml:Interaction
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Interaction ;
+  rdfs:subClassOf sml:Activity ;
+  skos:definition "The activity being a combination of sub-activities performed by physical objects between which a transfer of matter, information, energy or force takes place, typically over a connection or interface (directly or through ports)"@en ;
+  skos:prefLabel "Interaction"@en ;
+.
+sml:Interface
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Interface ;
+  rdfs:subClassOf sml:SpatialRegion ;
+  skos:definition "A spatial object, typically a thin 2D physical space (but also 0D or 1D) that connects two physical objects or ports of physical objects through which a static or dynamic interaction or interaction between those elements can take place"@en ;
+  skos:prefLabel "Interface"@en ;
+.
+sml:Liquid
+  a sml:AggregationStateType ;
+  rdfs:seeAlso sml-term:Liquid ;
+  skos:definition "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure"@en ;
+  skos:prefLabel "Liquid"@en ;
+.
+sml:MaterialFlow
+  a sml:TransferType ;
+  rdfs:seeAlso sml-term:MaterialFlow ;
+  skos:definition "The movement of an amount of material"@en ;
+  skos:prefLabel "Material flow"@en ;
+.
+sml:Matter
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Matter ;
+  rdfs:subClassOf sml:PhysicalObject ;
+  skos:definition "A pure chemical substance, chemical compound or mixture from which real objects are made"@en ;
+  skos:prefLabel "Matter"@en ;
+.
+sml:MatterPortion
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:MatterPortion ;
+  rdfs:subClassOf sml:RelationReference ;
+  skos:definition "An objectified relation reference for the consists of relation"@en ;
+  skos:prefLabel "Matter portion"@en ;
+.
+sml:Mixture
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Mixture ;
+  rdfs:subClassOf sml:Matter ;
+  skos:definition "The combination of two or more different pure substances without the molecules losing their identity"@en ;  skos:prefLabel "Mixture"@en ;
+.
+sml:Plasma
+  a sml:AggregationStateType ;
+  rdfs:seeAlso sml-term:Plasma ;
+  skos:definition "A phase in which the particles of a gaseous substance are ionised"@en ;
+  skos:prefLabel "Plasma"@en ;
+.
+sml:Port
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Port ;
+  rdfs:subClassOf sml:PhysicalObject ;
+  skos:definition "A physical or logical point of interaction as part of a physical object where, through a connection or interface, an interaction can take place"@en ;
+  skos:prefLabel "Port"@en ;
+.
+sml:PureSubstance
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:PureSubstance ;
+  rdfs:subClassOf sml:Matter ;
+  skos:definition "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
+  skos:prefLabel "Pure substance"@en ;
+.
+sml:RealObject
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:RealObject ;
+  rdfs:subClassOf sml:PhysicalObject ;
+  skos:definition "physical object (rigid or non-rigid) that is (or can be) tangible and visible in reality, man-made or naturally occurring"@en ;
+  skos:prefLabel "Real object"@en ;
+.
+sml:Requirement
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:Requirement ;
+  rdfs:subClassOf sml:InformationObject ;
+  skos:definition "A rule that should hold for something, defined via its attributes or relations" ;
+  skos:prefLabel "Requirement"@en ;
+.
+sml:RequirementSeverityType
+  a rdfs:Class ;
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:RequirementSeverityType ;
+  skos:definition "The seriousness of a requirement like demanded or wished"@en ;
+  skos:prefLabel "Requirement severity type"@en ;
+.
+sml:RequirementSourceType
+  a rdfs:Class ;
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:RequirementSourceType ;
+  skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
+  skos:prefLabel "Requirement source type"@en ;
+.
+sml:RequirementTopicType
+  a rdfs:Class ;
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:RequirementTopicType ;
+  skos:definition "The entity aspect a requirement applies to"@en ;
+  skos:prefLabel "Requirement topic type"@en ;
+.
+sml:Solid
+  a sml:AggregationStateType ;
+  rdfs:seeAlso sml-term:Solid ;
+  skos:definition "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en ;
+  skos:prefLabel "Solid"@en ;
+.
+sml:SpatialRegion
+  a rdfs:Class ;
+  rdfs:seeAlso sml-term:SpatialRegion ;
+  rdfs:subClassOf sml:PhysicalObject ;
+  skos:definition "A physical object that encloses a particular area such as a room, roadway and river, that is bounded by real objects or other spatial areas (e.g., by usage or convention) and that contains primarily liquid or gaseous amount of matter"@en ;   
+  skos:prefLabel "Spatial region"@en ;
+.
+sml:TransferType
+  a rdfs:Class ;
+  a sml:EnumerationType ;
+  rdfs:seeAlso sml-term:TransferType ;
+  skos:definition "The type of thing being transferred, here: material, information, energy or force"@en ;
+  skos:prefLabel "Transfer type"@en ;
+.
+sml:aggregationStateType
+  a rdf:Property ;
+  rdfs:domain sml:Matter ;
+  rdfs:range sml:AggregationStateType ;
+  rdfs:seeAlso sml-term:aggregationStateType ;
+  skos:definition "The possession of an aggregation state type"@en ;
+  skos:prefLabel "aggregation state type"@en ;
+.
+sml:chemicalFormula
+  a rdf:Property ;
+  rdfs:domain sml:Matter ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso sml-term:chemicalFormula ;
+  skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical compound"@en ;
+  skos:prefLabel "chemical formula"@en ;
+.
+sml:connectsObject
+  a rdf:Property ;
+  rdfs:range sml:PhysicalObject ;
+  rdfs:seeAlso sml-term:connectsObject ;
+  skos:definition "The physical objects connected by a connection or interface"@en ;
+  skos:prefLabel "connects object"@en ;
+.
+sml:connectsPort
+  a rdf:Property ;
+  rdfs:range sml:Port ;
+  rdfs:seeAlso sml-term:connectsPort ;
+  skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
+  skos:prefLabel "connects port"@en ;
+.
+sml:consistsOf
+  a rdf:Property ;
+  rdfs:seeAlso sml-term:consistsOf ;
+  skos:definition "The matter a real object or mixture is made of"@en ;
+  skos:prefLabel "consists of"@en ;
+.
+sml:contains
+  a rdf:Property ;
+  rdfs:domain sml:SpatialRegion ;
+  rdfs:range sml:RealObject ;
+  rdfs:seeAlso sml-term:contains ;
+  skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en ;
+  skos:prefLabel "contains"@en ;
+.
+sml:hasPartsGroup
+  a rdf:Property ;
+  rdfs:domain sml:ConcreteConcept ;
+  rdfs:range rdfs:Container ;
+  rdfs:seeAlso sml-term:hasPart ;
+  skos:definition "The possession of an group of, potentially implicit, parts"@en ;
+  skos:prefLabel "has parts group"@en ;
+.
+sml:hasRequirement
+  a rdf:Property ;
+  rdfs:domain sml:TopConcept ;
+  rdfs:range sml:Requirement ;
+  rdfs:seeAlso sml-term:hasRequirement ;
+  skos:definition "The (unstructured) requirement for something"@en ;
+  skos:prefLabel "has requirement"@en ;
+.
+sml:isBoundBy
+  a rdf:Property ;
+  rdfs:domain sml:SpatialRegion ;
+  rdfs:range sml:PhysicalObject ;
+  rdfs:seeAlso sml-term:isBoundBy ;
+  skos:definition "The physical object that bounds a spatial region"@en ;
+  skos:prefLabel "is bound by"@en ;
+.
+sml:isConnectedTo
+  a rdf:Property ;
+  rdfs:domain sml:PhysicalObject ;
+  rdfs:range sml:PhysicalObject ;
+  rdfs:seeAlso sml-term:isConnectedTo ;
+  skos:definition "The topological relationship between physical objects"@en ;
+  skos:prefLabel "is connected to"@en ;
+.
+sml:overConnection
+  a rdf:Property ;
+  rdfs:domain sml:Interaction ;
+  rdfs:range sml:Connection ;
+  rdfs:seeAlso sml-term:overConnection ;
+  skos:definition "The connection over which an interaction between physical objects takes place"@en ;
+  skos:prefLabel "over connection"@en ;
+.
+sml:overInterface
+  a rdf:Property ;
+  rdfs:domain sml:Interaction ;
+  rdfs:range sml:Interface ;
+  rdfs:seeAlso sml-term:overInterface ;
+  skos:definition "The interface over which an interaction between physical objects takes place"@en ;
+  skos:prefLabel "over interface"@en ;
+.
+sml:participatesIn
+  a rdf:Property ;
+  rdfs:domain sml:PhysicalObject ;
+  rdfs:range sml:Interaction ;
+  rdfs:seeAlso sml-term:participatesIn ;
+  skos:definition "The interaction a physical object participates in"@en ;
+  skos:prefLabel "participates in"@en ;
+.
+sml:portion
+  a rdf:Property ;
+  rdfs:domain sml:MatterPortion ;
+  rdfs:range sml:QuantityValue ;
+  rdfs:seeAlso sml-term:portion ;
+  skos:definition "The relative portion of a matter portion"@en ;
+  skos:prefLabel "portion"@en ;
+  sml:hasQuantityKind quantitykind:DimensionlessRatio ;
+.
+sml:requirementSeverityType
+  a rdf:Property ;
+  rdfs:domain sml:Requirement ;
+  rdfs:range sml:RequirementSeverityType ;
+  rdfs:seeAlso sml-term:requirementSeverityType ;
+  skos:definition "The possession of a severity type by a requirement"@en ;
+  skos:prefLabel "requirement severity type"@en ;
+.
+sml:requirementSourceType
+  a rdf:Property ;
+  rdfs:domain sml:Requirement ;
+  rdfs:range sml:RequirementSourceType ;
+  rdfs:seeAlso sml-term:requirementSourceType ;
+  skos:definition "The possession of a source type by a requirement"@en ;
+  skos:prefLabel "requirement source type"@en ;
+.
+sml:requirementTopicType
+  a rdf:Property ;
+  rdfs:domain sml:Requirement ;
+  rdfs:range sml:RequirementTopicType ;
+  rdfs:seeAlso sml-term:requirementTopicType ;
+  skos:definition "The possession of a topic type by a requirement"@en ;
+  skos:prefLabel "requirement topic type"@en ;
+.
+sml:transferType
+  a rdf:Property ;
+  rdfs:domain sml:Interaction ;
+  rdfs:range sml:TransferType ;
+  rdfs:seeAlso sml-term:transferType ;
+  skos:definition "The possession of a transfer type by an interaction"@en ;
+  skos:prefLabel "transfer type"@en ;
+.

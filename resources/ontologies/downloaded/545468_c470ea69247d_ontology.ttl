@@ -1,0 +1,448 @@
+@prefix : <https://w3id.org/digitalconstruction/Processes#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/digitalconstruction/Processes> .
+
+<https://w3id.org/digitalconstruction/Processes> rdf:type owl:Ontology ;
+                                                  owl:imports <http://purl.obolibrary.org/obo/bfo/2018-10-27/iso-21838.owl> ,
+                                                              <https://w3id.org/digitalconstruction/Agents> ,
+                                                              <https://w3id.org/digitalconstruction/Entities> ,
+                                                              <https://w3id.org/digitalconstruction/Information> ;
+                                                  <http://purl.org/dc/elements/1.1/creator> "Seppo Törmä" ,
+                                                                                            "Yuan Zheng" ;
+                                                  <http://purl.org/dc/elements/1.1/date> "2020-03-20" ;
+                                                  <http://purl.org/dc/elements/1.1/title> "Digital Construction Processes" ;
+                                                  <http://purl.org/dc/terms/abstract> "Process ontology provides the concepts for construction processes, including activities, their relationships, and relations to other entities (activity flows). " ;
+                                                  <http://purl.org/dc/terms/created> "2019-12-20" ;
+                                                  <http://purl.org/dc/terms/description> "Process ontology for digital construction" ;
+                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "dicp" ;
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/digitalconstruction/Processes" ;
+                                                  rdfs:label "Digital Construction Processes" ;
+                                                  rdfs:seeAlso <https://w3id.org/digitalconstruction> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/digitalconstruction/Processes#contentManagedIn
+:contentManagedIn rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Project ;
+                  rdfs:range <https://w3id.org/digitalconstruction/Contexts#Context> ;
+                  rdfs:comment "The root context in which the project information is represented and managed" ;
+                  rdfs:label "contentManagedIn" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasActivity
+:hasActivity rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasActor
+:hasActor rdf:type owl:ObjectProperty ;
+          rdfs:domain :ObjectActivity ;
+          rdfs:range <https://w3id.org/digitalconstruction/Entities#Agent> ;
+          rdfs:label "hasActor" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasCondition
+:hasCondition rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isConditionOf ;
+              rdfs:domain <https://w3id.org/digitalconstruction/Entities#Activity> ;
+              rdfs:label "hasCondition" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasEffect
+:hasEffect rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :isEffectOf ;
+           rdfs:domain <https://w3id.org/digitalconstruction/Entities#Activity> ;
+           rdfs:label "hasEffect" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:domain :StationaryActivity ;
+             rdfs:range <https://w3id.org/digitalconstruction/Entities#Location> ;
+             rdfs:label "hasLocation" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasObject
+:hasObject rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isObjectIn ;
+           rdfs:domain :ObjectActivity ;
+           rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+           rdfs:label "hasObject" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:domain :MovingActivity ;
+           rdfs:range <https://w3id.org/digitalconstruction/Entities#Location> ;
+           rdfs:label "hasOrigin" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:domain :MovingActivity ;
+           rdfs:range <https://w3id.org/digitalconstruction/Entities#Location> ;
+           rdfs:label "hasTarget" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#isConditionOf
+:isConditionOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasActivity ;
+               rdfs:range <https://w3id.org/digitalconstruction/Entities#Activity> ;
+               rdfs:label "isConditionOf" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#isEffectOf
+:isEffectOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ,
+                               :hasActivity ;
+            rdfs:range <https://w3id.org/digitalconstruction/Entities#Activity> ;
+            rdfs:label "isEffectOf" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#isObjectIn
+:isObjectIn rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+            rdfs:range :ObjectActivity .
+
+
+###  https://w3id.org/digitalconstruction/Processes#occupiesTemporalRegion
+:occupiesTemporalRegion rdf:type owl:ObjectProperty ;
+                        rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                        rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000008
+<http://purl.obolibrary.org/obo/BFO_0000008> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000038
+<http://purl.obolibrary.org/obo/BFO_0000038> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000148
+<http://purl.obolibrary.org/obo/BFO_0000148> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000148> .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000038> .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+
+###  https://w3id.org/digitalconstruction/Entities#Activity
+<https://w3id.org/digitalconstruction/Entities#Activity> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :occupiesTemporalRegion ;
+                                                                           owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000038>
+                                                                         ] .
+
+
+###  https://w3id.org/digitalconstruction/Processes#ActivityGroup
+:ActivityGroup rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/digitalconstruction/Entities#Activity> ,
+                               <https://w3id.org/digitalconstruction/Entities#Group> ;
+               owl:disjointWith :ObjectActivity ;
+               rdfs:comment "A collection of activities, not necessarily having any common purpose" ;
+               rdfs:label "ActivityGroup" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Adjoin
+:Adjoin rdf:type owl:Class ;
+        rdfs:subClassOf :JoinRelatedActivity ;
+        rdfs:comment "Attaching an onbject to a base object" ;
+        rdfs:label "Adjoin" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Approve
+:Approve rdf:type owl:Class ;
+         rdfs:subClassOf :ManagerialActivity ;
+         rdfs:comment "An activity that changes the administrative or management status of an object, thus enabling further activities to be performed on it." ;
+         rdfs:label "Approve" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#BuildingActivity
+:BuildingActivity rdf:type owl:Class ;
+                  rdfs:subClassOf :StationaryActivity ;
+                  rdfs:comment "Activity that creates an object from materials, such as from concrete, timber or bricks." ;
+                  rdfs:label "BuildingActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#CapabilityConstraint
+:CapabilityConstraint rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/digitalconstruction/Variables#Constraint> ;
+                      rdfs:label "CapabilityConstraint" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Caulking
+:Caulking rdf:type owl:Class ;
+          rdfs:subClassOf :TransformationActivity ;
+          rdfs:label "Caulking" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#ConcreteCasting
+:ConcreteCasting rdf:type owl:Class ;
+                 rdfs:subClassOf :BuildingActivity ;
+                 rdfs:label "ConcreteCasting" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#ConstructionProject
+:ConstructionProject rdf:type owl:Class ;
+                     rdfs:subClassOf :OrganizedProject ;
+                     rdfs:label "ConstructionProject" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Disjoin
+:Disjoin rdf:type owl:Class ;
+         rdfs:subClassOf :JoinRelatedActivity ;
+         rdfs:comment "Taking an object attached to a base object apart from it" ;
+         rdfs:label "Disjoin" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#FloorConcreting
+:FloorConcreting rdf:type owl:Class ;
+                 rdfs:subClassOf :TransformationActivity ;
+                 rdfs:label "FloorConcreting" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#FloorCovering
+:FloorCovering rdf:type owl:Class ;
+               rdfs:subClassOf :TransformationActivity ;
+               rdfs:label "FloorCovering" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#IndoorWallConstruction
+:IndoorWallConstruction rdf:type owl:Class ;
+                        rdfs:subClassOf :BuildingActivity ;
+                        rdfs:label "IndoorWallConstruction" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Inspect
+:Inspect rdf:type owl:Class ;
+         rdfs:subClassOf :ManagerialActivity ;
+         rdfs:comment "An activity to create information about the conformance of an object with its specification." ;
+         rdfs:label "Inspect" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Install
+:Install rdf:type owl:Class ;
+         rdfs:subClassOf :Adjoin ;
+         rdfs:comment "Attaching an object to a base object" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#JoinRelatedActivity
+:JoinRelatedActivity rdf:type owl:Class ;
+                     rdfs:subClassOf :StationaryActivity ;
+                     rdfs:comment "An activity that changes the attachment of an object to a base object. Examples are installation of a door to a wall, a window to a wall, a flow segments to a flow system, loading or unloading a shipment to a truck, and so on." ;
+                     rdfs:label "JoinRelatedActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Jointing
+:Jointing rdf:type owl:Class ;
+          rdfs:subClassOf :TransformationActivity ;
+          rdfs:label "Jointing" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Lift
+:Lift rdf:type owl:Class ;
+      rdfs:subClassOf :MovingActivity ;
+      rdfs:comment "A moving an object using a crane as the equipment. Often there is a vertical difference between the start location and end location of lifting." ;
+      rdfs:label "Lift" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Load
+:Load rdf:type owl:Class ;
+      rdfs:subClassOf :Adjoin ;
+      rdfs:comment "Attaching an object to a vehicle" ;
+      rdfs:label "Load" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#ManagerialActivity
+:ManagerialActivity rdf:type owl:Class ;
+                    rdfs:subClassOf :ObjectActivity ;
+                    rdfs:label "ManagerialActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Masonry
+:Masonry rdf:type owl:Class ;
+         rdfs:subClassOf :TransformationActivity ;
+         rdfs:label "Masonry" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#MovingActivity
+:MovingActivity rdf:type owl:Class ;
+                rdfs:subClassOf :ObjectActivity ;
+                rdfs:comment "Activity that changes the location of its object." ;
+                rdfs:label "MovingActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#ObjectActivity
+:ObjectActivity rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/digitalconstruction/Entities#Activity> ;
+                rdfs:comment "An activity focused on some specific object and carried out by an actor" ;
+                rdfs:label "ObjectActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#OrganizedProject
+:OrganizedProject rdf:type owl:Class ;
+                  rdfs:subClassOf :Project ;
+                  rdfs:comment "A Project carried out by an Organization" ;
+                  rdfs:label "OrganizedProject" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Pack
+:Pack rdf:type owl:Class ;
+      rdfs:subClassOf :Adjoin ;
+      rdfs:comment "Adding an object to a container" ;
+      rdfs:label "Pack" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Painting
+:Painting rdf:type owl:Class ;
+          rdfs:subClassOf :TransformationActivity ;
+          rdfs:label "Painting" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#PlanningActivity
+:PlanningActivity rdf:type owl:Class ;
+                  rdfs:subClassOf :ManagerialActivity ;
+                  rdfs:comment "An activity that creates a plan" ;
+                  rdfs:label "PlanningActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf :ObjectActivity ;
+         rdfs:comment "A ObjectActivity with specific goals" ;
+         rdfs:label "Project" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#RenovationProject
+:RenovationProject rdf:type owl:Class ;
+                   rdfs:subClassOf :ConstructionProject ;
+                   rdfs:label "RenovationProject" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#StationaryActivity
+:StationaryActivity rdf:type owl:Class ;
+                    rdfs:subClassOf :ObjectActivity ;
+                    rdfs:comment "An activity taking place in one location" ;
+                    rdfs:label "StationaryActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Tiling
+:Tiling rdf:type owl:Class ;
+        rdfs:subClassOf :TransformationActivity ;
+        rdfs:label "Tiling" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Transfer
+:Transfer rdf:type owl:Class ;
+          rdfs:subClassOf :ManagerialActivity ;
+          rdfs:comment "An activity of changing the owner of an object." ;
+          rdfs:label "Transfer" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#TransformationActivity
+:TransformationActivity rdf:type owl:Class ;
+                        rdfs:subClassOf :StationaryActivity ;
+                        rdfs:comment "An activity that changes the state of an object by applying some material on it or removing some of it. Examples are painting and grinding." ;
+                        rdfs:label "TransformationActivity" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf :MovingActivity ;
+           rdfs:comment "Moving activity that is carried out using a vehicle as an equipment." ;
+           rdfs:label "Transport" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Uninstall
+:Uninstall rdf:type owl:Class ;
+           rdfs:subClassOf :Disjoin ;
+           rdfs:comment "Taking an object attached to a base object apart from it." ;
+           rdfs:label "Uninstall" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Unload
+:Unload rdf:type owl:Class ;
+        rdfs:subClassOf :Disjoin ;
+        rdfs:comment "Taking an object away from a vehicle" ;
+        rdfs:label "Unload" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Unpack
+:Unpack rdf:type owl:Class ;
+        rdfs:subClassOf :Disjoin ;
+        rdfs:comment "Taking an object out from a container" ;
+        rdfs:label "Unpack" .
+
+
+###  https://w3id.org/digitalconstruction/Processes#Waterproofing
+:Waterproofing rdf:type owl:Class ;
+               rdfs:subClassOf :TransformationActivity ;
+               rdfs:label "Waterproofing" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.w3.org/2006/time#TemporalUnit> rdfs:comment "An OrganizedProject whose object is a Site" .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

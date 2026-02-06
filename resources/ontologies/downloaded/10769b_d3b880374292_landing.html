@@ -1,0 +1,823 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ofo#"
+     xml:base="https://w3id.org/ofo"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="https://www.schema.org/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/ofo#">
+        <terms:contributor>Bauke de Vries</terms:contributor>
+        <terms:contributor>Dujuan Yang</terms:contributor>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-8809-3277"/>
+        <terms:description xml:lang="en">The aim of the Occupant Feedback Ontology is to semantically describe passive and active occupant feedback and to enable integration of this feedback with linked building data.</terms:description>
+        <terms:title xml:lang="en">Occupant Feedback Ontology</terms:title>
+        <vann:preferredNamespacePrefix>ofo</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/ofo#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">Occupant Feedback Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/weblog -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/weblog"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://www.schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="https://www.schema.org/domainIncludes"/>
+    
+
+
+    <!-- https://www.schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="https://www.schema.org/rangeIncludes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/ofo#containsProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#containsProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isPartOfPropertySet"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#PropertySet"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Relationship between a property set and a property which is part of this set.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#executesOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#executesOn">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isExecutedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Relationship between a wearable and the property it executes on.</rdfs:comment>
+        <rdfs:label xml:lang="en">executes on</rdfs:label>
+        <www:domainIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#givesFeedback -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#givesFeedback">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isFeedbackOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ofo#wears"/>
+            <rdf:Description rdf:about="https://w3id.org/ofo#monitorsFeedback"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relationship between a person and the feedback given by this person.</rdfs:comment>
+        <rdfs:label xml:lang="en">gives feedback</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasComplexProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasComplexProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasResult"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isComplexPropertyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">Direct relationship between a feature of interest and a result.</rdfs:comment>
+        <rdfs:label xml:lang="en">has complex property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasDataPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasDataPoint">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isDataPointOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Database"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#DataPoint"/>
+        <rdfs:comment xml:lang="en">Relationship between a database and its data points.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasEvaluatedProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasEvaluatedProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#hasFeedback"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Relationship between feedback and the property it evaluates.</rdfs:comment>
+        <rdfs:label xml:lang="en">has evaluated property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasExternalDatabase -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasExternalDatabase">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isExternalDatabaseOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Database"/>
+        <rdfs:comment xml:lang="en">Linking a wearable with the database its results are stored in.</rdfs:comment>
+        <rdfs:label xml:lang="en">has external database</rdfs:label>
+        <www:rangeIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasFeatureOfInterest -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasFeatureOfInterest">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ofo#hasEvaluatedProperty"/>
+            <rdf:Description rdf:about="https://w3id.org/ofo#isPropertyOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Linking feedback with its feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasFeedback -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasFeedback">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:comment xml:lang="en">Relationship between a property and feedback evaluating this property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feedback</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasFeedbackResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasFeedbackResult">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasResult"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isFeedbackResultOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">Linking feedback to its result.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feedback result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasLocation">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isLocationOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Location"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ofo#isWornBy"/>
+            <rdf:Description rdf:about="https://w3id.org/ofo#hasLocation"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ofo#wears"/>
+            <rdf:Description rdf:about="https://w3id.org/ofo#hasLocation"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relationship between an entity, such as a person or a wearable, and a location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has location</rdfs:label>
+        <www:domainIncludes rdf:resource="https://w3id.org/ofo#Person"/>
+        <www:domainIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isPropertyOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Linking a feature of interest with its property. The property is intrinsic to this feature of interest, and cannot exist without this feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasPropertyState -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasPropertyState">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasResult"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isPropertyStateOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">Linking a property with a result.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasResult">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isResultOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">A superproperty of multiple object properties with an ofo:Result as rdfs:Range. This superproperty can be used to simultaneously query multiple ways of describing property values and increases the freedom of the data modeler.</rdfs:comment>
+        <rdfs:label xml:lang="en">has result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasSubProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#hasSubProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#isSubPropertyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Describing a whole-part relationship between a property and its sub-property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sub-property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isComplexPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isComplexPropertyOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#isResultOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Linking a result with a feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">is complex property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isDataPointOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isDataPointOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#DataPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Database"/>
+        <rdfs:comment xml:lang="en">Linking a data point with the database it is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is data point of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isExecutedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isExecutedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Relationship between a property and the wearable which acts on the property.</rdfs:comment>
+        <rdfs:label xml:lang="en">is executed by</rdfs:label>
+        <www:rangeIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isExternalDatabaseOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isExternalDatabaseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Database"/>
+        <rdfs:comment xml:lang="en">Linking a database with the wearable which results are stored in this database.</rdfs:comment>
+        <rdfs:label xml:lang="en">is external database of</rdfs:label>
+        <www:rangeIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isFeatureOfInterestOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isFeatureOfInterestOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:comment xml:lang="en">Linking a feature of interest with feedback that evaluates a property of this feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isFeedbackOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isFeedbackOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ofo#isMonitoredBy"/>
+            <rdf:Description rdf:about="https://w3id.org/ofo#isWornBy"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Relationship between feedback and the person that gave this feedback.</rdfs:comment>
+        <rdfs:label xml:lang="en">is feedback of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isFeedbackResultOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isFeedbackResultOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#isResultOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:comment xml:lang="en">Linking a result with feedback.</rdfs:comment>
+        <rdfs:label xml:lang="en">is feedback result of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isLocationOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Location"/>
+        <rdfs:comment xml:lang="en">Relationship between a location and an entity, such as a person or a wearable.</rdfs:comment>
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+        <www:rangeIncludes rdf:resource="https://w3id.org/ofo#Person"/>
+        <www:rangeIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isMonitoredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isMonitoredBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#monitorsFeedback"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:comment xml:lang="en">Relationship between feedback and the executor (e.g. a wearable) that monitored this feedback.</rdfs:comment>
+        <rdfs:label xml:lang="en">is monitored by</rdfs:label>
+        <www:rangeIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isPartOfPropertySet -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isPartOfPropertySet">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#PropertySet"/>
+        <rdfs:comment xml:lang="en">Relationship between a property and the property set it is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of property set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isPropertyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Linking a property with its feature of interest. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isPropertyStateOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isPropertyStateOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#isResultOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Linking a result with a property.</rdfs:comment>
+        <rdfs:label xml:lang="en">is property state of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isResultOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isResultOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">A superproperty of multiple object properties with an ofo:Result as rdfs:Domain. This superproperty can be used to simultaneously query multiple ways of describing property values and increases the freedom of the data modeler.</rdfs:comment>
+        <rdfs:label xml:lang="en">is result of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isSubPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isSubPropertyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Relation between a sub-property and its parent property.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sub-property of</rdfs:label>
+        <skos:example xml:lang="en">The object property describes a typical whole-part relationship between a property and its sub-properties. It is used in cases where properties are so complex that it is desirable to decompose them into separate properties. The separate properties might also be individually linked to their own results.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#isWornBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#isWornBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/ofo#wears"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Wearable"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Person"/>
+        <rdfs:comment xml:lang="en">Describing the relation between a wearable and the person wearing this wearable.</rdfs:comment>
+        <rdfs:label xml:lang="en">is worn by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#monitorsFeedback -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#monitorsFeedback">
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:comment xml:lang="en">Relationship between an executor (e.g. a wearable) and the feedback it monitors.</rdfs:comment>
+        <rdfs:label xml:lang="en">monitors feedback</rdfs:label>
+        <www:domainIncludes rdf:resource="https://w3id.org/ofo#Wearable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#wears -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ofo#wears">
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/ofo#Wearable"/>
+        <rdfs:comment xml:lang="en">Relationship between a wearable and the person that wears this wearable.</rdfs:comment>
+        <rdfs:label xml:lang="en">wears</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/ofo#hasID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofo#hasID">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#DataPoint"/>
+        <rdfs:comment xml:lang="en">The ID of a data point in an external database.</rdfs:comment>
+        <rdfs:label xml:lang="en">has ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasSimpleFeedbackState -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofo#hasSimpleFeedbackState">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasSimpleResult"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Feedback"/>
+        <rdfs:comment xml:lang="en">Linking feedback with a simple result value described as a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple feedback state</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasSimpleProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofo#hasSimpleProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasSimpleResult"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Linking a feature of interest with a simple property value described as a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasSimplePropertyState -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofo#hasSimplePropertyState">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasSimpleResult"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Property"/>
+        <rdfs:comment xml:lang="en">Linking a property with a simple property state value described as a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple property state</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasSimpleResult -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofo#hasSimpleResult">
+        <rdfs:comment xml:lang="en">A superproperty of multiple datatype properties that describe simple result values. This superproperty can be used to simultaneously query multiple ways of describing simple property values and increases the freedom of the data modeler.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple result</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ofo#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ofo#hasValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ofo#hasSimpleResult"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">The simple value of a result.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/ofo#DataPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#DataPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ofo#Result"/>
+        <rdfs:comment xml:lang="en">A data element in a database representing the state of a property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data point</rdfs:label>
+        <skos:example xml:lang="en">The data point can be used in various types of databases. It corresponds to single data records in time-series databases, or rows in SQL database tables. It is also a common concept in BMS servers, representing for example a sensor reading, output value of an actuator or any other scalar value.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Database -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Database">
+        <rdfs:comment xml:lang="en">A collection of data.
+
+The database class is used to describe an external database, storing results of executions, such as a time-series database.</rdfs:comment>
+        <rdfs:label xml:lang="en">Database</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ofo#hasProperty"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ofo#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An abstraction of a real-world phenomenon which could be described in terms of its properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
+        <skos:example xml:lang="en">An object, part, zone, event etc.
+In the context of the OFO ontology, an ofo:Person will usually also be an ofo:FeatureOfInterest.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Feedback -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Feedback">
+        <rdfs:comment xml:lang="en">An act of producing a statement of opinion on the state of a property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feedback</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Location -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Location">
+        <rdfs:comment xml:lang="en">The area or space something is in.
+
+The ofo:Location class could be used to describe both geographical locations (such as points) and topological locations (such as rooms).</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Person -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Person">
+        <rdfs:comment xml:lang="en">A member of the human race.</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Property -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ofo#isPropertyOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ofo#FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A measurable and intrinsic characteristic of a feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#PropertySet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#PropertySet">
+        <rdfs:comment xml:lang="en">A collection of properties. The collection could also be a singleton or a null set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Result -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Result">
+        <rdfs:comment xml:lang="en">The outcome of an execution.</rdfs:comment>
+        <rdfs:label xml:lang="en">Result</rdfs:label>
+        <skos:example xml:lang="en">The result may hold, for example, a value, a unit, a result time and other provenance data.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Smartwatch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Smartwatch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ofo#Wearable"/>
+        <rdfs:comment xml:lang="en">A wearable computer in the form of a watch. It can implement procedures to perform observations and actuations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smartwatch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ofo#Wearable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ofo#Wearable">
+        <rdfs:comment xml:lang="en">A smart electronic device that is worn close to or on the surface of a person’s skin. It can implement procedures to perform observations and actuations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wearable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://orcid.org/0000-0002-8809-3277 -->
+
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8809-3277">
+        <rdfs:comment>Alex Donkers</rdfs:comment>
+        <rdfs:label>Alex Donkers</rdfs:label>
+        <foaf:name>Alex Donkers</foaf:name>
+        <foaf:weblog>https://linktr.ee/AlexDonkers</foaf:weblog>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

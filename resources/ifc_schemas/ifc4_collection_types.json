@@ -1,0 +1,2235 @@
+{
+  "IfcActionRequest": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcActor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcActorRole": {},
+  "IfcActuator": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcActuatorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAddress": {},
+  "IfcAdvancedBrep": {},
+  "IfcAdvancedBrepWithVoids": {
+    "Voids": "SET"
+  },
+  "IfcAdvancedFace": {
+    "Bounds": "SET"
+  },
+  "IfcAirTerminal": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAirTerminalBox": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAirTerminalBoxType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAirTerminalType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAirToAirHeatRecovery": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAirToAirHeatRecoveryType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAlarm": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAlarmType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAnnotation": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAnnotationFillArea": {
+    "InnerBoundaries": "SET"
+  },
+  "IfcApplication": {},
+  "IfcAppliedValue": {
+    "Components": "LIST"
+  },
+  "IfcApproval": {},
+  "IfcApprovalRelationship": {
+    "RelatedApprovals": "SET"
+  },
+  "IfcArbitraryClosedProfileDef": {
+    "WR3": "SET"
+  },
+  "IfcArbitraryOpenProfileDef": {},
+  "IfcArbitraryProfileDefWithVoids": {
+    "InnerCurves": "SET",
+    "WR3": "SET"
+  },
+  "IfcAsset": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAsymmetricIShapeProfileDef": {},
+  "IfcAudioVisualAppliance": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAudioVisualApplianceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcAxis1Placement": {},
+  "IfcAxis2Placement2D": {},
+  "IfcAxis2Placement3D": {},
+  "IfcBSplineCurve": {
+    "ControlPointsList": "LIST",
+    "SameDim": "LIST"
+  },
+  "IfcBSplineCurveWithKnots": {
+    "KnotMultiplicities": "LIST",
+    "Knots": "LIST",
+    "CorrespondingKnotLists": "LIST",
+    "ControlPointsList": "LIST",
+    "SameDim": "LIST"
+  },
+  "IfcBSplineSurface": {
+    "ControlPointsList": "LIST"
+  },
+  "IfcBSplineSurfaceWithKnots": {
+    "UMultiplicities": "LIST",
+    "VMultiplicities": "LIST",
+    "UKnots": "LIST",
+    "VKnots": "LIST",
+    "CorrespondingULists": "LIST",
+    "CorrespondingVLists": "LIST",
+    "ControlPointsList": "LIST"
+  },
+  "IfcBeam": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBeamStandardCase": {
+    "HasMaterialProfileSetUsage": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBeamType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBlobTexture": {
+    "Parameter": "LIST"
+  },
+  "IfcBlock": {},
+  "IfcBoiler": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBoilerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBooleanClippingResult": {
+    "FirstOperandClosed": "SET",
+    "SecondOperandClosed": "SET"
+  },
+  "IfcBooleanResult": {
+    "FirstOperandClosed": "SET",
+    "SecondOperandClosed": "SET"
+  },
+  "IfcBoundaryCondition": {},
+  "IfcBoundaryCurve": {
+    "Segments": "LIST"
+  },
+  "IfcBoundaryEdgeCondition": {},
+  "IfcBoundaryFaceCondition": {},
+  "IfcBoundaryNodeCondition": {},
+  "IfcBoundaryNodeConditionWarping": {},
+  "IfcBoundedCurve": {},
+  "IfcBoundedSurface": {},
+  "IfcBoundingBox": {},
+  "IfcBoxedHalfSpace": {},
+  "IfcBuilding": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingElementPart": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingElementPartType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingElementProxy": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingElementProxyType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingStorey": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBuildingSystem": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBurner": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcBurnerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCShapeProfileDef": {},
+  "IfcCableCarrierFitting": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableCarrierFittingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableCarrierSegment": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableCarrierSegmentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableFitting": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableFittingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableSegment": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCableSegmentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCartesianPoint": {
+    "Coordinates": "LIST"
+  },
+  "IfcCartesianPointList": {},
+  "IfcCartesianPointList2D": {
+    "CoordList": "LIST"
+  },
+  "IfcCartesianPointList3D": {
+    "CoordList": "LIST"
+  },
+  "IfcCartesianTransformationOperator": {},
+  "IfcCartesianTransformationOperator2D": {},
+  "IfcCartesianTransformationOperator2DnonUniform": {},
+  "IfcCartesianTransformationOperator3D": {},
+  "IfcCartesianTransformationOperator3DnonUniform": {},
+  "IfcCenterLineProfileDef": {},
+  "IfcChiller": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcChillerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcChimney": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcChimneyType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCircle": {},
+  "IfcCircleHollowProfileDef": {},
+  "IfcCircleProfileDef": {},
+  "IfcCivilElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCivilElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcClassification": {
+    "ReferenceTokens": "LIST"
+  },
+  "IfcClassificationReference": {},
+  "IfcClosedShell": {
+    "CfsFaces": "SET"
+  },
+  "IfcCoil": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCoilType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcColourRgb": {},
+  "IfcColourRgbList": {
+    "ColourList": "LIST"
+  },
+  "IfcColourSpecification": {},
+  "IfcColumn": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcColumnStandardCase": {
+    "HasMaterialProfileSetUsage": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcColumnType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCommunicationsAppliance": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCommunicationsApplianceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcComplexProperty": {
+    "HasProperties": "SET"
+  },
+  "IfcComplexPropertyTemplate": {
+    "HasPropertyTemplates": "SET"
+  },
+  "IfcCompositeCurve": {
+    "Segments": "LIST"
+  },
+  "IfcCompositeCurveOnSurface": {
+    "Segments": "LIST"
+  },
+  "IfcCompositeCurveSegment": {},
+  "IfcCompositeProfileDef": {
+    "Profiles": "SET"
+  },
+  "IfcCompressor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCompressorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCondenser": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCondenserType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConic": {},
+  "IfcConnectedFaceSet": {
+    "CfsFaces": "SET"
+  },
+  "IfcConnectionCurveGeometry": {},
+  "IfcConnectionGeometry": {},
+  "IfcConnectionPointEccentricity": {},
+  "IfcConnectionPointGeometry": {},
+  "IfcConnectionSurfaceGeometry": {},
+  "IfcConnectionVolumeGeometry": {},
+  "IfcConstraint": {},
+  "IfcConstructionEquipmentResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionEquipmentResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionMaterialResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionMaterialResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionProductResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionProductResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConstructionResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcContext": {
+    "RepresentationContexts": "SET"
+  },
+  "IfcContextDependentUnit": {},
+  "IfcControl": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcController": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcControllerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcConversionBasedUnit": {},
+  "IfcConversionBasedUnitWithOffset": {
+    "ConversionOffset": "SET"
+  },
+  "IfcCooledBeam": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCooledBeamType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCoolingTower": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCoolingTowerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCoordinateOperation": {},
+  "IfcCoordinateReferenceSystem": {},
+  "IfcCostItem": {
+    "CostValues": "LIST",
+    "CostQuantities": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCostSchedule": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCostValue": {
+    "Components": "LIST"
+  },
+  "IfcCovering": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCoveringType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCrewResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCrewResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCsgPrimitive3D": {},
+  "IfcCsgSolid": {},
+  "IfcCurrencyRelationship": {},
+  "IfcCurtainWall": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCurtainWallType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcCurve": {},
+  "IfcCurveBoundedPlane": {
+    "InnerBoundaries": "SET"
+  },
+  "IfcCurveBoundedSurface": {
+    "Boundaries": "SET"
+  },
+  "IfcCurveStyle": {},
+  "IfcCurveStyleFont": {
+    "PatternList": "LIST"
+  },
+  "IfcCurveStyleFontAndScaling": {},
+  "IfcCurveStyleFontPattern": {},
+  "IfcCylindricalSurface": {},
+  "IfcDamper": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDamperType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDerivedProfileDef": {},
+  "IfcDerivedUnit": {
+    "Elements": "SET"
+  },
+  "IfcDerivedUnitElement": {},
+  "IfcDimensionalExponents": {},
+  "IfcDirection": {
+    "DirectionRatios": "LIST"
+  },
+  "IfcDiscreteAccessory": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDiscreteAccessoryType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionChamberElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionChamberElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionCircuit": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionControlElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionControlElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionFlowElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionFlowElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionPort": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDistributionSystem": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDocumentInformation": {
+    "Editors": "SET"
+  },
+  "IfcDocumentInformationRelationship": {
+    "RelatedDocuments": "SET"
+  },
+  "IfcDocumentReference": {},
+  "IfcDoor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDoorLiningProperties": {
+    "TransomOffset": "SET",
+    "LiningOffset": "SET",
+    "ThresholdOffset": "SET",
+    "LiningToPanelOffsetX": "SET",
+    "LiningToPanelOffsetY": "SET",
+    "WR33": "SET",
+    "WR35": "SET"
+  },
+  "IfcDoorPanelProperties": {
+    "ApplicableToType": "SET"
+  },
+  "IfcDoorStandardCase": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDoorStyle": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDoorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDraughtingPreDefinedColour": {},
+  "IfcDraughtingPreDefinedCurveFont": {},
+  "IfcDuctFitting": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDuctFittingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDuctSegment": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDuctSegmentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDuctSilencer": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcDuctSilencerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEdge": {},
+  "IfcEdgeCurve": {},
+  "IfcEdgeLoop": {
+    "EdgeList": "LIST",
+    "IsClosed": "LIST"
+  },
+  "IfcElectricAppliance": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricApplianceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricDistributionBoard": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricDistributionBoardType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricFlowStorageDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricFlowStorageDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricGenerator": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricGeneratorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricMotor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricMotorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricTimeControl": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElectricTimeControlType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElementAssembly": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElementAssemblyType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElementComponent": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElementComponentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElementQuantity": {
+    "Quantities": "SET"
+  },
+  "IfcElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcElementarySurface": {},
+  "IfcEllipse": {},
+  "IfcEllipseProfileDef": {},
+  "IfcEnergyConversionDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEnergyConversionDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEngine": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEngineType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEvaporativeCooler": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEvaporativeCoolerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEvaporator": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEvaporatorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEvent": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcEventTime": {},
+  "IfcEventType": {
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcExtendedProperties": {
+    "Properties": "SET"
+  },
+  "IfcExternalInformation": {},
+  "IfcExternalReference": {},
+  "IfcExternalReferenceRelationship": {
+    "RelatedResourceObjects": "SET"
+  },
+  "IfcExternalSpatialElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcExternalSpatialStructureElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcExternallyDefinedHatchStyle": {},
+  "IfcExternallyDefinedSurfaceStyle": {},
+  "IfcExternallyDefinedTextFont": {},
+  "IfcExtrudedAreaSolid": {},
+  "IfcExtrudedAreaSolidTapered": {},
+  "IfcFace": {
+    "Bounds": "SET"
+  },
+  "IfcFaceBasedSurfaceModel": {
+    "FbsmFaces": "SET"
+  },
+  "IfcFaceBound": {},
+  "IfcFaceOuterBound": {},
+  "IfcFaceSurface": {
+    "Bounds": "SET"
+  },
+  "IfcFacetedBrep": {},
+  "IfcFacetedBrepWithVoids": {
+    "Voids": "SET"
+  },
+  "IfcFailureConnectionCondition": {},
+  "IfcFan": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFanType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFastener": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFastenerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFeatureElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFeatureElementAddition": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFeatureElementSubtraction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFillAreaStyle": {
+    "FillStyles": "SET"
+  },
+  "IfcFillAreaStyleHatching": {},
+  "IfcFillAreaStyleTiles": {
+    "TilingPattern": "LIST",
+    "Tiles": "SET"
+  },
+  "IfcFilter": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFilterType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFireSuppressionTerminal": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFireSuppressionTerminalType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFixedReferenceSweptAreaSolid": {},
+  "IfcFlowController": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowControllerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowFitting": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowFittingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowInstrument": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowInstrumentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowMeter": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowMeterType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowMovingDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowMovingDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowSegment": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowSegmentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowStorageDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowStorageDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowTerminal": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowTerminalType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowTreatmentDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFlowTreatmentDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFooting": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFootingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFurnishingElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFurnishingElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFurniture": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcFurnitureType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcGeographicElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcGeographicElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcGeometricCurveSet": {
+    "NoSurfaces": "SET",
+    "Elements": "SET"
+  },
+  "IfcGeometricRepresentationContext": {},
+  "IfcGeometricRepresentationItem": {},
+  "IfcGeometricRepresentationSubContext": {},
+  "IfcGeometricSet": {
+    "Elements": "SET"
+  },
+  "IfcGrid": {
+    "UAxes": "LIST",
+    "VAxes": "LIST",
+    "WAxes": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcGridAxis": {},
+  "IfcGridPlacement": {},
+  "IfcGroup": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcHalfSpaceSolid": {},
+  "IfcHeatExchanger": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcHeatExchangerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcHumidifier": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcHumidifierType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcIShapeProfileDef": {},
+  "IfcImageTexture": {
+    "Parameter": "LIST"
+  },
+  "IfcIndexedColourMap": {
+    "MappedTo": "SET",
+    "Colours": "LIST",
+    "ColourIndex": "LIST"
+  },
+  "IfcIndexedPolyCurve": {
+    "Points": "LIST",
+    "Segments": "LIST"
+  },
+  "IfcIndexedPolygonalFace": {
+    "CoordIndex": "LIST"
+  },
+  "IfcIndexedPolygonalFaceWithVoids": {
+    "InnerCoordIndices": "LIST",
+    "CoordIndex": "LIST"
+  },
+  "IfcIndexedTextureMap": {
+    "MappedTo": "SET",
+    "TexCoords": "LIST",
+    "Maps": "LIST"
+  },
+  "IfcIndexedTriangleTextureMap": {
+    "TexCoordIndex": "LIST",
+    "MappedTo": "SET",
+    "TexCoords": "LIST",
+    "Maps": "LIST"
+  },
+  "IfcInterceptor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcInterceptorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcIntersectionCurve": {
+    "AssociatedGeometry": "LIST"
+  },
+  "IfcInventory": {
+    "ResponsiblePersons": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcIrregularTimeSeries": {
+    "Values": "LIST"
+  },
+  "IfcIrregularTimeSeriesValue": {
+    "ListValues": "LIST"
+  },
+  "IfcJunctionBox": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcJunctionBoxType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLShapeProfileDef": {},
+  "IfcLaborResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLaborResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLagTime": {},
+  "IfcLamp": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLampType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLibraryInformation": {},
+  "IfcLibraryReference": {},
+  "IfcLightDistributionData": {
+    "SecondaryPlaneAngle": "LIST",
+    "LuminousIntensity": "LIST"
+  },
+  "IfcLightFixture": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLightFixtureType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcLightIntensityDistribution": {
+    "DistributionData": "LIST"
+  },
+  "IfcLightSource": {},
+  "IfcLightSourceAmbient": {},
+  "IfcLightSourceDirectional": {},
+  "IfcLightSourceGoniometric": {},
+  "IfcLightSourcePositional": {},
+  "IfcLightSourceSpot": {},
+  "IfcLine": {},
+  "IfcLocalPlacement": {},
+  "IfcLoop": {},
+  "IfcManifoldSolidBrep": {},
+  "IfcMapConversion": {},
+  "IfcMappedItem": {},
+  "IfcMaterial": {},
+  "IfcMaterialClassificationRelationship": {
+    "MaterialClassifications": "SET"
+  },
+  "IfcMaterialConstituent": {},
+  "IfcMaterialConstituentSet": {
+    "MaterialConstituents": "SET"
+  },
+  "IfcMaterialDefinition": {},
+  "IfcMaterialDefinitionRepresentation": {
+    "Representations": "LIST"
+  },
+  "IfcMaterialLayer": {},
+  "IfcMaterialLayerSet": {
+    "MaterialLayers": "LIST",
+    "LayerSetName": "SET"
+  },
+  "IfcMaterialLayerSetUsage": {
+    "ForLayerSet": "SET",
+    "LayerSetDirection": "SET",
+    "OffsetFromReferenceLine": "SET"
+  },
+  "IfcMaterialLayerWithOffsets": {
+    "OffsetDirection": "SET",
+    "OffsetValues": "SET"
+  },
+  "IfcMaterialList": {
+    "Materials": "LIST"
+  },
+  "IfcMaterialProfile": {},
+  "IfcMaterialProfileSet": {
+    "MaterialProfiles": "LIST"
+  },
+  "IfcMaterialProfileSetUsage": {
+    "ForProfileSet": "SET"
+  },
+  "IfcMaterialProfileSetUsageTapering": {
+    "ForProfileEndSet": "SET",
+    "ForProfileSet": "SET"
+  },
+  "IfcMaterialProfileWithOffsets": {
+    "OffsetValues": "SET"
+  },
+  "IfcMaterialProperties": {
+    "Properties": "SET"
+  },
+  "IfcMaterialRelationship": {
+    "RelatedMaterials": "SET"
+  },
+  "IfcMaterialUsageDefinition": {},
+  "IfcMeasureWithUnit": {},
+  "IfcMechanicalFastener": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMechanicalFastenerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMedicalDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMedicalDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMember": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMemberStandardCase": {
+    "HasMaterialProfileSetUsage": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMemberType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMetric": {},
+  "IfcMirroredProfileDef": {},
+  "IfcMonetaryUnit": {},
+  "IfcMotorConnection": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcMotorConnectionType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcNamedUnit": {},
+  "IfcObject": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcObjectDefinition": {},
+  "IfcObjectPlacement": {},
+  "IfcObjective": {
+    "BenchmarkValues": "LIST"
+  },
+  "IfcOccupant": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcOffsetCurve2D": {},
+  "IfcOffsetCurve3D": {},
+  "IfcOpenShell": {
+    "CfsFaces": "SET"
+  },
+  "IfcOpeningElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcOpeningStandardCase": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcOrganization": {
+    "Roles": "LIST",
+    "Addresses": "LIST"
+  },
+  "IfcOrganizationRelationship": {
+    "RelatedOrganizations": "SET"
+  },
+  "IfcOrientedEdge": {},
+  "IfcOuterBoundaryCurve": {
+    "Segments": "LIST"
+  },
+  "IfcOutlet": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcOutletType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcOwnerHistory": {},
+  "IfcParameterizedProfileDef": {},
+  "IfcPath": {
+    "EdgeList": "LIST"
+  },
+  "IfcPcurve": {},
+  "IfcPerformanceHistory": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPermeableCoveringProperties": {},
+  "IfcPermit": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPerson": {
+    "MiddleNames": "LIST",
+    "PrefixTitles": "LIST",
+    "SuffixTitles": "LIST",
+    "Roles": "LIST",
+    "Addresses": "LIST",
+    "ValidSetOfNames": "SET"
+  },
+  "IfcPersonAndOrganization": {
+    "Roles": "LIST"
+  },
+  "IfcPhysicalComplexQuantity": {
+    "HasQuantities": "SET"
+  },
+  "IfcPhysicalQuantity": {},
+  "IfcPhysicalSimpleQuantity": {},
+  "IfcPile": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPileType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPipeFitting": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPipeFittingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPipeSegment": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPipeSegmentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPixelTexture": {
+    "Pixel": "LIST",
+    "SizeOfPixelList": "LIST",
+    "Parameter": "LIST"
+  },
+  "IfcPlacement": {},
+  "IfcPlanarBox": {},
+  "IfcPlanarExtent": {},
+  "IfcPlane": {},
+  "IfcPlate": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPlateStandardCase": {
+    "HasMaterialLayerSetUsage": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPlateType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPoint": {},
+  "IfcPointOnCurve": {},
+  "IfcPointOnSurface": {},
+  "IfcPolyLoop": {
+    "Polygon": "LIST"
+  },
+  "IfcPolygonalBoundedHalfSpace": {},
+  "IfcPolygonalFaceSet": {
+    "Faces": "LIST",
+    "PnIndex": "LIST",
+    "Coordinates": "LIST"
+  },
+  "IfcPolyline": {
+    "Points": "LIST"
+  },
+  "IfcPort": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPostalAddress": {
+    "AddressLines": "LIST"
+  },
+  "IfcPreDefinedColour": {},
+  "IfcPreDefinedCurveFont": {},
+  "IfcPreDefinedItem": {},
+  "IfcPreDefinedProperties": {},
+  "IfcPreDefinedPropertySet": {},
+  "IfcPreDefinedTextFont": {},
+  "IfcPresentationItem": {},
+  "IfcPresentationLayerAssignment": {
+    "AssignedItems": "SET"
+  },
+  "IfcPresentationLayerWithStyle": {
+    "LayerStyles": "SET",
+    "AssignedItems": "SET"
+  },
+  "IfcPresentationStyle": {},
+  "IfcPresentationStyleAssignment": {
+    "Styles": "SET"
+  },
+  "IfcProcedure": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProcedureType": {
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProcess": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProduct": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProductDefinitionShape": {
+    "Representations": "LIST"
+  },
+  "IfcProductRepresentation": {
+    "Representations": "LIST"
+  },
+  "IfcProfileDef": {},
+  "IfcProfileProperties": {
+    "Properties": "SET"
+  },
+  "IfcProject": {
+    "RepresentationContexts": "SET"
+  },
+  "IfcProjectLibrary": {
+    "RepresentationContexts": "SET"
+  },
+  "IfcProjectOrder": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProjectedCRS": {},
+  "IfcProjectionElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProperty": {},
+  "IfcPropertyAbstraction": {},
+  "IfcPropertyBoundedValue": {
+    "SetPointValue": "SET",
+    "SameUnitUpperSet": "SET",
+    "SameUnitLowerSet": "SET"
+  },
+  "IfcPropertyDefinition": {},
+  "IfcPropertyDependencyRelationship": {},
+  "IfcPropertyEnumeratedValue": {
+    "EnumerationValues": "LIST"
+  },
+  "IfcPropertyEnumeration": {
+    "EnumerationValues": "LIST"
+  },
+  "IfcPropertyListValue": {
+    "ListValues": "LIST",
+    "WR31": "LIST"
+  },
+  "IfcPropertyReferenceValue": {},
+  "IfcPropertySet": {
+    "HasProperties": "SET"
+  },
+  "IfcPropertySetDefinition": {},
+  "IfcPropertySetTemplate": {
+    "TemplateType": "SET",
+    "HasPropertyTemplates": "SET"
+  },
+  "IfcPropertySingleValue": {},
+  "IfcPropertyTableValue": {
+    "DefiningValues": "LIST",
+    "DefinedValues": "LIST"
+  },
+  "IfcPropertyTemplate": {},
+  "IfcPropertyTemplateDefinition": {},
+  "IfcProtectiveDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProtectiveDeviceTrippingUnit": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProtectiveDeviceTrippingUnitType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProtectiveDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcProxy": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPump": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcPumpType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcQuantityArea": {},
+  "IfcQuantityCount": {},
+  "IfcQuantityLength": {},
+  "IfcQuantitySet": {},
+  "IfcQuantityTime": {},
+  "IfcQuantityVolume": {},
+  "IfcQuantityWeight": {},
+  "IfcRailing": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRailingType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRamp": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRampFlight": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRampFlightType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRampType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRationalBSplineCurveWithKnots": {
+    "WeightsData": "LIST",
+    "SameNumOfWeightsAndPoints": "LIST",
+    "KnotMultiplicities": "LIST",
+    "Knots": "LIST",
+    "CorrespondingKnotLists": "LIST",
+    "ControlPointsList": "LIST",
+    "SameDim": "LIST"
+  },
+  "IfcRationalBSplineSurfaceWithKnots": {
+    "WeightsData": "LIST",
+    "CorrespondingWeightsDataLists": "LIST",
+    "UMultiplicities": "LIST",
+    "VMultiplicities": "LIST",
+    "UKnots": "LIST",
+    "VKnots": "LIST",
+    "CorrespondingULists": "LIST",
+    "CorrespondingVLists": "LIST",
+    "ControlPointsList": "LIST"
+  },
+  "IfcRectangleHollowProfileDef": {},
+  "IfcRectangleProfileDef": {},
+  "IfcRectangularPyramid": {},
+  "IfcRectangularTrimmedSurface": {},
+  "IfcRecurrencePattern": {
+    "DayComponent": "SET",
+    "WeekdayComponent": "SET",
+    "MonthComponent": "SET",
+    "TimePeriods": "LIST"
+  },
+  "IfcReference": {
+    "ListPositions": "LIST"
+  },
+  "IfcRegularTimeSeries": {
+    "Values": "LIST"
+  },
+  "IfcReinforcementBarProperties": {},
+  "IfcReinforcementDefinitionProperties": {
+    "ReinforcementSectionDefinitions": "LIST"
+  },
+  "IfcReinforcingBar": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcReinforcingBarType": {
+    "BendingParameters": "LIST",
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcReinforcingElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcReinforcingElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcReinforcingMesh": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcReinforcingMeshType": {
+    "BendingParameters": "LIST",
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRelAggregates": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssigns": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToActor": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToControl": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToGroup": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToGroupByFactor": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToProcess": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToProduct": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssignsToResource": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociates": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesApproval": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesClassification": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesConstraint": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesDocument": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesLibrary": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelAssociatesMaterial": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelConnects": {},
+  "IfcRelConnectsElements": {},
+  "IfcRelConnectsPathElements": {
+    "RelatingPriorities": "LIST",
+    "RelatedPriorities": "LIST"
+  },
+  "IfcRelConnectsPortToElement": {},
+  "IfcRelConnectsPorts": {},
+  "IfcRelConnectsStructuralActivity": {},
+  "IfcRelConnectsStructuralMember": {},
+  "IfcRelConnectsWithEccentricity": {},
+  "IfcRelConnectsWithRealizingElements": {
+    "RealizingElements": "SET"
+  },
+  "IfcRelContainedInSpatialStructure": {
+    "RelatedElements": "SET"
+  },
+  "IfcRelCoversBldgElements": {
+    "RelatedCoverings": "SET"
+  },
+  "IfcRelCoversSpaces": {
+    "RelatedCoverings": "SET"
+  },
+  "IfcRelDeclares": {
+    "RelatedDefinitions": "SET"
+  },
+  "IfcRelDecomposes": {},
+  "IfcRelDefines": {},
+  "IfcRelDefinesByObject": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelDefinesByProperties": {
+    "RelatedObjects": "SET",
+    "RelatingPropertyDefinition": "SET"
+  },
+  "IfcRelDefinesByTemplate": {
+    "RelatedPropertySets": "SET",
+    "RelatingTemplate": "SET"
+  },
+  "IfcRelDefinesByType": {
+    "RelatedObjects": "SET"
+  },
+  "IfcRelFillsElement": {},
+  "IfcRelFlowControlElements": {
+    "RelatedControlElements": "SET"
+  },
+  "IfcRelInterferesElements": {},
+  "IfcRelNests": {
+    "RelatedObjects": "LIST"
+  },
+  "IfcRelProjectsElement": {},
+  "IfcRelReferencedInSpatialStructure": {
+    "RelatedElements": "SET"
+  },
+  "IfcRelSequence": {},
+  "IfcRelServicesBuildings": {
+    "RelatedBuildings": "SET"
+  },
+  "IfcRelSpaceBoundary": {},
+  "IfcRelSpaceBoundary1stLevel": {},
+  "IfcRelSpaceBoundary2ndLevel": {},
+  "IfcRelVoidsElement": {},
+  "IfcRelationship": {},
+  "IfcReparametrisedCompositeCurveSegment": {},
+  "IfcRepresentation": {
+    "Items": "SET"
+  },
+  "IfcRepresentationContext": {},
+  "IfcRepresentationItem": {},
+  "IfcRepresentationMap": {},
+  "IfcResource": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcResourceApprovalRelationship": {
+    "RelatedResourceObjects": "SET"
+  },
+  "IfcResourceConstraintRelationship": {
+    "RelatedResourceObjects": "SET"
+  },
+  "IfcResourceLevelRelationship": {},
+  "IfcResourceTime": {},
+  "IfcRevolvedAreaSolid": {},
+  "IfcRevolvedAreaSolidTapered": {},
+  "IfcRightCircularCone": {},
+  "IfcRightCircularCylinder": {},
+  "IfcRoof": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRoofType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcRoot": {},
+  "IfcRoundedRectangleProfileDef": {},
+  "IfcSIUnit": {},
+  "IfcSanitaryTerminal": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSanitaryTerminalType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSchedulingTime": {},
+  "IfcSeamCurve": {
+    "AssociatedGeometry": "LIST"
+  },
+  "IfcSectionProperties": {},
+  "IfcSectionReinforcementProperties": {
+    "CrossSectionReinforcementDefinitions": "SET"
+  },
+  "IfcSectionedSpine": {
+    "CrossSections": "LIST",
+    "CrossSectionPositions": "LIST"
+  },
+  "IfcSensor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSensorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcShadingDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcShadingDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcShapeAspect": {
+    "ShapeRepresentations": "LIST"
+  },
+  "IfcShapeModel": {
+    "Items": "SET"
+  },
+  "IfcShapeRepresentation": {
+    "Items": "SET"
+  },
+  "IfcShellBasedSurfaceModel": {
+    "SbsmBoundary": "SET"
+  },
+  "IfcSimpleProperty": {},
+  "IfcSimplePropertyTemplate": {},
+  "IfcSite": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSlab": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSlabElementedCase": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSlabStandardCase": {
+    "HasMaterialLayerSetusage": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSlabType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSlippageConnectionCondition": {},
+  "IfcSolarDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSolarDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSolidModel": {},
+  "IfcSpace": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpaceHeater": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpaceHeaterType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpaceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpatialElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpatialElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpatialStructureElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpatialStructureElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpatialZone": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSpatialZoneType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSphere": {},
+  "IfcSphericalSurface": {},
+  "IfcStackTerminal": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStackTerminalType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStair": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStairFlight": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStairFlightType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStairType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralAction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralActivity": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralAnalysisModel": {
+    "LoadedBy": "SET",
+    "HasResults": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralConnection": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralConnectionCondition": {},
+  "IfcStructuralCurveAction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralCurveConnection": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralCurveMember": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralCurveMemberVarying": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralCurveReaction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralItem": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralLinearAction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralLoad": {},
+  "IfcStructuralLoadCase": {
+    "SelfWeightCoefficients": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralLoadConfiguration": {
+    "Values": "LIST",
+    "Locations": "LIST",
+    "ValidListSize": "LIST"
+  },
+  "IfcStructuralLoadGroup": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralLoadLinearForce": {},
+  "IfcStructuralLoadOrResult": {},
+  "IfcStructuralLoadPlanarForce": {},
+  "IfcStructuralLoadSingleDisplacement": {},
+  "IfcStructuralLoadSingleDisplacementDistortion": {},
+  "IfcStructuralLoadSingleForce": {},
+  "IfcStructuralLoadSingleForceWarping": {},
+  "IfcStructuralLoadStatic": {},
+  "IfcStructuralLoadTemperature": {},
+  "IfcStructuralMember": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralPlanarAction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralPointAction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralPointConnection": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralPointReaction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralReaction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralResultGroup": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralSurfaceAction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralSurfaceConnection": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralSurfaceMember": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralSurfaceMemberVarying": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStructuralSurfaceReaction": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcStyleModel": {
+    "Items": "SET"
+  },
+  "IfcStyledItem": {
+    "Styles": "SET"
+  },
+  "IfcStyledRepresentation": {
+    "Items": "SET"
+  },
+  "IfcSubContractResource": {
+    "BaseCosts": "LIST",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSubContractResourceType": {
+    "BaseCosts": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSubedge": {},
+  "IfcSurface": {},
+  "IfcSurfaceCurve": {
+    "AssociatedGeometry": "LIST"
+  },
+  "IfcSurfaceCurveSweptAreaSolid": {},
+  "IfcSurfaceFeature": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSurfaceOfLinearExtrusion": {},
+  "IfcSurfaceOfRevolution": {},
+  "IfcSurfaceReinforcementArea": {
+    "SurfaceReinforcement1": "LIST",
+    "SurfaceReinforcement2": "LIST"
+  },
+  "IfcSurfaceStyle": {
+    "Styles": "SET"
+  },
+  "IfcSurfaceStyleLighting": {
+    "DiffuseTransmissionColour": "SET"
+  },
+  "IfcSurfaceStyleRefraction": {},
+  "IfcSurfaceStyleRendering": {
+    "DiffuseTransmissionColour": "SET"
+  },
+  "IfcSurfaceStyleShading": {},
+  "IfcSurfaceStyleWithTextures": {
+    "Textures": "LIST"
+  },
+  "IfcSurfaceTexture": {
+    "Parameter": "LIST"
+  },
+  "IfcSweptAreaSolid": {},
+  "IfcSweptDiskSolid": {},
+  "IfcSweptDiskSolidPolygonal": {},
+  "IfcSweptSurface": {},
+  "IfcSwitchingDevice": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSwitchingDeviceType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSystem": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSystemFurnitureElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcSystemFurnitureElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTShapeProfileDef": {},
+  "IfcTable": {
+    "Rows": "LIST",
+    "Columns": "LIST"
+  },
+  "IfcTableColumn": {},
+  "IfcTableRow": {
+    "RowCells": "LIST"
+  },
+  "IfcTank": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTankType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTask": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTaskTime": {},
+  "IfcTaskTimeRecurring": {},
+  "IfcTaskType": {
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTelecomAddress": {
+    "TelephoneNumbers": "LIST",
+    "FacsimileNumbers": "LIST",
+    "ElectronicMailAddresses": "LIST",
+    "MessagingIDs": "LIST"
+  },
+  "IfcTendon": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTendonAnchor": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTendonAnchorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTendonType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTessellatedFaceSet": {
+    "Coordinates": "LIST"
+  },
+  "IfcTessellatedItem": {},
+  "IfcTextLiteral": {},
+  "IfcTextLiteralWithExtent": {},
+  "IfcTextStyle": {},
+  "IfcTextStyleFontModel": {
+    "FontFamily": "LIST"
+  },
+  "IfcTextStyleForDefinedFont": {},
+  "IfcTextStyleTextModel": {},
+  "IfcTextureCoordinate": {
+    "Maps": "LIST"
+  },
+  "IfcTextureCoordinateGenerator": {
+    "Parameter": "LIST",
+    "Maps": "LIST"
+  },
+  "IfcTextureMap": {
+    "Vertices": "LIST",
+    "Maps": "LIST"
+  },
+  "IfcTextureVertex": {
+    "Coordinates": "LIST"
+  },
+  "IfcTextureVertexList": {
+    "TexCoordsList": "LIST"
+  },
+  "IfcTimePeriod": {},
+  "IfcTimeSeries": {},
+  "IfcTimeSeriesValue": {
+    "ListValues": "LIST"
+  },
+  "IfcTopologicalRepresentationItem": {},
+  "IfcTopologyRepresentation": {
+    "Items": "SET"
+  },
+  "IfcToroidalSurface": {},
+  "IfcTransformer": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTransformerType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTransportElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTransportElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTrapeziumProfileDef": {
+    "TopXOffset": "SET"
+  },
+  "IfcTriangulatedFaceSet": {
+    "Normals": "LIST",
+    "CoordIndex": "LIST",
+    "PnIndex": "LIST",
+    "Coordinates": "LIST"
+  },
+  "IfcTrimmedCurve": {
+    "Trim1": "SET",
+    "Trim2": "SET"
+  },
+  "IfcTubeBundle": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTubeBundleType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTypeObject": {
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTypeProcess": {
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTypeProduct": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcTypeResource": {
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcUShapeProfileDef": {},
+  "IfcUnitAssignment": {
+    "Units": "SET"
+  },
+  "IfcUnitaryControlElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcUnitaryControlElementType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcUnitaryEquipment": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcUnitaryEquipmentType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcValve": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcValveType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcVector": {},
+  "IfcVertex": {},
+  "IfcVertexLoop": {},
+  "IfcVertexPoint": {},
+  "IfcVibrationIsolator": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcVibrationIsolatorType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcVirtualElement": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcVirtualGridIntersection": {
+    "IntersectingAxes": "LIST",
+    "OffsetDistances": "SET"
+  },
+  "IfcVoidingFeature": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWall": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWallElementedCase": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWallStandardCase": {
+    "HasMaterialLayerSetUsage": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWallType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWasteTerminal": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWasteTerminalType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWindow": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWindowLiningProperties": {
+    "FirstTransomOffset": "SET",
+    "SecondTransomOffset": "SET",
+    "FirstMullionOffset": "SET",
+    "SecondMullionOffset": "SET",
+    "LiningOffset": "SET",
+    "LiningToPanelOffsetX": "SET",
+    "LiningToPanelOffsetY": "SET",
+    "WR32": "SET",
+    "WR33": "SET",
+    "WR34": "SET"
+  },
+  "IfcWindowPanelProperties": {
+    "ApplicableToType": "SET"
+  },
+  "IfcWindowStandardCase": {
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWindowStyle": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWindowType": {
+    "RepresentationMaps": "LIST",
+    "HasPropertySets": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWorkCalendar": {
+    "WorkingTimes": "SET",
+    "ExceptionTimes": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWorkControl": {
+    "Creators": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWorkPlan": {
+    "Creators": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWorkSchedule": {
+    "Creators": "SET",
+    "UniquePropertySetNames": "SET"
+  },
+  "IfcWorkTime": {},
+  "IfcZShapeProfileDef": {},
+  "IfcZone": {
+    "UniquePropertySetNames": "SET"
+  }
+}

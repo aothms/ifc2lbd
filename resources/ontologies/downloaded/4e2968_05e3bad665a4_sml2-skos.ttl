@@ -1,0 +1,321 @@
+# baseURI: https://w3id.org/sml/2/skos/term
+# imports: https://w3id.org/sml/skos/term
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# imports: http://www.w3.org/ns/sosa/
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# prefix: sml-term
+
+@prefix sml-term: <https://w3id.org/sml/term#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+<https://w3id.org/sml/2/skos/term>
+  a skos:ConceptScheme ;
+  owl:imports <https://w3id.org/sml/skos/term> ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <http://www.w3.org/ns/sosa/> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+  skos:hasTopConcept sml-term:TopConcept ;
+.
+sml-term:AggregationStateType
+  a skos:Concept ;
+  skos:broader sml-term:EnumerationType ;
+  skos:definition "One of the four fundamental states of matter being a solid, liquid, gas or plasma"@en ;
+  skos:prefLabel "Aggregation state type"@en ;
+.
+sml-term:AmountOfBulkMatter
+  a skos:Concept ;
+  skos:broader sml-term:RealObject ;
+  skos:definition "A real object that consists of a continuous amount of non-rigid matter, held together primarily by external forces (gravity or confinement)"@en ;
+  skos:prefLabel "Amount of bulk matter"@en ;
+.
+sml-term:ChemicalCompound
+  a skos:Concept ;
+  skos:broader sml-term:PureSubstance ;
+  skos:definition "Pure substance consisting of two or more chemical elements that have a chemical bond with each other. In a chemical compound, the elements occur in a fixed ratio. A compound can be broken down into simpler substances by means of chemical reactions"@en ;
+  skos:prefLabel "Chemical compound"@en ;
+.
+sml-term:ChemicalElement
+  a skos:Concept ;
+  skos:broader sml-term:PureSubstance ;
+  skos:definition "Pure substance that is made up of atoms with the same atomic number. A chemical element cannot be decomposed through chemical reactions"@en ;
+  skos:prefLabel "Chemical element"@en ;
+.
+sml-term:Connection
+  a skos:Concept ;
+  skos:broader sml-term:PhysicalObject ;
+  skos:definition "A physical object (real object or spatial area) that connects two other physical objects and over which interaction takes place, namely the transfer of matter, energy, information or forces"@en ;
+  skos:prefLabel "Connection"@en ;
+.
+sml-term:DiscreteObject
+  a skos:Concept ;
+  skos:broader sml-term:RealObject ;
+  skos:definition "A real object consisting of a contiguous amount of form-retaining matter, held together primarily by internal forces (gravity or electromagnetic force)"@en ;
+  skos:prefLabel "Discrete object"@en ;
+.
+sml-term:EnergyFlow
+  a skos:Concept ;
+  skos:broader sml-term:TransferType ;
+  skos:definition "The movement of an amount of energy (as capacity to do work)"@en ;
+  skos:prefLabel "Energy flow"@en ;
+.
+sml-term:Force
+  a skos:Concept ;
+  skos:broader sml-term:TransferType ;
+  skos:definition "Physical quantity which, when exerted on a body, causes tension or pressure to arise therein, or which causes the body to change motion, accelerate"@en ;
+  skos:prefLabel "Force"@en ;
+.
+sml-term:Function
+  a skos:Concept ;
+  skos:broader sml-term:Activity ;
+  skos:broader sml-term:FunctionalActivity ;
+  skos:definition "An activity performed by an object whose external behavior contributes to goals set by one or more technical entities"@en ;
+  skos:prefLabel "Function"@en ;
+.
+sml-term:Gas
+  a skos:Concept ;
+  skos:broader sml-term:AggregationStateType ;
+  skos:definition "Matter in an intermediate state between liquid and plasma that can be contained only if it is fully surrounded by a solid (or in a bubble of liquid) (or held together by gravitational pull); it can condense into a liquid, or can (rarely) become a solid directly by deposition"@en ;
+  skos:prefLabel "Gas"@en ;
+.
+sml-term:HeterogeneousMixture
+  a skos:Concept ;
+  skos:broader sml-term:Mixture ;
+  skos:definition "A mixture that is separated into different regions or phases that have different compositions or properties"@en ;
+  skos:prefLabel "Heterogeneous mixture"@en ;
+.
+sml-term:HomogeneousMixture
+  a skos:Concept ;
+  skos:broader sml-term:Mixture ;
+  skos:definition "A mixture that is uniform throughout, and has only one phase"@en ;
+  skos:prefLabel "Homogeneous mixture"@en ;
+.
+sml-term:InformationFlow
+  a skos:Concept ;
+  skos:broader sml-term:TransferType ;
+  skos:definition "The movement of information represented in some medium"@en ;
+  skos:prefLabel "Information flow"@en ;
+.
+sml-term:Interaction
+  a skos:Concept ;
+  skos:broader sml-term:Activity ;
+  skos:definition "The activity being a combination of sub-activities performed by physical objects between which a transfer of matter, information, energy or force takes place, typically over a connection or interface (directly or through ports)"@en ;
+  skos:prefLabel "Interaction"@en ;
+.
+sml-term:Interface
+  a skos:Concept ;
+  skos:broader sml-term:SpatialRegion ;
+  skos:definition "A spatial object, typically a thin 2D physical space (but also 0D or 1D) that connects two physical objects or ports of physical objects through which a static or dynamic interaction or interaction between those elements can take place"@en ;
+  skos:prefLabel "Interface"@en ;
+.
+sml-term:Liquid
+  a skos:Concept ;
+  skos:broader sml-term:AggregationStateType ;
+  skos:definition "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure"@en ;
+  skos:prefLabel "Liquid"@en ;
+.
+sml-term:MaterialFlow
+  a skos:Concept ;
+  skos:broader sml-term:TransferType ;
+  skos:definition "The movement of an amount of material"@en ;
+  skos:prefLabel "Material flow"@en ;
+.
+sml-term:Matter
+  a skos:Concept ;
+  skos:altLabel "Chemical substance"@en ;
+  skos:broader sml-term:PhysicalObject ;
+  skos:definition "A pure chemical substance, chemical compound or mixture from which real objects are made"@en ;
+  skos:prefLabel "Matter"@en ;
+.
+sml-term:MatterPortion
+  a skos:Concept ;
+  skos:broader sml-term:RelationReference ;
+  skos:definition "An objectified relation reference for the consists of relation"@en ;
+  skos:prefLabel "Matter portion"@en ;
+.
+sml-term:Mixture
+  a skos:Concept ;
+  skos:broader sml-term:Matter ;
+  skos:definition "The combination of two or more different pure substances without the molecules losing their identity"@en ;
+  skos:prefLabel "Mixture"@en ;
+.
+sml-term:Plasma
+  a skos:Concept ;
+  skos:broader sml-term:AggregationStateType ;
+  skos:definition "A phase in which the particles of a gaseous substance are ionised"@en ;
+  skos:prefLabel "Plasma"@en ;
+.
+sml-term:Port
+  a skos:Concept ;
+  skos:broader sml-term:PhysicalObject ;
+  skos:definition "A physical or logical point of interaction as part of a physical object where, through a connection or interface, an interaction can take place"@en ;
+  skos:prefLabel "Port"@en ;
+.
+sml-term:PureSubstance
+  a skos:Concept ;
+  skos:broader sml-term:Matter ;
+  skos:definition "Chemical matter that has an equal chemical composition and recognizable uniform and isotropic properties"@en ;
+  skos:prefLabel "Pure substance"@en ;
+.
+sml-term:RealObject
+  a skos:Concept ;
+  skos:altLabel "Amount of matter"@en ;
+  skos:broader sml-term:PhysicalObject ;
+  skos:definition "physical object (rigid or non-rigid) that is (or can be) tangible and visible in reality, man-made or naturally occurring"@en ;
+  skos:prefLabel "Real object"@en ;
+.
+sml-term:Requirement
+  a skos:Concept ;
+  skos:broader sml-term:InformationObject ;
+  skos:definition "A rule that should hold for something, defined via its attributes or relations"@en ;
+  skos:prefLabel "Requirement"@en ;
+.
+sml-term:RequirementSeverityType
+  a skos:Concept ;
+  skos:broader sml-term:EnumerationType ;
+  skos:definition "The seriousness of a requirement like demanded or wished"@en ;
+  skos:prefLabel "Requirement severity type"@en ;
+.
+sml-term:RequirementSourceType
+  a skos:Concept ;
+  skos:broader sml-term:EnumerationType ;
+  skos:definition "The type of source from which a requirement comes like a client, by definition, recommended by the sector or demanded by law/regulation"@en ;
+  skos:prefLabel "Requirement source type"@en ;
+.
+sml-term:RequirementTopicType
+  a skos:Concept ;
+  skos:broader sml-term:EnumerationType ;
+  skos:definition "The entity aspect a requirement applies to"@en ;
+  skos:prefLabel "Requirement topic type"@en ;
+.
+sml-term:Solid
+  a skos:Concept ;
+  skos:broader sml-term:AggregationStateType ;
+  skos:definition "Matter that can be picked up or held, having a texture, and usually firm. Unlike a liquid, gas or plasma"@en ;
+  skos:prefLabel "Solid"@en ;
+.
+sml-term:SpatialRegion
+  a skos:Concept ;
+  skos:broader sml-term:PhysicalObject ;
+  skos:definition "A physical object that encloses a particular area such as a room, roadway and river, that is bounded by real objects or other spatial areas (e.g., by usage or convention) and that contains primarily liquid or gaseous amount of matter"@en ;
+  skos:prefLabel "Spatial region"@en ;
+.
+sml-term:TransferType
+  a skos:Concept ;
+  skos:broader sml-term:EnumerationType ;
+  skos:definition "The type of thing being transferred, here: material, information, energy or force"@en ;
+  skos:prefLabel "Transfer type"@en ;
+.
+sml-term:aggregationStateType
+  a skos:Concept ;
+  skos:definition "The possession of an aggregation state type"@en ;
+  skos:prefLabel "aggregation state type"@en ;
+.
+sml-term:chemicalFormula
+  a skos:Concept ;
+  skos:definition "The possession of information about the chemical proportions of atoms that constitute a particular chemical compound"@en ;
+  skos:prefLabel "chemical formula"@en ;
+.
+sml-term:connectsObject
+  a skos:Concept ;
+  skos:definition "The physical objects connected by a connection or interface"@en ;
+  skos:prefLabel "connects object"@en ;
+.
+sml-term:connectsPort
+  a skos:Concept ;
+  skos:definition "The ports (as part of physical objects) connected by a connection or interface"@en ;
+  skos:prefLabel "connects port"@en ;
+.
+sml-term:consistsOf
+  a skos:Concept ;
+  skos:definition "The matter a real object or mixture is made of"@en ;
+  skos:prefLabel "consists of"@en ;
+.
+sml-term:contains
+  a skos:Concept ;
+  skos:definition "The real objects located in a spatial region, typically the gaseous amount of bulk matter present in that region"@en ;
+  skos:prefLabel "contains"@en ;
+.
+sml-term:hasPartsGroup
+  a skos:Concept ;
+  skos:definition "The possession of an group of, potentially implicit, parts"@en ;
+  skos:prefLabel "has parts group"@en ;
+.
+sml-term:hasRequirement
+  a skos:Concept ;
+  skos:definition "The (unstructured) requirement for something"@en ;
+  skos:prefLabel "has requirement"@en ;
+.
+sml-term:isBoundBy
+  a skos:Concept ;
+  skos:definition "The physical object that bounds a spatial region"@en ;
+  skos:prefLabel "is bound by"@en ;
+.
+sml-term:isConnectedTo
+  a skos:Concept ;
+  skos:definition "The topological relation between physical objects"@en ;
+  skos:prefLabel "is connected to"@en ;
+.
+sml-term:overConnection
+  a skos:Concept ;
+  skos:definition "The connection over which an interaction between physical objects takes place"@en ;
+  skos:prefLabel "over connection"@en ;
+.
+sml-term:overInterface
+  a skos:Concept ;
+  skos:definition "The interface over which an interaction between physical objects takes place"@en ;
+  skos:prefLabel "over interface"@en ;
+.
+sml-term:participatesIn
+  a skos:Concept ;
+  skos:definition "The interaction a physical object participates in"@en ;
+  skos:prefLabel "participates in"@en ;
+.
+sml-term:portion
+  a skos:Concept ;
+  skos:definition "The relative portion of a matter portion"@en ;
+  skos:prefLabel "portion"@en ;
+.
+sml-term:requirementSeverityType
+  a skos:Concept ;
+  skos:definition "The possession of a severity type by a requirement"@en ;
+  skos:prefLabel "requirement severity type"@en ;
+.
+sml-term:requirementSourceType
+  a skos:Concept ;
+  skos:definition "The possession of a source type by a requirement"@en ;
+  skos:prefLabel "requirement source type"@en ;
+.
+sml-term:requirementTopicType
+  a skos:Concept ;
+  skos:definition "The possession of a topic type by a requirement"@en ;
+  skos:prefLabel "requirement topic type"@en ;
+.
+sml-term:transferType
+  a skos:Concept ;
+  skos:definition "The possession of a transfer type by an interaction"@en ;
+  skos:prefLabel "transfer type"@en ;
+.

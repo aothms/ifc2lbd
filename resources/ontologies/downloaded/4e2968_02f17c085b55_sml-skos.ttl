@@ -1,0 +1,289 @@
+# baseURI: https://w3id.org/sml/skos/term
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# prefix: sml-term
+
+@prefix sml-term: <https://w3id.org/sml/term#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/sml/skos/term>
+  a skos:ConceptScheme ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  skos:hasTopConcept sml-term:TopConcept ;
+.
+sml-term:AbstractConcept
+  a skos:Concept ;
+  skos:broader sml-term:TopConcept ;
+  skos:definition "Concept that forms a manifestation and demarcation in an abstract space. An abstract concept has no life cycle"@en ;
+  skos:prefLabel "Abstract concept"@en ;
+.
+sml-term:Activity
+  a skos:Concept ;
+  skos:broader sml-term:Entity ;
+  skos:definition "Entity that takes place or can take place in a concrete space-time. An activity transforms objects, and is executed by an object"@en ;
+  skos:prefLabel "Activity"@en ;
+.
+sml-term:ConceptType
+  a skos:Concept ;
+  skos:broader sml-term:Type ;
+  skos:definition "A meta-concept having concepts as instances that can have attributes or relations"@en ;
+  skos:prefLabel "Concept type"@en ;
+.
+sml-term:ConcreteConcept
+  a skos:Concept ;
+  skos:broader sml-term:TopConcept ;
+  skos:definition "Concept that forms a manifestation and a demarcation in a concrete space-time. A concrete concept has a life cycle"@en ;
+  skos:prefLabel "Concrete concept"@en ;
+.
+sml-term:Entity
+  a skos:Concept ;
+  skos:broader sml-term:ConcreteConcept ;
+  skos:definition "Concept that forms a manifestation and a demarcation in a concrete space-time, and which has a certain state at any moment in time. An entity has a unique identity that remains constant throughout its life cycle. The life cycle of an entity is made up of the sequence of states of that entity, which follow each other in time. An entity is an object or an activity. An object exists, an activity takes place"@en ;
+  skos:prefLabel "Entity"@en ;
+.
+sml-term:EnumerationType
+  a skos:Concept ;
+  skos:broader sml-term:Type ;
+  skos:definition "A meta-concept having concepts as instances having no further attributes or relations (annotations only)"@en ;
+  skos:prefLabel "Enumeration type"@en ;
+.
+sml-term:Event
+  a skos:Concept ;
+  skos:broader sml-term:ConcreteConcept ;
+  skos:definition "Transition between two successive states of an entity (object or activity). An event is triggered in a state"@en ;
+  skos:prefLabel "Event"@en ;
+.
+sml-term:FunctionalEntity
+  a skos:Concept ;
+  skos:broader sml-term:Entity ;
+  skos:definition "An entity involving the external behavior where the output contributes to stakeholder objectives implemented/played by one or more technical entities"@en ;
+  skos:prefLabel "Functional entity"@en ;
+.
+sml-term:GeometricEntity
+  a skos:Concept ;
+  skos:broader sml-term:Representation ;
+  skos:definition "Named concept, which forms an actual or virtual demarcation in a concrete (physical, three-dimensional) space, which we experience in reality"@en ;
+  skos:prefLabel "Geometric entity"@en ;
+.
+sml-term:InformationObject
+  a skos:Concept ;
+  skos:broader sml-term:Object ;
+  skos:definition "Object which describes a thing in reality"@en ;
+  skos:prefLabel "Information object"@en ;
+.
+sml-term:Object
+  a skos:Concept ;
+  skos:broader sml-term:Entity ;
+  skos:definition "Entity that exists or can exist within a concrete space-time. An object executes an activity, and is transformed by an activity"@en ;
+  skos:prefLabel "Object"@en ;
+.
+sml-term:Objectification
+  a skos:Concept ;
+  skos:broader sml-term:AbstractConcept ;
+  skos:definition "An attribute (quality or quantity) or relation represented as an individual defined by a concept"@en ;
+  skos:prefLabel "Objectification"@en ;
+.
+sml-term:PhysicalObject
+  a skos:Concept ;
+  skos:broader sml-term:Object ;
+  skos:definition "Object that exists or may exist within physical 4D space-time. A physical object forms a manifestation and a demarcation of matter and/or energy, and is (in)directly perceptible by the senses"@en ;
+  skos:prefLabel "Physical object"@en ;
+.
+sml-term:PlannedEntity
+  a skos:Concept ;
+  skos:broader sml-term:Entity ;
+  skos:definition "An entity that does not yet exist in physical reality, but which exists in mental or conceptual reality"@en ;
+  skos:prefLabel "Planned entity"@en ;
+.
+sml-term:QualityValue
+  a skos:Concept ;
+  skos:broader sml-term:Objectification ;
+  skos:definition "The objectification of a value of a quality having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+  skos:prefLabel "Quality value"@en ;
+.
+sml-term:QuantityKind
+  a skos:Concept ;
+  skos:definition "Any observable property that can be measured and quantified numerically"@en ;
+  skos:prefLabel "Quantity kind"@en ;
+.
+sml-term:QuantityValue
+  a skos:Concept ;
+  skos:broader sml-term:Objectification ;
+  skos:definition "The objectification of a value of a quantity (typically involving a quantity kind and a unit) having a complex value like a simple value sec combined with other metadata or just a combination of simple values"@en ;
+  skos:prefLabel "Quantity value"@en ;
+.
+sml-term:RealizedEntity
+  a skos:Concept ;
+  skos:broader sml-term:Entity ;
+  skos:definition "An entity that exists or has existed in the physical reality"@en ;
+  skos:prefLabel "Realized entity"@en ;
+.
+sml-term:RelationReference
+  a skos:Concept ;
+  skos:broader sml-term:Objectification ;
+  skos:definition "The objectification of a reference for a relation having a complex value like a simple reference sec combined with other metadata or just a combination of simple references (n-ary relation)"@en ;
+  skos:prefLabel "Relation reference"@en ;
+.
+sml-term:Representation
+  a skos:Concept ;
+  skos:broader sml-term:InformationObject ;
+  skos:definition "That which represents something else"@en ;
+  skos:prefLabel "Representation"@en ;
+.
+sml-term:State
+  a skos:Concept ;
+  skos:broader sml-term:ConcreteConcept ;
+  skos:definition "Temporal part of an entity during a period between two events. A state is characterized by the properties and relations of the entity"@en ;
+  skos:prefLabel "State"@en ;
+.
+sml-term:TechnicalEntity
+  a skos:Concept ;
+  skos:broader sml-term:Entity ;
+  skos:definition "An entity concerned with technical properties and relations that implements or plays functional entities"@en ;
+  skos:prefLabel "Technical entity"@en ;
+.
+sml-term:TemporalEntity
+  a skos:Concept ;
+  skos:broader sml-term:Representation ;
+  skos:definition "A temporal interval or instant"@en ;
+  skos:prefLabel "Temporal entity"@en ;
+.
+sml-term:TopConcept
+  a skos:Concept ;
+  skos:definition "The most generic concept"@en ;
+  skos:prefLabel "Top concept"@en ;
+.
+sml-term:Type
+  a skos:Concept ;
+  skos:broader sml-term:AbstractConcept ;
+  skos:definition "A meta-concept which instances are concepts (not individuals)"@en ;
+  skos:prefLabel "Type"@en ;
+.
+sml-term:Unit
+  a skos:Concept ;
+  skos:definition "A particular quantity value that has been chosen as a scale for measuring other quantities the same kind"@en ;
+  skos:prefLabel "Unit"@en ;
+.
+sml-term:abbreviation
+  a skos:Concept ;
+  skos:broader skos:altLabel ;
+  skos:definition "Acronym or initial word as special case of a name"@en ;
+  skos:prefLabel "abbreviation"@en ;
+.
+sml-term:begins
+  a skos:Concept ;
+  skos:definition "The state that is started by an event"@en ;
+  skos:prefLabel "begins"@en ;
+.
+sml-term:ends
+  a skos:Concept ;
+  skos:definition "The state that is ended by an event"@en ;
+  skos:prefLabel "ends"@en ;
+.
+sml-term:executes
+  a skos:Concept ;
+  skos:definition "The activity executed by a physical object"@en ;
+  skos:prefLabel "executes"@en ;
+.
+sml-term:hasBoundary
+  a skos:Concept ;
+  skos:definition "The geometric entity representing the boundary of a concrete concept"@en ;
+  skos:prefLabel "has boundary"@en ;
+.
+sml-term:hasFunctionalPart
+  a skos:Concept ;
+  skos:broader sml-term:hasPart ;
+  skos:definition "The hasPart relation of a functional nature"@en ;
+  skos:prefLabel "has functional part"@en ;
+.
+sml-term:hasInterior
+  a skos:Concept ;
+  skos:definition "The geometric entity representing the interior of a concrete concept"@en ;
+  skos:prefLabel "has interior"@en ;
+.
+sml-term:hasPart
+  a skos:Concept ;
+  skos:definition "A decomposition (hasPart) relation between concrete concepts"@en ;
+  skos:prefLabel "has part"@en ;
+.
+sml-term:hasQuantityKind
+  a skos:Concept ;
+  skos:definition "The possession of a quantity kind"@en ;
+  skos:prefLabel "has quantity kind"@en ;
+.
+sml-term:hasSolution
+  a skos:Concept ;
+  skos:definition "A technical entity that is a potential solution for a functional entity"@en ;
+  skos:prefLabel "has solution"@en ;
+.
+sml-term:hasState
+  a skos:Concept ;
+  skos:definition "The state of an entity in a certain point or period of time"@en ;
+  skos:prefLabel "has state"@en ;
+.
+sml-term:hasTechnicalPart
+  a skos:Concept ;
+  skos:broader sml-term:hasPart ;
+  skos:definition "A hasPart relation of a technical nature"@en ;
+  skos:prefLabel "has technical part"@en ;
+.
+sml-term:hasTemporalEntity
+  a skos:Concept ;
+  skos:definition "The abstract temporal entity representing a concrete concept in time"@en ;
+  skos:prefLabel "has temporal entity"@en ;
+.
+sml-term:hasUnit
+  a skos:Concept ;
+  skos:definition "The possession of a unit"@en ;
+  skos:prefLabel "has unit"@en ;
+.
+sml-term:isDescribedBy
+  a skos:Concept ;
+  skos:definition "The information object that describes something"@en ;
+  skos:prefLabel "is described by"@en ;
+.
+sml-term:isImplementedBy
+  a skos:Concept ;
+  skos:broader sml-term:hasSolution ;
+  skos:definition "The technical entity that implements a functional entity"@en ;
+  skos:prefLabel "is implemented by"@en ;
+.
+sml-term:isPlanFor
+  a skos:Concept ;
+  skos:definition "A potentially realized entity according to this planned entity"@en ;
+  skos:prefLabel "is plan for"@en ;
+.
+sml-term:isRealizedBy
+  a skos:Concept ;
+  skos:broader sml-term:isPlanFor ;
+  skos:definition "The realized entity that realizes a planned entity"@en ;
+  skos:prefLabel "is realized by"@en ;
+.
+sml-term:transforms
+  a skos:Concept ;
+  skos:definition "The object transformed by an activity"@en ;
+  skos:prefLabel "transforms"@en ;
+.
+sml-term:triggers
+  a skos:Concept ;
+  skos:definition "The event triggert by an entity"@en ;
+  skos:prefLabel "triggers"@en ;
+.

@@ -1,0 +1,202 @@
+# BOT (Building Topology Ontology) to ifcOWL Alignment
+# Version: 1.0.0
+# IFC Versions: IFC4, IFC4X3
+# Author: IFC2LBD Project
+# License: CC-BY-4.0
+# 
+# BOT: https://w3id.org/bot#
+# Reference: https://github.com/w3c-lbd-cg/bot
+
+@prefix align: <http://example.org/alignment#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix ifc: <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#> .
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+<http://example.org/alignments/bot-ifcowl-ifc4> a align:Alignment ;
+    align:source ifc: ;
+    align:target bot: ;
+    align:sourcePrefix "ifc" ;
+    align:targetPrefix "bot" ;
+    align:ifcVersion "IFC4" ;
+    align:ifcVersion "IFC4X3" ;
+    align:version "1.0.0" ;
+    align:author "IFC2LBD Project" ;
+    align:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment """
+        Building Topology Ontology (BOT) alignment with ifcOWL.
+        
+        BOT provides a minimal ontology for describing building topology:
+        - Spatial structure (Site, Building, Storey, Space)
+        - Elements contained in spaces
+        - Zones grouping spaces
+        - Interfaces between elements
+        
+        This alignment maps IFC spatial structure to BOT concepts.
+        Note: BOT is intentionally minimal; IFC element subtypes map
+        to the generic bot:Element class.
+    """ .
+
+# ============================================================================
+# CLASS MAPPINGS - Spatial Structure
+# ============================================================================
+
+# Site
+ifc:IfcSite skos:exactMatch bot:Site .
+
+# Building
+ifc:IfcBuilding skos:exactMatch bot:Building .
+
+# Storey / Floor
+ifc:IfcBuildingStorey skos:exactMatch bot:Storey .
+
+# Space / Room
+ifc:IfcSpace skos:exactMatch bot:Space .
+
+# Zone
+ifc:IfcZone skos:closeMatch bot:Zone .
+
+# ============================================================================
+# CLASS MAPPINGS - Building Elements (narrowMatch - IFC is more specific)
+# ============================================================================
+
+# Structural Elements
+ifc:IfcWall skos:narrowMatch bot:Element .
+ifc:IfcWallStandardCase skos:narrowMatch bot:Element .
+ifc:IfcCurtainWall skos:narrowMatch bot:Element .
+ifc:IfcSlab skos:narrowMatch bot:Element .
+ifc:IfcBeam skos:narrowMatch bot:Element .
+ifc:IfcColumn skos:narrowMatch bot:Element .
+ifc:IfcFoundation skos:narrowMatch bot:Element .
+ifc:IfcPile skos:narrowMatch bot:Element .
+ifc:IfcFooting skos:narrowMatch bot:Element .
+
+# Openings and Closures
+ifc:IfcDoor skos:narrowMatch bot:Element .
+ifc:IfcWindow skos:narrowMatch bot:Element .
+ifc:IfcOpeningElement skos:narrowMatch bot:Element .
+
+# Vertical Circulation
+ifc:IfcStair skos:narrowMatch bot:Element .
+ifc:IfcStairFlight skos:narrowMatch bot:Element .
+ifc:IfcRamp skos:narrowMatch bot:Element .
+ifc:IfcRampFlight skos:narrowMatch bot:Element .
+
+# Roof and Ceiling
+ifc:IfcRoof skos:narrowMatch bot:Element .
+ifc:IfcCovering skos:narrowMatch bot:Element .
+ifc:IfcCeiling skos:narrowMatch bot:Element .
+
+# MEP Elements
+ifc:IfcFlowTerminal skos:narrowMatch bot:Element .
+ifc:IfcFlowSegment skos:narrowMatch bot:Element .
+ifc:IfcFlowFitting skos:narrowMatch bot:Element .
+ifc:IfcDistributionElement skos:narrowMatch bot:Element .
+
+# Furniture and Equipment
+ifc:IfcFurnishingElement skos:narrowMatch bot:Element .
+ifc:IfcFurniture skos:narrowMatch bot:Element .
+
+# Generic
+ifc:IfcBuildingElement skos:narrowMatch bot:Element .
+ifc:IfcBuildingElementProxy skos:narrowMatch bot:Element .
+ifc:IfcElement skos:broadMatch bot:Element .
+
+# ============================================================================
+# CLASS MAPPINGS - 3D Representation (BOT extension)
+# ============================================================================
+
+# BOT has limited geometry support, these are informational
+ifc:IfcProduct skos:relatedMatch bot:Element .
+
+# ============================================================================
+# PROPERTY MAPPINGS
+# ============================================================================
+
+# Spatial Containment
+[ a align:PropertyMapping ;
+    align:sourceProperty ifc:containsElements_IfcSpatialStructureElement ;
+    align:targetProperty bot:containsElement ;
+    align:mappingType skos:closeMatch ;
+    align:direction align:bidirectional ;
+    align:cardinality "1:n" ;
+    rdfs:comment "IFC uses inverse relationship pattern" ] .
+
+# Building has Storey
+[ a align:PropertyMapping ;
+    align:sourceProperty ifc:isDecomposedBy_IfcObjectDefinition ;
+    align:targetProperty bot:hasStorey ;
+    align:mappingType skos:closeMatch ;
+    align:direction align:forward ;
+    align:condition "When relating IfcBuilding to IfcBuildingStorey via IfcRelAggregates" ;
+    rdfs:comment "IFC uses generic decomposition; BOT has specific property" ] .
+
+# Storey has Space  
+[ a align:PropertyMapping ;
+    align:sourceProperty ifc:isDecomposedBy_IfcObjectDefinition ;
+    align:targetProperty bot:hasSpace ;
+    align:mappingType skos:closeMatch ;
+    align:direction align:forward ;
+    align:condition "When relating IfcBuildingStorey to IfcSpace via IfcRelAggregates" ] .
+
+# Site has Building
+[ a align:PropertyMapping ;
+    align:sourceProperty ifc:isDecomposedBy_IfcObjectDefinition ;
+    align:targetProperty bot:hasBuilding ;
+    align:mappingType skos:closeMatch ;
+    align:direction align:forward ;
+    align:condition "When relating IfcSite to IfcBuilding via IfcRelAggregates" ] .
+
+# Zone groups Spaces
+[ a align:PropertyMapping ;
+    align:sourceProperty ifc:isGroupedBy_IfcObject ;
+    align:targetProperty bot:hasSpace ;
+    align:mappingType skos:closeMatch ;
+    align:direction align:forward ;
+    align:condition "When IfcZone groups IfcSpace instances via IfcRelAssignsToGroup" ] .
+
+# Element interfaces (connections)
+[ a align:PropertyMapping ;
+    align:sourceProperty ifc:relatedElements_IfcRelConnectsElements ;
+    align:targetProperty bot:interfaceOf ;
+    align:mappingType skos:relatedMatch ;
+    align:direction align:forward ;
+    rdfs:comment "IFC has detailed connection types; BOT has generic interface" ] .
+
+# ============================================================================
+# LOSS INFORMATION
+# ============================================================================
+
+<http://example.org/alignments/bot-ifcowl-ifc4> 
+    align:forwardLoss "IFC element subtypes (IfcWall, IfcSlab, etc.) become generic bot:Element - type information is lost unless preserved as additional triple" ;
+    align:forwardLoss "IFC property sets and properties are not represented in BOT" ;
+    align:forwardLoss "IFC geometry representations are not covered by BOT (use FOG or OMG for geometry)" ;
+    align:forwardLoss "IFC relationship details (e.g., connection types) simplified to generic bot:Interface" ;
+    align:forwardLoss "IFC material assignments not represented in BOT" ;
+    align:forwardLoss "IFC quantities and measurements not represented in BOT" ;
+    align:backwardLoss "Cannot determine specific IFC element type from bot:Element - defaults to IfcBuildingElementProxy" ;
+    align:backwardLoss "Cannot recreate IFC geometry from BOT" ;
+    align:backwardLoss "Cannot recreate property sets from BOT" .
+
+# ============================================================================
+# NOTES
+# ============================================================================
+
+# BOT is intentionally minimal - it focuses on:
+# 1. Spatial hierarchy (Site > Building > Storey > Space)
+# 2. Element containment in spaces
+# 3. Zones as groupings
+# 4. Interfaces between elements
+#
+# For richer representations, combine BOT with:
+# - FOG (File Ontology for Geometry) for geometry
+# - PROPS (Product Ontology Properties) for properties  
+# - OPM (Ontology for Property Management) for dynamic properties
+# - DOT (Damage Ontology) for defects and damage
+#
+# Recommendation: Use ENRICH mode to preserve IFC types alongside BOT

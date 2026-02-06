@@ -1,0 +1,1837 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/cr#"
+     xml:base="http://w3id.org/cr"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="https://schema.org/schema:">
+    <owl:Ontology rdf:about="http://w3id.org/cr">
+        <owl:imports rdf:resource="http://w3id.org/cterm"/>
+        <terms:bibliographicCitation></terms:bibliographicCitation>
+        <terms:contributor rdf:nodeID="genid1"/>
+        <terms:contributor rdf:nodeID="genid3"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-12</terms:created>
+        <terms:creator rdf:nodeID="genid5"/>
+        <terms:creator rdf:nodeID="genid7"/>
+        <terms:description xml:lang="en">The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-07</terms:modified>
+        <terms:rights>Copyright 2025 by DABC, PoliMi</terms:rights>
+        <terms:title xml:lang="en">The Construction Resources (CR) Ontology</terms:title>
+        <vann:preferredNamespacePrefix>cr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="http://w3id.org/cr#"/>
+        <owl:versionInfo rdf:resource="http://w3id.org/cr#"/>
+        <owl:versionInfo>0.2</owl:versionInfo>
+        <schema:funding>The development of the ontology was funded through the NEST project at PoliMi.</schema:funding>
+        <schema1:codeRepository rdf:resource="https://github.com/cpm-ont-network/resource"/>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:email rdf:resource="mailto:claudio.mirarchi@polimi.it"/>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0002-9288-8662"/>
+        <schema:memberOf rdf:nodeID="genid2"/>
+        <schema:name>Mirarchi, Claudio</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:email rdf:resource="mailto:katharina.sigalov@rub.de"/>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0002-3070-0759"/>
+        <schema:memberOf rdf:nodeID="genid4"/>
+        <schema:name>Sigalov, Katharina</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:email rdf:resource="mailto:jacopo.cassandro@polimi.it"/>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0002-1487-8178"/>
+        <schema:memberOf rdf:nodeID="genid6"/>
+        <schema:name>Cassandro, Jacopo</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:email rdf:resource="mailto:philipp.hagedorn-n6v@rub.de"/>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0002-6249-243X"/>
+        <schema:memberOf rdf:nodeID="genid8"/>
+        <schema:memberOf>
+            <rdf:Description>
+                <schema:name>Politecnico di Milano</schema:name>
+            </rdf:Description>
+        </schema:memberOf>
+        <schema:name>Hagedorn, Philipp</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <schema:identifier rdf:resource="https://www.dabc.polimi.it/persona/claudio-mirarchi/"/>
+        <schema:name>Politecnico di Milano, Dipartimento ABC</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <schema:identifier rdf:resource="https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/katharina_sigalov.html.en"/>
+        <schema:name>Ruhr University Bochum</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <schema:identifier rdf:resource="https://www.dabc.polimi.it/persona/jacopo-cassandro/"/>
+        <schema:name>Politecnico di Milano</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <schema:identifier rdf:resource="https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en"/>
+        <schema:name>Ruhr University Bochum, Computing in Engineering</schema:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- https://schema.org/email -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/email"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/identifier"/>
+    
+
+
+    <!-- https://schema.org/memberOf -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/memberOf"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://schema.org/schema:codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/schema:codeRepository"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/cr#consumptionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#consumptionOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/cr#hasConsumption"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Consumption"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#EquipmentResource"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#MaterialResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>consumptionOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasAssignment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasAssignment">
+        <owl:inverseOf rdf:resource="https://w3id.org/cr#isAssignmentOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#AssignmentSet"/>
+        <rdfs:range rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:label>has assignment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasConsumption -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasConsumption">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#EquipmentResource"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#MaterialResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/cr#Consumption"/>
+        <rdfs:label>hasConsumption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasLagDuration -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasLagDuration">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#LagPrecondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasLagStart -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasLagStart">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#LagPrecondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasLagUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasLagUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#LagPrecondition"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label>hasLagUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasSubResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasSubResource">
+        <owl:inverseOf rdf:resource="https://w3id.org/cr#subRecourceOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:label>hasSubResource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#hasUnit">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#Consumption"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#Resource"/>
+                    <rdf:Description rdf:about="https://w3id.org/cterm#Parameter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label>hasUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#isAssignmentOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#isAssignmentOf">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:range rdf:resource="https://w3id.org/cr#AssignmentSet"/>
+        <rdfs:label>is assignment Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#ref -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#ref">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:label>ref</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refCostItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#refCostItem">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#ref"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#CostItemToGeometryAssignment"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#ResourceToCostItemAssignment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/ci#ProductionResult"/>
+        <rdfs:label>ref cost item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#refGeometry">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#ref"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#CostItemToGeometryAssignment"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#TaskToGeometryAssignment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct"/>
+        <rdfs:label>ref geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#refResource">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#ref"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#ResourceToCostItemAssignment"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#ResourceToTaskAssignment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:label>ref resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#refTask">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#ref"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#ResourceToTaskAssignment"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#TaskToGeometryAssignment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology#Task"/>
+        <rdfs:label>ref task</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cr#subRecourceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cr#subRecourceOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:label>subRecourceOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/cterm#hasAspect -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasAspect"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasCategory"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasDimensionParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasDimensionParameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasFamily -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasFamily"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasFinishing -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasFinishing"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasFunction -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasFunction"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasFurnishing -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasFurnishing"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasObject -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasObject"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasObjectStandard -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasObjectStandard"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasOtherStandard -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasOtherStandard"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasPerformanceParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasPerformanceParameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasPhysicalParameter -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasPhysicalParameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasQualificationLevel -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasQualificationLevel"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasType"/>
+    
+
+
+    <!-- https://w3id.org/cterm#hasUse -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#hasUse"/>
+    
+
+
+    <!-- https://w3id.org/cterm#parameterType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/cterm#parameterType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/cr#accessory -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#accessory">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#EquipmentResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>accessory</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#cam -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#cam">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#EquipmentResource"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#MaterialResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>cam</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#code -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#code">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#descriptionDetail -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#descriptionDetail">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>descriptionDetail</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#descriptionGeneral -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#descriptionGeneral">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>descriptionGeneral</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#excluded -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#excluded">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>excluded</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasLagDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#hasLagDuration">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#hasLagStart -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#hasLagStart">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#included -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#included">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>included</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#keywords -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#keywords">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>keywords</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#law -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#law">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>law</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#measurementRules -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#measurementRules">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>measurement rules</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#minimunLevelLabourResource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#minimunLevelLabourResource">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#EquipmentResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>minimunLevelLabourResource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#quantityUnitOfMeasure -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#quantityUnitOfMeasure">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>quantityUnitOfMeasure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refParamFormula -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#refParamFormula">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#refParameter"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#CostItemToGeometryAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>ref param formula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refParamQuantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#refParamQuantity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#refParameter"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#CostItemToGeometryAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>The quantity calculated from the geometrical element that is applied to the cost item and its unitary price.</rdfs:comment>
+        <rdfs:label>quantity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refParamUtilizationFactor -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#refParamUtilizationFactor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#refParameter"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#ResourceToCostItemAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>The utilization factor of a resource that is applied in a cost item.</rdfs:comment>
+        <rdfs:label>utilization factor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refParamUtilizationRate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#refParamUtilizationRate">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cr#refParameter"/>
+        <rdfs:domain rdf:resource="https://w3id.org/cr#ResourceToTaskAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>The utilization rate of a (equipment) resource that is applied in a task.</rdfs:comment>
+        <rdfs:label>utilization rate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#refParameter -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#refParameter">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:label>ref parameter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#rent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#rent">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#EquipmentResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>rent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#techSpecs -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#techSpecs">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>tech specs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#unitPrice -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#unitPrice">
+        <rdfs:domain rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>unit price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cr#yield -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#yield">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/cr#EquipmentResource"/>
+                    <rdf:Description rdf:about="https://w3id.org/cr#MaterialResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>yield</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/cterm#parameterSymbol1 -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cterm#parameterSymbol1"/>
+    
+
+
+    <!-- https://w3id.org/cterm#parameterSymbol2 -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cterm#parameterSymbol2"/>
+    
+
+
+    <!-- https://w3id.org/cterm#parameterValue1 -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cterm#parameterValue1"/>
+    
+
+
+    <!-- https://w3id.org/cterm#parameterValue2 -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cterm#parameterValue2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct -->
+
+
+    <owl:Class rdf:about="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology#Resource -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology#Resource">
+        <owl:equivalentClass rdf:resource="https://w3id.org/cr#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#ResourceToTaskAssignment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology#Task -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology#Task"/>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/Precondition -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/Precondition"/>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment">
+        <owl:equivalentClass rdf:resource="https://w3id.org/cr#EquipmentResource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial">
+        <owl:equivalentClass rdf:resource="https://w3id.org/cr#MaterialResource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker -->
+
+
+    <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker">
+        <owl:equivalentClass rdf:resource="https://w3id.org/cr#LabourResource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
+    
+
+
+    <!-- https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct -->
+
+
+    <owl:Class rdf:about="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct"/>
+    
+
+
+    <!-- https://w3id.org/ci#CostItem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ci#CostItem"/>
+    
+
+
+    <!-- https://w3id.org/ci#ProductionResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ci#ProductionResult"/>
+    
+
+
+    <!-- https://w3id.org/cr#Assignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#Assignment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#isAssignmentOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cr#AssignmentSet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Assignment</rdfs:label>
+        <rdfs:label xml:lang="it">Relazione</rdfs:label>
+        <rdfs:label xml:lang="de">Zuweisung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#AssignmentSet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#AssignmentSet">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#hasAssignment"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cr#Assignment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Assignment set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#Consumption -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#Consumption">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#parameterType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#ParameterType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#hasUnit"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#parameterSymbol1"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#parameterSymbol2"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#parameterValue1"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#parameterValue2"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Consumo</rdfs:label>
+        <rdfs:label xml:lang="en">Consumption</rdfs:label>
+        <rdfs:label xml:lang="de">Verbrauch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#CostItemToGeometryAssignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#CostItemToGeometryAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refCostItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ci#CostItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refGeometry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refParamFormula"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refParamQuantity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#ResourceToCostItemAssignment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#ResourceToTaskAssignment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToCostItemAssignment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToGeometryAssignment"/>
+        <rdfs:label xml:lang="en">Cost item to geometry assignment</rdfs:label>
+        <rdfs:label xml:lang="it">Relazione tra costo e geometria</rdfs:label>
+        <rdfs:label xml:lang="de">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#EquipmentResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#EquipmentResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasAspect"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#AspectOfEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasDimensionParameter"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#DimensionParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#FunctionOfEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasOtherStandard"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#Standard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasPerformanceParameter"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#PerformanceParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasPhysicalParameter"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#PhysicalParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasUse"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#CategoryOfEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFamily"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#FamilyOfEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasMaterial"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasObject"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#ObjectOfEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasObjectStandard"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#Standard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#TypeOfEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#accessory"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#rent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#minimunLevelLabourResource"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#LabourResource"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#MaterialResource"/>
+        <rdfs:isDefinedBy rdf:resource="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm"/>
+        <rdfs:label xml:lang="en">Equipment resource</rdfs:label>
+        <rdfs:label xml:lang="de">Geräteressource</rdfs:label>
+        <rdfs:label xml:lang="it">Risorsa strumentale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#LabourResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#LabourResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#CategoryOfLabour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFamily"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#FamilyOfLabour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasObject"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#ObjectOfLabour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasQualificationLevel"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#QualificationLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#TypeOfLabour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#MaterialResource"/>
+        <rdfs:isDefinedBy rdf:resource="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm"/>
+        <rdfs:label xml:lang="de">Arbeitsressourcen</rdfs:label>
+        <rdfs:label xml:lang="en">Labour resource</rdfs:label>
+        <rdfs:label xml:lang="it">Risorsa umana</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#LagPrecondition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#LagPrecondition">
+        <rdfs:subClassOf rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology/Precondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#hasLagUnit"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#hasLagDuration"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#hasLagStart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity.</rdfs:comment>
+        <rdfs:label>Lag Precondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#MaterialResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#MaterialResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasAspect"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#AspectOfMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasDimensionParameter"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#DimensionParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFinishing"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#Finishing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#FunctionOfMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFurnishing"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#Furnishing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasOtherStandard"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#Standard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasPerformanceParameter"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#PerformanceParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasPhysicalParameter"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#PhysicalParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasUse"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cterm#Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasCategory"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#CategoryOfMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFamily"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#FamilyOfMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasMaterial"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasObject"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#ObjectOfMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasObjectStandard"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#Standard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cterm#hasType"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#TypeOfMaterial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#cam"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm"/>
+        <rdfs:label xml:lang="en">Material resource</rdfs:label>
+        <rdfs:label xml:lang="de">Materielle Ressource</rdfs:label>
+        <rdfs:label xml:lang="it">Risorsa materiale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#Resource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#Resource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#hasUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#keywords"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#law"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#code"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#descriptionGeneral"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#quantityUnitOfMeasure"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#unitPrice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#descriptionDetail"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class is used for providing information about a construction resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm"/>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+        <rdfs:label xml:lang="de">Ressource</rdfs:label>
+        <rdfs:label xml:lang="it">Risorsa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#ResourceToCostItemAssignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#ResourceToCostItemAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refCostItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ci#CostItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refResource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/cr#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#ResourceToTaskAssignment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToCostItemAssignment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToGeometryAssignment"/>
+        <rdfs:label xml:lang="it">Relazione tra risorsa e costo</rdfs:label>
+        <rdfs:label xml:lang="en">Resource to cost item assignment</rdfs:label>
+        <rdfs:label xml:lang="de">Zuordnung von Ressourcen zu Kostenbestandteilen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#ResourceToTaskAssignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#ResourceToTaskAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refResource"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/cr#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refTask"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refParamUtilizationRate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToCostItemAssignment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToGeometryAssignment"/>
+        <rdfs:isDefinedBy rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"/>
+        <rdfs:label xml:lang="it">Relazione tra risorsa e attività</rdfs:label>
+        <rdfs:label xml:lang="en">Resource to task assignment</rdfs:label>
+        <rdfs:label xml:lang="de">Zuordnung von Ressourcen zu Vorgängen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#TaskToCostItemAssignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#TaskToCostItemAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refCostItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/ci#CostItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refTask"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#TaskToGeometryAssignment"/>
+        <rdfs:label xml:lang="it">Relazione tra attività e costo</rdfs:label>
+        <rdfs:label xml:lang="en">Task to cost item assignment</rdfs:label>
+        <rdfs:label xml:lang="de">Zuordnung von Vorgängen zu Kostenbestandteilen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cr#TaskToGeometryAssignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cr#TaskToGeometryAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refGeometry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#refTask"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology#Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="it">Relazione tra attività e geometria</rdfs:label>
+        <rdfs:label xml:lang="en">Task to geometry assignment</rdfs:label>
+        <rdfs:label xml:lang="de">Zuordnung von Vorgängen zu Geometrieobjekten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cterm#AspectOfEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#AspectOfEquipment"/>
+    
+
+
+    <!-- https://w3id.org/cterm#AspectOfMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#AspectOfMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#CategoryOfEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#CategoryOfEquipment"/>
+    
+
+
+    <!-- https://w3id.org/cterm#CategoryOfLabour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#CategoryOfLabour"/>
+    
+
+
+    <!-- https://w3id.org/cterm#CategoryOfMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#CategoryOfMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#DimensionParameter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#DimensionParameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#FamilyOfEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#FamilyOfEquipment"/>
+    
+
+
+    <!-- https://w3id.org/cterm#FamilyOfLabour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#FamilyOfLabour"/>
+    
+
+
+    <!-- https://w3id.org/cterm#FamilyOfMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#FamilyOfMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#Finishing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#Finishing"/>
+    
+
+
+    <!-- https://w3id.org/cterm#FunctionOfEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#FunctionOfEquipment"/>
+    
+
+
+    <!-- https://w3id.org/cterm#FunctionOfMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#FunctionOfMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#Furnishing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#Furnishing"/>
+    
+
+
+    <!-- https://w3id.org/cterm#Material -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#Material"/>
+    
+
+
+    <!-- https://w3id.org/cterm#ObjectOfEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#ObjectOfEquipment"/>
+    
+
+
+    <!-- https://w3id.org/cterm#ObjectOfLabour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#ObjectOfLabour"/>
+    
+
+
+    <!-- https://w3id.org/cterm#ObjectOfMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#ObjectOfMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#Parameter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#Parameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#ParameterType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#ParameterType"/>
+    
+
+
+    <!-- https://w3id.org/cterm#PerformanceParameter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#PerformanceParameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#PhysicalParameter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#PhysicalParameter"/>
+    
+
+
+    <!-- https://w3id.org/cterm#QualificationLevel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#QualificationLevel"/>
+    
+
+
+    <!-- https://w3id.org/cterm#Standard -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#Standard"/>
+    
+
+
+    <!-- https://w3id.org/cterm#TypeOfEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#TypeOfEquipment"/>
+    
+
+
+    <!-- https://w3id.org/cterm#TypeOfLabour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#TypeOfLabour"/>
+    
+
+
+    <!-- https://w3id.org/cterm#TypeOfMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#TypeOfMaterial"/>
+    
+
+
+    <!-- https://w3id.org/cterm#Use -->
+
+
+    <owl:Class rdf:about="https://w3id.org/cterm#Use"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/cr#hasLagDuration">
+        <rdfs:label>hasLagDuration</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/cr#hasLagStart">
+        <rdfs:label>hasLagStart</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,269 @@
+# baseURI: https://w3id.org/sml/shacl/def
+# imports: http://qudt.org/2.1/schema/qudt
+# imports: http://qudt.org/2.1/vocab/quantitykind
+# imports: http://qudt.org/2.1/vocab/unit
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/shacl
+# imports: https://w3id.org/sml/rdfs/def
+# prefix: sml
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sml: <https://w3id.org/sml/def#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/sml/shacl/def>
+  a owl:Ontology ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
+  owl:imports <http://qudt.org/2.1/vocab/quantitykind> ;
+  owl:imports <http://qudt.org/2.1/vocab/unit> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/ns/shacl> ;
+  owl:imports <https://w3id.org/sml/rdfs/def> ;
+.
+
+sml:Activity
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasBoundary ;
+      sh:class sml:GeometricEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasInterior ;
+      sh:class sml:GeometricEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:Activity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPeriod ;
+      sh:class time:TemporalEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:transforms ;
+      sh:class sml:Object ;
+    ] ;
+.
+sml:ConcreteConcept
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasBoundary ;
+      sh:class sml:GeometricEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasInterior ;
+      sh:class sml:GeometricEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasTemporalEntity ;
+      sh:class time:TemporalEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:ConcreteConcept ;
+    ] ;
+.
+sml:Entity
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasState ;
+      sh:class sml:State ;
+    ] ;
+  sh:property [
+      sh:path sml:triggers ;
+      sh:class sml:Event ;
+    ] ;
+.
+sml:Event
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:begins ;
+      sh:class sml:State ;
+    ] ;
+  sh:property [
+      sh:path sml:ends ;
+      sh:class sml:State ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:Event ;
+    ] ;
+.
+sml:FunctionalEntity
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:Entity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasFunctionalPart ;
+      sh:class sml:FunctionalEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasSolution ;
+      sh:class sml:TechnicalEntity ;
+    ] ;
+.
+sml:Object
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:Object ;
+    ] ;
+.
+sml:Objectification
+  a sh:NodeShape ;
+  sh:property [
+      sh:path rdf:value;
+      sh:maxCount 1;
+    ] ;
+.
+sml:PhysicalObject
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:isDescribedBy ;
+      sh:class sml:InformationObject ;
+    ] ;
+  sh:property [
+      sh:path sml:executes ;
+      sh:class sml:Activity ;
+    ] ;
+.
+sml:PlannedEntity
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:PlannedEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:isPlanFor ;
+      sh:class sml:RealizedEntity ;
+    ] ;
+.
+sml:QualityValue
+  a sh:NodeShape ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:datatype xsd:string ;
+    ] ;
+.
+sml:QuantityValue
+  a sh:NodeShape ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:or ( [ sh:datatype xsd:decimal ] [sh:datatype xsd:float] [ sh:datatype xsd:double ] );
+    ] ;
+.
+sml:RealizedEntity
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:RealizedEntity ;
+    ] ;
+.
+sml:RelationReference
+  a sh:NodeShape ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:datatype xsd:anyURI ;
+    ] ;
+.
+sml:State
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasBoundary ;
+      sh:class sml:GeometricEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasInterior ;
+      sh:class sml:GeometricEntity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:State ;
+    ] ;
+  sh:property [
+      sh:path sml:hasPeriod ;
+      sh:class time:TemporalEntity ;
+    ] ;
+.
+sml:TechnicalEntity
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:hasPart ;
+      sh:class sml:Entity ;
+    ] ;
+  sh:property [
+      sh:path sml:hasTechnicalPart ;
+      sh:class sml:TechnicalEntity ;
+    ] ;
+.
+sml:TopConcept
+  a sh:NodeShape ;
+  sh:property [
+      sh:path sml:abbreviation ;
+      sh:datatype xsd:string ;
+    ] ;
+  sh:property [
+      sh:path sml:isDescribedBy ;
+      sh:class sml:InformationObject ;
+    ] ;
+.
+sml:hasQuantityKindShape
+  a sh:NodeShape ;
+  sh:class qudt:QuantityKind ;
+  sh:targetObjectsOf sml:hasQuantityKind ;
+.
+sml:hasUnitShape
+  a sh:NodeShape ;
+  sh:class qudt:Unit ;
+  sh:targetObjectsOf sml:hasUnit ;
+.
+
+sml:AllDisjointClassesShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdf:type ;
+  sh:property [
+    sh:path (rdf:type [sh:zeroOrMorePath rdfs:subClassOf]) ;
+    sh:qualifiedValueShape [
+      sh:in (
+        sml:PhysicalObject
+        sml:InformationObject
+        sml:State
+        sml:Event
+        sml:Activity
+      ) ;
+    ] ;
+    sh:qualifiedMaxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path (rdf:type [sh:zeroOrMorePath rdfs:subClassOf]) ;    
+    sh:qualifiedValueShape [
+      sh:in (
+        sml:FunctionalEntity
+        sml:TechnicalEntity
+      ) ;
+    ] ;
+    sh:qualifiedMaxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path (rdf:type [sh:zeroOrMorePath rdfs:subClassOf]) ;    
+    sh:qualifiedValueShape [
+      sh:in (
+        sml:PlannedEntity
+        sml:RealizedEntity
+      ) ;
+    ] ;
+    sh:qualifiedMaxCount 1 ;
+  ] ;
+.

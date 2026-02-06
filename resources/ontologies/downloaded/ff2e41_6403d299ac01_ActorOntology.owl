@@ -1,0 +1,1073 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#"
+     xml:base="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl">
+        <rdfs:comment xml:lang="en">1.01 Actor and Preference Ontology</rdfs:comment>
+        <rdfs:comment xml:lang="en">an ontology to represent actors and their preferences for a smart home system</rdfs:comment>
+        <owl:versionIRI rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/actor/ActorOntology_1.01.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#currentlyLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#currentlyLocatedIn">
+        <rdfs:comment xml:lang="en">the location where a human actor is currently located (e.g. zone, space, room)</rdfs:comment>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#forTime -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#forTime">
+        <rdfs:range rdf:resource="&time;Interval"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication">
+        <rdfs:comment xml:lang="en">application of a user preference</rdfs:comment>
+        <rdfs:comment xml:lang="en">this property was known as &quot;hasAssociatedProcess&quot; in prior versions of the ontology</rdfs:comment>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ProcessCentricPreferenceValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedDomain -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedDomain">
+        <rdfs:comment xml:lang="en">domain of a user preference, which can be a building part or space </rdfs:comment>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceProfile -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceProfile">
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorPreferenceProfile"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceSchedule -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceSchedule">
+        <rdfs:comment xml:lang="en">this property was known as &quot;hasUserPreferenceSchedule&quot; in prior versions of the ontology</rdfs:comment>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceValue -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceValue">
+        <rdfs:comment xml:lang="en">this property was known as &quot;hasUserPreferenceValue&quot; in prior versions of the ontology</rdfs:comment>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#involvesActivity -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#involvesActivity">
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isPreferenceProfileOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isPreferenceProfileOf">
+        <rdfs:comment xml:lang="en">this property was known as &quot;isUserPreferenceProfileOf&quot; in prior versions of the ontology</rdfs:comment>
+        <owl:inverseOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied">
+        <rdfs:comment xml:lang="en">connection between human actors and their level of satisfaction</rdfs:comment>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#representedBy -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#representedBy">
+        <rdfs:comment xml:lang="en">A human actor in the system can be represented by a system actor (e.g. autonomous software agent)</rdfs:comment>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor"/>
+        <rdfs:range rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#represents -->
+
+    <owl:ObjectProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#represents">
+        <owl:inverseOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#representedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasHours -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasHours">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasID -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActor"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasName">
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasUnit"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasValue"/>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears -->
+
+    <owl:DatatypeProperty rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ActivityPreferenceSchedule -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ActivityPreferenceSchedule">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+        <owl:disjointWith rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#OccupancyPreferenceSchedule"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ActivityPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ActivityPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#involvesActivity"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">all individuals (human or system), that interact with the system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AdvancedHumanActorAge -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AdvancedHumanActorAge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">66</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age">
+        <rdfs:comment xml:lang="en">Age of actors. In the case of system actors, the age is stated in hours, in the case of human actors in years.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AgedHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AgedHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AdvancedHumanActorAge"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirFlowVelocityPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirFlowVelocityPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirQualityPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirQualityPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirVentilationPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirVentilationPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#FemaleHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#FemaleHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Female"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Female"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Male"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Gender of human actors</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorAge"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceProfile"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorPreferenceProfile"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceProfile"/>
+                        <owl:allValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorPreferenceProfile"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorAge -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorAge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorPreferenceProfile -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActorPreferenceProfile">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile"/>
+        <owl:disjointWith rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#StandardPreferenceProfile"/>
+        <rdfs:comment xml:lang="en">the user preference profile class represents consolidated human actor preferences per user</rdfs:comment>
+        <rdfs:comment xml:lang="en">this class was known as &quot;UserPreferenceProfile&quot; in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#VerySatisfied"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#DisSatisfied"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Satisfied"/>
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#BarelySatisfied"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">a one-word description of the satisfaction of human actors with the performance of the system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LightingPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LightingPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MaleHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MaleHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender"/>
+                        <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Male"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MatureHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MatureHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MatureHumanActorAge"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MatureHumanActorAge -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#MatureHumanActorAge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">14</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;integer">66</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#OccupancyPreferenceSchedule -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#OccupancyPreferenceSchedule">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+        <rdfs:comment xml:lang="en">this class was known as &quot;OccupancyPreferenceSchedule&quot; in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#OccupancyPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#OccupancyPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:comment xml:lang="en">this class was known as &quot;SpaceOccupancyPreferenceValue&quot;  in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceSchedule"/>
+                <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceValue"/>
+                <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceValue"/>
+                <owl:allValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">the preference profile of a human actor which may consist of a variety of preference values and preference schedules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasPreferenceValue"/>
+                <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#forTime"/>
+                <owl:someValuesFrom rdf:resource="&time;Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This class combines more than one user preference value to a schedule and is used when for example different preference values are stored for different days (e.g. occupancy, etc)</rdfs:comment>
+        <rdfs:comment xml:lang="en">this class was known as &quot;UserPreferenceSchedule&quot; in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasUnit"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedDomain"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">represents user preference values.</rdfs:comment>
+        <rdfs:comment xml:lang="en">this class was known as &quot;UserPreferenceValue&quot; in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ProcessCentricPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ProcessCentricPreferenceValue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                        <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">concern preferences regarding processes such as heating, cooling or lighting.</rdfs:comment>
+        <rdfs:comment xml:lang="en">this class was known as &quot;ProcessCentricUserPreferenceValue&quot; in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#RelativeHumidityPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#RelativeHumidityPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SatisfiedHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SatisfiedHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied"/>
+                                <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Satisfied"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied"/>
+                                <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#VerySatisfied"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SoundPressureLevelPreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SoundPressureLevelPreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#StandardPreferenceProfile -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#StandardPreferenceProfile">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile"/>
+        <rdfs:comment xml:lang="en">represents various standard preference profiles</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActorAge"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActorAge -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActorAge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasHours"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#TemperaturePreferenceValue -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#TemperaturePreferenceValue">
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAssociatedApplication"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Operative Temperature: The comfort zone is defined in terms of range of operative temperatures that provide acceptable thermal environmental conditions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">this class was known as &quot;OperativeTemperaturePreferenceValue&quot; in prior versions of the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#UnsatisfiedHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#UnsatisfiedHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied"/>
+                                <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#BarelySatisfied"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#isSatisfied"/>
+                                <owl:hasValue rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#DisSatisfied"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#UserSystemActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#UserSystemActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SystemActorAge"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#represents"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#HumanActor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#YoungHumanActor -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#YoungHumanActor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasAge"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#YoungHumanActorAge"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasGender"/>
+                        <owl:someValuesFrom rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#YoungHumanActorAge -->
+
+    <owl:Class rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#YoungHumanActorAge">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#hasYears"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="&xsd;integer">14</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#February -->
+
+    <owl:Class rdf:about="&time;February"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#BarelySatisfied -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#BarelySatisfied">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#DisSatisfied -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#DisSatisfied">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Female -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Female">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Male -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Male">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Satisfied -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Satisfied">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#VerySatisfied -->
+
+    <owl:NamedIndividual rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#VerySatisfied">
+        <rdf:type rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LevelOfSatisfaction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Female"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#ActivityPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirFlowVelocityPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirQualityPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#AirVentilationPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#LightingPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#OccupancyPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#RelativeHumidityPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#SoundPressureLevelPreferenceValue"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#TemperaturePreferenceValue"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Actor"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#Age"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceProfile"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceSchedule"/>
+            <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/ActorOntology.owl#PreferenceValue"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

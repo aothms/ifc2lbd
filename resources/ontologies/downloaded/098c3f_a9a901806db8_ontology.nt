@@ -1,0 +1,488 @@
+<https://w3id.org/con-tax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/con-tax> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/con-tax> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<http://www.w3.org/2006/vcard/ns#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2006/vcard/ns#family-name> "Bonduel" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#fn> "Mathias Bonduel" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#given-name> "Mathias" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasOrganizationName> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Organization> .
+<http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.kuleuven.be> .
+_:genid2 <http://www.w3.org/2006/vcard/ns#organization-name> "KU Leuven" .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://orcid.org/0000-0002-3313-924X> .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.kuleuven.be/wieiswie/nl/person/00110827> .
+_:genid1 <http://www.w3.org/2006/vcard/ns#hasURL> <https://www.researchgate.net/profile/Mathias_Bonduel> .
+<https://w3id.org/con-tax> <http://purl.org/dc/terms/description> "An ontology containing additional terminology for structuring and annotating RDFS/OWL taxonomies for describing constructions (components, materials, spatial zones, damages, construction tasks and properties). It also functions as an index for known taxonomies starting from root classes and properties."@en .
+<https://w3id.org/con-tax> <http://purl.org/dc/terms/issued> "2020-11-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/con-tax> <http://purl.org/dc/terms/title> "ConTax ontology"@en .
+<https://w3id.org/con-tax> <http://purl.org/vocab/vann/preferredNamespacePrefix> "contax" .
+<https://w3id.org/con-tax> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/con-tax#" .
+<https://w3id.org/con-tax> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.1: initial version"@en .
+<https://w3id.org/con-tax> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#family-name
+<http://www.w3.org/2006/vcard/ns#family-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#fn
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#given-name
+<http://www.w3.org/2006/vcard/ns#given-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#hasOrganizationName
+<http://www.w3.org/2006/vcard/ns#hasOrganizationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#hasURL
+<http://www.w3.org/2006/vcard/ns#hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#organization-name
+<http://www.w3.org/2006/vcard/ns#organization-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/con-tax#containsConcept
+<https://w3id.org/con-tax#containsConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#containsConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to connect a gvp:GuideTerm instance to a class that is part of the main taxonomy hierarchy. The guide term represents a grouping of terms to provide alternative means for finding classes (object of this property) besides the main taxonomy hierarchy."@en .
+<https://w3id.org/con-tax#containsConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#containsConcept> <http://www.w3.org/2000/01/rdf-schema#label> "contains concept"@en .
+<https://w3id.org/con-tax#containsConcept> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#containsConcept> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.getty.edu/ontology#GuideTerm> .
+# 
+# https://w3id.org/con-tax#containsGuideTerm
+<https://w3id.org/con-tax#containsGuideTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#containsGuideTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to connect a class that is based on a concept from the Getty AAT to a gvp:GuideTerm, i.e. an individual node that represents a grouping of terms to provide alternative means for finding classes besides the main taxonomy hierarchy. The guide term specializes a more general class from the taxonomy."@en .
+<https://w3id.org/con-tax#containsGuideTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#containsGuideTerm> <http://www.w3.org/2000/01/rdf-schema#label> "contains guide term "@en .
+<https://w3id.org/con-tax#containsGuideTerm> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.getty.edu/ontology#GuideTerm> .
+<https://w3id.org/con-tax#containsGuideTerm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/con-tax#domainOrSubjectIncludes
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation property to connect a property definition to a class that is either in the domain of this property (instance property) or is a potential subject (or superclass of a potential subject) of this property (type property)."@en .
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/2000/01/rdf-schema#label> "domain or subject includes"@en .
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#domainOrSubjectIncludes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+# 
+# https://w3id.org/con-tax#isRootOfTaxonomy
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://schema.org/domainIncludes> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://schema.org/domainIncludes> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://schema.org/domainIncludes> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://schema.org/domainIncludes> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://schema.org/domainIncludes> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property to store references to the known (external) taxonomies for root classes, properties or SKOS concepts defined or mentioned in ConTax. The URI of each taxonomy is the object of this property."@en .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "root of taxonomy"@en .
+<https://w3id.org/con-tax#isRootOfTaxonomy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax#potentialInterventionType
+<https://w3id.org/con-tax#potentialInterventionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#potentialInterventionType> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation property used in taxonomies of damage types to connect a damage type class (subclass of dot:ClassifiedDamage) to a reparation task (subclass of cto:RepairTask)."@en .
+<https://w3id.org/con-tax#potentialInterventionType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#potentialInterventionType> <http://www.w3.org/2000/01/rdf-schema#label> "potential intervention type"@en .
+<https://w3id.org/con-tax#potentialInterventionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#potentialInterventionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/con-tax#potentialSubComponent
+<https://w3id.org/con-tax#potentialSubComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#potentialSubComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation property used in taxonomies of construction components to connect a construction component type such as a stairs that can consists of smaller sub components such as railings and steps."@en .
+<https://w3id.org/con-tax#potentialSubComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#potentialSubComponent> <http://www.w3.org/2000/01/rdf-schema#label> "potential sub component"@en .
+<https://w3id.org/con-tax#potentialSubComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#potentialSubComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/con-tax#rangeOrObjectIncludes
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://schema.org/rangeIncludes> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://schema.org/rangeIncludes> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation property to connect a property definition to a class or datatype that is either in the range of this property (instance property) or is a potential object (or superclass of a potential object) of this property (type property). It can also refer to a skos:Concept node that represents a node in a SKOS taxonomy; this node and all its descendants (skos:narrower or inverse skos:broader) can be used as an object of the property (instance or type property). In the case of properties level 2 or 3, this property refers to the range or object for the generic schema:value property of the entire property pattern."@en .
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2000/01/rdf-schema#label> "range or object includes"@en .
+<https://w3id.org/con-tax#rangeOrObjectIncludes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/vocommons/voaf#generalizes
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/dcat#downloadURL
+<http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/con-tax#hasProperty
+<https://w3id.org/con-tax#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/opm#Property> .
+<https://w3id.org/con-tax#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to connect an object to the first intermediate node of a level 2 or 3 property when using approach 4 or 5 for assigning the property name."@en .
+<https://w3id.org/con-tax#hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+# 
+# https://w3id.org/con-tax#hasPropertyContext
+<https://w3id.org/con-tax#hasPropertyContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#hasPropertyContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/con-tax#PropertyContext> .
+<https://w3id.org/con-tax#hasPropertyContext> <http://schema.org/domainIncludes> <https://w3id.org/opm#Property> .
+<https://w3id.org/con-tax#hasPropertyContext> <http://schema.org/domainIncludes> <https://w3id.org/opm#PropertyState> .
+<https://w3id.org/con-tax#hasPropertyContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#hasPropertyContext> <http://www.w3.org/2000/01/rdf-schema#label> "has property context (grouping)"@en .
+# 
+# https://w3id.org/con-tax#isDerivedFromProperty
+<https://w3id.org/con-tax#isDerivedFromProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#isDerivedFromProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/opm#Property> .
+<https://w3id.org/con-tax#isDerivedFromProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/opm#Property> .
+<https://w3id.org/con-tax#isDerivedFromProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#isDerivedFromProperty> <http://www.w3.org/2000/01/rdf-schema#label> "is derived from property "@en .
+# 
+# https://w3id.org/con-tax#isDerivedFromPropertyState
+<https://w3id.org/con-tax#isDerivedFromPropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#isDerivedFromPropertyState> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/opm#PropertyState> .
+<https://w3id.org/con-tax#isDerivedFromPropertyState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/opm#PropertyState> .
+<https://w3id.org/con-tax#isDerivedFromPropertyState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#isDerivedFromPropertyState> <http://www.w3.org/2000/01/rdf-schema#label> "is derived from property state"@en .
+# 
+# https://w3id.org/con-tax#propertyName
+<https://w3id.org/con-tax#propertyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#propertyName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/opm#Property> .
+<https://w3id.org/con-tax#propertyName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/con-tax#propertyName> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to connect the first intermediate node of a level 2 or 3 property to its actual property name"@en .
+<https://w3id.org/con-tax#propertyName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#propertyName> <http://www.w3.org/2000/01/rdf-schema#label> "property name "@en .
+# 
+# https://w3id.org/con-tax#property_OP
+<https://w3id.org/con-tax#property_OP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/con-tax#property_OP> <http://www.w3.org/2000/01/rdf-schema#comment> "A root property for taxonomies of object properties. Subproperties should be defined from this base property to specify the type of property. Via this root property and its counterpart for datatype properties (contax:property_DP), it is possible to retrieve all properties of construction components, spatial zones, damages, etc. excluding the linking relations that form the construction topology, damage topology, etc."@en .
+<https://w3id.org/con-tax#property_OP> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#property_OP> <http://www.w3.org/2000/01/rdf-schema#label> "property (object) "@en .
+<https://w3id.org/con-tax#property_OP> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/properties/bhp> .
+<https://w3id.org/con-tax#property_OP> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/properties/cp> .
+# 
+# https://w3id.org/omg#hasComplexGeometryDescription
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/fog> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/con-tax#property_DP
+<https://w3id.org/con-tax#property_DP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/con-tax#property_DP> <http://www.w3.org/2000/01/rdf-schema#comment> "A root property for taxonomies of datatype properties. Subproperties should be defined from this base property to specify the type of property. Via this root property and its counterpart for object properties (contax:property_OP), it is possible to retrieve all properties of construction components, spatial zones, damages, etc. excluding the linking relations that form the construction topology, damage topology, etc."@en .
+<https://w3id.org/con-tax#property_DP> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#property_DP> <http://www.w3.org/2000/01/rdf-schema#label> "property (datatype) "@en .
+<https://w3id.org/con-tax#property_DP> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/properties/bhp> .
+# 
+# https://w3id.org/omg#hasReferencedGeometryId
+<https://w3id.org/omg#hasReferencedGeometryId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/omg#hasReferencedGeometryId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasReferencedGeometryId> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/fog> .
+# 
+# https://w3id.org/omg#hasSimpleGeometryDescription
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/fog> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://pi.pauwel.be/voc/buildingelement#BuildingElement
+<http://pi.pauwel.be/voc/buildingelement#BuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pi.pauwel.be/voc/buildingelement#BuildingElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/con-tax#ConstructionComponent> .
+<http://pi.pauwel.be/voc/buildingelement#BuildingElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pi.pauwel.be/voc/buildingelement> .
+# 
+# http://pi.pauwel.be/voc/buildingelement#ElementComponent
+<http://pi.pauwel.be/voc/buildingelement#ElementComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pi.pauwel.be/voc/buildingelement#ElementComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/con-tax#ConstructionSubComponent> .
+<http://pi.pauwel.be/voc/buildingelement#ElementComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pi.pauwel.be/voc/buildingelement> .
+# 
+# http://pi.pauwel.be/voc/buildingelement#TransportElement
+<http://pi.pauwel.be/voc/buildingelement#TransportElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pi.pauwel.be/voc/buildingelement#TransportElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/con-tax#ConstructionComponent> .
+<http://pi.pauwel.be/voc/buildingelement#TransportElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pi.pauwel.be/voc/buildingelement> .
+# 
+# http://pi.pauwel.be/voc/distributionelement#DistributionElement
+<http://pi.pauwel.be/voc/distributionelement#DistributionElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pi.pauwel.be/voc/distributionelement#DistributionElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/con-tax#ConstructionComponent> .
+<http://pi.pauwel.be/voc/distributionelement#DistributionElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pi.pauwel.be/voc/distributionelement> .
+# 
+# http://pi.pauwel.be/voc/furniture#Furniture
+<http://pi.pauwel.be/voc/furniture#Furniture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pi.pauwel.be/voc/furniture#Furniture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/con-tax#ConstructionComponent> .
+<http://pi.pauwel.be/voc/furniture#Furniture> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pi.pauwel.be/voc/furniture> .
+# 
+# http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Product
+<http://schema.org/Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://vocab.getty.edu/ontology#GuideTerm
+<http://vocab.getty.edu/ontology#GuideTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2006/vcard/ns#Individual
+# 
+# http://www.w3.org/2006/vcard/ns#Organization
+# 
+# https://w3id.org/bot#Building
+<https://w3id.org/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Building> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/zones/aat-buildings> .
+<https://w3id.org/bot#Building> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/zones/et-buildings> .
+# 
+# https://w3id.org/bot#Element
+<https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/bot#Site
+<https://w3id.org/bot#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Site> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/zones/aat-buildingSites> .
+# 
+# https://w3id.org/bot#Space
+<https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Space> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/zones/aat-spaces> .
+# 
+# https://w3id.org/bot#Storey
+<https://w3id.org/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Storey> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/zones/aat-storeys> .
+# 
+# https://w3id.org/bot#Zone
+<https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+# 
+# https://w3id.org/con-tax#ConstructionComponent
+<https://w3id.org/con-tax#ConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "An object that forms, formed or has the potential to form a part of a construction. Use a more specific subclass from a dedicated taxonomy such as BEO/FURN/MEP based on IFC or AAT-ARCH/AAT-FURN/AAT-MEP based on the Getty AAT concepts related to constructions."@en .
+<https://w3id.org/con-tax#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "construction component"@en .
+<https://w3id.org/con-tax#ConstructionComponent> <https://w3id.org/con-tax#isRootOfTaxonomy> <http://pi.pauwel.be/voc/buildingelement> .
+<https://w3id.org/con-tax#ConstructionComponent> <https://w3id.org/con-tax#isRootOfTaxonomy> <http://pi.pauwel.be/voc/distributionelement> .
+<https://w3id.org/con-tax#ConstructionComponent> <https://w3id.org/con-tax#isRootOfTaxonomy> <http://pi.pauwel.be/voc/furniture> .
+<https://w3id.org/con-tax#ConstructionComponent> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/components/aat-arch> .
+<https://w3id.org/con-tax#ConstructionComponent> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/components/aat-furn> .
+<https://w3id.org/con-tax#ConstructionComponent> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/components/aat-mep> .
+# 
+# https://w3id.org/con-tax#ConstructionSubComponent
+<https://w3id.org/con-tax#ConstructionSubComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#ConstructionSubComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/con-tax#ConstructionComponent> .
+<https://w3id.org/con-tax#ConstructionSubComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction component that forms, formed or has the potential to form a part of another construction component. It can be distinguished from other types of construction components since they are, in normal situations, no individual components. An example are the steps and railings as sub components of a stairs component. Use a more specific subclass from a dedicated taxonomy such as BEO based on IFC or AAT-ARCH based on the Getty AAT concepts related to constructions."@en .
+<https://w3id.org/con-tax#ConstructionSubComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#ConstructionSubComponent> <http://www.w3.org/2000/01/rdf-schema#label> "construction sub component"@en .
+# 
+# https://w3id.org/con-tax#Material
+<https://w3id.org/con-tax#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A material of which a construction component is made. It excludes subcomponents of larger construction components, e.g. a brick in a wall (see contax:ConstructionSubComponent)."@en .
+<https://w3id.org/con-tax#Material> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#Material> <http://www.w3.org/2000/01/rdf-schema#label> "building material"@en .
+<https://w3id.org/con-tax#Material> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/aat-materials> .
+# 
+# https://w3id.org/con-tax#PropertyContext
+<https://w3id.org/con-tax#PropertyContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/con-tax#PropertyContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/con-tax> .
+<https://w3id.org/con-tax#PropertyContext> <http://www.w3.org/2000/01/rdf-schema#label> "property context (grouping) "@en .
+# 
+# https://w3id.org/cto#InspectionTask
+<https://w3id.org/cto#InspectionTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cto#InspectionTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> .
+# 
+# https://w3id.org/cto#InstallmentTask
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> .
+# 
+# https://w3id.org/cto#ModificationTask
+<https://w3id.org/cto#ModificationTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cto#ModificationTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> .
+# 
+# https://w3id.org/cto#RemovalTask
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> .
+# 
+# https://w3id.org/cto#RepairTask
+<https://w3id.org/cto#RepairTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cto#RepairTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> .
+<https://w3id.org/cto#RepairTask> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/tasks/mwv> .
+# 
+# https://w3id.org/dot#ClassifiedDamage
+<https://w3id.org/dot#ClassifiedDamage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dot#ClassifiedDamage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/dot#> .
+<https://w3id.org/dot#ClassifiedDamage> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://mdcs.monumentenkennis.nl/damageatlas/ontology> .
+<https://w3id.org/dot#ClassifiedDamage> <https://w3id.org/con-tax#isRootOfTaxonomy> <https://w3id.org/con-tax/damages/mwv> .
+<https://w3id.org/dot#ClassifiedDamage> <https://w3id.org/con-tax#isRootOfTaxonomy> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+_:genid3 <http://www.w3.org/ns/dcat#distribution> _:genid4 .
+_:genid4 <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/Alhakam/dot/master/Extension/cdo.ttl> .
+<https://raw.githubusercontent.com/Alhakam/dot/master/Extension/cdo.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/dot#Damage
+<https://w3id.org/dot#Damage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/opm#Property
+<https://w3id.org/opm#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/opm#PropertyState
+<https://w3id.org/opm#PropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Katholieke_Universiteit_Leuven
+# 
+# http://pi.pauwel.be/voc/buildingelement
+<http://pi.pauwel.be/voc/buildingelement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pi.pauwel.be/voc/buildingelement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# http://pi.pauwel.be/voc/distributionelement
+<http://pi.pauwel.be/voc/distributionelement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pi.pauwel.be/voc/distributionelement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# http://pi.pauwel.be/voc/furniture
+<http://pi.pauwel.be/voc/furniture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://pi.pauwel.be/voc/furniture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://mdcs.monumentenkennis.nl/damageatlas/ontology
+<https://mdcs.monumentenkennis.nl/damageatlas/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://mdcs.monumentenkennis.nl/damageatlas/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://raw.githubusercontent.com/Alhakam/dot/master/Extension/cdo.ttl
+# 
+# https://w3id.org/con-tax
+<https://w3id.org/con-tax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/cto
+<https://w3id.org/cto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/cto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/fog
+<https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/omg
+<https://w3id.org/omg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/omg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/bot#
+<https://w3id.org/bot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/bot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/aat-materials
+<https://w3id.org/con-tax/aat-materials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/aat-materials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/components/aat-arch
+<https://w3id.org/con-tax/components/aat-arch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/components/aat-arch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/components/aat-furn
+<https://w3id.org/con-tax/components/aat-furn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/components/aat-furn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/components/aat-mep
+<https://w3id.org/con-tax/components/aat-mep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/components/aat-mep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/damages/mwv
+<https://w3id.org/con-tax/damages/mwv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/damages/mwv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/properties/bhp
+<https://w3id.org/con-tax/properties/bhp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/properties/bhp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/properties/cp
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/properties/cp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/tasks/mwv
+<https://w3id.org/con-tax/tasks/mwv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/tasks/mwv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/zones/aat-buildingSites
+<https://w3id.org/con-tax/zones/aat-buildingSites> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/zones/aat-buildingSites> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/zones/aat-buildings
+<https://w3id.org/con-tax/zones/aat-buildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/zones/aat-buildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/zones/aat-spaces
+<https://w3id.org/con-tax/zones/aat-spaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/zones/aat-spaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/zones/aat-storeys
+<https://w3id.org/con-tax/zones/aat-storeys> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/zones/aat-storeys> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/con-tax/zones/et-buildings
+<https://w3id.org/con-tax/zones/et-buildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/con-tax/zones/et-buildings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# https://w3id.org/dot#
+<https://w3id.org/dot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

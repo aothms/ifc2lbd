@@ -1,0 +1,2395 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/fmo#"
+     xml:base="https://w3id.org/fmo"
+     xmlns:dot="https://w3id.org/dot#"
+     xmlns:fmo="https://w3id.org/fmo#"
+     xmlns:hmo="https://w3id.org/hmo#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/fmo">
+        <terms:creator>Maria Laura Leonardi, Stefano Cursi, Elena Gigliarelli, José Granja, Daniel Oliveira, Miguel Azenha.</terms:creator>
+        <terms:description>An ontology to represent the failure mechanism of unreinforced masonry structures</terms:description>
+        <terms:issued>2024-04-29</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/1.0</terms:license>
+        <terms:modified>2024-04-29</terms:modified>
+        <terms:title xml:lang="en">Failure Mechanism Ontology</terms:title>
+        <rdfs:comment>Version 0.1</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <preferredNamespacePrexif>fmo</preferredNamespacePrexif>
+        <preferredNamespaceUri>https://w3id.org/fmo#</preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- https://w3id.org/fmo#preferredNamespacePrexif -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fmo#preferredNamespacePrexif"/>
+    
+
+
+    <!-- https://w3id.org/fmo#preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/fmo#preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dot#hasCausation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dot#hasCausation">
+        <rdfs:domain rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdfs:range rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment>It indicates the relationship between a damage and the failure mechanism that causes it.</rdfs:comment>
+        <rdfs:label>Has causation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dot#hasDamage -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dot#hasDamage">
+        <rdfs:domain rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdfs:comment>imported from https://w3id.org/dot ; used to describe damage hmo:MasonryWall, and understand its corration with possible ongoing mechanisms</rdfs:comment>
+        <rdfs:label>Has damage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fmo#FacilitatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fmo#FacilitatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:range rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment>Indicates the relationship between a failure mechanism and the vulnerability that facilitates it.</rdfs:comment>
+        <rdfs:label>Facilitated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fmo#FacilitatesMechanism -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fmo#FacilitatesMechanism">
+        <rdfs:domain rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:range rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment>A relationship between a vulneability and the specific mechanism that it facilitates.</rdfs:comment>
+        <rdfs:label>Facilitates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fmo#hasBehaviour -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fmo#hasBehaviour">
+        <rdfs:domain rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+        <rdfs:range rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">Indicates the relationship between the masonry wall and its load response behaviour.</rdfs:comment>
+        <rdfs:label>Has behaviour</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fmo#hasOccurringMechanism -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fmo#hasOccurringMechanism">
+        <rdfs:domain rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+        <rdfs:range rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment>It relates the masonry wall with the inferred occurred mechanism.</rdfs:comment>
+        <rdfs:label>Has occurring mechanism</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fmo#hasVulnerability -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fmo#hasVulnerability">
+        <rdfs:domain rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+        <rdfs:range rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment>Relates the masonry wall to the vulnerability that characterised them.</rdfs:comment>
+        <rdfs:label xml:lang="en">Has Vulnerability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/hmo#hasMasonryQualityIndex -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/hmo#hasMasonryQualityIndex">
+        <rdfs:domain rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+        <rdfs:range rdf:resource="https://w3id.org/hmo#MasonryQualityIndex"/>
+        <rdfs:comment>Imported from the https://w3id.org/hmo ontology, it relates a masonry wall to the value of the masonry quality index.</rdfs:comment>
+        <rdfs:label>Has Masonry Quality Index</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/hmo#MQITotalInPlane -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/hmo#MQITotalInPlane">
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryQualityIndex"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Defines the total value of MQI for in plane loads. Imported from https://w3id.org/hmo.</rdfs:comment>
+        <rdfs:label>Masonry Quality Index total value for in plane loads</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/hmo#MQITotalOutOfPlane -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/hmo#MQITotalOutOfPlane">
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryQualityIndex"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Defines the total value of MQI for out of plane loads. Imported from https://w3id.org/hmo.</rdfs:comment>
+        <rdfs:label>Masonry Quality Index total value for out of plane loads</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/hmo#MQITotalVertical -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/hmo#MQITotalVertical">
+        <rdfs:domain rdf:resource="https://w3id.org/hmo#MasonryQualityIndex"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Defines the total value of MQI for vertical loads. Imported from https://w3id.org/hmo.</rdfs:comment>
+        <rdfs:label>Masonry Quality Index total value for vertical loads</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://pi.pauwel.be/voc/buildingelement#Wall -->
+
+
+    <owl:Class rdf:about="https://pi.pauwel.be/voc/buildingelement#Wall">
+        <rdfs:comment>Class imported from https://pi.pauwel.be/voc/buildingelement ontology, to map an IFC wall with a masonry wall, in the ontology-BIM model.</rdfs:comment>
+        <rdfs:label>Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#StructuralDamage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dot#StructuralDamage">
+        <rdfs:comment xml:lang="en">Imported from https://w3id.org/dot.Indicates damage in a hmo:MasonryWall. In the context of failure mechanisms, it helps to understand when a mechanism is present in a wall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#Crack -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#Crack">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdfs:comment xml:lang="en">A type of damage, which is modelled as a specific subclass of https://w3id.org/dot#StructuralDamage. It may indicate the presence of an ongoing mechanism.</rdfs:comment>
+        <rdfs:label>Crack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#FailureMechanism -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#FailureMechanism">
+        <owl:disjointWith rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment>Indicates the collapse mechanism expected from a specific hmo:MasonryWall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Failure Mechanism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#InPlaneBehaviour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#InPlaneBehaviour">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">Indicates the behaviour of a wall subjected to a in plane load.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Plane Behaviour.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#OutOfPlaneBehaviour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#OutOfPlaneBehaviour">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">Indicates the behaviour of a wall subjected to an out of plane load.</rdfs:comment>
+        <rdfs:label xml:lang="en">Out Of Plane Behaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#VerticalBehaviour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#VerticalBehaviour">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">Indicates the behaviour of a wall subjected to a specific vertical load.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vertical Behaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#Vulnerability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#Vulnerability">
+        <rdfs:comment xml:lang="en">It indicates a feature of the wall that can facilitate the occurrence of a mechanism.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vulnerability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fmo#WallBehaviour -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fmo#WallBehaviour">
+        <rdfs:comment xml:lang="en">Indicates the behaviour of a wall subjected to a specific load.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wall Behaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hmo#MasonryQualityIndex -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hmo#MasonryQualityIndex">
+        <rdfs:comment>Class imported from the https://w3id.org/hmo# ontology, to define vertical, in plane and out of plane behaviour of the assessed wall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Masonry Quality Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/hmo#MasonryWall -->
+
+
+    <owl:Class rdf:about="https://w3id.org/hmo#MasonryWall">
+        <rdfs:subClassOf rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdfs:comment xml:lang="en">imported from https://w3id.org/hmo, to apply the vulnerability - behaviour - failure mechanism to a hmo:MasonryWall</rdfs:comment>
+        <rdfs:label xml:lang="en">Masonry Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/fmo#AbsenceOfIntermediateChains -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AbsenceOfIntermediateChains">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment xml:lang="en">A vulnerability that consists in the absence of chains in the intermediate floors of the slabs supported by the wall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Absence of intermediate chains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#AbsenceOfIntermediateCurbstone -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AbsenceOfIntermediateCurbstone">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment xml:lang="en">A vulnerability that consists in the absence of curbstones in the intermediate floors of the slabs supported by the wall.</rdfs:comment>
+        <rdfs:label>Absence of intermediate curbstone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#AbsenceOfTopChains -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AbsenceOfTopChains">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment xml:lang="en">A vulnerability that consists in the absence of chains in the roof supported by the wall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Absence of Top Chains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#AbsenceOfTopCurbstone -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AbsenceOfTopCurbstone">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment>A vulnerability that consists in the absence of curbstone in the roof supported by the wall.</rdfs:comment>
+        <rdfs:label>Absence of Top Curbstone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#AverageInPlaneBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AverageInPlaneBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#InPlaneBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">It indicates a type of behaviour that is within the average range of how masonry walls behave when subjected to in plane load.</rdfs:comment>
+        <rdfs:label xml:lang="en">Average in plane behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#AverageOutOfPlaneBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AverageOutOfPlaneBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#OutOfPlaneBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">It indicates a type of behaviour (based on the values of https://w3id.org/hmo#MasonryQualityIndex) that is within the average range of how masonry walls behave when subjected to a out of plane load.</rdfs:comment>
+        <rdfs:label xml:lang="en">Average out of plane behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#AverageVerticalBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#AverageVerticalBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#VerticalBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">It indicates a type of behaviour that is within the average range (based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex) of how masonry walls behave when subjected to a vertical load.</rdfs:comment>
+        <rdfs:label xml:lang="en">Average Vertical Behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#DeformableFloors -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#DeformableFloors">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment>A vulnerability consisting of the presence of deformable slabs supported by the wall.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deformable Floors</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#DiagonalAndVerticalCracks -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#DiagonalAndVerticalCracks">
+        <rdf:type rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Crack"/>
+        <dot:hasCausation rdf:resource="https://w3id.org/fmo#HorizontalBending"/>
+        <rdfs:comment>Diagonal and vertical cracks in the same wall.</rdfs:comment>
+        <rdfs:label>Diagonal and vertical cracks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#DiagonalCrack -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#DiagonalCrack">
+        <rdf:type rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Crack"/>
+        <dot:hasCausation rdf:resource="https://w3id.org/fmo#InPlaneFailure"/>
+        <rdfs:comment xml:lang="en">Crack with diagonal progression.</rdfs:comment>
+        <rdfs:label>Diagonal crack</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#ExcessiveSlenderness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#ExcessiveSlenderness">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:label xml:lang="en">A specific vulnerability consisting of excessive slenderness of the wall.</rdfs:label>
+        <rdfs:label xml:lang="en">Excessive slenderness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#GoodInPlaneBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#GoodInPlaneBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#InPlaneBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">A type of (in plane) wall behaviour that is considered good based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Good in plane behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#GoodOutOfPlaneBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#GoodOutOfPlaneBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#OutOfPlaneBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">A type of (out of plane) wall behaviour that is considered good based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Good Out Of Plane Behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#GoodVerticalBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#GoodVerticalBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#VerticalBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">The vertical wall behaviour that is considered good based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Good vertical behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#HorizontalAndVerticalCracks -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#HorizontalAndVerticalCracks">
+        <rdf:type rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Crack"/>
+        <dot:hasCausation rdf:resource="https://w3id.org/fmo#VerticalBending"/>
+        <rdfs:comment>Vertical and horizontal cracks in the same wall.</rdfs:comment>
+        <rdfs:label>Horizontal and vertical cracks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#HorizontalBending -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#HorizontalBending">
+        <rdf:type rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment xml:lang="en">A specific mechanism manifested by the expulsion of material from the top zone of the wall and the detachment of wedge-shaped bodies 
+accompanied by the formation of oblique and vertical cylindrical hinges due to out-of-plane actions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Horizontal Bending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#InPlaneFailure -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#InPlaneFailure">
+        <rdf:type rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment xml:lang="en">A specific mechanism that do not involve out of plane overturning, but in plane craking/failure.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Plane Failure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#InadequateInPlaneBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#InadequateInPlaneBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#InPlaneBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">A type of (in plane) wall behaviour that is considered inadequate based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inadequate in plane behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#InadequateOutOfPlaneBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#OutOfPlaneBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">A type of (out of plane) wall behaviour that is considered inadequate based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inadequate out of plane behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#InadequateVerticalBehaviour -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#InadequateVerticalBehaviour">
+        <rdf:type rdf:resource="https://w3id.org/fmo#VerticalBehaviour"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#WallBehaviour"/>
+        <rdfs:comment xml:lang="en">A type of (vertical) wall behaviour that is considered inadequate based on the values assigned to https://w3id.org/hmo#MasonryQualityIndex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inadequate Vertical Behaviour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#MQIWallFacadeA417_a -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#MQIWallFacadeA417_a">
+        <rdf:type rdf:resource="https://w3id.org/hmo#MasonryQualityIndex"/>
+        <hmo:MQITotalInPlane rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.55</hmo:MQITotalInPlane>
+        <hmo:MQITotalInPlane rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.90</hmo:MQITotalInPlane>
+        <hmo:MQITotalOutOfPlane rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.15</hmo:MQITotalOutOfPlane>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#OpeningsNearIntersections -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#OpeningsNearIntersections">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:label xml:lang="en">Openings near intersections</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#PartialOverturn -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#PartialOverturn">
+        <rdf:type rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment xml:lang="en">A specific mechanism consisting of the total rotation of part of a wall out of the plane.</rdfs:comment>
+        <rdfs:label xml:lang="en">Partial Overturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#PresenceOfHorizontalThrust -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#PresenceOfHorizontalThrust">
+        <rdf:type rdf:resource="https://w3id.org/fmo#Vulnerability"/>
+        <rdfs:comment xml:lang="en">A specific vulnerability in the wall consists in the presence of thrusting elements, which facilitate out-of-plane movement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Presence of horizontal thrust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#TotalOverturn -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#TotalOverturn">
+        <rdf:type rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment xml:lang="en">A specific mechanism consisting of the total rotation of the entire wall out of the plane.</rdfs:comment>
+        <rdfs:label xml:lang="en">Total Overturn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#VerticalBending -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#VerticalBending">
+        <rdf:type rdf:resource="https://w3id.org/fmo#FailureMechanism"/>
+        <rdfs:comment xml:lang="en">A specific mechanism manifested with the formation a horizontal cylindrical hinge that divides the wall into two blocks and is described by the mutual rotation of the same around this axis by out-of-plane actions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vertical Bending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#VerticalCrackEntireWallAtIntersection -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#VerticalCrackEntireWallAtIntersection">
+        <rdf:type rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdf:type rdf:resource="https://w3id.org/fmo#Crack"/>
+        <dot:hasCausation rdf:resource="https://w3id.org/fmo#TotalOverturn"/>
+        <rdfs:comment xml:lang="en">A vertical crack occurring at the intersection between walls.</rdfs:comment>
+        <rdfs:label>Vertical crack near intersection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fmo#WallFacadeA417_a -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fmo#WallFacadeA417_a">
+        <rdf:type rdf:resource="https://pi.pauwel.be/voc/buildingelement#Wall"/>
+        <rdf:type rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+        <dot:hasDamage rdf:resource="https://w3id.org/fmo#VerticalCrackEntireWallAtIntersection"/>
+        <hasBehaviour rdf:resource="https://w3id.org/fmo#AverageInPlaneBehaviour"/>
+        <hasBehaviour rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+        <hasOccurringMechanism rdf:resource="https://w3id.org/fmo#TotalOverturn"/>
+        <hasVulnerability rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+        <hmo:hasMasonryQualityIndex rdf:resource="https://w3id.org/fmo#MQIWallFacadeA417_a"/>
+        <rdfs:comment xml:lang="en">Wall of the facade in the isolate A, units 417, side a. Castelnuovo di Porto</rdfs:comment>
+        <rdfs:label xml:lang="en">Wall Facade A417_a</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/fmo#wl">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/fmo#MQI">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/fmo#MQIv">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/fmo#dmg">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/fmo#mcn">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total In Plane Value less or equal than 10 and greater than 5, than the Masonry Wall has an good in plane behaviour</rdfs:comment>
+        <rdfs:label>Good in plane behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalInPlane"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#GoodInPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total vertical value less or equal than 10 and greater than 5, than the Masonry Wall has a good vertical behaviour</rdfs:comment>
+        <rdfs:label>Good vertical behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalVertical"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#GoodVerticalBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total Vertical value less or equal than 5 and greater than 2.5, than the Masonry Wall has an average vertical behaviour</rdfs:comment>
+        <rdfs:label>Average vertical Behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalVertical"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AverageVerticalBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total vertical value less or equal than 2.5 and greater or equal than 0, than the Masonry Wall has an inadequate vertical behaviour</rdfs:comment>
+        <rdfs:label>Inadequate vertical behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalVertical"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>2.5</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>0</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateVerticalBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a wall has a damage, and the damage is caused by a specific mechanism, than the wall has a ongoing mechanism</rdfs:comment>
+        <rdfs:label>Mechanism and damage</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasDamage"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#dmg"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasCausation"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#dmg"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#mcn"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#mcn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘absence of intermediate chains’ and has a vulnerability that is ‘absence of top chains’, then it has an occurring mechanism that is ‘total overturn&apos;.</rdfs:comment>
+        <rdfs:label>Total overtun - chains</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfIntermediateChains"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopChains"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#TotalOverturn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘absence of intermediate chains&apos; and has a vulnerability that is ‘absence of top curbstone&apos;, then it has an occurring mechanism that is ‘total overturn.</rdfs:comment>
+        <rdfs:label>Total overturn chain - curbston</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfIntermediateChains"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopCurbstone"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#TotalOverturn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘absence of intermediate curbstone’ and has a vulnerability that is ‘absence of top chains&apos;, then it has an occurring mechanism that is ‘total overturn.</rdfs:comment>
+        <rdfs:label>Total overturn - curstone -chain</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfIntermediateCurbstone"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopChains"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#TotalOverturn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total in plane value less or equal than 3 and greater or equal than 0, than the Masonry Wall has an inadequate In plane behaviour</rdfs:comment>
+        <rdfs:label>Inadequate in plane behavior</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalInPlane"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateInPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘absence of intermediate curbstone’ and has a vulnerability that is ‘absence of top curbstone’, then it has an occurring mechanism that is ‘total overturn.</rdfs:comment>
+        <rdfs:label>Total overturn - curbstone</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfIntermediateCurbstone"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopCurbstone"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#TotalOverturn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘absence of top chains’, then it has an occurring mechanism that is ‘partial overturn.</rdfs:comment>
+        <rdfs:label>Partial overturn - chains</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopChains"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#PartialOverturn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘absence of top curbstone, then it has an occurring mechanism that is ‘partial overturn.</rdfs:comment>
+        <rdfs:label>Partial overturn - curbstone</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopCurbstone"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#PartialOverturn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘excessive slenderness’ and a vulnerability that is ‘absence of top chains’ and a vulnerability that is ‘presence of horizontal thrusts’ and a behaviour that is ‘inadequate out of plane behaviour’, then it has an occurring mechanism that is ‘horizontal bending’.</rdfs:comment>
+        <rdfs:label>Horizontal bending - absence of top chains</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#ExcessiveSlenderness"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopChains"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#PresenceOfHorizontalThrust"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#HorizontalBending"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘excessive slenderness’ and a vulnerability that is ‘absence of top curbstone’ and a vulnerability that is ‘presence of horizontal thrusts’ and a behaviour that is ‘inadequate out of plane behaviour’, then it has an occurring mechanism that is ‘horizontal bending’.</rdfs:comment>
+        <rdfs:label>Horizontal bending - absence of top curbstone</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#ExcessiveSlenderness"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#AbsenceOfTopCurbstone"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#PresenceOfHorizontalThrust"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#HorizontalBending"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘excessive slenderness’  and has a vulnerability that is ‘presence of horizontal thrusts’, and has a vulnerability that is ‘deformable floor, and it has a behaviour that is ‘inadequate out of plane behaviour’, then it has an occurring mechanism that is ‘vertical bending’.</rdfs:comment>
+        <rdfs:label>Vertical bending</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#ExcessiveSlenderness"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#PresenceOfHorizontalThrust"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#DeformableFloors"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#VerticalBending"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘inadequate in plane behaviour’, then it has a vulnerability that is ‘inadequate in plane behaviour’.</rdfs:comment>
+        <rdfs:label>Inadequate in plane behaviour vulnerability</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateInPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateInPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘inadequate in plane behaviour’, than it has an occurring mechanism that is ‘in plane failure’.</rdfs:comment>
+        <rdfs:label>In plane failure</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateInPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasOccurringMechanism"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InPlaneFailure"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a vulnerability that is ‘inadequate out of plane behaviour’, then it has an occurring mechanism that is ‘out of plane failure’.</rdfs:comment>
+        <rdfs:label>Inadequate Out Of Plane Behaviour Vulnerability</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a masonry wall has a behaviour that is ‘inadequate vertical behaviour’, then it has a vulnerability that is ‘inadequate vertical behaviour’.</rdfs:comment>
+        <rdfs:label>Inadequate Vertical Behaviour Vulnerability</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateVerticalBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasVulnerability"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateVerticalBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total In Plane Value less or equal than 5  and greater than 3, than the Masonry Wall has an average in Plane behaviour</rdfs:comment>
+        <rdfs:label>Average in plane behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalInPlane"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AverageInPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total out of plane value less or equal than 10 and greater than 7, than the Masonry Wall has an good out of plane behaviour</rdfs:comment>
+        <rdfs:label>Good out of plane behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalOutOfPlane"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#GoodOutOfPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total out of plane value less or equal than 4 and greater or equal than 0, than the Masonry Wall has an inadequate out of plane behaviour</rdfs:comment>
+        <rdfs:label>Inadequate out of plane behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalOutOfPlane"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#InadequateOutOfPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a Masonry Wall has a Masonry Quality Index, which has a Masonry Quality Index Total Out Of Plane Value less or equal than 7 and greater than 4, than the Masonry Wall has an average out of Plane behaviour</rdfs:comment>
+        <rdfs:label>Average out of plane behaviour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/hmo#MasonryWall"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#hasMasonryQualityIndex"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQI"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/hmo#MQITotalOutOfPlane"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#MQI"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="https://w3id.org/fmo#MQIv"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/fmo#hasBehaviour"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/fmo#wl"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/fmo#AverageOutOfPlaneBehaviour"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

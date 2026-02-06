@@ -1,0 +1,10 @@
+http://lbd.arch.rwth-aachen.de/bcfOWL_V1/index-en.html | Timeout after 30 seconds.
+https://rub-informatik-im-bauwesen.github.io/ir-ontologies/dt/dt.html | HTML fetch failed: 404 Client Error: Not Found for url: https://rub-informatik-im-bauwesen.github.io/ir-ontologies/dt/dt.html
+http://emmo.info/emmo | HTML fetch failed: HTTPSConnectionPool(host='emmo.info', port=443): Max retries exceeded with url: /emmo (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)')))
+https://purl.org/fisa# | Timeout after 30 seconds.
+https://purl.org/ffdr-ontology | Timeout after 30 seconds.
+http://w3id.org/charta77/jup | HTML fetch failed: 404 Client Error: Not Found for url: http://rdf.pth.name/jup/
+https://jwerbrouck.inrupt.net/public/scan-to-graph/stg.ttl | HTML fetch failed: HTTPSConnectionPool(host='jwerbrouck.inrupt.net', port=443): Max retries exceeded with url: /public/scan-to-graph/stg.ttl (Caused by NameResolutionError("HTTPSConnection(host='jwerbrouck.inrupt.net', port=443): Failed to resolve 'jwerbrouck.inrupt.net' ([Errno 11001] getaddrinfo failed)"))
+http://lbd.arch.rwth-aachen.de/bcfOWL_V1/index-en.html | Timeout after 30 seconds.
+https://purl.org/ffdr-ontology | HTML fetch failed: HTTPSConnectionPool(host='ffdrontology.github.io', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='ffdrontology.github.io', port=443): Failed to resolve 'ffdrontology.github.io' ([Errno 11001] getaddrinfo failed)"))
+https://w3id.org/seas/seas-1.1 | Timeout after 30 seconds.
