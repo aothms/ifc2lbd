@@ -12,7 +12,7 @@ import ifcopenshell
 from ifc.ifc_options import load_ifc, stream_ifc
 from lbd.namespaces import get_namespaces
 from lbd.TTL_writer_strings_spf import string_writer_mini_ifcOWL, string_writer_ifcOWL
-from src.lbd.TTL_writer_strings_stream import string_writer_mini_ifcOWL_stream
+from lbd.TTL_writer_strings_stream import string_writer_mini_ifcOWL_stream
 from lbd.TTL_writer import string_stream_refactored, string_stream_functional
 
 

@@ -72,15 +72,15 @@ stream = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraB
 
 stream_ifcowl = "python src/main.py -i data/input/Viadotto.ifc -o data/output/Viadotto-ifcowl.ttl --converter ifcowl --stream --verbose"
 
-refactored = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-refactored-by-co.ttl --converter co_refactored --stream --verbose --benchmark"
+refactored = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-refactored-by-co.ttl --converter mini_ifcowl_complete --stream --verbose --benchmark"
 
-functional = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-functional-by-co.ttl --converter co_functional --stream --verbose --benchmark"
+functional = "python src/main.py -i data/input/InfraBridge.ifc -o data/output/InfraBridge-functional-by-co.ttl --converter mini_ifcowl_complete2 --stream --verbose --benchmark"
 
 
 #### PLEASE use these tasks for testing.
-refactored_test = "python src/main.py -i test_files/InfraBridge.ifc -o test_files/InfraBridge-refactored-test.ttl --converter co_refactored --stream --verbose"
+refactored_test = "python src/main.py -i test_files/InfraBridge.ifc -o test_files/InfraBridge-refactored-test.ttl --converter mini_ifcowl_complete --stream --verbose"
 
-functional_test = "python src/main.py -i test_files/InfraBridge.ifc -o test_files/InfraBridge-functional-test.ttl --converter co_functional --stream --verbose"
+functional_test = "python src/main.py -i test_files/InfraBridge.ifc -o test_files/InfraBridge-functional-test.ttl --converter mini_ifcowl_complete2 --stream --verbose"
 
 [dependency-groups]
 stable-pypi = ["ifcopenshell>=0.8.4.post1,<0.9"]
