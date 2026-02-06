@@ -23,8 +23,10 @@ python run src/main.py --inputs input.ifc --outputs output.ttl
 python run src/main.py --inputs input.ifc --outputs output.ttl --verbose
 ```
 
+**NOTE** So far, SPF will be behind in the contrary to the stream writer. For the up-to-date version, please use `experimental-conda` environment.
 
 ### Single File Conversion (TTL output)
+
 ```bash
 # Basic usage (loads to memory)
 pixi run -e stable-conda python src/main.py --inputs input.ifc --outputs output.ttl
@@ -33,6 +35,8 @@ pixi run -e stable-conda python src/main.py --inputs input.ifc --outputs output.
 pixi run -e stable-conda python src/main.py -i input.ifc -o output.ttl --verbose
 
 # With streaming (for large files)
+pixi run -e stable-pypi python src/main.py -i input.ifc -o output.ttl --stream
+pixi run -e stable-conda python src/main.py -i input.ifc -o output.ttl --stream
 pixi run -e experimental-conda python src/main.py -i input.ifc -o output.ttl --stream
 
 # All options together
@@ -68,7 +72,7 @@ pixi run -e experimental-conda python src/main.py \
   - Multiple files → TRIG format (named graphs) (don't worry about it, it's not yet implemented)
 - **Load vs Stream**:
   - Default: Load entire IFC to memory
-  - `--stream`: Stream IFC file (good for large files, also fast - it requires Alpha version of IfcOpenShell from IfcOpenShell::IfcOpenShell conda channel)
+  - `--stream`: Stream IFC file (good for large files, also fast - it currently runs on all builds `stable-pypi`, `stable-conda`, `experimental-conda`)
 
 ### Get Help
 ```bash
@@ -102,7 +106,8 @@ The project supports multiple pixi environments:
   - Use: `pixi run -e stable-conda ...`
 
 - **`stable-pypi`**: Alternative stable environment
-  - ifcopenshell from PyPI
+  - IfcOpenShell from PyPI
+  - It supports streaming
   - Use: `pixi run -e stable-pypi ...`
 
 - **`experimental-conda`**: Bleeding-edge features
@@ -117,21 +122,19 @@ The project supports multiple pixi environments:
 ### Short about environments.
 
 **For conda developers**:`stable-conda`
-It doesn't have `stream2` option yet - I'll keep an eye on this if it does)
 ```bash
 pixi run -e stable-conda python src/main.py -i input.ifc -o output.ttl
 ```
 
 **For streaming large files (and potentially faster conversion)**: `experimental-conda` with streaming flag (`--stream`).
-So far streaming is only available in Alpha version of IfcOpenShell.
 ```bash
 pixi run -e stable-conda python src/main.py -i large.ifc -o output.ttl -s -v
 ```
 
 **For PyPi developers**: `stable-pypi`:
-If someone uses IfcOpenShell from PyPi. Mind you, streaming `stream2` is not there yet.
 ```bash
-pixi run -e experimental-conda python src/main.py -i input.ifc -o output.ttl
+pixi run -e stable-pypi python src/main.py -i input.ifc -o output.ttl
+
 ```
 
 ### Run Tests
