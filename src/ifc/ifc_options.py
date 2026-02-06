@@ -60,12 +60,15 @@ def get_schema_uri(ifc_model_or_path) -> str:
         schema = ifc_model_or_path.schema_identifier
     
     # Map schema identifiers to OWL URIs
+    # Only versions that are marked "official" in the page are included https://technical.buildingsmart.org/standards/ifc/ifc-schema-specifications/
+    
     schema_map = {
         'IFC2X3': 'https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL#',
-        'IFC4': 'https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#',
-        #IFC4X3 not official in buildingSMART
-        'IFC4X3': 'https://standards.buildingsmart.org/IFC/DEV/IFC4_3/OWL#',
-        'IFC4X3_ADD2': 'https://standards.buildingsmart.org/IFC/DEV/IFC4_3/OWL#',
+        'IFC4': 'https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#',
+        'IFC4X3_ADD2': 'https://w3id.org/ifc/IFC4X3_ADD2#',
     }
+    #IFC2x3_TC1 (denoted as IFC2X3)
+    #IFC4_ADD2_TC1 (denoted as IFC4)
+    #IFC4X3 not official in buildingSMART website (denoted as IFC4X3_ADD2)
     return schema
     #return schema_map.get(schema.upper(), f'https://standards.buildingsmart.org/IFC/DEV/{schema}/OWL#')

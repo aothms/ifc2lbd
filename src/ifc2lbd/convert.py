@@ -9,10 +9,11 @@ from io import StringIO
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import ifcopenshell
-from ifc.ifc_options import load_ifc, stream_ifc, get_schema_uri
+from ifc.ifc_options import load_ifc, stream_ifc
+from lbd.namespaces import get_namespaces
 from lbd.TTL_writer_strings_spf import string_writer_mini_ifcOWL, string_writer_ifcOWL
-from lbd.TTL_writer_strings_stream import string_writer_mini_ifcOWL_stream, string_writer_ifcOWL_stream
-# from lbd.ifcow_express_writer import string_writer_ifcowl_express  # 
+from src.lbd.TTL_writer_strings_stream import string_writer_mini_ifcOWL_stream
+from lbd.TTL_writer import string_stream_refactored, string_stream_functional
 
 
 # Map converter names to writer functions (for loaded models)
@@ -25,12 +26,13 @@ CONVERTERS = {
 # Map converter names to streaming writer functions
 STREAM_CONVERTERS = {
     "mini_ifcowl": string_writer_mini_ifcOWL_stream,
-    "ifcowl": string_writer_ifcOWL_stream,
+    "mini_ifcowl_complete": string_stream_refactored,
+    "mini_ifcowl_complete2": string_stream_functional,
     # "ifcowl_express": Not yet implemented for streaming
 }
 
 
-def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = False, verbose: bool = False, profile: bool = False, converter: str = "mini_ifcowl") -> None:
+def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = False, verbose: bool = False, profile: bool = False, converter: str = "mini_ifcowl", return_metrics: bool = False, single_pass: bool = False) -> dict | None:
     """
     Convert a single IFC file to LBD Turtle format.
     
@@ -41,6 +43,11 @@ def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = Fal
         verbose: If True, print timing information
         profile: If True, run with cProfile and save stats
         converter: Which converter to use ('mini_ifcowl', 'ifcowl', 'mini_reference')
+        return_metrics: If True, return a dict with conversion metrics for benchmarking
+        single_pass: If True, skip entity type mapping (only for mini_ifcowl_optimized)
+        
+    Returns:
+        dict with metrics if return_metrics=True, otherwise None
     """
     if stream and converter not in STREAM_CONVERTERS:
         raise ValueError(f"Streaming not yet implemented for converter '{converter}'. Available for streaming: {list(STREAM_CONVERTERS.keys())}")
@@ -68,30 +75,21 @@ def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = Fal
     if verbose:
         print(f"{'Streaming' if stream else 'Loading'} IFC: {load_time:.3f}s")
     
-    # Choosing ontologies/namespaces to use
-    mini_ifc_name = f"https://mini-ifc.ifc/{get_schema_uri(schema_source)}/#"
-    namespaces = {
-        "BASE": "http://example.org/base#",
-        #"IFC": get_schema_uri(schema_source),
-        "MINIIFC": mini_ifc_name,
-        #"IFC": get_schema_uri(schema_source),
-        "INST": "https://lbd-lbd.lbd/ifc/instances#",
-        "LIST": "https://w3id.org/list#",
-        "EXPRESS": "https://w3id.org/express#",
-        "RDF": "http://www.w3.org/1999/02/22-rdf#",
-        "XSD": "http://www.w3.org/2001/XMLSchema#",
-        "OWL": "http://www.w3.org/2002/07/owl#"
-    }
+    # Get namespaces for conversion
+    namespaces = get_namespaces(schema_source)
     
-    
-    # Writer just serializes what it's told
+    # Writer
     start_write = time.time()
     if stream:
         writer_function = STREAM_CONVERTERS[converter]
-        writer_function(input_ifc_path, output_ttl_path, namespaces)
+        # Pass use_typed_refs parameter for optimized converter
+        if converter == "mini_ifcowl_optimized":
+            writer_result = writer_function(input_ifc_path, output_ttl_path, namespaces, use_typed_refs=not single_pass)
+        else:
+            writer_result = writer_function(input_ifc_path, output_ttl_path, namespaces)
     else:
         writer_function = CONVERTERS[converter]
-        writer_function(ifc_model_or_iterator, output_ttl_path, namespaces)
+        writer_result = writer_function(ifc_model_or_iterator, output_ttl_path, namespaces)
     
     write_time = time.time() - start_write
     if verbose:
@@ -116,6 +114,31 @@ def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = Fal
         print(s.getvalue())
         print(f"Profile stats saved to: {stats_file}")
         print(f"To analyze: python -m pstats {stats_file}")
+    
+    # Return metrics if requested (for benchmarking)
+    if return_metrics:
+        metrics = {
+            'input_file': input_ifc_path,
+            'output_file': output_ttl_path,
+            'stream_mode': stream,
+            'converter': converter,
+            'load_time': load_time,
+            'write_time': write_time,
+            'total_time': total_time,
+        }
+        # Merge in writer-specific metrics (entities_processed, triples_written)
+        if writer_result:
+            metrics.update(writer_result)
+        return metrics
+    
+    return None
+
+    if return_metrics:
+        return {
+            'load_time': load_time,
+            'write_time': write_time,
+            'total_time': total_time
+        }
 
 
 # Not there yet.
@@ -140,16 +163,7 @@ def ifc_to_lbd_trig(input_ifc_path: str, output_trig_path: str, stream: bool = F
     else:
         ifc_model = load_ifc(input_ifc_path)
     
-    namespaces = {
-        "BASE": "http://example.org/base#",
-        "IFC": get_schema_uri(ifc_model),
-        "INST": "https://lbd-lbd.lbd/ifc/instances#",
-        "LIST": "https://w3id.org/list#",
-        "EXPRESS": "https://w3id.org/express#",
-        "RDF": "http://www.w3.org/1999/02/22-rdf#",
-        "XSD": "http://www.w3.org/2001/XMLSchema#",
-        "OWL": "http://www.w3.org/2002/07/owl#"
-    }
+    namespaces = get_namespaces(ifc_model)
     
     file_name = Path(input_ifc_path).stem
     
@@ -159,7 +173,7 @@ def ifc_to_lbd_trig(input_ifc_path: str, output_trig_path: str, stream: bool = F
         f.write(f"# Mode: {'Streaming' if stream else 'Loaded to memory'}\n")
         f.write("\n")
         f.write("@prefix lbd: <https://w3id.org/lbd#> .\n")
-        f.write("@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n")
+        f.write("@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n")
         f.write("\n")
         f.write(f"<http://example.org/graph/{file_name}> {{\n")
         f.write("    # TODO: Add actual conversion logic using string_writer_mini_ifcOWL\n")
