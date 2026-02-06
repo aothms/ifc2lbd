@@ -8,8 +8,9 @@ from datetime import datetime
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from ifc2lbd.convert import ifc_to_lbd_ttl, ifc_to_lbd_trig
+from ifc2lbd.convert import CONVERTERS, STREAM_CONVERTERS, ifc_to_lbd_ttl, ifc_to_lbd_trig
 
+options = set(CONVERTERS.keys() | STREAM_CONVERTERS.keys())
 
 def log(message: str, verbose: bool = True):
     """Log message with timestamp if verbose mode is enabled."""
@@ -69,7 +70,7 @@ def main():
     
     parser.add_argument(
         "--converter", "-c",
-        choices=["mini_ifcowl", "mini_ifcowl_complete", "mini_ifcowl_complete2"], 
+        choices=options, 
         default="mini_ifcowl_complete",
         help="Choose conversion method: 'mini_ifcowl' (default, simplified), 'ifcowl' (with declared types), 'mini_ifcowl_optimized' (optimized streaming(read about it in docs))"
     )
@@ -129,7 +130,7 @@ def main():
     all_metrics = []
     
     for idx, (input_file, output_file) in enumerate(zip(args.inputs, args.outputs), 1):
-        try:
+        # try:
             log(f"[{idx}/{len(args.inputs)}] Converting '{input_file}' -> '{output_file}'", args.verbose)
             
             if is_multiple:
@@ -145,11 +146,11 @@ def main():
             log(f"[{idx}/{len(args.inputs)}] Completed successfully", args.verbose)
             success_count += 1
             
-        except Exception as e:
-            print(f"Error converting '{input_file}': {e}", file=sys.stderr)
-            if args.verbose:
-                import traceback
-                traceback.print_exc()
+        ## except Exception as e:
+        ##     print(f"Error converting '{input_file}': {e}", file=sys.stderr)
+        ##     if args.verbose:
+        ##         import traceback
+        ##         traceback.print_exc()
     
     # Print benchmark results if requested
     if args.benchmark and all_metrics:

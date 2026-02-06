@@ -1,10 +1,12 @@
 """Core conversion logic from IFC to LBD Turtle format."""
+import itertools
 import sys
 from pathlib import Path
 import time
 import cProfile
 import pstats
 from io import StringIO
+from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -14,12 +16,14 @@ from lbd.namespaces import get_namespaces
 from lbd.TTL_writer_strings_spf import string_writer_mini_ifcOWL, string_writer_ifcOWL
 from lbd.TTL_writer_strings_stream import string_writer_mini_ifcOWL_stream
 from lbd.TTL_writer import string_stream_refactored, string_stream_functional
-
+from .geometry import geometry_processor
 
 # Map converter names to writer functions (for loaded models)
 CONVERTERS = {
     "mini_ifcowl": string_writer_mini_ifcOWL,
     "ifcowl": string_writer_ifcOWL,
+    "mini_ifcowl_wkt": string_writer_mini_ifcOWL,
+    "ifcowl_wkt": string_writer_ifcOWL,
     # "ifcowl_express": string_writer_ifcowl_express,s
 }
 
@@ -31,6 +35,7 @@ STREAM_CONVERTERS = {
     # "ifcowl_express": Not yet implemented for streaming
 }
 
+WITH_GEOMETRY_PROCESSING = {"mini_ifcowl_wkt", "ifcowl_wkt"}
 
 def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = False, verbose: bool = False, profile: bool = False, converter: str = "mini_ifcowl", return_metrics: bool = False, single_pass: bool = False) -> dict | None:
     """
@@ -60,6 +65,8 @@ def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = Fal
         profiler.enable()
     
     start_total = time.time()
+
+    proc: Optional[geometry_processor] = None
     
     # Load or stream IFC model
     start_load = time.time()
@@ -69,6 +76,12 @@ def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = Fal
         schema_source = file_path if file_path else ifc_model_or_iterator
     else:
         ifc_model_or_iterator = load_ifc(input_ifc_path)
+
+        if converter in WITH_GEOMETRY_PROCESSING:
+            proc = geometry_processor(ifc_model_or_iterator)
+            proc.process()
+            proc.remove_from_file()
+
         schema_source = ifc_model_or_iterator
     
     load_time = time.time() - start_load
@@ -89,7 +102,7 @@ def ifc_to_lbd_ttl(input_ifc_path: str, output_ttl_path: str, stream: bool = Fal
             writer_result = writer_function(input_ifc_path, output_ttl_path, namespaces)
     else:
         writer_function = CONVERTERS[converter]
-        writer_result = writer_function(ifc_model_or_iterator, output_ttl_path, namespaces)
+        writer_result = writer_function(ifc_model_or_iterator, output_ttl_path, namespaces, geometry=proc)
     
     write_time = time.time() - start_write
     if verbose:
