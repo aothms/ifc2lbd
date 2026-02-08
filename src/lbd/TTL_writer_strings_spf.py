@@ -94,7 +94,7 @@ def string_writer_mini_ifcOWL(model, output_path: str, namespaces: Dict[str, str
                         pred_obj[p].append(o)
                     else:
                         # @todo should be further optimized, prefixes and all...
-                        f.write(f"inst:{s.rsplit('/',1)[1]} {p} {o} .\n\n")
+                        f.write(f"{s} {p} {o} .\n\n")
                         triple_count += 1
 
             f.write(f"{subj} a ifc:{inst.is_a()}")

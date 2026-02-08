@@ -117,6 +117,8 @@ class geometry_processor:
                 else:
                     for k, n in namespaces.items():
                         if v.startswith(n):
+                            # if 'instances' in str(v):
+                            #     breakpoint()
                             return f'{k}:{str(v)[len(n):]}'
                 return f'<{v}>'
             else:
@@ -124,4 +126,4 @@ class geometry_processor:
 
         if g := getattr(inst, 'GlobalId', None):
             for s in self.guid_to_uri.get(g, ()):
-                yield from ((subject if _s == s else _s, fmt(_p), fmt(_o)) for _s, _p, _o in bfs(s))
+                yield from ((subject if _s == s else fmt(_s), fmt(_p), fmt(_o)) for _s, _p, _o in bfs(s))
