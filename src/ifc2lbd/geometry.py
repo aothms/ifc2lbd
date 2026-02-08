@@ -66,12 +66,16 @@ class geometry_processor:
             guid = ifcopenshell.guid.compress(''.join(feat.rsplit('/', 1)[1].split('_')[1:-1]))
             self.guid_to_uri[guid].append(feat)
 
-
     def remove_from_file(self):
         for inst in self.obsolete_instances:
             self.file.remove(inst)
 
     def lookup(self, inst, subject, namespaces={}):
+        # a bit wasteful; used in fmt() below
+        G = rdflib.Graph()
+        for prefix, iri in namespaces.items():
+            G.bind(prefix, iri, override=True)
+
         def bfs(start):
             stack = [start]
             visited_nodes = set()
@@ -117,12 +121,10 @@ class geometry_processor:
                 else:
                     for k, n in namespaces.items():
                         if v.startswith(n):
-                            # if 'instances' in str(v):
-                            #     breakpoint()
                             return f'{k}:{str(v)[len(n):]}'
                 return f'<{v}>'
             else:
-                return f'"{v}"'
+                return v.n3(G.namespace_manager)
 
         if g := getattr(inst, 'GlobalId', None):
             for s in self.guid_to_uri.get(g, ()):
