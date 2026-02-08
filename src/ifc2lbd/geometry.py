@@ -1,8 +1,12 @@
 from collections import defaultdict
 import itertools
+import re
 import toposort
 import rdflib
 import ifcopenshell.geom
+
+num_regexp = re.compile(r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?")
+wkt_lit = rdflib.term.URIRef('http://www.opengis.net/ont/geosparql#wktLiteral')
 
 class geometry_processor:
 
@@ -12,12 +16,16 @@ class geometry_processor:
         self.obsolete_instances = []
         self.guid_to_uri = defaultdict(list)
 
-    def process(self):
+    def process(self, base=None):
         buff = ifcopenshell.geom.serializers.buffer()
         sett = ifcopenshell.geom.settings()
         sett.set('triangulation-type', ifcopenshell.ifcopenshell_wrapper.POLYHEDRON_WITH_HOLES)
+        sett.set('use-world-coords', True)
         sett.set('dimensionality', ifcopenshell.ifcopenshell_wrapper.CURVES_SURFACES_AND_SOLIDS)
-        sr = ifcopenshell.geom.serializers.ttl(buff, sett, ifcopenshell.geom.serializer_settings())
+        ssett = ifcopenshell.geom.serializer_settings()
+        if base:
+            ssett.set('base-uri', base)
+        sr = ifcopenshell.geom.serializers.ttl(buff, sett, ssett)
         sr.writeHeader()
         all_geometry = set()
 
@@ -63,7 +71,7 @@ class geometry_processor:
         for inst in self.obsolete_instances:
             self.file.remove(inst)
 
-    def lookup(self, inst, subject):
+    def lookup(self, inst, subject, namespaces={}):
         def bfs(start):
             stack = [start]
             visited_nodes = set()
@@ -75,11 +83,27 @@ class geometry_processor:
                 visited_nodes.add(s)
 
                 for p, o in self.graph.predicate_objects(s):
+                    if p in (rdflib.namespace.RDFS.label, rdflib.namespace.DCTERMS.identifier):
+                        continue
                     if "body_footprint_geometry" in o:
                         # @nb this is calculated in the serializer, not actually in the model, skip these
                         continue
 
-                    yield (s, p, o)
+                    def round_wkt_lit(lit, ndigits: int = 6):
+                        if isinstance(lit, rdflib.Literal) and lit.datatype == wkt_lit:
+                            def repl(m: re.Match) -> str:
+                                v = round(float(m.group()), ndigits)
+                                s = f"{v:.{ndigits}f}".rstrip("0").rstrip(".")
+                                return "0" if s in {"", "-0"} else s
+
+                            return type(lit)(
+                                num_regexp.sub(repl, str(lit)),
+                                datatype=lit.datatype,
+                                lang=lit.language,
+                            )
+                        return lit
+
+                    yield (s, p, round_wkt_lit(o))
 
                     # Recurse only into resource nodes (not literals)
                     if isinstance(o, (rdflib.URIRef, rdflib.BNode)):
@@ -88,6 +112,12 @@ class geometry_processor:
         def fmt(v):
             # @todo not complete, no escaping, etc.
             if isinstance(v, rdflib.URIRef):
+                if v == rdflib.namespace.RDF.type:
+                    return 'a'
+                else:
+                    for k, n in namespaces.items():
+                        if v.startswith(n):
+                            return f'{k}:{str(v)[len(n):]}'
                 return f'<{v}>'
             else:
                 return f'"{v}"'
